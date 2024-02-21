@@ -1,93 +1,48 @@
 #include <iostream>
 #include <vector>
-#include <array>
-#include <string>
-#include <time.h>
-#include <algorithm>
-#include <stdlib.h>
-#include <math.h>
-#include <cmath>
-#include <queue>
-#include <stack>
-#include <deque>
-#include <map>
-#include <unordered_map>
-#include <set>
-#include <limits.h>
-#include <string.h>
 
-#define Endl << "\n"
-#define endL << "\n" <<
-#define Cout cout <<
-#define	COUT cout << "OUT: " <<
-#define Cin cin >>
-#define fspc << " "
-#define spc << " " <<
-#define Enter cout << "\n"
-#define if if
-#define elif else if
-#define else else
-#define For(n) for(int i = 0; i < n; i++)
-#define Forj(n) for(int j = 0; j < n; j++)
-#define Foro(n) for(int i = 1; i <= n; i++)
-#define Forjo(n) for(int j = 1; j <= n; j++)
-#define between(small, middle, big) (small < middle && middle < big)
-#define among(small, middle, big) (small <= middle && middle <= big)
-#define stoe(container) container.begin(), container.end()
-#define lf(d) Cout fixed; cout.precision(d);
-#define ulf cout.unsetf(ios::scientific);
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
-#define PI 3.14159265359
-
-typedef long long LLONG;
-typedef unsigned long long ULLONG;
-typedef unsigned int UINT;
 
 using namespace std;
 
-template <typename T>
-class heap : public priority_queue<T, vector<T>, greater<T>>
-{
-};
-
 int main()
 {
-	FastIO;
+    FastIO;
 
-	int tc;
-	Cin tc;
+    int tc;
+    cin >> tc;
 
-	while (tc--)
-	{
-		int n, m;
-		Cin n >> m;
+    while (tc--)
+    {
+        int n, m;
+        cin >> n >> m;
 
-		vector<int> c(n);
-		LLONG cSum = 0;
-		For(n)
-		{
-			Cin c[i];
-			cSum += c[i];
-		}
-		double cAvg = (double)cSum / n;
+        vector<int> c(n);
+        long long cSum = 0;
+        for (int i = 0; i < n; i++)
+        {
+            cin >> c[i];
+            cSum += c[i];
+        }
+        double cAvg = (double)cSum / n;
 
-		LLONG eSum = 0;
-		For(m)
-		{
-			int e;
-			Cin e;
-			eSum += e;
-		}
-		double eAvg = (double)eSum / m;
+        long long eSum = 0;
+        for (int i = 0; i < m; i++)
+        {
+            int e;
+            cin >> e;
+            eSum += e;
+        }
+        double eAvg = (double)eSum / m;
 
-		int result = 0;
-		For(n)
-		{
-			double cNewAvg = (double)(cSum - c[i]) / (n - 1);
-			double eNewAvg = (double)(eSum + c[i]) / (m + 1);
+        int result = 0;
+        for (int i = 0; i < n; i++)
+        {
+            double cNewAvg = (double)(cSum - c[i]) / (n - 1);
+            double eNewAvg = (double)(eSum + c[i]) / (m + 1);
 
-			result += (cNewAvg > cAvg && eNewAvg > eAvg);
-		}
-		Cout result Endl;
-	}
+            result += (cNewAvg > cAvg && eNewAvg > eAvg);
+        }
+        cout << result << '\n';
+    }
 }

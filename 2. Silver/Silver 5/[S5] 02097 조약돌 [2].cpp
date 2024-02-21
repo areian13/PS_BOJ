@@ -1,8 +1,6 @@
 #include <iostream>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
-#define lf(d) cout << fixed; cout.precision(d);
-#define ulf cout.unsetf(ios::scientific);
 
 using namespace std;
 
@@ -10,11 +8,15 @@ int main()
 {
     FastIO;
 
-    double a, b;
-    cin >> a >> b;
+    int n;
+    cin >> n;
 
-    double result = a / b;
+    int a = 1;
+    int b = 1;
 
-    lf(9);
+    while (n > (a + 1) * (b + 1))
+        (a > b ? b : a)++;
+    
+    int result = (a + b) * 2;
     cout << result << '\n';
 }

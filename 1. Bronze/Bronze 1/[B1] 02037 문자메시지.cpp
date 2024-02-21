@@ -1,106 +1,63 @@
 #include <iostream>
-#include <vector>
 #include <array>
 #include <string>
-#include <time.h>
-#include <algorithm>
-#include <stdlib.h>
-#include <math.h>
-#include <cmath>
-#include <queue>
-#include <stack>
-#include <deque>
-#include <map>
-#include <unordered_map>
-#include <set>
-#include <limits.h>
-#include <float.h>
-#include <string.h>
 
-#define Endl << "\n"
-#define endL << "\n" <<
-#define Cout cout <<
-#define	COUT cout << "OUT: " <<
-#define Cin cin >>
-#define fspc << " "
-#define spc << " " <<
-#define Enter cout << "\n"
-#define if if
-#define elif else if
-#define else else
-#define For(n) for(int i = 0; i < n; i++)
-#define Forj(n) for(int j = 0; j < n; j++)
-#define Foro(n) for(int i = 1; i <= n; i++)
-#define Forjo(n) for(int j = 1; j <= n; j++)
-#define between(small, middle, big) (small < middle && middle < big)
-#define among(small, middle, big) (small <= middle && middle <= big)
-#define stoe(container) container.begin(), container.end()
-#define lf(d) Cout fixed; cout.precision(d);
-#define ulf cout.unsetf(ios::scientific);
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
-#define PI 3.14159265359
-
-typedef long long LLONG;
-typedef unsigned long long ULLONG;
-typedef unsigned int UINT;
 
 using namespace std;
 
-template <typename T>
-class heap : public priority_queue<T, vector<T>, greater<T>>
-{
-};
-
+#define SIZE 26
 
 int main()
 {
-	FastIO;
+    FastIO;
 
-	int number[26] =
-	{
-		2,2,2,
-		3,3,3,
-		4,4,4,
-		5,5,5,
-		6,6,6,
-		7,7,7,7,
-		8,8,8,
-		9,9,9,9
-	};
+    array<int, SIZE> number =
+    {
+        2,2,2,
+        3,3,3,
+        4,4,4,
+        5,5,5,
+        6,6,6,
+        7,7,7,7,
+        8,8,8,
+        9,9,9,9
+    };
 
-	int cnt[26] =
-	{
-		1,2,3,
-		1,2,3,
-		1,2,3,
-		1,2,3,
-		1,2,3,
-		1,2,3,4,
-		1,2,3,
-		1,2,3,4
-	};
+    array<int, SIZE> cnt =
+    {
+        1,2,3,
+        1,2,3,
+        1,2,3,
+        1,2,3,
+        1,2,3,
+        1,2,3,4,
+        1,2,3,
+        1,2,3,4
+    };
 
-	int p, w;
-	Cin p >> w;
+    int p, w;
+    cin >> p >> w;
 
-	cin.ignore();
-	string str;
-	getline(cin, str);
+    cin.ignore();
+    string str;
+    getline(cin, str);
 
-	int result = 0;
-	For(str.size())
-	{
-		if (among('A', str[i], 'Z'))
-		{
-			if (i > 0 && among('A', str[i - 1], 'Z'))
-			{
-				if (number[str[i] - 'A'] == number[str[i - 1] - 'A'])
-					result += w;
-			}
-			result += p * cnt[str[i] - 'A'];
-		}
-		else
-			result += p;
-	}
-	Cout result;
+    int n = str.size();
+    int result = 0;
+    for (int i = 0; i < n; i++)
+    {
+        if ('A' <= str[i] && str[i] <= 'Z')
+        {
+            if (i > 0 && ('A' <= str[i - 1] && str[i - 1] <= 'Z'))
+            {
+                if (number[str[i] - 'A'] == number[str[i - 1] - 'A'])
+                    result += w;
+            }
+            result += p * cnt[str[i] - 'A'];
+        }
+        else
+            result += p;
+    }
+    cout << result << '\n';
 }
