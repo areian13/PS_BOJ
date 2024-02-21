@@ -1,6 +1,6 @@
 #include <iostream>
-#include <array>
 #include <string>
+#include <array>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
 

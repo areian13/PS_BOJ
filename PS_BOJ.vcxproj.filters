@@ -80,10 +80,10 @@
     <ClCompile Include="1. Bronze\Bronze 1\[B1] 02596 비밀편지.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 1\[B1] 02622 삼각형만들기.cpp">
+    <ClCompile Include="2. Silver\Silver 5\[S5] 02622 삼각형만들기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 1\[B1] 02669 직사각형 네개의 합집합의 면적 구하기.cpp">
+    <ClCompile Include="2. Silver\Silver 5\[S5] 02669 직사각형 네개의 합집합의 면적 구하기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 1\[B1] 02684 동전 게임.cpp">

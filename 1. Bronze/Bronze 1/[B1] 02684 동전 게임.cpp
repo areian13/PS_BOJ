@@ -1,85 +1,44 @@
-
 #include <iostream>
-#include <vector>
-#include <array>
 #include <string>
-#include <time.h>
-#include <algorithm>
-#include <stdlib.h>
-#include <math.h>
-#include <cmath>
-#include <queue>
-#include <stack>
-#include <deque>
-#include <map>
-#include <unordered_map>
-#include <set>
-#include <limits.h>
-#include <string.h>
+#include <array>
 
-#define Endl << "\n"
-#define endL << "\n" <<
-#define Cout cout <<
-#define	COUT cout << "OUT: " <<
-#define Cin cin >>
-#define fspc << " "
-#define spc << " " <<
-#define Enter cout << "\n"
-#define if if
-#define elif else if
-#define else else
-#define For(n) for(int i = 0; i < n; i++)
-#define Forj(n) for(int j = 0; j < n; j++)
-#define Foro(n) for(int i = 1; i <= n; i++)
-#define Forjo(n) for(int j = 1; j <= n; j++)
-#define between(small, middle, big) (small < middle && middle < big)
-#define among(small, middle, big) (small <= middle && middle <= big)
-#define stoe(container) container.begin(), container.end()
-#define lf(d) Cout fixed; cout.precision(d);
-#define ulf cout.unsetf(ios::scientific);
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
-#define PI 3.14159265359
-
-typedef long long LLONG;
-typedef unsigned long long ULLONG;
-typedef unsigned int UINT;
 
 using namespace std;
 
-template <typename T>
-class heap : public priority_queue<T, vector<T>, greater<T>>
-{
-};
+#define COIN_CNT 8
 
-array<string, 8> coins = { "TTT","TTH","THT","THH","HTT","HTH","HHT","HHH" };
+array<string, COIN_CNT> coins = { "TTT","TTH","THT","THH","HTT","HTH","HHT","HHH" };
 
 int SameCoin(string coin)
 {
-	For(8)
-	{
-		if (coins[i] == coin)
-			return i;
-	}
+    for (int i = 0; i < COIN_CNT; i++)
+    {
+        if (coins[i] == coin)
+            return i;
+    }
+    return -1;
 }
 
 int main()
 {
-	FastIO;
+    FastIO;
 
+    int tc;
+    cin >> tc;
 
-	int tc;
-	Cin tc;
-	
-	while (tc--)
-	{
-		string coin;
-		Cin coin;
+    while (tc--)
+    {
+        string coin;
+        cin >> coin;
 
-		array<int, 8> result = { 0, };
-		For(coin.size() - 2)
-			result[SameCoin(coin.substr(i, 3))]++;
-		For(8)
-			Cout result[i] fspc;
-		Enter;
-	}
+        int n = coin.size();
+        array<int, COIN_CNT> result = { 0, };
+        for (int i = 0; i < n - 2; i++)
+            result[SameCoin(coin.substr(i, 3))]++;
+       
+        for (int i = 0; i < COIN_CNT; i++)
+            cout << result[i] << ' ';
+        cout << '\n';
+    }
 }
