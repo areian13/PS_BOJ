@@ -186,6 +186,7 @@
     <ClCompile Include="1. Bronze\Bronze 1\[B1] 02037 문자메시지.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 05364 Escape Route.cpp" />
     <ClCompile Include="2. Silver\Silver 5\[S5] 02097 조약돌 [1].cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -306,7 +307,7 @@
     <ClCompile Include="1. Bronze\Bronze 1\[B1] 28255 3단 초콜릿 아이스크림.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 1\[B1] 28358 생일 맞추기.cpp">
+    <ClCompile Include="2. Silver\Silver 5\[S5] 28358 생일 맞추기.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 1\[B1] 28682 재우야 임관하자.cpp">

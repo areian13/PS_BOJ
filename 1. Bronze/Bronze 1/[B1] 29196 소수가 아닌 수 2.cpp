@@ -25,5 +25,6 @@ int main()
     p /= gcd;
     q /= gcd;
 
-    cout << "YES" << '\n' << p << ' ' << q << '\n';
+    cout << "YES" << '\n';
+    cout << p << ' ' << q << '\n';
 }

@@ -170,7 +170,7 @@
     <ClCompile Include="1. Bronze\Bronze 1\[B1] 28255 3단 초콜릿 아이스크림.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 1\[B1] 28358 생일 맞추기.cpp">
+    <ClCompile Include="2. Silver\Silver 5\[S5] 28358 생일 맞추기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 1\[B1] 28682 재우야 임관하자.cpp">
@@ -2859,6 +2859,9 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 05362 Garbled Message.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 05364 Escape Route.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
