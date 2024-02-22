@@ -81,13 +81,16 @@ int main()
 {
     FastIO;
 
-    vector<string> fb(3);
     int n = 0;
-    For(3)
+    for (int i = 0; i < 3; i++)
     {
-        Cin fb[i];
-        if (IsNum(fb[i]))
-            n = stoi(fb[i]) + 3 - i;
+        string fb;
+        cin >> fb;
+
+        if (IsNum(fb))
+            n = stoi(fb) + 3 - i;
     }
-    Cout MakeFizzBuzz(n) Endl;
+
+    string result = MakeFizzBuzz(n);
+    cout << result << '\n';
 }

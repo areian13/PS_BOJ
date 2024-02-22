@@ -61,25 +61,28 @@ class heap : public priority_queue<T, vector<T>, greater<T>>
 
 int main()
 {
-	FastIO;
+    FastIO;
 
-	string korea = "KOREA";
-	string yonsei = "YONSEI";
-	int k = 0;
-	int y = 0;
+    string korea = "KOREA";
+    string yonsei = "YONSEI";
+    int k = 0;
+    int y = 0;
 
-	string str;
-	Cin str;
+    string str;
+    cin >> str;
 
-	For(str.size())
-	{
-		if (str[i] == korea[k])
-			k++;
-		if (str[i] == yonsei[y])
-			y++;
+    int n = str.size();
+    for (int i = 0; i < n; i++)
+    {
+        if (str[i] == korea[k])
+            k++;
+        if (str[i] == yonsei[y])
+            y++;
 
-		if (k == 5 || y == 6)
-			break;
-	}
-	Cout(k == 5 ? korea : yonsei) Endl;
+        if (k == korea.size() || y == yonsei.size())
+            break;
+    }
+
+    string result = (k == korea.size() ? korea : yonsei);
+    cout << result << '\n';
 }

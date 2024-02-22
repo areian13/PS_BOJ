@@ -1,9 +1,3 @@
-#ifdef ONLINE_JUDGE
-#define _128d  __int128
-#else
-#define _128d long long
-#endif
-
 #include <iostream>
 #include <vector>
 #include <array>
@@ -60,32 +54,36 @@ class heap : public priority_queue<T, vector<T>, greater<T>>
 
 int GetDec(char ch)
 {
-	if (among('0', ch, '9'))
-		return ch - '0';
-	return ch - 'A' + 10;
+    if (among('0', ch, '9'))
+        return ch - '0';
+    return ch - 'A' + 10;
 }
 
 int GetValue(string& str, int idx)
 {
-	return 16 * GetDec(str[2 * idx]) + GetDec(str[2 * idx + 1]);
+    return 16 * GetDec(str[2 * idx]) + GetDec(str[2 * idx + 1]);
 }
 
 int main()
 {
-	FastIO;
+    FastIO;
 
-	string hex = "0123456789ABCDEF";
+    string a, b;
+    cin >> a >> b;
 
-	string a, b;
-	Cin a >> b;
+    int n = a.size() / 2;
 
-	int n = a.size() / 2;
+    vector<int> code(n + 1);
+    code[0] = 32 ^ GetValue(b, 0);
+    for (int i = 1; i <= n; i++)
+        code[i] = code[i - 1] ^ GetValue(a, i - 1) ^ GetValue(b, i);
 
-	vector<int> result(n + 1);
-	result[0] = 32 ^ GetValue(b, 0);
-	Foro(n)
-		result[i] = result[i - 1] ^ GetValue(a, i - 1) ^ GetValue(b, i);
-
-	for (int x : result)
-		Cout hex[x / 16] << hex[x % 16];
+    string result = "";
+    string hex = "0123456789ABCDEF";
+    for (int x : code)
+    {
+        result += hex[x / 16];
+        result += hex[x % 16];
+    }
+    cout << result << '\n';
 }
