@@ -1,5 +1,4 @@
 #include <iostream>
-#include <string>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
 
@@ -11,17 +10,18 @@ int main()
 
     while (true)
     {
-        string s;
-        getline(cin, s);
+        int h;
+        cin >> h;
 
-        if (s == "#")
+        if (h == 0)
             break;
 
-        int n = s.size();
-        int result = 0;
-        for (int i = 0; i < n; i++)
-            result += (s[i] == ' ' ? 0 : s[i] - 'A' + 1) * (i + 1);
-
+        int result = h;
+        while (h != 1)
+        {
+            h = (h % 2 == 0 ? h / 2 : h * 3 + 1);
+            result = max(result, h);
+        }
         cout << result << '\n';
     }
 }

@@ -5,6 +5,17 @@
 
 using namespace std;
 
+bool IsTautogram(string& s)
+{
+    int n = s.size();
+    for (int i = 1; i < n; i++)
+    {
+        if (s[i - 1] == ' ' && (s[i] | 32) != (s[0] | 32))
+            return false;
+    }
+    return true;
+}
+
 int main()
 {
     FastIO;
@@ -14,14 +25,10 @@ int main()
         string s;
         getline(cin, s);
 
-        if (s == "#")
+        if (s == "*")
             break;
-
-        int n = s.size();
-        int result = 0;
-        for (int i = 0; i < n; i++)
-            result += (s[i] == ' ' ? 0 : s[i] - 'A' + 1) * (i + 1);
-
+        
+        char result = (IsTautogram(s) ? 'Y' : 'N');
         cout << result << '\n';
     }
 }
