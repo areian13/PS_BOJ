@@ -33,10 +33,9 @@ string BinSum(string a, string b)
     int idx = 0;
     for (int i = 0; i < n - 1; i++)
     {
-        if (a[i] == '0')
-            idx++;
-        else
+        if (a[i] != '0')
             break;
+        idx++;
     }
 
     return a.substr(idx);
