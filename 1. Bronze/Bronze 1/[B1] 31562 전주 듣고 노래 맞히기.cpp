@@ -21,7 +21,7 @@ int main()
         string s;
         cin >> t >> s;
 
-        string sheet;
+        string sheet = "";
         for (int i = 0; i < 7; i++)
         {
             char a;
@@ -33,7 +33,7 @@ int main()
 
     while (m--)
     {
-        string sheet;
+        string sheet = "";
         for (int i = 0; i < 3; i++)
         {
             char a;
