@@ -41,7 +41,7 @@ int main()
             result = pos[i];
         }
     }
-    
+
     lf(2);
     cout << pos[0].x << ' ' << pos[0].y << '\n';
     cout << result.x << ' ' << result.y << '\n';

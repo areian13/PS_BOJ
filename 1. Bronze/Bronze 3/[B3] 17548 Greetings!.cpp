@@ -57,15 +57,15 @@ void operator ? (char a, char b)
 }
 int main()
 {
-	FastIO;
+    FastIO;
 
-	string hey;
-	Cin hey;
+    string hey;
+    Cin hey;
 
-	for (char e : hey)
-	{
-		Cout e;
-		if (e == 'e')
-			Cout e;
-	}
+    for (char e : hey)
+    {
+        Cout e;
+        if (e == 'e')
+            Cout e;
+    }
 }

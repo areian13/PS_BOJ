@@ -341,7 +341,7 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 05370 Which Way.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 2\[B2] 06558 Average is not Fast Enough!.cpp">
+    <ClCompile Include="1. Bronze\Bronze 1\[B1] 06558 Average is not Fast Enough!.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 08743 Turniej.cpp">
@@ -353,10 +353,10 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 10813 공 바꾸기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 2\[B2] 10988 팰린드롬인지 확인하기.cpp">
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 10988 팰린드롬인지 확인하기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 2\[B2] 11018 Fall 2006： 100 Years of Engineering.cpp">
+    <ClCompile Include="1. Bronze\Bronze 1\[B1] 11018 Fall 2006： 100 Years of Engineering.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 12836 가계부 (Easy).cpp">
@@ -2961,6 +2961,93 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="2. Silver\Silver 2\[S2] 11060 점프 점프.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 31628 가지 한 두름 주세요.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 15953 상금 헌터.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 5\[G5] 01245 농장 관리.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 16479 컵라면 측정하기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 5\![G5] 14677 병약한 윤호.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 5\[G5] 14714 홍삼 게임 %28Easy%29.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 16483 접시 안의 원.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 4\[G4] 01261 알고스팟.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 15841 Virus Outbreak.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 16673 고려대학교에는 공식 와인이 있다 [1].cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 16673 고려대학교에는 공식 와인이 있다 [2].cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. Silver\Silver 3\[S3] 12779 상품 is 뭔들.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 17174 전체 계산 횟수.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 5\[G5] 02668 숫자고르기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 5\[G5] 13023 ABCDE.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. Silver\Silver 2\[S2] 01058 친구.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 17210 문문문.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. Silver\Silver 4\[S4] 31395 정렬된 연속한 부분수열의 개수.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 3\[G3] 31404 아리스, 청소합니다! %28Easy%29.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 17263 Sort 마스터 배지훈 [1].cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 17263 Sort 마스터 배지훈 [2].cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 4\[G4] 10159 저울.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. Silver\Silver 4\[S4] 01590 캠프가는 영식.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 5\[G5] 15591 MooTube %28Silver%29 [1].cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 5\[G5] 15591 MooTube %28Silver%29 [2].cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 3\[G3] 10021 Watering the Fields.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 2\![G2] 17780 새로운 게임.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 5\[G5] 02174 로봇 시뮬레이션.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 17284 Vending Machine.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

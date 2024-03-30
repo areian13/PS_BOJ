@@ -1,47 +1,34 @@
 #include <iostream>
-#include <unordered_map>
-#include <string>
 #include <vector>
+#include <array>
+#include <algorithm>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
 
 using namespace std;
 
+long long MinPunish(vector<long long>& r)
+{
+    int n = r.size();
+
+    array<long long, 2> sum = { 0,0 };
+    for (int i = 0; i < n; i++)
+        sum[i % 2] += r[i];
+
+    return min(sum[0], sum[1]);
+}
+
 int main()
 {
     FastIO;
 
-    int n, m;
-    cin >> n >> m;
+    int n;
+    cin >> n;
 
-    unordered_map<string, vector<string>> jukebox;
+    vector<long long> r(n);
     for (int i = 0; i < n; i++)
-    {
-        int t;
-        string s;
-        cin >> t >> s;
+        cin >> r[i];
 
-        string sheet;
-        for (int i = 0; i < 7; i++)
-        {
-            char a;
-            cin >> a;
-            sheet += a;
-        }
-        jukebox[sheet.substr(0, 3)].push_back(s);
-    }
-
-    while (m--)
-    {
-        string sheet;
-        for (int i = 0; i < 3; i++)
-        {
-            char a;
-            cin >> a;
-            sheet += a;
-        }
-
-        string result = (jukebox[sheet].size() == 1 ? jukebox[sheet][0] : (jukebox[sheet].empty() ? "!" : "?"));
-        cout << result << '\n';
-    }
+    long long result = MinPunish(r);
+    cout << result << '\n';
 }
