@@ -2963,7 +2963,7 @@
     <ClCompile Include="2. Silver\Silver 2\[S2] 11060 점프 점프.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 2\[B2] 31628 가지 한 두름 주세요.cpp">
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 31628 가지 한 두름 주세요.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 15953 상금 헌터.cpp">
@@ -3048,6 +3048,39 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 17284 Vending Machine.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 5\[G5] 01584 게임.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 31668 특별한 가지.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 31669 특별한 학교 탈출.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 31712 핑크빈 레이드.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 5\[B5] 29163 Счастье Мистера Бина.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="0. Unrated\[U0] 15641 SUPER SUPER BINARY SEARCH DELUXE 2.5： THE LEGEND OF THE GOLDEN MAZASSUMNIDA, EPISODE 2： THE MAZWAETL UNIVERSE, PART 2： THE PARALLEL UNIVERSE AND THE LOST MAZASSUMNIDA： GAME OF THE YEAR EDITION.txt">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 17350 2루수 이름이 뭐야.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 17450 과자 사기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 17614 369.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 5\[G5] 05972 택배 배송.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 4\[G4] 02665 미로만들기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

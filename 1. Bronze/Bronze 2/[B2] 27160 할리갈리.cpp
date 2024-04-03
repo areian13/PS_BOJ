@@ -1,80 +1,36 @@
 #include <iostream>
-#include <vector>
-#include <array>
-#include <string>
-#include <time.h>
-#include <algorithm>
-#include <stdlib.h>
-#include <math.h>
-#include <cmath>
-#include <queue>
-#include <stack>
-#include <deque>
-#include <map>
 #include <unordered_map>
-#include <set>
-#include <limits.h>
-#include <float.h>
-#include <string.h>
+#include <string>
 
-#define Endl << "\n"
-#define endL << "\n" <<
-#define Cout cout <<
-#define	COUT cout << "OUT: " <<
-#define Cin cin >>
-#define fspc << " "
-#define spc << " " <<
-#define Enter cout << "\n"
-#define if if
-#define elif else if
-#define else else
-#define For(n) for(int i = 0; i < n; i++)
-#define Forj(n) for(int j = 0; j < n; j++)
-#define Foro(n) for(int i = 1; i <= n; i++)
-#define Forjo(n) for(int j = 1; j <= n; j++)
-#define between(small, middle, big) (small < middle && middle < big)
-#define among(small, middle, big) (small <= middle && middle <= big)
-#define stoe(container) container.begin(), container.end()
-#define lf(d) Cout fixed; cout.precision(d);
-#define ulf cout.unsetf(ios::scientific);
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
-#define PI 3.14159265359
-
-typedef long long LLONG;
-typedef unsigned long long ULLONG;
-typedef unsigned int UINT;
 
 using namespace std;
 
-template <typename T>
-class heap : public priority_queue<T, vector<T>, greater<T>>
+bool IsIn5(unordered_map<string, int>& fruitCount)
 {
-};
-
-bool Is5(map<string, int>& UMP)
-{
-	return UMP["STRAWBERRY"] == 5 || UMP["BANANA"] == 5 || UMP["LIME"] == 5 || UMP["PLUM"] == 5;
+    return fruitCount["STRAWBERRY"] == 5 
+        || fruitCount["BANANA"] == 5 
+        || fruitCount["LIME"] == 5 
+        || fruitCount["PLUM"] == 5;
 }
 
 int main()
 {
-	FastIO;
+    FastIO;
 
-	map<string, int> UMP;
+    int n;
+    cin >> n;
 
-	int n;
-	Cin n;
+    unordered_map<string, int> fruitCount;
+    for (int i = 0; i < n; i++)
+    {
+        string fruit;
+        int cnt;
+        cin >> fruit >> cnt;
 
-	string result = "NO";
-	For(n)
-	{
-		string fruit;
-		int cnt;
-		Cin fruit >> cnt;
+        fruitCount[fruit] += cnt;
+    }
 
-		UMP[fruit] += cnt;
-	}
-	if (Is5(UMP))
-		result = "YES";
-	Cout result;
+    string result = (IsIn5(fruitCount) ? "YES" : "NO");
+    cout << result << '\n';
 }

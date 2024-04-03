@@ -1,15 +1,16 @@
 #include <iostream>
 #include <vector>
-#include <string>
-#include <algorithm>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
 
 using namespace std;
 
-string Get3LetterName(vector<string>& names)
+bool IsHappy(vector<int>& a)
 {
-
+    int count = 0;
+    for (int k : a)
+        count += (k % 2 == 0 ? +1 : -1);
+    return (count > 0);
 }
 
 int main()
@@ -19,10 +20,10 @@ int main()
     int n;
     cin >> n;
 
-    vector<string> names(n);
+    vector<int> a(n);
     for (int i = 0; i < n; i++)
-        cin >> names[i];
+        cin >> a[i];
 
-    string result = Get3LetterName(names);
+    string result = (IsHappy(a) ? "Happy" : "Sad");
     cout << result << '\n';
 }

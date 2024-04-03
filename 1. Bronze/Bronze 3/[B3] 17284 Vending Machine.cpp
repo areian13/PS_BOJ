@@ -17,7 +17,7 @@ int main()
     {
         int n;
         cin >> n;
-        
+
         if (cin.eof())
             break;
 

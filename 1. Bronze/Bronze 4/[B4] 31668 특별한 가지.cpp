@@ -8,10 +8,9 @@ int main()
 {
     FastIO;
 
-    long long n;
-    cin >> n;
+    int n, m, k;
+    cin >> n >> m >> k;
 
-    long long result = n * (n - 1) * (n - 2) / 6;
+    int result = m / n * k;
     cout << result << '\n';
-    cout << 3 << '\n';
 }
