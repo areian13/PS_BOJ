@@ -648,7 +648,7 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 24267 알고리즘 수업 - 알고리즘의 수행 시간 6.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 2\[B2] 26305 커트라인.cpp">
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 25305 커트라인.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 27160 할리갈리.cpp">

@@ -9,7 +9,13 @@ using namespace std;
 
 string Get3LetterName(vector<string>& names)
 {
-
+    string result = "ZZZZZ";
+    for (string& name : names)
+    {
+        if (name.size() == 3)
+            result = min(result, name);
+    }
+    return result;
 }
 
 int main()
