@@ -1652,7 +1652,7 @@
     <ClCompile Include="1. Bronze\Bronze 5\[B5] 30676 이 별은 무슨 색일까.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 5\~[B5] 26082 WARBOY.cpp">
+    <ClCompile Include="1. Bronze\Bronze 5\[B5] 26082 WARBOY.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 5\~[B5] 26209 Intercepting Information.cpp">
@@ -3081,6 +3081,39 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="3. Gold\Gold 4\[G4] 02665 미로만들기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 4\[G4] 01277 발전소 설치.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 4\[G4] 09505 엔터프라이즈호 탈출.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 4\[G4] 06595 프로거 [1].cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 17618 신기한 수.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 4\[G4] 06595 프로거 [2].cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. Silver\Silver 5\[S5] 31738 매우 어려운 문제.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 4\[G4] 13905 세부.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 4\[G4] 16398 행성 연결.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 3\[G3] 09344 도로.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 4\[G4] 18769 그리드 네트워크.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 17944 퐁당퐁당 1.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
