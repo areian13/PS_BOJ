@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <array>
 #include <algorithm>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
@@ -28,13 +29,12 @@ void Union(int u, int v, vector<int>& p)
     p[v] = u;
 }
 
-int MinCost(int n, vector<Edge>& edges)
+void Network(int n, vector<Edge>& edges, vector<array<int, 2>>& result)
 {
     sort(edges.begin(), edges.end());
 
-    vector<int> p(n + 1, -1);
-
-    int result = 0;
+    vector<int> p(n, -1);
+    result.push_back({ 0,0 });
     for (Edge& edge : edges)
     {
         int u = Find(edge.u, p);
@@ -44,41 +44,50 @@ int MinCost(int n, vector<Edge>& edges)
             continue;
 
         Union(u, v, p);
-        result += edge.w;
+        result[0][0] += edge.w;
+
+        if (edge.w > 0)
+        {
+            result[0][1]++;
+            result.push_back({ edge.u + 1,edge.v + 1 });
+        }
     }
-    return result;
 }
 
 int main()
 {
     FastIO;
 
-    int n;
-    cin >> n;
+    int n, m;
+    cin >> n >> m;
 
-    vector<Edge> edges;
-    for (int u = 1; u <= n; u++)
+    vector<Edge> edges(m);
+    for (int i = 0; i < m; i++)
     {
-        int w;
-        cin >> w;
+        int u, v;
+        cin >> u >> v;
+        u--, v--;
 
-        edges.push_back({ 0,u,w });
+        edges[i] = { u,v,0 };
     }
 
-    for (int u = 1; u <= n; u++)
+    for (int u = 0; u < n; u++)
     {
-        for (int v = 1; v <= n; v++)
+        for (int v = 0; v < n; v++)
         {
             int w;
             cin >> w;
 
-            if (u >= v)
+            if (u == 0 || u >= v)
                 continue;
 
             edges.push_back({ u,v,w });
         }
     }
 
-    int result = MinCost(n, edges);
-    cout << result << '\n';
+    vector<array<int, 2>> result;
+    Network(n, edges, result);
+
+    for (array<int, 2>& x : result)
+        cout << x[0] << ' ' << x[1] << '\n';
 }

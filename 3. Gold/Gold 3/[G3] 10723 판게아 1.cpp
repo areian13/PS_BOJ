@@ -8,11 +8,11 @@ using namespace std;
 
 struct Edge
 {
-    int u, v, w;
+    int u, v, c;
 
     friend bool operator<(const Edge& a, const Edge& b)
     {
-        return a.w < b.w;
+        return a.c < b.c;
     }
 };
 
@@ -28,13 +28,12 @@ void Union(int u, int v, vector<int>& p)
     p[v] = u;
 }
 
-int MinCost(int n, vector<Edge>& edges)
+long long MinRoad(int n, vector<Edge>& edges)
 {
     sort(edges.begin(), edges.end());
 
-    vector<int> p(n + 1, -1);
-
-    int result = 0;
+    vector<int> p(n, -1);
+    long long result = 0;
     for (Edge& edge : edges)
     {
         int u = Find(edge.u, p);
@@ -44,7 +43,7 @@ int MinCost(int n, vector<Edge>& edges)
             continue;
 
         Union(u, v, p);
-        result += edge.w;
+        result += edge.c;
     }
     return result;
 }
@@ -53,32 +52,32 @@ int main()
 {
     FastIO;
 
-    int n;
-    cin >> n;
+    int tc;
+    cin >> tc;
 
-    vector<Edge> edges;
-    for (int u = 1; u <= n; u++)
+    while (tc--)
     {
-        int w;
-        cin >> w;
+        int n, m;
+        cin >> n >> m;
 
-        edges.push_back({ 0,u,w });
-    }
-
-    for (int u = 1; u <= n; u++)
-    {
-        for (int v = 1; v <= n; v++)
+        vector<Edge> edges(n - 1);
+        for (int u = 1; u <= n - 1; u++)
         {
-            int w;
-            cin >> w;
+            int v, c;
+            cin >> v >> c;
 
-            if (u >= v)
-                continue;
-
-            edges.push_back({ u,v,w });
+            edges[u - 1] = { u,v,c };
         }
-    }
 
-    int result = MinCost(n, edges);
-    cout << result << '\n';
+        long long result = 0;
+        while (m--)
+        {
+            int u, v, c;
+            cin >> u >> v >> c;
+
+            edges.push_back({ u,v,c });
+            result ^= MinRoad(n, edges);
+        }
+        cout << result << '\n';
+    }
 }

@@ -8,13 +8,20 @@ using namespace std;
 
 struct Edge
 {
-    int u, v, w;
+    int u, v, c;
 
     friend bool operator<(const Edge& a, const Edge& b)
     {
-        return a.w < b.w;
+        return a.c < b.c;
     }
 };
+
+int ctoi(char c)
+{
+    if ('a' <= c && c <= 'z')
+        return c - 'a' + 1;
+    return c - 'A' + 27;
+}
 
 int Find(int u, vector<int>& p)
 {
@@ -28,24 +35,29 @@ void Union(int u, int v, vector<int>& p)
     p[v] = u;
 }
 
-int MinCost(int n, vector<Edge>& edges)
+int MaxDonation(int n, vector<Edge>& edges)
 {
     sort(edges.begin(), edges.end());
 
-    vector<int> p(n + 1, -1);
-
+    vector<int> p(n, -1);
     int result = 0;
+    int cnt = 0;
     for (Edge& edge : edges)
     {
         int u = Find(edge.u, p);
         int v = Find(edge.v, p);
 
         if (u == v)
+        {
+            result += edge.c;
             continue;
+        }
 
         Union(u, v, p);
-        result += edge.w;
+        cnt++;
     }
+    result = (cnt == n - 1 ? result : -1);
+
     return result;
 }
 
@@ -57,28 +69,20 @@ int main()
     cin >> n;
 
     vector<Edge> edges;
-    for (int u = 1; u <= n; u++)
+    for (int i = 0; i < n; i++)
     {
-        int w;
-        cin >> w;
-
-        edges.push_back({ 0,u,w });
-    }
-
-    for (int u = 1; u <= n; u++)
-    {
-        for (int v = 1; v <= n; v++)
+        for (int j = 0; j < n; j++)
         {
-            int w;
-            cin >> w;
+            char c;
+            cin >> c;
 
-            if (u >= v)
+            if (c == '0')
                 continue;
 
-            edges.push_back({ u,v,w });
+            edges.push_back({ i,j,ctoi(c) });
         }
     }
 
-    int result = MinCost(n, edges);
+    int result = MaxDonation(n, edges);
     cout << result << '\n';
 }

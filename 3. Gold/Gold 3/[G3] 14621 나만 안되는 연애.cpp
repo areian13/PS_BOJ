@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <array>
 #include <algorithm>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
@@ -8,11 +9,11 @@ using namespace std;
 
 struct Edge
 {
-    int u, v, w;
+    int u, v, d;
 
     friend bool operator<(const Edge& a, const Edge& b)
     {
-        return a.w < b.w;
+        return a.d < b.d;
     }
 };
 
@@ -28,13 +29,13 @@ void Union(int u, int v, vector<int>& p)
     p[v] = u;
 }
 
-int MinCost(int n, vector<Edge>& edges)
+int MinMeetingRoute(int n, vector<Edge>& edges)
 {
     sort(edges.begin(), edges.end());
 
-    vector<int> p(n + 1, -1);
-
+    vector<int> p(n, -1);
     int result = 0;
+    int cnt = 0;
     for (Edge& edge : edges)
     {
         int u = Find(edge.u, p);
@@ -44,41 +45,39 @@ int MinCost(int n, vector<Edge>& edges)
             continue;
 
         Union(u, v, p);
-        result += edge.w;
+        result += edge.d;
+        cnt++;
+
+        if (cnt == n - 1)
+            return result;
     }
-    return result;
+    return -1;
 }
 
 int main()
 {
     FastIO;
 
-    int n;
-    cin >> n;
+    int n, m;
+    cin >> n >> m;
+
+    vector<char> g(n);
+    for (int i = 0; i < n; i++)
+        cin >> g[i];
 
     vector<Edge> edges;
-    for (int u = 1; u <= n; u++)
+    for (int i = 0; i < m; i++)
     {
-        int w;
-        cin >> w;
+        int u, v, d;
+        cin >> u >> v >> d;
+        u--, v--;
 
-        edges.push_back({ 0,u,w });
+        if (g[u] == g[v])
+            continue;
+
+        edges.push_back({ u,v,d });
     }
 
-    for (int u = 1; u <= n; u++)
-    {
-        for (int v = 1; v <= n; v++)
-        {
-            int w;
-            cin >> w;
-
-            if (u >= v)
-                continue;
-
-            edges.push_back({ u,v,w });
-        }
-    }
-
-    int result = MinCost(n, edges);
+    int result = MinMeetingRoute(n, edges);
     cout << result << '\n';
 }

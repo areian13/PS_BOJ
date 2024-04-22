@@ -14,6 +14,10 @@ struct Edge
     {
         return a.w < b.w;
     }
+    friend bool operator>(const Edge& a, const Edge& b)
+    {
+        return a.w > b.w;
+    }
 };
 
 int Find(int u, vector<int>& p)
@@ -28,12 +32,14 @@ void Union(int u, int v, vector<int>& p)
     p[v] = u;
 }
 
-int MinCost(int n, vector<Edge>& edges)
+int Fatigue(bool type, int n, vector<Edge>& edges)
 {
-    sort(edges.begin(), edges.end());
+    if (type == false)
+        sort(edges.begin(), edges.end(), less<Edge>());
+    else
+        sort(edges.begin(), edges.end(), greater<Edge>());
 
-    vector<int> p(n + 1, -1);
-
+    vector<int> p(n, -1);
     int result = 0;
     for (Edge& edge : edges)
     {
@@ -46,6 +52,8 @@ int MinCost(int n, vector<Edge>& edges)
         Union(u, v, p);
         result += edge.w;
     }
+    result *= result;
+
     return result;
 }
 
@@ -53,32 +61,20 @@ int main()
 {
     FastIO;
 
-    int n;
-    cin >> n;
+    int n, m;
+    cin >> n >> m;
+    n++, m++;
 
-    vector<Edge> edges;
-    for (int u = 1; u <= n; u++)
+    vector<Edge> edges(m);
+    for (int i = 0; i < m; i++)
     {
-        int w;
-        cin >> w;
+        int u, v, w;
+        cin >> u >> v >> w;
+        w = !w;
 
-        edges.push_back({ 0,u,w });
+        edges[i] = { u,v,w };
     }
 
-    for (int u = 1; u <= n; u++)
-    {
-        for (int v = 1; v <= n; v++)
-        {
-            int w;
-            cin >> w;
-
-            if (u >= v)
-                continue;
-
-            edges.push_back({ u,v,w });
-        }
-    }
-
-    int result = MinCost(n, edges);
+    int result = Fatigue(true, n, edges) - Fatigue(false, n, edges);
     cout << result << '\n';
 }

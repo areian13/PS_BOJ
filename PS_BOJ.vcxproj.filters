@@ -25,7 +25,7 @@
     <Text Include="1. Bronze\Bronze 5\[B5] 10189 Hook.txt" />
     <Text Include="1. Bronze\Bronze 5\[B5] 11942 고려대는 사랑입니다.txt" />
     <Text Include="1. Bronze\Bronze 5\[B5] 24900 한별 찍기.txt" />
-    <Text Include="3. Gold\Gold 3\[G3] 13317 한 번 남았다 [2].txt" />
+    <Text Include="3. Gold\Gold 2\[G2] 13317 한 번 남았다 [2].txt" />
     <Text Include="3. Gold\Gold 4\[G4] 23483 Construct Points.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -2423,7 +2423,7 @@
     <ClCompile Include="3. Gold\Gold 3\[G3] 11437 LCA [2].cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="3. Gold\Gold 3\[G3] 13317 한 번 남았다 [1].cpp">
+    <ClCompile Include="3. Gold\Gold 2\[G2] 13317 한 번 남았다 [1].cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="3. Gold\Gold 3\[G3] 14427 수열과 쿼리 15.cpp">
@@ -3132,6 +3132,42 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="3. Gold\Gold 2\[G2] 01368 물대기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 2\[G2] 02350 대운하.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 4\[G4] 30797 가희와 여행가요.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 3\[G3] 10723 판게아 1.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 3\[G3] 01414 불우이웃돕기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 3\[G3] 13418 학교 탐방하기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 3\[G3] 01833 고속철도 설계하기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 3\[G3] 02406 안정적인 네트워크.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 3\[G3] 10423 전기가 부족해.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 3\[G3] 14621 나만 안되는 연애.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 3\[G3] 14950 정복자.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. Silver\Silver 3\[S3] 13171 A.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. Silver\Silver 1\[S1] 01629 곱셈.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

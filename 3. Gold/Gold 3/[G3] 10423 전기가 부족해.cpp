@@ -28,12 +28,11 @@ void Union(int u, int v, vector<int>& p)
     p[v] = u;
 }
 
-int MinCost(int n, vector<Edge>& edges)
+int MinWire(int n, vector<Edge>& edges)
 {
     sort(edges.begin(), edges.end());
 
-    vector<int> p(n + 1, -1);
-
+    vector<int> p(n, -1);
     int result = 0;
     for (Edge& edge : edges)
     {
@@ -53,32 +52,27 @@ int main()
 {
     FastIO;
 
-    int n;
-    cin >> n;
+    int n, m, k;
+    cin >> n >> m >> k;
+    n++;
 
     vector<Edge> edges;
-    for (int u = 1; u <= n; u++)
+    for (int i = 0; i < k; i++)
     {
-        int w;
-        cin >> w;
+        int v;
+        cin >> v;
 
-        edges.push_back({ 0,u,w });
+        edges.push_back({ 0,v,0 });
     }
 
-    for (int u = 1; u <= n; u++)
+    for (int i = 0; i < m; i++)
     {
-        for (int v = 1; v <= n; v++)
-        {
-            int w;
-            cin >> w;
+        int u, v, w;
+        cin >> u >> v >> w;
 
-            if (u >= v)
-                continue;
-
-            edges.push_back({ u,v,w });
-        }
+        edges.push_back({ u,v,w });
     }
 
-    int result = MinCost(n, edges);
+    int result = MinWire(n, edges);
     cout << result << '\n';
 }

@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <array>
 #include <algorithm>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
@@ -28,25 +29,33 @@ void Union(int u, int v, vector<int>& p)
     p[v] = u;
 }
 
-int MinCost(int n, vector<Edge>& edges)
+void Highway(int n, vector<Edge>& edges, vector<array<int, 2>>& result)
 {
     sort(edges.begin(), edges.end());
 
-    vector<int> p(n + 1, -1);
-
-    int result = 0;
+    vector<int> p(n, -1);
+    result.push_back({ 0,0 });
     for (Edge& edge : edges)
     {
         int u = Find(edge.u, p);
         int v = Find(edge.v, p);
 
+        if (edge.w < 0)
+            result[0][0] += -edge.w;
+
         if (u == v)
             continue;
 
         Union(u, v, p);
-        result += edge.w;
+
+        if (edge.w > 0)
+        {
+            result[0][0] += edge.w;
+
+            result[0][1]++;
+            result.push_back({ edge.u + 1,edge.v + 1 });
+        }
     }
-    return result;
 }
 
 int main()
@@ -57,17 +66,9 @@ int main()
     cin >> n;
 
     vector<Edge> edges;
-    for (int u = 1; u <= n; u++)
+    for (int u = 0; u < n; u++)
     {
-        int w;
-        cin >> w;
-
-        edges.push_back({ 0,u,w });
-    }
-
-    for (int u = 1; u <= n; u++)
-    {
-        for (int v = 1; v <= n; v++)
+        for (int v = 0; v < n; v++)
         {
             int w;
             cin >> w;
@@ -79,6 +80,9 @@ int main()
         }
     }
 
-    int result = MinCost(n, edges);
-    cout << result << '\n';
+    vector<array<int, 2>> result;
+    Highway(n, edges, result);
+
+    for (array<int, 2>& x : result)
+        cout << x[0] << ' ' << x[1] << '\n';
 }
