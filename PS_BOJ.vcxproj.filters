@@ -3266,6 +3266,33 @@
     <ClCompile Include="3. Gold\Gold 5\[G5] 17396 백도어.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="3. Gold\Gold 5\[G5] 20168 골목 대장 호석 - 기능성.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 4\[G4] 12441 약속장소 정하기 %28Small%29.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 4\[G4] 12442 약속장소 정하기 %28Large%29.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 4\[G4] 12786 INHA SUIT.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 5\![P5] 13308 주유소.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 4\[G4] 12834 주간 미팅.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 4\[G4] 13424 비밀 모임.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. Silver\Silver 2\[S2] 18352 특정 거리의 도시 찾기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 4\[G4] 14497 주난의 난%28難%29.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="0. Unrated\[U0] 27903 인생.bf" />
