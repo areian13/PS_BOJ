@@ -446,10 +446,10 @@
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 05789 한다 안한다.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 3\[B3] 06251 Leaking Dike [1].cpp">
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 06251 Leaking Dike [1].cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 3\[B3] 06251 Leaking Dike [2].cpp">
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 06251 Leaking Dike [2].cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 06438 Reverse Text.cpp">
@@ -3330,6 +3330,9 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="3. Gold\Gold 3\[G3] 12913 매직 포션.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 3\[G3] 09694 무엇을 아느냐가 아니라 누구를 아느냐가 문제다.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

@@ -756,10 +756,10 @@
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 05789 한다 안한다.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 3\[B3] 06251 Leaking Dike [1].cpp">
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 06251 Leaking Dike [1].cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 3\[B3] 06251 Leaking Dike [2].cpp">
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 06251 Leaking Dike [2].cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 06438 Reverse Text.cpp">
@@ -2802,6 +2802,7 @@
     <ClCompile Include="3. Gold\Gold 3\[G3] 09466 텀 프로젝트.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="3. Gold\Gold 3\[G3] 09694 무엇을 아느냐가 아니라 누구를 아느냐가 문제다.cpp" />
     <ClCompile Include="3. Gold\Gold 3\[G3] 10021 Watering the Fields.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -2823,7 +2824,9 @@
     <ClCompile Include="3. Gold\Gold 2\[G2] 13317 한 번 남았다 [1].cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="3. Gold\Gold 3\[G3] 12913 매직 포션.cpp" />
+    <ClCompile Include="3. Gold\Gold 3\[G3] 12913 매직 포션.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="3. Gold\Gold 3\[G3] 13418 학교 탐방하기.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
