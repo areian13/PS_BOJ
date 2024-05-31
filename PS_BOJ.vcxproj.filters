@@ -3200,10 +3200,10 @@
     <ClCompile Include="3. Gold\Gold 2\[G2] 23743 방탈출.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="temp\2024 POSTECH Programming Contest Open Contest\A번 - 글로벌 포닉스.cpp">
+    <ClCompile Include="Contest\2024 POSTECH Programming Contest Open Contest\A번 - 글로벌 포닉스.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="temp\2024 POSTECH Programming Contest Open Contest\B번 - 예비 소집 결과 보고서.cpp">
+    <ClCompile Include="Contest\2024 POSTECH Programming Contest Open Contest\B번 - 예비 소집 결과 보고서.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="3. Gold\Gold 2\[G2] 28473 도로 위의 표지판.cpp">
@@ -3224,10 +3224,10 @@
     <ClCompile Include="3. Gold\Gold 1\[G1] 20390 완전그래프의 최소 스패닝 트리.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="temp\2024 부산대학교 프로그래밍 대회 %28PNUPC%29 - Open Contest\A번 - 모험의 시작.cpp">
+    <ClCompile Include="Contest\2024 부산대학교 프로그래밍 대회 %28PNUPC%29 - Open Contest\A번 - 모험의 시작.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="temp\2024 부산대학교 프로그래밍 대회 (PNUPC) - Open Contest\B번 - 아~파트 아파트.cpp">
+    <ClCompile Include="Contest\2024 부산대학교 프로그래밍 대회 %28PNUPC%29 - Open Contest\B번 - 아~파트 아파트.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="3. Gold\Gold 1\[G1] 28019 산지니의 여행계획.cpp">
@@ -3239,7 +3239,7 @@
     <ClCompile Include="4. Platinum\Platinum 5\[P5] 14574 헤븐스 키친.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="temp\DSPC 2024 Open Contest\A번 - 단원평가.cpp">
+    <ClCompile Include="Contest\DSPC 2024 Open Contest\A번 - 단원평가.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="4. Platinum\Platinum 5\[P5] 23034 조별과제 멈춰!.cpp">
@@ -3314,13 +3314,13 @@
     <ClCompile Include="3. Gold\Gold 3\[G3] 02158 산악자전거.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="temp\2024 서강대학교 K512컵 Open Contest\A번 - K512컵 개최!.cpp">
+    <ClCompile Include="Contest\2024 서강대학교 K512컵 Open Contest\A번 - K512컵 개최!.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="temp\2024 서강대학교 K512컵 Open Contest\B번 - K512에 바이러스 퍼뜨리기.cpp">
+    <ClCompile Include="Contest\2024 서강대학교 K512컵 Open Contest\B번 - K512에 바이러스 퍼뜨리기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="temp\2024 아주대학교 프로그래밍 경시대회 APC - Open Contest\A번 - 이 대회는 이제 제 겁니다.cpp">
+    <ClCompile Include="Contest\2024 아주대학교 프로그래밍 경시대회 APC - Open Contest\A번 - 이 대회는 이제 제 겁니다.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="3. Gold\Gold 3\[G3] 06087 레이저 통신.cpp">
@@ -3333,6 +3333,15 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="3. Gold\Gold 3\[G3] 09694 무엇을 아느냐가 아니라 누구를 아느냐가 문제다.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 3\[G3] 14221 편의점.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 3\[G3] 14431 소수마을.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 3\[G3] 14618 총깡 총깡.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

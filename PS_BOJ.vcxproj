@@ -2802,7 +2802,9 @@
     <ClCompile Include="3. Gold\Gold 3\[G3] 09466 텀 프로젝트.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="3. Gold\Gold 3\[G3] 09694 무엇을 아느냐가 아니라 누구를 아느냐가 문제다.cpp" />
+    <ClCompile Include="3. Gold\Gold 3\[G3] 09694 무엇을 아느냐가 아니라 누구를 아느냐가 문제다.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="3. Gold\Gold 3\[G3] 10021 Watering the Fields.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -2830,7 +2832,16 @@
     <ClCompile Include="3. Gold\Gold 3\[G3] 13418 학교 탐방하기.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="3. Gold\Gold 3\[G3] 14221 편의점.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="3. Gold\Gold 3\[G3] 14427 수열과 쿼리 15.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 3\[G3] 14431 소수마을.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 3\[G3] 14618 총깡 총깡.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="3. Gold\Gold 3\[G3] 14621 나만 안되는 연애.cpp">
@@ -3445,28 +3456,28 @@
     <ClCompile Include="2. Silver\Silver 5\[S5] 31738 매우 어려운 문제.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="temp\2024 POSTECH Programming Contest Open Contest\A번 - 글로벌 포닉스.cpp">
+    <ClCompile Include="Contest\2024 POSTECH Programming Contest Open Contest\A번 - 글로벌 포닉스.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="temp\2024 POSTECH Programming Contest Open Contest\B번 - 예비 소집 결과 보고서.cpp">
+    <ClCompile Include="Contest\2024 POSTECH Programming Contest Open Contest\B번 - 예비 소집 결과 보고서.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="temp\2024 부산대학교 프로그래밍 대회 %28PNUPC%29 - Open Contest\A번 - 모험의 시작.cpp">
+    <ClCompile Include="Contest\2024 부산대학교 프로그래밍 대회 %28PNUPC%29 - Open Contest\A번 - 모험의 시작.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="temp\2024 부산대학교 프로그래밍 대회 (PNUPC) - Open Contest\B번 - 아~파트 아파트.cpp">
+    <ClCompile Include="Contest\2024 부산대학교 프로그래밍 대회 %28PNUPC%29 - Open Contest\B번 - 아~파트 아파트.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="temp\2024 서강대학교 K512컵 Open Contest\A번 - K512컵 개최!.cpp">
+    <ClCompile Include="Contest\2024 서강대학교 K512컵 Open Contest\A번 - K512컵 개최!.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="temp\2024 서강대학교 K512컵 Open Contest\B번 - K512에 바이러스 퍼뜨리기.cpp">
+    <ClCompile Include="Contest\2024 서강대학교 K512컵 Open Contest\B번 - K512에 바이러스 퍼뜨리기.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="temp\2024 아주대학교 프로그래밍 경시대회 APC - Open Contest\A번 - 이 대회는 이제 제 겁니다.cpp">
+    <ClCompile Include="Contest\2024 아주대학교 프로그래밍 경시대회 APC - Open Contest\A번 - 이 대회는 이제 제 겁니다.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="temp\DSPC 2024 Open Contest\A번 - 단원평가.cpp">
+    <ClCompile Include="Contest\DSPC 2024 Open Contest\A번 - 단원평가.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
   </ItemGroup>
