@@ -3344,6 +3344,36 @@
     <ClCompile Include="3. Gold\Gold 3\[G3] 14618 총깡 총깡.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Contest\2024 SCSC 서울대학교 프로그래밍 경시대회 Open Contest\A번 - 정육면체의 네 꼭짓점.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Contest\2024 SCSC 서울대학교 프로그래밍 경시대회 Open Contest\!B번 - 로그프레소 마에스트로.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 3\[G3] 17270 연예인은 힘들어.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 3\[G3] 14630 변신로봇.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 3\[G3] 20160 야쿠르트 아줌마 야쿠르트 주세요.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 3\[G3] 20182 골목 대장 호석 - 효율성 1.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 3\[G3] 01022 소용돌이 예쁘게 출력하기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 3\[G3] 20313 출퇴근.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 3\[G3] 23030 후다다닥을 이겨 츄르를 받자!.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 3\[G3] 23286 허들 넘기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="0. Unrated\[U0] 27903 인생.bf" />
