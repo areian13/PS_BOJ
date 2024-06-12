@@ -80,6 +80,7 @@ int main()
             MinMaxHurdle(u, dists[u], graph);
             isCalculated[u] = true;
         }
+
         int result = (dists[u][v] == INT_MAX ? -1 : dists[u][v]);
         cout << result << '\n';
     }
