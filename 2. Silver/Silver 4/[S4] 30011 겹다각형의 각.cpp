@@ -5,6 +5,16 @@
 
 using namespace std;
 
+int SumFoldygon(vector<int>& a)
+{
+    int n = a.size();
+
+    int result = 0;
+    for (int i = 0; i < n; i++)
+        result += 180 * (i == 0 ? a[i] - 2 : a[i]);
+    return result;
+}
+
 int main()
 {
     FastIO;
@@ -12,12 +22,10 @@ int main()
     int n;
     cin >> n;
 
-    vector<long long> station(n);
+    vector<int> a(n);
     for (int i = 0; i < n; i++)
-        cin >> station[i];
+        cin >> a[i];
 
-    long long result = 0;
-    for (int i = 0; i < n - 1; i++)
-        result += (station[i + 1] - station[i]) * (station[i + 1] - station[i]);
+    int result = SumFoldygon(a);
     cout << result << '\n';
 }

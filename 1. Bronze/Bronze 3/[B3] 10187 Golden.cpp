@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <cmath>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
 
@@ -7,9 +8,9 @@ using namespace std;
 
 #define フ 1.61803399
 
-bool IsGoldenRatio(double a, double b)
+bool IsGoldenRatio(double r)
 {
-    return fabs(フ - (a / b)) / フ * 100 <= 1;
+    return fabs(フ - r) / フ * 100 <= 1;
 }
 
 int main()
@@ -24,7 +25,7 @@ int main()
         double a, b;
         cin >> a >> b;
 
-        string result = IsGoldenRatio(a, b) ? "golden" : "not";
+        string result = IsGoldenRatio(a / b) ? "golden" : "not";
         cout << result << '\n';
     }
 }

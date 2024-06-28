@@ -1,8 +1,7 @@
 #include <iostream>
-#include <random>
-#include <unordered_map>
 #include <vector>
 #include <string>
+#include <algorithm>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
 #define lf(d) cout << fixed; cout.precision(d);
@@ -10,53 +9,75 @@
 
 using namespace std;
 
-#define COUNT 100
-
-double getRand(vector<double>& g)
+struct Grade
 {
-    random_device rd;
-    mt19937 gen(rd());
+    string id;
 
-    double lower_bound = g[0];
-    double upper_bound = g[1];
-    double midpoint = (lower_bound + upper_bound) / 2.0;
-    double slope = 2.0 / (upper_bound - lower_bound);
+    int n = 4;
+    vector<double> s;
 
-    uniform_real_distribution<> distr(0.0, 1.0);
+    double score = 0;
 
-    double rand_prob = distr(gen);
+    static vector<double> maxScore;
+    static vector<double> c;
 
-    double randomValue;
-    if (rand_prob <= 0.5) {
-        randomValue = lower_bound + (midpoint - lower_bound) * sqrt(rand_prob / 0.5);
-    }
-    else {
-        randomValue = midpoint + (upper_bound - midpoint) * sqrt((1.0 - rand_prob) / 0.5);
+    Grade(string id, vector<double> s)
+    {
+        this->id = id;
+        this->s = s;
     }
 
-    return randomValue;
-}
+    static void SetMaxScoreAndCoef(vector<double> maxScore, vector<double> c)
+    {
+        Grade::maxScore = maxScore;
+        Grade::c = c;
+    }
+
+    double Score()
+    {
+        double result = 0;
+        for (int i = 0; i < n; i++)
+            result += (s[i] / maxScore[i]) * c[i];
+        this->score = result * 100;
+        return result * 100;
+    }
+
+    friend bool operator>(const Grade& a, const Grade& b)
+    {
+        return a.score > b.score;
+    }
+};
+
+vector<double> Grade::maxScore;
+vector<double> Grade::c;
 
 int main()
 {
     FastIO;
 
-    vector<string> names = { "setosa","versicolor","virginica" };
-    unordered_map<string, vector<vector<double>>> gyesu;
-    gyesu[names[0]] = { { 4.4,5.5 },{ 2.9,4.2 },{ 1.0,1.7 },{ 0.1,0.5 } };
-    gyesu[names[1]] = { { 4.9,7.0 },{ 2.3,3.2 },{ 3.3,5.1 },{ 1.0,1.8 } };
-    gyesu[names[2]] = { { 4.9,7.7 },{ 2.5,3.8 },{ 4.8,6.4 },{ 1.6,2.5 } };
+    Grade::SetMaxScoreAndCoef(
+        { 195, 100, 300, 100 },
+        { 0.4, 0.3, 0.2, 0.1 }
+    );
+    lf(3);
 
-    for (string& name : names)
+    vector<Grade> grades;
+    while (true)
     {
-        for (int i = 0; i < COUNT; i++)
-        {
-            double a = getRand(gyesu[name][0]);
-            double b = getRand(gyesu[name][1]);
-            double c = getRand(gyesu[name][2]);
-            double d = getRand(gyesu[name][3]);
+        string id;
+        double m1, m2, f, p1, p2, p3;
+        cin >> id >> m1 >> m2 >> f >> p1 >> p2 >> p3;
 
-            printf("%.1lf,%.1lf,%.1lf,%.1lf,%s\n", a, b, c, d, name.c_str());
-        }
+        if (cin.eof())
+            break;
+
+        Grade grade(id, { m1 + m2,f,p1 + p2 + p3,100 });
+        grade.Score();
+        grades.push_back(grade);
     }
+
+    sort(grades.begin(), grades.end(), greater<Grade>());
+    int rank = 0;
+    for (Grade& grade : grades)
+        cout << ++rank << ' ' << grade.id << ' ' << grade.score << '\n';
 }
