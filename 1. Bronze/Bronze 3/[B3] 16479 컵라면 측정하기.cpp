@@ -16,7 +16,7 @@ int main()
 
     double x = (d1 - d2) / 2;
     
-    double result = k * k - x * x;
     lf(6);
+    double result = k * k - x * x;
     cout << result << '\n';
 }
