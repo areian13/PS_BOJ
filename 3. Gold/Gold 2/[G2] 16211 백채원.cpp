@@ -9,8 +9,7 @@ using namespace std;
 
 struct Edge
 {
-    int v;
-    long long w;
+    int v, w;
 
     friend bool operator<(const Edge& a, const Edge& b)
     {
@@ -18,7 +17,8 @@ struct Edge
     }
 };
 
-void Dijkstra(vector<int>& s, vector<long long>& dist, vector<vector<Edge>>& graph)
+void Dijkstra(vector<int>& s, vector<int>& dist,
+    vector<int>& max, vector<vector<Edge>>& graph)
 {
     int n = graph.size();
 
@@ -32,7 +32,7 @@ void Dijkstra(vector<int>& s, vector<long long>& dist, vector<vector<Edge>>& gra
     while (!PQ.empty())
     {
         int u = PQ.top().v;
-        long long w = PQ.top().w;
+        int w = PQ.top().w;
         PQ.pop();
 
         if (dist[u] < w)
@@ -41,9 +41,9 @@ void Dijkstra(vector<int>& s, vector<long long>& dist, vector<vector<Edge>>& gra
         for (Edge& edge : graph[u])
         {
             int v = edge.v;
-            long long nw = w + edge.w;
+            int nw = w + edge.w;
 
-            if (dist[v] <= nw)
+            if (dist[v] <= nw || max[v] <= nw)
                 continue;
 
             dist[v] = nw;
@@ -52,13 +52,13 @@ void Dijkstra(vector<int>& s, vector<long long>& dist, vector<vector<Edge>>& gra
     }
 }
 
-void GetCanGo(vector<long long>& pDist, vector<long long>& cDist, vector<int>& result)
+void GetCanGo(vector<int>& pDist, vector<int>& result)
 {
     int n = pDist.size();
 
     for (int i = 1; i < n; i++)
     {
-        if (pDist[i] < cDist[i])
+        if (pDist[i] != INT_MAX)
             result.push_back(i);
     }
     if (result.empty())
@@ -83,10 +83,6 @@ int main()
         graph[v].push_back({ u,w });
     }
 
-    vector<int> p(1, 0);
-    vector<long long> pDist(n, LLONG_MAX);
-    Dijkstra(p, pDist, graph);
-
     vector<int> c(k);
     for (int i = 0; i < k; i++)
     {
@@ -94,11 +90,14 @@ int main()
         c[i]--;
     }
 
-    vector<long long> cDist(n, LLONG_MAX);
-    Dijkstra(c, cDist, graph);
+    vector<int> cDist(n, INT_MAX), pDist(n, INT_MAX);
+    Dijkstra(c, cDist, pDist, graph);
+
+    vector<int> p(1, 0);
+    Dijkstra(p, pDist, cDist, graph);
 
     vector<int> result;
-    GetCanGo(pDist, cDist, result);
+    GetCanGo(pDist, result);
 
     for (int x : result)
         cout << x + 1 << ' ';
