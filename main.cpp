@@ -51,9 +51,18 @@ struct Grade
 vector<double> Grade::maxScore;
 vector<double> Grade::c;
 
+struct student
+{
+    int id;
+    char name[10];
+    double score;
+} s1;
+
 int main()
 {
     FastIO;
+
+    cout << sizeof(s1) << '\n';
 
     Grade::SetMaxScoreAndCoef(
         { 195, 100, 300, 100 },
