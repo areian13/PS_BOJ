@@ -6,27 +6,46 @@
 
 using namespace std;
 
-string DecConversion(string n, int fd, int td)
-{
-    static string d16 = "0123456789ABCDEF";
+#define SIZE 7
 
-    long long d10 = stoll(n, nullptr, fd);
+int ctoi(char c)
+{
+    if (('0' <= c && c <= '9'))
+        return c - '0';
+    return c - 'A' + 10;
+}
+
+char itoc(int n)
+{
+    if (0 <= n && n <= 9)
+        return n + '0';
+    return n - 10 + 'A';
+}
+
+int BaseToDec(string& n, int b)
+{
+    int result = 0;
+    int d = n.size();
+    int k = 1;
+    for (int i = d - 1; i >= 0; i--)
+    {
+        result += ctoi(n[i]) * k;
+        k *= b;
+    }
+    return result;
+}
+
+string DecToBase(int n, int b)
+{
     string result = "";
     do
     {
-        result += d16[d10 % td];
-        d10 /= td;
-    } while (d10 > 0);
-
-    int k = result.size();
-    if (k > 7)
-    {
-        result = "RORRE";
-        k = result.size();
-    }
-    result += string(7 - k, ' ');
+        result += itoc(n % b);
+        n /= b;
+    } while (n > 0);
 
     reverse(result.begin(), result.end());
+
     return result;
 }
 
@@ -43,7 +62,11 @@ int main()
         if (cin.eof())
             break;
 
-        string result = DecConversion(n, fd, td);
-        cout << result << '\n';
+        string result = DecToBase(BaseToDec(n, fd), td);
+
+        if (result.size() > SIZE)
+            result = "ERROR";
+
+        cout << string(SIZE - result.size(), ' ') << result << '\n';
     }
 }

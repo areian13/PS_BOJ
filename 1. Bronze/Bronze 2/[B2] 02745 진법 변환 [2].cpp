@@ -12,14 +12,14 @@ int ctoi(char c)
     return c - 'A' + 10;
 }
 
-int ConvertBaseTo10(string& str, int b)
+int BaseToDec(string& n, int b)
 {
     int result = 0;
-    int d = str.size();
+    int d = n.size();
     int k = 1;
-    for (int i = 0; i < d; i++)
+    for (int i = d - 1; i >= 0; i--)
     {
-        result += ctoi(str[d - i - 1]) * k;
+        result += ctoi(n[i]) * k;
         k *= b;
     }
     return result;
@@ -33,7 +33,6 @@ int main()
     int b;
     cin >> n >> b;
 
-    // 물론 stl 함수를 아는 것도 중요하지만 직접 구현할 줄 알아야지.
-    int result = ConvertBaseTo10(n, b);
+    int result = BaseToDec(n, b);
     cout << result << '\n';
 }

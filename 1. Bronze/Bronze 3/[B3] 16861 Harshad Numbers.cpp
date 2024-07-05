@@ -1,5 +1,4 @@
 #include <iostream>
-#include <string>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
 
@@ -7,13 +6,21 @@ using namespace std;
 
 bool IsHarshad(int n)
 {
-    string sNum = to_string(n);
-    int d = sNum.size();
-
     int sum = 0;
-    for (int i = 0; i < d; i++)
-        sum += (sNum[i] - '0');
+    int k = n;
+    while (k > 0)
+    {
+        sum += k % 10;
+        k /= 10;
+    }
     return (n % sum == 0);
+}
+
+int Harshad(int n)
+{
+    while (!IsHarshad(n))
+        n++;
+    return n;
 }
 
 int main()
@@ -23,9 +30,6 @@ int main()
     int n;
     cin >> n;
 
-    int result = n;
-    while (!IsHarshad(result))
-        result++;
-
+    int result = Harshad(n);
     cout << result << '\n';
 }

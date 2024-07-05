@@ -13,14 +13,15 @@ char itoc(int n)
     return n - 10 + 'A';
 }
 
-string Convert10ToBase(int n, int b)
+string DecToBase(int n, int b)
 {
     string result = "";
-    while (n > 0)
+    do
     {
         result += itoc(n % b);
         n /= b;
-    }
+    } while (n > 0);
+
     reverse(result.begin(), result.end());
 
     return result;
@@ -33,6 +34,6 @@ int main()
     int n, b;
     cin >> n >> b;
 
-    string result = Convert10ToBase(n, b);
+    string result = DecToBase(n, b);
     cout << result << '\n';
 }
