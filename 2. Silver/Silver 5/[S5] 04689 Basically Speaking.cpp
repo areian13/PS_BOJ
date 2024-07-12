@@ -49,6 +49,14 @@ string DecToBase(int n, int b)
     return result;
 }
 
+string Convert(string n, int fd, int td)
+{
+    string result = DecToBase(BaseToDec(n, fd), td);
+    if (result.size() > SIZE)
+        result = "ERROR";
+    return string(SIZE - result.size(), ' ') + result;
+}
+
 int main()
 {
     FastIO;
@@ -62,11 +70,7 @@ int main()
         if (cin.eof())
             break;
 
-        string result = DecToBase(BaseToDec(n, fd), td);
-
-        if (result.size() > SIZE)
-            result = "ERROR";
-
-        cout << string(SIZE - result.size(), ' ') << result << '\n';
+        string result = Convert(n, fd, td);
+        cout << result << '\n';
     }
 }

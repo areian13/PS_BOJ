@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <climits>
 #include <queue>
 #include <array>
 
@@ -22,33 +23,6 @@ struct Pos
     int y, x;
 };
 
-bool CanMove(int& y, int& x, int& d, queue<Pos>& Q, vector<vector<int>>& map)
-{
-    int n = map.size();
-
-    y += dy[d];
-    x += dx[d];
-
-    if (y < 0 || y >= n || x < 0 || x >= n)
-        return false;
-    if (map[y][x] == State::SNAKE)
-        return false;
-
-    if (map[y][x] != State::APPLE)
-    {
-        int ry = Q.front().y;
-        int rx = Q.front().x;
-        Q.pop();
-
-        map[ry][rx] = State::EMPTY;
-    }
-
-    map[y][x] = State::SNAKE;
-    Q.push({ y,x });
-
-    return true;
-}
-
 int Dummy(vector<pair<int, char>>& cmds, vector<vector<int>>& map)
 {
     int n = map.size();
@@ -69,16 +43,30 @@ int Dummy(vector<pair<int, char>>& cmds, vector<vector<int>>& map)
         {
             result++;
 
-            if (!CanMove(y, x, d, Q, map))
+            y += dy[d];
+            x += dx[d];
+
+            if (y < 0 || y >= n || x < 0 || x >= n)
                 return result;
+            if (map[y][x] == State::SNAKE)
+                return result;
+
+            if (map[y][x] != State::APPLE)
+            {
+                int ry = Q.front().y;
+                int rx = Q.front().x;
+                Q.pop();
+
+                map[ry][rx] = State::EMPTY;
+            }
+
+            map[y][x] = State::SNAKE;
+            Q.push({ y,x });
         }
 
         d = (d + (cmd.second == 'D' ? 1 : 3)) % 4;
     }
 
-    while (CanMove(y, x, d, Q, map))
-        result++;
-    result++;
     return result;
 }
 
@@ -102,9 +90,10 @@ int main()
     int l;
     cin >> l;
 
-    vector<pair<int, char>> cmds(l);
+    vector<pair<int, char>> cmds(l + 1);
     for (auto& cmd : cmds)
         cin >> cmd.first >> cmd.second;
+    cmds[l] = { INT_MAX,'E' };
 
     int result = Dummy(cmds, map);
     cout << result << '\n';

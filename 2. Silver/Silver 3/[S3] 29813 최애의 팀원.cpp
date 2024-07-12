@@ -11,6 +11,24 @@ struct Student
     int id;
 };
 
+string LastStudent(queue<Student>& Q)
+{
+    while (Q.size() > 1)
+    {
+        Student stu = Q.front();
+        Q.pop();
+
+        for (int i = 0; i < stu.id - 1; i++)
+        {
+            Q.push(Q.front());
+            Q.pop();
+        }
+        Q.pop();
+    }
+
+    return Q.front().name;
+}
+
 int main()
 {
     FastIO;
@@ -28,19 +46,6 @@ int main()
         Q.push({ name,id });
     }
 
-    while (Q.size() > 1)
-    {
-        Student stu = Q.front();
-        Q.pop();
-
-        for (int i = 0; i < stu.id - 1; i++)
-        {
-            Q.push(Q.front());
-            Q.pop();
-        }
-        Q.pop();
-    }
-
-    string result = Q.front().name;
+    string result = LastStudent(Q);
     cout << result << '\n';
 }

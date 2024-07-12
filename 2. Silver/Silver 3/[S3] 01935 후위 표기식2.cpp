@@ -19,18 +19,8 @@ double Calc(double a, double b, char op)
     return a / b;
 }
 
-int main()
+double CalcPostfix(string& e, vector<int>& a)
 {
-    FastIO;
-
-    int n;
-    string e;
-    cin >> n >> e;
-
-    vector<int> a(n);
-    for (int i = 0; i < n; i++)
-        cin >> a[i];
-
     stack<double> S;
     for (char c : e)
     {
@@ -47,7 +37,22 @@ int main()
         }
     }
 
+    return S.top();
+}
+
+int main()
+{
+    FastIO;
+
+    int n;
+    string e;
+    cin >> n >> e;
+
+    vector<int> a(n);
+    for (int i = 0; i < n; i++)
+        cin >> a[i];
+
     lf(2);
-    double result = S.top();
+    double result = CalcPostfix(e, a);
     cout << result << '\n';
 }

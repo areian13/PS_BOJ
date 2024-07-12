@@ -9,7 +9,7 @@ int Pow(int a, int b, int c)
     if (b == 1)
         return a % c;
 
-    long long result = Pow(a, b / 2, c) % c;
+    long long result = Pow(a, b / 2, c);
     result *= result;
     result %= c;
 

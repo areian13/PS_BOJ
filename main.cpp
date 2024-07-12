@@ -1,92 +1,59 @@
 #include <iostream>
 #include <vector>
-#include <string>
-#include <algorithm>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
-#define lf(d) cout << fixed; cout.precision(d);
-#define ulf() cout.unsetf(ios::scientific);
 
 using namespace std;
 
-struct Grade
+void Print(vector<int>& arr)
 {
-    string id;
+    for (int x : arr)
+        cout << x << ' ';
+    cout << '\n';
+}
 
-    int n = 4;
-    vector<double> s;
-
-    double score = 0;
-
-    static vector<double> maxScore;
-    static vector<double> c;
-
-    Grade(string id, vector<double> s)
-    {
-        this->id = id;
-        this->s = s;
-    }
-
-    static void SetMaxScoreAndCoef(vector<double> maxScore, vector<double> c)
-    {
-        Grade::maxScore = maxScore;
-        Grade::c = c;
-    }
-
-    double Score()
-    {
-        double result = 0;
-        for (int i = 0; i < n; i++)
-            result += (s[i] / maxScore[i]) * c[i];
-        this->score = result * 100;
-        return result * 100;
-    }
-
-    friend bool operator>(const Grade& a, const Grade& b)
-    {
-        return a.score > b.score;
-    }
-};
-
-vector<double> Grade::maxScore;
-vector<double> Grade::c;
-
-struct student
+void Merge(int start, int mid, int end, vector<int>& arr, bool order)
 {
-    int id;
-    char name[10];
-    double score;
-} s1;
+    int n = end - start + 1;
+    vector<int> temp(n);
+
+    int l = start;
+    int r = mid + 1;
+    int t = 0;
+    while (l <= mid && r <= end)
+        temp[t++] = (order ^ (arr[l] <= arr[r])) ? arr[l++] : arr[r++];
+
+    int s = (l <= mid ? l : r);
+    int e = (l <= mid ? mid : end);
+    for (int i = s; i <= e; i++)
+        temp[t++] = arr[i];
+
+    for (int i = start; i <= end; i++)
+        arr[i] = temp[i - start];
+}
+
+void MergeSort(int start, int end, vector<int>& arr, bool order = 0)
+{
+    if (start == end)
+        return;
+
+    int mid = (start + end) / 2;
+    MergeSort(start, mid, arr, order);
+    MergeSort(mid + 1, end, arr, order);
+    Merge(start, mid, end, arr, order);
+}
 
 int main()
 {
     FastIO;
 
-    cout << sizeof(s1) << '\n';
+    vector<int> arr, temp = { 2,6,4,3,7,8,1,9,5,0 };
 
-    Grade::SetMaxScoreAndCoef(
-        { 195, 100, 300, 100 },
-        { 0.4, 0.3, 0.2, 0.1 }
-    );
-    lf(3);
+    arr = temp;
+    MergeSort(0, arr.size() - 1, arr);
+    Print(arr);
 
-    vector<Grade> grades;
-    while (true)
-    {
-        string id;
-        double m1, m2, f, p1, p2, p3;
-        cin >> id >> m1 >> m2 >> f >> p1 >> p2 >> p3;
-
-        if (cin.eof())
-            break;
-
-        Grade grade(id, { m1 + m2,f,p1 + p2 + p3,100 });
-        grade.Score();
-        grades.push_back(grade);
-    }
-
-    sort(grades.begin(), grades.end(), greater<Grade>());
-    int rank = 0;
-    for (Grade& grade : grades)
-        cout << ++rank << ' ' << grade.id << ' ' << grade.score << '\n';
+    arr = temp;
+    MergeSort(0, arr.size() - 1, arr, 1);
+    Print(arr);
 }
