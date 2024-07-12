@@ -8,14 +8,14 @@ int main()
 {
     FastIO;
 
-    long long n;
+    int n;
     cin >> n;
 
-    int result = 0;
-    while (n != 1)
+    if (n % 2 == 0)
     {
-        n = (n % 2 == 0 ? n / 2 : n + 1);
-        result++;
+        cout << "Alice" << '\n';
+        cout << n - 1 << '\n';
     }
-    cout << result << '\n';
+    else
+        cout << "Bob" << '\n';
 }

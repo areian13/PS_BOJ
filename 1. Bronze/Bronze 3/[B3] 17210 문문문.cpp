@@ -17,6 +17,9 @@ int main()
     else
     {
         for (int i = 2; i <= n; i++)
-            cout << (i + k + 1) % 2 << '\n';
+        {
+            int result = (i + k + 1) % 2;
+            cout << result << '\n';
+        }
     }
 }
