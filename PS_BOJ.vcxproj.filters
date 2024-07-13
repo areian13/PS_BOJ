@@ -647,7 +647,7 @@
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 16861 Harshad Numbers.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 3\[B3] 17010 Time to Decompress.cpp">
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 17010 Time to Decompress.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 17042 Elder.cpp">
@@ -659,7 +659,7 @@
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 17530 Buffoon.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 3\[B3] 17548 Greetings!.cpp">
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 17548 Greetings!.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 17588 Missing Numbers.cpp">
@@ -668,7 +668,7 @@
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 17598 Animal King Election.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 3\[B3] 17783 Breaking Branches.cpp">
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 17783 Breaking Branches.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 17869 Simple Collatz Sequence.cpp">
@@ -680,7 +680,7 @@
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 17912 License to Launch.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 3\[B3] 17924 Cooking Water.cpp">
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 17924 Cooking Water.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 18063 Jazz Enthusiast.cpp">
@@ -692,13 +692,13 @@
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 18412 文字列の反転 (Inversion of a String).cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 3\[B3] 18813 Divisionals Spelling.cpp">
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 18813 Divisionals Spelling.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 3\[B3] 18883 N M 찍기.cpp">
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 18883 N M 찍기 [1].cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 3\[B3] 18964 Questionnaire.cpp">
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 18964 Questionnaire [1].cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 19751 Fractification.cpp">
@@ -719,7 +719,7 @@
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 20017 Топот котов.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 3\[B3] 20268 Keystroke.cpp">
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 20268 Keystroke.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 20282 Game Show!.cpp">
@@ -728,7 +728,7 @@
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 20332 Divvying Up.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 3\[B3] 20336 Haughty Cuisine.cpp">
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 20336 Haughty Cuisine.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 20359 A simple task.cpp">
@@ -2405,7 +2405,7 @@
     <ClCompile Include="3. Gold\Gold 3\[G3] 04386 별자리 만들기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="3. Gold\Gold 3\[G3] 06086 최대 유량.cpp">
+    <ClCompile Include="3. Gold\Gold 3\[G3] 06086 최대 유량 [1].cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="3. Gold\Gold 3\[G3] 07579 앱.cpp">
@@ -3579,6 +3579,18 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="3. Gold\Gold 2\[G2] 22255 호석사우루스.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 18883 N M 찍기 [2].cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 18964 Questionnaire [2].txt">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 5\![P5] 01702 고속도로.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 3\[G3] 06086 최대 유량 [2].cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

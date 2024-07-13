@@ -286,6 +286,12 @@
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 18247 겨울왕국 티켓 예매.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 18883 N M 찍기 [2].cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 18964 Questionnaire [2].txt">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 23972 악마의 제안.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -1042,7 +1048,7 @@
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 16861 Harshad Numbers.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 3\[B3] 17010 Time to Decompress.cpp">
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 17010 Time to Decompress.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 17042 Elder.cpp">
@@ -1054,7 +1060,7 @@
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 17530 Buffoon.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 3\[B3] 17548 Greetings!.cpp">
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 17548 Greetings!.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 17588 Missing Numbers.cpp">
@@ -1063,7 +1069,7 @@
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 17598 Animal King Election.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 3\[B3] 17783 Breaking Branches.cpp">
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 17783 Breaking Branches.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 17869 Simple Collatz Sequence.cpp">
@@ -1075,7 +1081,7 @@
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 17912 License to Launch.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 3\[B3] 17924 Cooking Water.cpp">
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 17924 Cooking Water.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 18063 Jazz Enthusiast.cpp">
@@ -1087,13 +1093,13 @@
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 18412 文字列の反転 (Inversion of a String).cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 3\[B3] 18813 Divisionals Spelling.cpp">
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 18813 Divisionals Spelling.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 3\[B3] 18883 N M 찍기.cpp">
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 18883 N M 찍기 [1].cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 3\[B3] 18964 Questionnaire.cpp">
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 18964 Questionnaire [1].cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 19751 Fractification.cpp">
@@ -1114,7 +1120,7 @@
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 20017 Топот котов.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 3\[B3] 20268 Keystroke.cpp">
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 20268 Keystroke.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 20282 Game Show!.cpp">
@@ -1123,7 +1129,7 @@
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 20332 Divvying Up.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 3\[B3] 20336 Haughty Cuisine.cpp">
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 20336 Haughty Cuisine.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 20359 A simple task.cpp">
@@ -2626,7 +2632,12 @@
     <ClCompile Include="3. Gold\Gold 2\[G2] 20926 얼음 미로.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="3. Gold\Gold 2\[G2] 22255 호석사우루스.cpp" />
+    <ClCompile Include="3. Gold\Gold 2\[G2] 22255 호석사우루스.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 3\[G3] 06086 최대 유량 [2].cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="3. Gold\Gold 5\[G5] 02447 별 찍기 - 10.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -2939,7 +2950,7 @@
     <ClCompile Include="3. Gold\Gold 3\[G3] 04386 별자리 만들기.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="3. Gold\Gold 3\[G3] 06086 최대 유량.cpp">
+    <ClCompile Include="3. Gold\Gold 3\[G3] 06086 최대 유량 [1].cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="3. Gold\Gold 3\[G3] 06087 레이저 통신.cpp">
@@ -3522,7 +3533,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="4. Platinum\Platinum 4\![P4] 02188 축사 배정.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="4. Platinum\Platinum 4\![P4] 12094 2048 (Hard).cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
@@ -3600,6 +3611,9 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="4. Platinum\Platinum 5\[P5] 01537 새로운 연산자.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 5\![P5] 01702 고속도로.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="4. Platinum\Platinum 5\[P5] 01725 히스토그램.cpp">
