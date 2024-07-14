@@ -2738,10 +2738,10 @@
     <ClCompile Include="4. Platinum\Platinum 3\[P3] 16915 호텔 관리.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="4. Platinum\Platinum 3\[P3] 20307 RREF.cpp">
+    <ClCompile Include="4. Platinum\Platinum 2\[P2] 20307 RREF.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="4. Platinum\Platinum 4\![P4] 02188 축사 배정.cpp">
+    <ClCompile Include="4. Platinum\Platinum 4\[P4] 02188 축사 배정.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="4. Platinum\Platinum 4\![P4] 12094 2048 (Hard).cpp">
@@ -3591,6 +3591,18 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="3. Gold\Gold 3\[G3] 06086 최대 유량 [2].cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 4\[P4] 17412 도시 왕복하기 1.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 4\[G4] 30805 사전 순 최대 공통 부분 수열.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 3\[P3] 02316 도시 왕복하기 2.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 1\[P1] 05651 완전 중요한 간선.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
