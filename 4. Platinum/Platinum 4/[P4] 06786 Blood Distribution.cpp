@@ -8,6 +8,8 @@
 
 using namespace std;
 
+#define BLOOD 8
+
 struct Edge
 {
     int v, c, f;
@@ -27,7 +29,7 @@ struct Edge
     }
 };
 
-int MaxPlate(int s, int t, vector<vector<Edge*>>& graph)
+int MaxBlood(int s, int t, vector<vector<Edge*>>& graph)
 {
     int n = graph.size();
 
@@ -72,7 +74,6 @@ int MaxPlate(int s, int t, vector<vector<Edge*>>& graph)
             path[i]->AddFLow(flow);
         result += flow;
     }
-
     return result;
 }
 
@@ -80,18 +81,56 @@ int main()
 {
     FastIO;
 
-    int n, k, d;
-    cin >> n >> k >> d;
-
-    vector<vector<Edge*>> graph(n * 2 + d + 2);
-    int s = 0;
-    int t = n * 2 + d + 1;
-    for (int u = n * 2 + 1; u <= n * 2 + d; u++)
+    vector<vector<int>> edges =
     {
-        int c;
-        cin >> c;
+        { 0,1,2,3,4,5,6,7 }, // O-
+        { 1,3,5,7 },         // O+
+        { 2,3,6,7 },         // A-
+        { 3,7 },             // A+
+        { 4,5,6,7 },         // B-
+        { 5,7 },             // B+
+        { 6,7 },             // AB-
+        { 7 }                // AB+
+    };
 
-        Edge* e1 = new Edge(t, c);
+    vector<vector<Edge*>> graph(BLOOD * 2 + 2);
+    int s = BLOOD * 2;
+    int t = s + 1;
+    for (int i = 0; i < BLOOD; i++)
+    {
+        int h;
+        cin >> h;
+
+        int u = i * 2;
+
+        Edge* e1 = new Edge(u, h);
+        Edge* e2 = new Edge(s, 0);
+        e1->rev = e2;
+        e2->rev = e1;
+        graph[s].push_back(e1);
+        graph[u].push_back(e2);
+
+        for (int v : edges[i])
+        {
+            v = v * 2 + 1;
+
+            e1 = new Edge(v, INT_MAX);
+            e2 = new Edge(u, 0);
+            e1->rev = e2;
+            e2->rev = e1;
+            graph[u].push_back(e1);
+            graph[v].push_back(e2);
+        }
+    }
+
+    for (int i = 0; i < BLOOD; i++)
+    {
+        int p;
+        cin >> p;
+
+        int u = i * 2 + 1;
+
+        Edge* e1 = new Edge(t, p);
         Edge* e2 = new Edge(u, 0);
         e1->rev = e2;
         e2->rev = e1;
@@ -99,48 +138,6 @@ int main()
         graph[t].push_back(e2);
     }
 
-    for (int i = 1; i <= n; i++)
-    {
-        int u = i * 2 - 1;
-
-        Edge* e1 = new Edge(u, INT_MAX);
-        Edge* e2 = new Edge(s, 0);
-        e1->rev = e2;
-        e2->rev = e1;
-        graph[s].push_back(e1);
-        graph[u].push_back(e2);
-
-        e1 = new Edge(u + 1, k);
-        e2 = new Edge(u, 0);
-        e1->rev = e2;
-        e2->rev = e1;
-        graph[u].push_back(e1);
-        graph[u + 1].push_back(e2);
-
-        int z;
-        cin >> z;
-
-        for (int i = 0; i < z; i++)
-        {
-            int v;
-            cin >> v;
-            v += n * 2;
-
-            e1 = new Edge(v, 1);
-            e2 = new Edge(u + 1, 0);
-            e1->rev = e2;
-            e2->rev = e1;
-            graph[u + 1].push_back(e1);
-            graph[v].push_back(e2);
-        }
-    }
-
-    int result = MaxPlate(s, t, graph);
+    int result = MaxBlood(s, t, graph);
     cout << result << '\n';
-
-    for (int u = 0; u < n * 2 + d + 2; u++)
-    {
-        for (Edge* edge : graph[u])
-            delete edge;
-    }
 }

@@ -1,90 +1,133 @@
 #include <iostream>
 #include <vector>
-#include <array>
-#include <string>
-#include <time.h>
-#include <algorithm>
-#include <stdlib.h>
-#include <math.h>
-#include <cmath>
+#include <climits>
 #include <queue>
-#include <stack>
-#include <deque>
-#include <map>
-#include <unordered_map>
-#include <set>
-#include <limits.h>
-#include <float.h>
-#include <string.h>
 
-#define Endl << "\n"
-#define endL << "\n" <<
-#define Cout cout <<
-#define	COUT cout << "OUT: " <<
-#define Cin cin >>
-#define fspc << " "
-#define spc << " " <<
-#define Enter cout << "\n"
-#define if if
-#define elif else if
-#define else else
-#define For(n) for(int i = 0; i < n; i++)
-#define Forj(n) for(int j = 0; j < n; j++)
-#define Foro(n) for(int i = 1; i <= n; i++)
-#define Forjo(n) for(int j = 1; j <= n; j++)
-#define between(small, middle, big) (small < middle && middle < big)
-#define among(small, middle, big) (small <= middle && middle <= big)
-#define stoe(container) container.begin(), container.end()
-#define lf(d) Cout fixed; cout.precision(d);
-#define ulf cout.unsetf(ios::scientific);
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
-#define PI 3.14159265359
-
-typedef long long LLONG;
-typedef unsigned long long ULLONG;
-typedef unsigned int UINT;
 
 using namespace std;
 
-template <typename T>
-class heap : public priority_queue<T, vector<T>, greater<T>>
+struct Edge
 {
+    int v, w;
+    bool canGo;
+
+    friend bool operator<(const Edge& a, const Edge& b)
+    {
+        return a.w > b.w;
+    }
 };
 
-struct Info
+int Dijkstra(int s, int t, vector<int>& dist, vector<vector<Edge>>& graph)
 {
-	int v, p;
+    int n = graph.size();
 
-	bool operator<(Info c)
-	{
-		if (p == c.p)
-			return v < c.v;
-		return p < c.p;
-	}
-};
+    dist[s] = 0;
+
+    priority_queue<Edge> PQ;
+    PQ.push({ s,0 });
+
+    while (!PQ.empty())
+    {
+        int u = PQ.top().v;
+        int w = PQ.top().w;
+        PQ.pop();
+
+        if (dist[u] < w)
+            continue;
+
+        for (Edge& edge : graph[u])
+        {
+            if (!edge.canGo)
+                continue;
+
+            int v = edge.v;
+            int nw = w + edge.w;
+
+            if (dist[v] <= nw)
+                continue;
+
+            dist[v] = nw;
+            PQ.push({ v,nw });
+        }
+    }
+
+    if (dist[t] == INT_MAX)
+        return -1;
+    return dist[t];
+}
+
+bool EraseEdge(int u, int t, vector<int>& type, vector<int>& dist, vector<vector<Edge>>& graph)
+{
+    if (u == t)
+        return type[u] = false;
+
+    int w = dist[u];
+
+    for (Edge& edge : graph[u])
+    {
+        int v = edge.v;
+        int nw = w + edge.w;
+
+        if (dist[v] < nw)
+            continue;
+
+        if (dist[v] == nw && type[v] != -1)
+        {
+            edge.canGo = type[v];
+            type[u] &= type[v];
+            continue;
+        }
+        if (!EraseEdge(v, t, type, dist, graph))
+        {
+            edge.canGo = false;
+            type[u] = type[v] = false;
+        }
+    }
+    return type[u];
+}
+
+int AlmostMinDist(int s, int t, vector<vector<Edge>>& graph)
+{
+    int n = graph.size();
+
+    vector<int> dist(n, INT_MAX);
+    int minDist = Dijkstra(s, t, dist, graph);
+    if (minDist == -1)
+        return -1;
+
+    vector<int> type(n, -1);
+    EraseEdge(s, t, type, dist, graph);
+
+    fill(dist.begin(), dist.end(), INT_MAX);
+    return Dijkstra(s, t, dist, graph);
+}
 
 int main()
 {
-	FastIO;
+    FastIO;
 
-	while (true)
-	{
-		int n, m;
-		Cin n >> m;
+    while (true)
+    {
+        int n, m;
+        cin >> n >> m;
 
-		if (n == 0 && m == 0)
-			break;
+        if (n == 0 && m == 0)
+            break;
 
-		int s, d;
-		Cin s >> d;
+        int s, t;
+        cin >> s >> t;
 
-		vector<vector<Info>> node(n);
-		For(m)
-		{
-			int from, to, dist;
-			Cin from >> to >> dist;
+        vector<vector<Edge>> graph(n);
+        for (int i = 0; i < m; i++)
+        {
+            int u, v, w;
+            cin >> u >> v >> w;
 
-			node[from].push_back({ to,dist });
-		}
-	}
+            graph[u].push_back({ v,w,true });
+        }
+
+        int result = AlmostMinDist(s, t, graph);
+        cout << result << '\n';
+    }
 }

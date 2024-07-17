@@ -1,7 +1,9 @@
 #include <iostream>
 #include <vector>
-#include <climits>
+#include <string>
+#include <sstream>
 #include <queue>
+#include <climits>
 #include <algorithm>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
@@ -20,14 +22,14 @@ struct Edge
     {
         return c - f;
     }
-    void AddFLow(int f)
+    void AddFlow(int f)
     {
         this->f += f;
         rev->f -= f;
     }
 };
 
-int MaxPlate(int s, int t, vector<vector<Edge*>>& graph)
+int MaxBook(int s, int t, vector<vector<Edge*>>& graph)
 {
     int n = graph.size();
 
@@ -69,10 +71,9 @@ int MaxPlate(int s, int t, vector<vector<Edge*>>& graph)
         for (int i = t; i != s; i = p[i])
             flow = min(flow, path[i]->Spare());
         for (int i = t; i != s; i = p[i])
-            path[i]->AddFLow(flow);
+            path[i]->AddFlow(flow);
         result += flow;
     }
-
     return result;
 }
 
@@ -80,18 +81,19 @@ int main()
 {
     FastIO;
 
-    int n, k, d;
-    cin >> n >> k >> d;
+    int n, m;
+    cin >> n >> m;
 
-    vector<vector<Edge*>> graph(n * 2 + d + 2);
-    int s = 0;
-    int t = n * 2 + d + 1;
-    for (int u = n * 2 + 1; u <= n * 2 + d; u++)
+    vector<vector<Edge*>> graph(n + m + 2);
+    int s = n + m;
+    int t = s + 1;
+    for (int i = 0; i < n; i++)
     {
-        int c;
-        cin >> c;
+        int a;
+        cin >> a;
 
-        Edge* e1 = new Edge(t, c);
+        int u = i;
+        Edge* e1 = new Edge(t, a);
         Edge* e2 = new Edge(u, 0);
         e1->rev = e2;
         e2->rev = e1;
@@ -99,46 +101,44 @@ int main()
         graph[t].push_back(e2);
     }
 
-    for (int i = 1; i <= n; i++)
+    for (int i = 0; i < m; i++)
     {
-        int u = i * 2 - 1;
+        int b;
+        cin >> b;
 
-        Edge* e1 = new Edge(u, INT_MAX);
+        int u = n + i;
+
+        Edge* e1 = new Edge(u, b);
         Edge* e2 = new Edge(s, 0);
         e1->rev = e2;
         e2->rev = e1;
         graph[s].push_back(e1);
         graph[u].push_back(e2);
-
-        e1 = new Edge(u + 1, k);
-        e2 = new Edge(u, 0);
-        e1->rev = e2;
-        e2->rev = e1;
-        graph[u].push_back(e1);
-        graph[u + 1].push_back(e2);
-
-        int z;
-        cin >> z;
-
-        for (int i = 0; i < z; i++)
+    }
+    
+    for (int i = 0; i < m; i++)
+    {
+        for (int j = 0; j < n; j++)
         {
-            int v;
-            cin >> v;
-            v += n * 2;
+            int c;
+            cin >> c;
 
-            e1 = new Edge(v, 1);
-            e2 = new Edge(u + 1, 0);
+            int u = n + i;
+            int v = j;
+
+            Edge* e1 = new Edge(v, c);
+            Edge* e2 = new Edge(u, 0);
             e1->rev = e2;
             e2->rev = e1;
-            graph[u + 1].push_back(e1);
+            graph[u].push_back(e1);
             graph[v].push_back(e2);
         }
     }
 
-    int result = MaxPlate(s, t, graph);
+    int result = MaxBook(s, t, graph);
     cout << result << '\n';
 
-    for (int u = 0; u < n * 2 + d + 2; u++)
+    for (int u = 0; u < n + m + 2; u++)
     {
         for (Edge* edge : graph[u])
             delete edge;
