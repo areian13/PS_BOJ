@@ -2795,7 +2795,7 @@
     <ClCompile Include="4. Platinum\Platinum 5\![P5] 01517 버블 소트.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="4. Platinum\Platinum 5\![P5] 05719 거의 최단 경로.cpp">
+    <ClCompile Include="4. Platinum\Platinum 5\[P5] 05719 거의 최단 경로.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="4. Platinum\Platinum 5\![P5] 20541 앨범정리.cpp">
@@ -3621,6 +3621,9 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="4. Platinum\Platinum 2\[P2] 11495 격자 0 만들기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 2\[P2] 01658 돼지 잡기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
