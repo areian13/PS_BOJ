@@ -3626,6 +3626,9 @@
     <ClCompile Include="4. Platinum\Platinum 2\[P2] 01658 돼지 잡기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="3. Gold\Gold 2\[G2] 22955 고양이 도도의 탈출기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="0. Unrated\[U0] 27903 인생.bf" />
