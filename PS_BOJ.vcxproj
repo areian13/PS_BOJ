@@ -2689,6 +2689,7 @@
     <ClCompile Include="4. Platinum\Platinum 3\[P3] 02316 도시 왕복하기 2.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 3\[P3] 11377 열혈강호 3.cpp" />
     <ClCompile Include="4. Platinum\Platinum 4\[P4] 02188 축사 배정 [2].cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -2704,7 +2705,9 @@
     <ClCompile Include="4. Platinum\Platinum 4\[P4] 11375 열혈강호.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="4. Platinum\Platinum 4\[P4] 11376 열혈강호 2.cpp" />
+    <ClCompile Include="4. Platinum\Platinum 4\[P4] 11376 열혈강호 2.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="4. Platinum\Platinum 4\[P4] 11406 책 구매하기 2.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
