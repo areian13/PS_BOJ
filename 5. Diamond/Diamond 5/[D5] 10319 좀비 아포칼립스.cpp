@@ -1,7 +1,8 @@
 #include <iostream>
 #include <vector>
-#include <climits>
 #include <queue>
+#include <climits>
+#include <algorithm>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
 
@@ -36,7 +37,7 @@ struct Edge
     }
 };
 
-int MaxPig(int s, int t, vector<vector<Edge*>>& graph)
+int MaxHuman(int s, int t, vector<vector<Edge*>>& graph)
 {
     int n = graph.size();
 
@@ -57,9 +58,8 @@ int MaxPig(int s, int t, vector<vector<Edge*>>& graph)
             for (Edge* edge : graph[u])
             {
                 int v = edge->v;
-                int w = edge->Spare();
 
-                if (w <= 0 || p[v] != -1)
+                if (edge->Spare() <= 0 || p[v] != -1)
                     continue;
 
                 p[v] = u;
@@ -88,72 +88,67 @@ int main()
 {
     FastIO;
 
-    int m, n;
-    cin >> m >> n;
+    int tc;
+    cin >> tc;
 
-    vector<vector<Edge*>> graph((m + 1) * n + 2);
-    int s = (m + 1) * n;
-    int t = s + 1;
-    for (int i = 0; i < m; i++)
+    while (tc--)
     {
-        int p;
-        cin >> p;
+        int n, i, g, k, m;
+        cin >> n >> i >> g >> k >> m;
+        i--;
 
-        for (int j = 0; j < n; j++)
+        vector<vector<Edge*>> graph(n * (k + 1) + 2);
+        int s = n * (k + 1);
+        int t = s + 1;
+        Edge::AddEdge(s, i, g, 0, graph);
+        for (int i = 0; i < n; i++)
         {
-            int v = i * n + j;
-            int u = (j == 0 ? s : v - 1);
-            int c = (j == 0 ? p : INT_MAX);
-
-            Edge::AddEdge(u, v, c, 0, graph);
-        }
-    }
-
-    for (int i = 0; i < n; i++)
-    {
-        int a;
-        cin >> a;
-
-        vector<int> k(a);
-        for (int j = 0; j < a; j++)
-        {
-            cin >> k[j];
-            k[j]--;
-
-            int u = k[j] * n + i;
-            int v = m * n + i;
-            Edge::AddEdge(u, v, INT_MAX, 0, graph);
-        }
-
-        int b;
-        cin >> b;
-
-        int u = m * n + i;
-        Edge::AddEdge(u, t, b, 0, graph);
-
-        if (i == n - 1)
-            break;
-
-        for (int j = 0; j < a; j++)
-        {
-            for (int l = 0; l < a; l++)
+            for (int j = 1; j <= k; j++)
             {
-                if (j == l)
-                    continue;
-
-                int u = k[j] * n + i;
-                int v = k[l] * n + i + 1;
+                int u = (j - 1) * n + i;
+                int v = j * n + i;
                 Edge::AddEdge(u, v, INT_MAX, 0, graph);
             }
         }
-    }
 
-    int result = MaxPig(s, t, graph);
-    cout << result << '\n';
+        for (int i = 0; i < m; i++)
+        {
+            int h;
+            cin >> h;
+            h--;
 
-    for (int u = 0; u < m * n + 2; u++)
-    {
-        for (Edge* edge : graph[u])
-            delete edge;
+            for (int j = 0; j <= k; j++)
+            {
+                int u = j * n + h;
+                Edge::AddEdge(u, t, INT_MAX, 0, graph);
+            }
+        }
+
+        int r;
+        cin >> r;
+
+        for (int i = 0; i < r; i++)
+        {
+            int a, b, c, w;
+            cin >> a >> b >> c >> w;
+            a--, b--;
+
+            for (int j = 0; j + w <= k; j++)
+            {
+                int u = j * n + a;
+                int v = (j + w) * n + b;
+
+                Edge::AddEdge(u, v, c, 0, graph);
+            }
+        }
+
+        int result = MaxHuman(s, t, graph);
+        cout << result << '\n';
+
+        for (auto& edges : graph)
+        {
+            for (Edge* edge : edges)
+                delete edge;
+        }
     }
 }

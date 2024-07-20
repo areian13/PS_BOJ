@@ -2741,7 +2741,7 @@
     <ClCompile Include="4. Platinum\Platinum 2\[P2] 20307 RREF.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="4. Platinum\Platinum 4\[P4] 02188 축사 배정.cpp">
+    <ClCompile Include="4. Platinum\Platinum 4\[P4] 02188 축사 배정 [1].cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="4. Platinum\Platinum 4\![P4] 12094 2048 (Hard).cpp">
@@ -3627,6 +3627,45 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="3. Gold\Gold 2\[G2] 22955 고양이 도도의 탈출기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="5. Diamond\Diamond 5\[D5] 10319 좀비 아포칼립스.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 25501 재귀의 귀재.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. Silver\Silver 4\[S4] 10994 별 찍기 - 19.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. Silver\Silver 2\[S2] 01780 종이의 개수.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. Silver\Silver 2\[S2] 10997 별 찍기 - 22.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. Silver\Silver 5\[S5] 01010 다리 놓기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. Silver\Silver 5\[S5] 08582 Park.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. Silver\Silver 5\[S5] 09625 BABBA.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 4\[P4] 02188 축사 배정 [2].cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 2\[G2] 09576 책 나눠주기 [1].cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 2\[G2] 09576 책 나눠주기 [2].cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 4\[P4] 11375 열혈강호.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 4\[P4] 11376 열혈강호 2.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
