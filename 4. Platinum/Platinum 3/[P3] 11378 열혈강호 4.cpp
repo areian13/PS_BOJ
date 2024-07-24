@@ -42,10 +42,11 @@ int main()
 {
     FastIO;
 
-    int n, m;
-    cin >> n >> m;
+    int n, m, k;
+    cin >> n >> m >> k;
 
-    vector<vector<int>> graph(n * 2);
+    vector<vector<int>> graph(n + k);
+    vector<bool> isLinked(m, false);
     for (int u = 0; u < n; u++)
     {
         int s;
@@ -57,11 +58,17 @@ int main()
             cin >> v;
             v--;
 
-            graph[u * 2].push_back(v);
-            graph[u * 2 + 1].push_back(v);
+            graph[u].push_back(v);
+
+            if (isLinked[v])
+                continue;
+
+            for (int j = n; j < n + k; j++)
+                graph[j].push_back(v);
+            isLinked[v] = true;
         }
     }
 
-    int result = MaxWork(n * 2, m, graph);
+    int result = MaxWork(n + k, m, graph);
     cout << result << '\n';
 }

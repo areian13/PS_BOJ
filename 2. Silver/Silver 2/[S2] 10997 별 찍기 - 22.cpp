@@ -5,25 +5,24 @@
 
 using namespace std;
 
-void MakeStar(int p, int k, int s, vector<vector<char>>& result)
+void MakeStar(int s, int r, int c, vector<vector<char>>& map)
 {
-    if (k <= 0 || s <= 0)
+    if (r <= 0 || c <= 0)
         return;
 
-    for (int i = p; i < p + s; i++)
+    for (int i = s; i < s + c; i++)
     {
-        result[p][i] = '*';
-        result[p + k - 1][i] = '*';
+        map[s][i] = '*';
+        map[s + r - 1][i] = '*';
     }
-    for (int i = p; i < p + k; i++)
-        result[i][p] = '*';
-    for (int i = p + 2; i < p + k; i++)
-        result[i][p + s - 1] = '*';
+    for (int i = s; i < s + r; i++)
+        map[i][s] = '*';
+    for (int i = s + 2; i < s + r; i++)
+        map[i][s + c - 1] = '*';
+    if (c != 1)
+        map[s + 2][s + c - 2] = '*';
 
-    if (s != 1)
-        result[p + 2][p + s - 2] = '*';
-
-    MakeStar(p + 2, k - 4, s - 4, result);
+    MakeStar(s + 2, r - 4, c - 4, map);
 }
 
 int main()
@@ -33,19 +32,18 @@ int main()
     int n;
     cin >> n;
 
-    int k = n == 1 ? 1 : (n - 1) * 4 + 3;
-    int s = (n - 1) * 4 + 1;
+    int r = (n == 1 ? 1 : (n - 1) * 4 + 3);
+    int c = (n - 1) * 4 + 1;
 
-    vector<vector<char>> result(k, vector<char>(s, ' '));
-    MakeStar(0, k, s, result);
+    vector<vector<char>> result(r, vector<char>(c, ' '));
+    MakeStar(0, r, c, result);
 
-    for (int i = 0; i < k; i++)
+    for (int i = 0; i < r; i++)
     {
-        for (int j = 0; j < s; j++)
+        for (int j = 0; j < c; j++)
         {
             if (i == 1 && j > 0)
-                continue;
-
+                break;
             cout << result[i][j];
         }
         cout << '\n';

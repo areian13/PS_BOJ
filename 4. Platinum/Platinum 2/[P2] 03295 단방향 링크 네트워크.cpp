@@ -23,7 +23,7 @@ bool CanMatch(int u, vector<bool>& isVisited,
     return false;
 }
 
-int MaxWork(int n, int m, vector<vector<int>>& graph)
+int MaxValue(int n, int m, vector<vector<int>>& graph)
 {
     vector<int> a(n, -1), b(m, -1);
     int result = 0;
@@ -42,26 +42,24 @@ int main()
 {
     FastIO;
 
-    int n, m;
-    cin >> n >> m;
+    int tc;
+    cin >> tc;
 
-    vector<vector<int>> graph(n * 2);
-    for (int u = 0; u < n; u++)
+    while (tc--)
     {
-        int s;
-        cin >> s;
+        int n, m;
+        cin >> n >> m;
 
-        for (int i = 0; i < s; i++)
+        vector<vector<int>> graph(n * 2);
+        for (int i = 0; i < m; i++)
         {
-            int v;
-            cin >> v;
-            v--;
+            int u, v;
+            cin >> u >> v;
 
-            graph[u * 2].push_back(v);
-            graph[u * 2 + 1].push_back(v);
+            graph[u * 2].push_back(v * 2 + 1);
         }
-    }
 
-    int result = MaxWork(n * 2, m, graph);
-    cout << result << '\n';
+        int result = MaxValue(n * 2, n * 2, graph);
+        cout << result << '\n';
+    }
 }
