@@ -3701,6 +3701,21 @@
     <ClCompile Include="4. Platinum\Platinum 2\[P2] 02570 비숍2.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 2\[P2] 01420 학교 가지마!.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 2\[G2] 07453 합이 0인 네 정수.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. Silver\Silver 3\[S3] 15649 N과 M %281%29.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. Silver\Silver 3\[S3] 15650 N과 M %282%29.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. Silver\Silver 3\[S3] 15651 N과 M %283%29.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="0. Unrated\[U0] 27903 인생.bf" />

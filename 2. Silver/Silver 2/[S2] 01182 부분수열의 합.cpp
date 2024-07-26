@@ -1,78 +1,37 @@
 #include <iostream>
 #include <vector>
-#include <array>
-#include <string>
-#include <time.h>
-#include <algorithm>
-#include <stdlib.h>
-#include <math.h>
-#include <cmath>
-#include <queue>
-#include <stack>
-#include <deque>
-#include <map>
-#include <unordered_map>
-#include <set>
-#include <limits.h>
-#include <float.h>
-#include <string.h>
 
-#define Endl << "\n"
-#define endL << "\n" <<
-#define Cout cout <<
-#define	COUT cout << "OUT: " <<
-#define Cin cin >>
-#define fspc << " "
-#define spc << " " <<
-#define Enter cout << "\n"
-#define if if
-#define elif else if
-#define else else
-#define For(n) for(int i = 0; i < n; i++)
-#define Forj(n) for(int j = 0; j < n; j++)
-#define Foro(n) for(int i = 1; i <= n; i++)
-#define Forjo(n) for(int j = 1; j <= n; j++)
-#define between(small, middle, big) (small < middle && middle < big)
-#define among(small, middle, big) (small <= middle && middle <= big)
-#define stoe(container) container.begin(), container.end()
-#define lf(d) Cout fixed; cout.precision(d);
-#define ulf cout.unsetf(ios::scientific);
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
-#define PI 3.14159265359
-
-typedef long long LLONG;
-typedef unsigned long long ULLONG;
-typedef unsigned int UINT;
 
 using namespace std;
 
-template <typename T>
-class heap : public priority_queue<T, vector<T>, greater<T>>
+int CountSumIsS(int k, int sum, int s, vector<int>& a)
 {
-};
+    int n = a.size();
 
-void BT(int cur, int curSum, int n, int s, vector<int>& arr, int& result)
-{
-	if (cur == n)
-		return;
-	if (curSum + arr[cur] == s)
-		result++;
-	BT(cur + 1, curSum, n, s, arr, result);
-	BT(cur + 1, curSum + arr[cur], n, s, arr, result);
+    if (k == n)
+        return 0;
+
+    int result = 0;
+    if (sum + a[k] == s)
+        result++;
+
+    result += CountSumIsS(k + 1, sum, s, a);
+    result += CountSumIsS(k + 1, sum + a[k], s, a);
+    return result;
 }
 
 int main()
 {
-	FastIO;
+    FastIO;
 
-	int n, s;
-	Cin n >> s;
+    int n, s;
+    cin >> n >> s;
 
-	vector<int> arr(n);
-	For(n)
-		Cin arr[i];
+    vector<int> a(n);
+    for (int i = 0; i < n; i++)
+        cin >> a[i];
 
-	int result = 0;
-	BT(0, 0, n, s, arr, result);
-	Cout result;
+    int result = CountSumIsS(0, 0, s, a);
+    cout << result << '\n';
 }
