@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 #include <algorithm>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
@@ -11,20 +12,13 @@ int main()
 
     while (true)
     {
-        int n, m;
-        cin >> n >> m;
+        int r0, w0, c, r;
+        cin >> r0 >> w0 >> c >> r;
 
-        if (n == 0 && m == 0)
+        if (r0 == 0 && w0 == 0 && c == 0 && r == 0)
             break;
 
-        int result = 0;
-        for (int i = 0; i < n; i++)
-        {
-            int a;
-            cin >> a;
-
-            result += min(m / n, a);
-        }
+        int result = max((int)ceil((double)(c * w0 - r0) / r), 0);
         cout << result << '\n';
     }
 }

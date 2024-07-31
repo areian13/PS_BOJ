@@ -7,11 +7,11 @@ using namespace std;
 
 int main()
 {
-	FastIO;
+    FastIO;
 
-	int n;
-	cin>> n;
+    int n;
+    cin >> n;
 
-	string result = (n % 2 == 1 ? "Either" : ((n / 2) % 2 == 1 ? "Odd" : "Even"));
-	cout << result << '\n';
+    string result = (n % 2 == 1 ? "Either" : ((n / 2) % 2 == 1 ? "Odd" : "Even"));
+    cout << result << '\n';
 }

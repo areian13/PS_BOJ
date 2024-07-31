@@ -9,22 +9,22 @@ using namespace std;
 
 int main()
 {
-	FastIO;
+    FastIO;
 
-	int n, k;
-	cin>>n >> k;
+    int n, k;
+    cin >> n >> k;
 
-	int d = n - k;
-	int sum = 0;
-	for (int i = 0; i < k; i++)
-	{
-		int r;
-		cin>>r;
+    int d = n - k;
+    int sum = 0;
+    for (int i = 0; i < k; i++)
+    {
+        int r;
+        cin >> r;
 
-		sum += r;
-	}
+        sum += r;
+    }
 
-	lf(4);
-	array<double, 2> result = { (double)(sum - 3 * d) / n,(double)(sum + 3 * d) / n };
-	cout << result[0] << ' ' << result[1] << '\n';
+    lf(4);
+    array<double, 2> result = { (double)(sum - 3 * d) / n,(double)(sum + 3 * d) / n };
+    cout << result[0] << ' ' << result[1] << '\n';
 }
