@@ -1,119 +1,34 @@
-#ifdef ONLINE_JUDGE
-#define _128d  __int128
-#else
-#define _128d long long
-#endif
-
 #include <iostream>
 #include <vector>
-#include <array>
-#include <string>
-#include <sstream>
-#include <ctime>
-#include <algorithm>
-#include <cstdio>
-#include <cstdlib>
-#include <cmath>
-#include <queue>
-#include <stack>
-#include <deque>
-#include <map>
-#include <unordered_map>
-#include <set>
 #include <climits>
-#include <cfloat>
-#include <cstring>
-#include <random>
-#include <type_traits>
-#include <numeric>
-#include <functional>
+#include <algorithm>
 
-#define Endl << "\n"
-#define endL << "\n" <<
-#define Cout cout <<
-#define COUT cout << "OUT: " <<
-#define Cin cin >>
-#define fspc << " "
-#define spc << " " <<
-#define Enter cout << "\n"
-#define if if
-#define elif else if
-#define else else
-#define For(n) for(int i = 0; i < n; i++)
-#define Forj(n) for(int j = 0; j < n; j++)
-#define Foro(n) for(int i = 1; i <= n; i++)
-#define Forjo(n) for(int j = 1; j <= n; j++)
-#define between(small, middle, big) (small < middle && middle < big)
-#define among(small, middle, big) (small <= middle && middle <= big)
-#define stoe(container) container.begin(), container.end()
-#define lf(d) Cout fixed; cout.precision(d);
-#define ulf() cout.unsetf(ios::scientific);
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
-#define PI 3.14159265359
-
-typedef long long LLONG;
-typedef unsigned long long ULLONG;
-typedef unsigned int UINT;
-typedef long double LDOUBLE;
 
 using namespace std;
-
-template <typename T>
-class heap : public priority_queue<T, vector<T>, greater<T>>
-{
-};
-
-template <typename T>
-ostream& operator<<(ostream& os, vector<T>& vec)
-{
-    for (T& value : vec)
-        os << value << ' ';
-    return os;
-}
-
-template <typename T, size_t N>
-ostream& operator<<(ostream& os, array<T, N>& vec)
-{
-    for (T& value : vec)
-        os << value << ' ';
-    return os;
-}
 
 struct Edge
 {
     int u, v, w;
 };
 
-void BFS(int start, vector<bool>& isVisited, vector<vector<int>>& graph)
+void DFS(int u, vector<bool>& isVisited, vector<vector<int>>& graph)
 {
-    int n = isVisited.size() - 1;
+    isVisited[u] = true;
 
-    isVisited[start] = true;
-
-    queue<int> Q;
-    Q.push(start);
-
-    while (!Q.empty())
+    for (int v : graph[u])
     {
-        int cur = Q.front();
-        Q.pop();
-
-        for (int nxt : graph[cur])
-        {
-            if (isVisited[nxt])
-                continue;
-
-            isVisited[nxt] = true;
-            Q.push(nxt);
-        }
+        if (!isVisited[v])
+            DFS(v, isVisited, graph);
     }
 }
 
-bool BF(vector<int>& dist, vector<int>& pre, vector<Edge> edges)
+bool BF(int s, int t, vector<int>& dist, vector<int>& pre, vector<Edge> edges)
 {
-    int n = dist.size() - 1;
+    int n = dist.size();
 
-    For(n)
+    dist[s] = 0;
+    for (int i = 0; i < n; i++)
     {
         for (Edge& edge : edges)
         {
@@ -131,7 +46,7 @@ bool BF(vector<int>& dist, vector<int>& pre, vector<Edge> edges)
             }
         }
     }
-    return dist[n] != INT_MIN;
+    return (dist[t] != INT_MIN);
 }
 
 int main()
@@ -139,55 +54,48 @@ int main()
     FastIO;
 
     int n, m;
-    Cin n >> m;
+    cin >> n >> m;
 
     vector<Edge> tempEdges(m);
-    vector<vector<int>> startGraph(n + 1);
-    vector<vector<int>> endGraph(n + 1);
-    For(m)
+    vector<vector<int>> graph(n);
+    for (int i = 0; i < m; i++)
     {
         int u, v, w;
-        Cin u >> v >> w;
+        cin >> u >> v >> w;
+        u--, v--;
 
         tempEdges[i] = { u,v,w };
-        startGraph[u].push_back(v);
-        endGraph[v].push_back(u);
+        graph[v].push_back(u);
     }
 
-    vector<bool> startIsVisited(n + 1, false);
-    BFS(1, startIsVisited, startGraph);
-
-    vector<bool> endIsVisited(n + 1, false);
-    BFS(n, endIsVisited, endGraph);
+    int s = 0, t = n - 1;
+    vector<bool> isVisited(n, false);
+    DFS(t, isVisited, graph);
 
     vector<Edge> edges;
     for (Edge& edge : tempEdges)
     {
-        if (startIsVisited[edge.u] && startIsVisited[edge.v]
-            && endIsVisited[edge.u] && endIsVisited[edge.v])
+        if (isVisited[edge.u] && isVisited[edge.v])
             edges.push_back(edge);
     }
 
-    vector<int> dist(n + 1, INT_MIN);
-    dist[1] = 0;
-    
-    vector<int> pre(n + 1);
-    pre[1] = 0;
-
-    bool canGo = BF(dist, pre, edges);
-
-    vector<int> result;
+    vector<int> dist(n, INT_MIN), pre(n, -1);
+    bool canGo = BF(s, t, dist, pre, edges);
     if (!canGo)
-        result.push_back(-1);
+        cout << -1 << '\n';
     else
     {
-        int x = n;
-        while (x != 0)
+        vector<int> result;
+        int x = t;
+        while (x != -1)
         {
             result.push_back(x);
             x = pre[x];
         }
-        reverse(stoe(result));
+        reverse(result.begin(), result.end());
+
+        for (int u : result)
+            cout << u + 1 << ' ';
+        cout << '\n';
     }
-    Cout result Endl;
 }

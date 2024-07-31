@@ -20,14 +20,24 @@ struct Edge
     {
         return c - f;
     }
-    void AddFlow(int f)
+    void AddFlow(int flow)
     {
-        this->f += f;
-        rev->f -= f;
+        f += flow;
+        rev->f -= flow;
+    }
+
+    static void AddEdge(int u, int v, int c2, int c1, vector<vector<Edge*>>& graph)
+    {
+        Edge* e1 = new Edge(v, c2);
+        Edge* e2 = new Edge(u, c1);
+        e1->rev = e2;
+        e2->rev = e1;
+        graph[u].push_back(e1);
+        graph[v].push_back(e2);
     }
 };
 
-int MaxBook(int s, int t, vector<vector<Edge*>>& graph)
+int MaxFlow(int s, int t, vector<vector<Edge*>>& graph)
 {
     int n = graph.size();
 
@@ -48,9 +58,8 @@ int MaxBook(int s, int t, vector<vector<Edge*>>& graph)
             for (Edge* edge : graph[u])
             {
                 int v = edge->v;
-                int w = edge->Spare();
 
-                if (w <= 0 || p[v] != -1)
+                if (edge->Spare() <= 0 || p[v] != -1)
                     continue;
 
                 p[v] = u;
@@ -82,63 +91,22 @@ int main()
     int n, m;
     cin >> n >> m;
 
-    vector<vector<Edge*>> graph(n + m + 2);
-    int s = n + m;
-    int t = s + 1;
-    for (int i = 0; i < n; i++)
-    {
-        int a;
-        cin >> a;
-
-        int u = i;
-        Edge* e1 = new Edge(t, a);
-        Edge* e2 = new Edge(u, 0);
-        e1->rev = e2;
-        e2->rev = e1;
-        graph[u].push_back(e1);
-        graph[t].push_back(e2);
-    }
-
+    vector<vector<Edge*>> graph(n);
     for (int i = 0; i < m; i++)
     {
-        int b;
-        cin >> b;
+        int u, v, w;
+        cin >> u >> v >> w;
+        u--, v--;
 
-        int u = n + i;
-
-        Edge* e1 = new Edge(u, b);
-        Edge* e2 = new Edge(s, 0);
-        e1->rev = e2;
-        e2->rev = e1;
-        graph[s].push_back(e1);
-        graph[u].push_back(e2);
-    }
-    
-    for (int i = 0; i < m; i++)
-    {
-        for (int j = 0; j < n; j++)
-        {
-            int c;
-            cin >> c;
-
-            int u = n + i;
-            int v = j;
-
-            Edge* e1 = new Edge(v, c);
-            Edge* e2 = new Edge(u, 0);
-            e1->rev = e2;
-            e2->rev = e1;
-            graph[u].push_back(e1);
-            graph[v].push_back(e2);
-        }
+        Edge::AddEdge(u, v, w, w, graph);
     }
 
-    int result = MaxBook(s, t, graph);
+    int result = MaxFlow(0, n - 1, graph);
     cout << result << '\n';
 
-    for (int u = 0; u < n + m + 2; u++)
+    for (auto& edges : graph)
     {
-        for (Edge* edge : graph[u])
+        for (Edge* edge : edges)
             delete edge;
     }
 }

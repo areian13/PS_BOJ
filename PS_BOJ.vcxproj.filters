@@ -1661,7 +1661,7 @@
     <ClCompile Include="1. Bronze\Bronze 5\~[B5] 26545 Mathematics.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 5\~[B5] 27324 ゾロ目 (Same Numbers).cpp">
+    <ClCompile Include="1. Bronze\Bronze 5\[B5] 27324 ゾロ目 %28Same Numbers%29.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 5\~[B5] 27327 時間 (Hour).cpp">
@@ -2747,7 +2747,7 @@
     <ClCompile Include="4. Platinum\Platinum 4\![P4] 12094 2048 (Hard).cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="4. Platinum\Platinum 4\[P4 03747 완벽한 선거!.cpp">
+    <ClCompile Include="4. Platinum\Platinum 4\[P4] 03747 완벽한 선거!.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="4. Platinum\Platinum 4\[P4] 01199 오일러 회로.cpp">
@@ -3714,6 +3714,36 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="2. Silver\Silver 3\[S3] 15651 N과 M %283%29.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Contest\SCPC 2024 Round 2\1. 연속 1.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 1\[P1] 05398 틀렸습니다.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 4\[P4] 15892 사탕 줍는 로봇.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 4\[P4] 01014 컨닝.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. Silver\Silver 1\[S1] 14889 스타트와 링크.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 3\[P3] 11405 책 구매하기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 3\[P3] 11407 책 구매하기 3.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. Silver\Silver 5\[S5] 13301 타일 장식물.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. Silver\Silver 5\[S5] 14916 거스름돈 [1].cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. Silver\Silver 5\[S5] 14916 거스름돈 [2].cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
