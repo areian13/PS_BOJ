@@ -779,7 +779,7 @@
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 21339 Contest Struggles.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 3\[B3] 21410 Монетки.cpp">
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 21420 Монетки.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 21507 POBEDA-2014.cpp">
@@ -821,7 +821,7 @@
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 22388 改元.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 3\[B3] 22396 카레 만들기.cpp">
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 22396 カレー作り.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 22421 Koto Municipal Subway.cpp">
@@ -3744,6 +3744,24 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="2. Silver\Silver 5\[S5] 14916 거스름돈 [2].cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="0. Unrated\[U？] Bitwise Formula.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 3\[P3] 11408 열혈강호 5.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 3\[P3] 11409 열혈강호 6.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 4\[P4] 02188 축사 배정 [3].cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 1\[P1] 13161 분단의 슬픔.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 3\[P3] 01585 경찰.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

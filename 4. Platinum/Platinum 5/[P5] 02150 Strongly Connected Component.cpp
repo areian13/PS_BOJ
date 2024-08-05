@@ -1,131 +1,95 @@
 #include <iostream>
 #include <vector>
-#include <array>
-#include <string>
-#include <time.h>
 #include <algorithm>
-#include <stdlib.h>
-#include <math.h>
-#include <cmath>
-#include <queue>
 #include <stack>
-#include <deque>
-#include <map>
-#include <unordered_map>
-#include <set>
-#include <limits.h>
-#include <string.h>
 
-#define Endl << "\n"
-#define endL << "\n" <<
-#define Cout cout <<
-#define	COUT cout << "OUT: " <<
-#define Cin cin >>
-#define fspc << " "
-#define spc << " " <<
-#define Enter cout << "\n"
-#define if if
-#define elif else if
-#define else else
-#define For(n) for(int i = 0; i < n; i++)
-#define Forj(n) for(int j = 0; j < n; j++)
-#define Foro(n) for(int i = 1; i <= n; i++)
-#define Forjo(n) for(int j = 1; j <= n; j++)
-#define between(small, middle, big) (small < middle && middle < big)
-#define among(small, middle, big) (small <= middle && middle <= big)
-#define stoe(container) container.begin(), container.end()
-#define lf(d) Cout fixed; cout.precision(d);
-#define ulf cout.unsetf(ios::scientific);
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
-#define PI 3.14159265359
-
-typedef long long LLONG;
-typedef unsigned long long ULLONG;
-typedef unsigned int UINT;
 
 using namespace std;
 
-template <typename T>
-class heap : public priority_queue<T, vector<T>, greater<T>>
+int DFS(int u, int& cnt, vector<int>& nthDFS, vector<bool>& isFinished,
+    stack<int>& S, vector<vector<int>>& SCC, vector<vector<int>>& graph)
 {
-};
+    nthDFS[u] = cnt++;
+    S.push(u);
 
-vector<vector<int>> edge, SCC;
-vector<int> nthDFS;
-vector<bool> isFinished;
+    int result = nthDFS[u];
+    for (int v : graph[u])
+    {
+        if (nthDFS[v] == -1)
+            result = min(result, DFS(v, cnt, nthDFS, isFinished, S, SCC, graph));
+        else if (!isFinished[v])
+            result = min(result, nthDFS[v]);
+    }
 
-stack<int> S;
+    if (result == nthDFS[u])
+    {
+        vector<int> curSCC;
 
-int cnt = 0;
+        while (true)
+        {
+            int top = S.top();
+            S.pop();
 
-int DFS(int cur)
+            curSCC.push_back(top);
+            isFinished[top] = true;
+
+            if (top == u)
+                break;
+        }
+
+        SCC.push_back(curSCC);
+    }
+
+    return result;
+}
+
+void MakeSCC(vector<vector<int>>& scc, vector<vector<int>>& graph)
 {
-	nthDFS[cur] = ++cnt;
-	S.push(cur);
+    int v = graph.size();
 
-	int result = nthDFS[cur];
-	for (int nxt : edge[cur])
-	{
-		if (nthDFS[nxt] == 0)
-			result = min(result, DFS(nxt));
-		elif(!isFinished[nxt])
-			result = min(result, nthDFS[nxt]);
-	}
+    vector<int> nthDFS(v, -1);
+    vector<bool> isFinished(v, false);
+    stack<int> S;
+    int cnt;
 
-	if (result == nthDFS[cur])
-	{
-		vector<int> curSCC;
-
-		while (true)
-		{
-			int top = S.top();
-			S.pop();
-
-			curSCC.push_back(top);
-			isFinished[top] = true;
-
-			if (top == cur)
-				break;
-		}
-
-		sort(stoe(curSCC));
-		SCC.push_back(curSCC);
-	}
-
-	return result;
+    for (int i = 0; i < v; i++)
+    {
+        if (nthDFS[i] == -1)
+            DFS(i, cnt, nthDFS, isFinished, S, scc, graph);
+    }
 }
 
 int main()
 {
-	FastIO;
+    FastIO;
 
-	int v, e;
-	Cin v >> e;
-	
-	edge.resize(v + 1);
-	For(e)
-	{
-		int a, b;
-		Cin a >> b;
+    int v, e;
+    cin >> v >> e;
 
-		edge[a].push_back(b);
-	}
+    vector<vector<int>> graph(v);
+    for (int i = 0; i < e; i++)
+    {
+        int a, b;
+        cin >> a >> b;
+        a--, b--;
 
-	nthDFS.resize(v + 1, 0);
-	isFinished.resize(v + 1, false);
+        graph[a].push_back(b);
+    }
 
-	Foro(v)
-	{
-		if (nthDFS[i] == 0)
-			DFS(i);
-	}
-	sort(stoe(SCC));
+    vector<vector<int>> result;
+    MakeSCC(result, graph);
+    
+    int k = result.size();
+    for (int i = 0; i < k; i++)
+        sort(result[i].begin(), result[i].end());
+    sort(result.begin(), result.end());
 
-	Cout SCC.size() Endl;
-	For(SCC.size())
-	{
-		for (int node : SCC[i])
-			Cout node fspc;
-		Cout -1 Endl;
-	}
+    cout << k << '\n';
+    for (int i = 0; i < k; i++)
+    {
+        for (int u : result[i])
+            cout << u + 1 << ' ';
+        cout << -1 << '\n';
+    }
 }

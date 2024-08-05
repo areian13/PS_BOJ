@@ -10,7 +10,7 @@ int main()
 {
     FastIO;
 
-    bool preDir = false;;
+    bool preDir = false;
     while (true)
     {
         string cmd;
