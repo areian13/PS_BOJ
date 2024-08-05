@@ -364,7 +364,9 @@
     <ClCompile Include="1. Bronze\Bronze 5\[B5] 29863 Arno%27s Sleep Schedule.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 5\[B5] 30030 스위트콘 가격 구하기.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 5\[B5] 30030 스위트콘 가격 구하기.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="2. Silver\Silver 1\[S1] 01074 Z.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -1343,7 +1345,7 @@
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 24349 МЕД.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 3\[B3] 24387 BEE HONEY EXHIBITION.cpp">
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 24387 ИЗЛОЖЕНИЕ НА ПЧЕЛЕН МЕД.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 24408 Mult!.cpp">
@@ -1449,7 +1451,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 25933 Medal Ranking.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 25985 Fastestest Function.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
