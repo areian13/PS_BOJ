@@ -1658,19 +1658,16 @@
     <ClCompile Include="1. Bronze\Bronze 5\[B5] 26209 Intercepting Information.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 5\~[B5] 26545 Mathematics.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 5\[B5] 27324 ゾロ目 %28Same Numbers%29.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 5\~[B5] 27327 時間 (Hour).cpp">
+    <ClCompile Include="1. Bronze\Bronze 5\[B5] 27327 時間 %28Hour%29.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 5\~[B5] 27328 三方比較 (Three-Way Comparison).cpp">
+    <ClCompile Include="1. Bronze\Bronze 5\[B5] 27328 三方比較 %28Three-Way Comparison%29.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 5\~[B5] 27331 2 桁の整数 (Two-digit Integer).cpp">
+    <ClCompile Include="1. Bronze\Bronze 5\[B5] 27331 2 桁の整数 %28Two-digit Integer%29.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="2. Silver\Silver 2\[S2] 30804 과일 탕후루.cpp">
@@ -3762,6 +3759,15 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="4. Platinum\Platinum 3\[P3] 01585 경찰.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 5\[B5] 29731 2033년 밈 투표.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 5\[B5] 29863 Arno%27s Sleep Schedule.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 5\[B5] 30030 스위트콘 가격 구하기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

@@ -358,6 +358,13 @@
     <ClCompile Include="1. Bronze\Bronze 5\[B5] 29163 Счастье Мистера Бина.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 5\[B5] 29731 2033년 밈 투표.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 5\[B5] 29863 Arno%27s Sleep Schedule.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 5\[B5] 30030 스위트콘 가격 구하기.cpp" />
     <ClCompile Include="2. Silver\Silver 1\[S1] 01074 Z.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -2107,19 +2114,16 @@
     <ClCompile Include="1. Bronze\Bronze 5\[B5] 26209 Intercepting Information.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 5\~[B5] 26545 Mathematics.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-    </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 5\[B5] 27324 ゾロ目 %28Same Numbers%29.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 5\~[B5] 27327 時間 (Hour).cpp">
+    <ClCompile Include="1. Bronze\Bronze 5\[B5] 27327 時間 %28Hour%29.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 5\~[B5] 27328 三方比較 (Three-Way Comparison).cpp">
+    <ClCompile Include="1. Bronze\Bronze 5\[B5] 27328 三方比較 %28Three-Way Comparison%29.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 5\~[B5] 27331 2 桁の整数 (Two-digit Integer).cpp">
+    <ClCompile Include="1. Bronze\Bronze 5\[B5] 27331 2 桁の整数 %28Two-digit Integer%29.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="2. Silver\Silver 1\![S1] 01552 도미노.cpp">
@@ -2737,7 +2741,9 @@
     <ClCompile Include="4. Platinum\Platinum 3\[P3] 01017 소수 쌍.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="4. Platinum\Platinum 3\[P3] 01585 경찰.cpp" />
+    <ClCompile Include="4. Platinum\Platinum 3\[P3] 01585 경찰.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="4. Platinum\Platinum 3\[P3] 01671 상어의 저녁식사.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
