@@ -1013,7 +1013,7 @@
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 26314 Vowel Count.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 3\[B3] 26329 Desni klik.cpp">
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 26392 Desni klik.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 26432 Walktober.cpp">
@@ -3768,6 +3768,9 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 5\[B5] 30030 스위트콘 가격 구하기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="0. Unrated\[U？] 26329 Come Minion!.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
