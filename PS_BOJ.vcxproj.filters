@@ -3743,7 +3743,7 @@
     <ClCompile Include="2. Silver\Silver 5\[S5] 14916 거스름돈 [2].cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="0. Unrated\[U？] Bitwise Formula.cpp">
+    <ClCompile Include="0. Unrated\[U？] 21901 Bitwise Formula.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="4. Platinum\Platinum 3\[P3] 11408 열혈강호 5.cpp">
@@ -3770,7 +3770,10 @@
     <ClCompile Include="1. Bronze\Bronze 5\[B5] 30030 스위트콘 가격 구하기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="0. Unrated\[U？] 26329 Come Minion!.cpp">
+    <ClCompile Include="2. Silver\Silver 1\[S1] 26329 Come Minion!.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 3\[P3] 14286 간선 끊어가기 2.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
