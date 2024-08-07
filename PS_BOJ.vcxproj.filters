@@ -1019,16 +1019,13 @@
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 26432 Walktober.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 3\[B3] 26498 Chronogram.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 26509 Triangle.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 26510 V for Vendetta.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 3\[B3] 26536 Chicken Pen.cpp">
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 26535 Chicken Pen.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 26547 Square.cpp">
@@ -3783,6 +3780,9 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="4. Platinum\Platinum 1\[P1] 06241 Dining.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 3\[P3] 03073 집으로 가는 길.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
