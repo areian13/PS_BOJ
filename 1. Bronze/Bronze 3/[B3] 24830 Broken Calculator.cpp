@@ -9,7 +9,6 @@ long long Add(long long a, long long b, long long pre)
 {
     return (a + b) - pre;
 }
-
 long long Sub(long long a, long long b, long long pre)
 {
     return (a - b) * pre;

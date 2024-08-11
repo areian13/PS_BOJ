@@ -1037,7 +1037,7 @@
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 26550 Ornaments.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 3\[B3] 26560 Periods.cpp">
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 26560 Periods.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 26564 Poker Hand.cpp">
@@ -1079,7 +1079,7 @@
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 27101 Metric Matrices.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 3\[B3] 27106 Making Change.cpp">
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 27106 Making Change.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 27159 노 땡스!.cpp">
@@ -3804,6 +3804,15 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="4. Platinum\Platinum 4\[P4] 02188 축사 배정 [4].cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 4\[P4] 10999 구간 합 구하기 2.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 1\[G1] 02357 최솟값과 최댓값.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 27130 Long Multiplication [1].cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

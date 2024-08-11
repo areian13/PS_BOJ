@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
 
@@ -11,12 +12,15 @@ int main()
     int tc;
     cin >> tc;
 
+    cin.ignore();
     while (tc--)
     {
-        long long n;
-        cin >> n;
+        string str;
+        getline(cin, str);
 
-        long long result = (n * (n + 1) * (n + 2)) / 6;
-        cout << result << '\n';
+        if (str.back() != '.')
+            str += '.';
+
+        cout << str << '\n';
     }
 }
