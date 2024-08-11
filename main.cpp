@@ -1,59 +1,73 @@
 #include <iostream>
 #include <vector>
+#include <climits>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
 
 using namespace std;
 
-void Print(vector<int>& arr)
+struct Edge
 {
-    for (int x : arr)
-        cout << x << ' ';
-    cout << '\n';
-}
+    int u, v, w;
+};
 
-void Merge(int start, int mid, int end, vector<int>& arr, bool order)
+bool BF(int s, vector<long long>& dist, vector<Edge>& edges)
 {
-    int n = end - start + 1;
-    vector<int> temp(n);
+    int n = dist.size();
 
-    int l = start;
-    int r = mid + 1;
-    int t = 0;
-    while (l <= mid && r <= end)
-        temp[t++] = (order ^ (arr[l] <= arr[r])) ? arr[l++] : arr[r++];
+    dist[s] = 0;
 
-    int s = (l <= mid ? l : r);
-    int e = (l <= mid ? mid : end);
-    for (int i = s; i <= e; i++)
-        temp[t++] = arr[i];
+    for (int i = 0; i < n; i++)
+    {
+        for (Edge& edge : edges)
+        {
+            int u = edge.u;
+            int v = edge.v;
 
-    for (int i = start; i <= end; i++)
-        arr[i] = temp[i - start];
-}
+            if (dist[u] == LLONG_MAX)
+                continue;
 
-void MergeSort(int start, int end, vector<int>& arr, bool order = 0)
-{
-    if (start == end)
-        return;
-
-    int mid = (start + end) / 2;
-    MergeSort(start, mid, arr, order);
-    MergeSort(mid + 1, end, arr, order);
-    Merge(start, mid, end, arr, order);
+            long long nw = dist[u] + edge.w;
+            if (dist[v] > nw)
+            {
+                if (i == n - 1)
+                    return false;
+                dist[v] = nw;
+            }
+        }
+    }
+    return true;
 }
 
 int main()
 {
     FastIO;
 
-    vector<int> arr, temp = { 2,6,4,3,7,8,1,9,5,0 };
+    int n, m;
+    cin >> n >> m;
 
-    arr = temp;
-    MergeSort(0, arr.size() - 1, arr);
-    Print(arr);
+    vector<Edge> edges(m);
+    for (int i = 0; i < m; i++)
+    {
+        int u, v, w;
+        cin >> u >> v >> w;
+        u--, v--;
 
-    arr = temp;
-    MergeSort(0, arr.size() - 1, arr, 1);
-    Print(arr);
+        edges[i] = { u,v,w };
+    }
+
+    vector<long long> dist(n, LLONG_MAX);
+
+    if (!BF(0, dist, edges))
+        cout << -1 << '\n';
+    else
+    {
+        for (int i = 1; i < n; i++)
+        {
+            if (dist[i] == LLONG_MAX)
+                cout << -1 << '\n';
+            else
+                cout << dist[i] << '\n';
+        }
+    }
 }

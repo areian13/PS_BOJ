@@ -27,7 +27,6 @@ int main()
             result[n - 1][n - 1 - i] = k[i];
             result[i][0] = k[i];
             result[n - 1 - i][n - 1] = k[i];
-
         }
 
         for (int i = 0; i < n; i++)
