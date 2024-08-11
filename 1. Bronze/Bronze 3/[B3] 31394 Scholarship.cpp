@@ -11,7 +11,7 @@ string Scholarship(vector<int>& m)
     int n = m.size();
 
     double avg = 0;
-    For(n)
+    for (int i = 0; i < n; i++)
     {
         if (m[i] == 3)
             return "None";
