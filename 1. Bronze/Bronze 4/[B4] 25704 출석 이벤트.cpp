@@ -21,6 +21,7 @@ double SaledPrice(double n, double p)
 
     return max(result, .0);
 }
+
 int main()
 {
     FastIO;
