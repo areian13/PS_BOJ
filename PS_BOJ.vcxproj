@@ -187,7 +187,9 @@
     <ClCompile Include="0. Unrated\[U0] 18017 총알의 속도.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 3\[B3] 27130 Long Multiplication [1].cpp" />
+    <ClCompile Include="0. Unrated\[U？] Zuma 2.0： Возвращение лягушки-идола.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="2. Silver\Silver 1\[S1] 11403 경로 찾기.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -1553,7 +1555,7 @@
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 27225 Класс.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 3\[B3] 27227 Дивизионы.cpp">
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 27227 Дивизионы.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 27246 Различные квадраты.cpp">
@@ -1583,7 +1585,7 @@
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 27334 マラソン大会 (Marathon Race).cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 3\[B3] 27445 Gorani Command.cpp">
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 27445 Gorani Command.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 27465 소수가 아닌 수.cpp">
@@ -1652,7 +1654,7 @@
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 28932 Префиксы-суффиксы [1].cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 3\[B3] 28966 Доктор Стрэндж и перестановка.cpp">
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 28966 Доктор Стрэндж и перестановка.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 29002 Космический корабль.cpp">
@@ -1712,7 +1714,7 @@
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 30216 Increasing Sublist.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 3\[B3] 30217 Let’s Portmanteau.cpp">
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 30217 Let’s Portmanteau.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 30260 Finding Your Roots.cpp">
@@ -1799,7 +1801,7 @@
     <ClCompile Include="1. Bronze\Bronze 4\[B4] 06888 Terms of Office.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 4\[B4] 06916 0123456789.cpp">
+    <ClCompile Include="0. Unrated\[U0] 06916 0123456789.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 4\[B4] 09782 Median.cpp">
@@ -1821,7 +1823,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 4\[B4] 25704 출석 이벤트.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 4\[B4] 25932 Find the Twins.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>

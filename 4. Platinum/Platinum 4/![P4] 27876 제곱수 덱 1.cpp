@@ -23,37 +23,41 @@ void Union(int u, int v, vector<int>& p)
 
 long long MinWapasDeck(int n)
 {
-    vector<int> p(n + 1, -1);
+    vector<int> p(n * 2, -1);
     long long result = 1;
     int cnt = 0;
 
-    for (int i = 0; i < 2; i++)
+    while (true)
     {
-        for (int u = 1; u <= n; u++)
+        bool isAll = true;
+        for (int i = 1; i * i < n * 2; i++)
         {
-            long long r = sqrt(u) + 1;
-            while (true)
+            int k = i * i;
+
+            int l = k / 2 - (k % 2 == 0);
+            int r = (k + 1) / 2 + (k % 2 == 0);
+            while (l > 0 && r < k)
             {
-                long long k = r * r;
-                long long v = k - u;
-                r++;
-
-                if (v > n)
-                    break;
-                if (v <= u)
+                if (Find(l, p) == Find(r, p))
+                {
+                    l--, r++;
                     continue;
+                }
 
-                if (Find(u, p) == Find(v, p))
-                    continue;
-
-                cout << u << ' ' << v << '\n';
-                Union(u, v, p);
-                result *= abs(v - u);
+                Union(l, r, p);
+                result *= abs(l - r);
                 result %= MOD;
                 cnt++;
+                isAll = false;
                 break;
             }
+            cout << result << '\n';
+
         }
+
+        cout << result << '\n';
+        if (isAll)
+            break;
     }
 
     if (cnt == n - 1)

@@ -1091,7 +1091,7 @@
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 27225 Класс.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 3\[B3] 27227 Дивизионы.cpp">
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 27227 Дивизионы.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 27246 Различные квадраты.cpp">
@@ -1121,7 +1121,7 @@
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 27334 マラソン大会 (Marathon Race).cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 3\[B3] 27445 Gorani Command.cpp">
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 27445 Gorani Command.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 27465 소수가 아닌 수.cpp">
@@ -1190,7 +1190,7 @@
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 28932 Префиксы-суффиксы [1].cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 3\[B3] 28966 Доктор Стрэндж и перестановка.cpp">
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 28966 Доктор Стрэндж и перестановка.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 29002 Космический корабль.cpp">
@@ -1250,7 +1250,7 @@
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 30216 Increasing Sublist.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 3\[B3] 30217 Let’s Portmanteau.cpp">
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 30217 Let’s Portmanteau.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 30260 Finding Your Roots.cpp">
@@ -1334,7 +1334,7 @@
     <ClCompile Include="1. Bronze\Bronze 4\[B4] 06888 Terms of Office.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 4\[B4] 06916 0123456789.cpp">
+    <ClCompile Include="0. Unrated\[U0] 06916 0123456789.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 4\[B4] 09782 Median.cpp">
@@ -3812,7 +3812,7 @@
     <ClCompile Include="3. Gold\Gold 1\[G1] 02357 최솟값과 최댓값.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 3\[B3] 27130 Long Multiplication [1].cpp">
+    <ClCompile Include="0. Unrated\[U？] Zuma 2.0： Возвращение лягушки-идола.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

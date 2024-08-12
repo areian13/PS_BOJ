@@ -1,80 +1,38 @@
 #include <iostream>
-#include <vector>
-#include <array>
-#include <string>
-#include <time.h>
-#include <algorithm>
-#include <stdlib.h>
-#include <math.h>
-#include <cmath>
-#include <queue>
-#include <stack>
-#include <deque>
-#include <map>
 #include <unordered_map>
-#include <set>
-#include <limits.h>
-#include <float.h>
-#include <string.h>
+#include <string>
 
-#define Endl << "\n"
-#define endL << "\n" <<
-#define Cout cout <<
-#define	COUT cout << "OUT: " <<
-#define Cin cin >>
-#define fspc << " "
-#define spc << " " <<
-#define Enter cout << "\n"
-#define if if
-#define elif else if
-#define else else
-#define For(n) for(int i = 0; i < n; i++)
-#define Forj(n) for(int j = 0; j < n; j++)
-#define Foro(n) for(int i = 1; i <= n; i++)
-#define Forjo(n) for(int j = 1; j <= n; j++)
-#define between(small, middle, big) (small < middle && middle < big)
-#define among(small, middle, big) (small <= middle && middle <= big)
-#define stoe(container) container.begin(), container.end()
-#define lf(d) Cout fixed; cout.precision(d);
-#define ulf cout.unsetf(ios::scientific);
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
-#define PI 3.14159265359
-
-typedef long long LLONG;
-typedef unsigned long long ULLONG;
-typedef unsigned int UINT;
 
 using namespace std;
 
-template <typename T>
-class heap : public priority_queue<T, vector<T>, greater<T>>
-{
-};
-
 int main()
 {
-	FastIO;
+    FastIO;
 
-	unordered_map<string, string> result;
-	result["CU"] = "see you";
-	result[":-)"] = "I¡¯m happy";
-	result[":-("] = "I¡¯m unhappy";
-	result[";-)"] = "wink";
-	result[":-P"] = "stick out my tongue";
-	result["(~.~)"] = "sleepy";
-	result["TA"] = "totally awesome";
-	result["CCC"] = "Canadian Computing Competition";
-	result["CUZ"] = "because";
-	result["TY"] = "thank-you";
-	result["YW"] = "you¡¯re welcome";
-	result["TTYL"] = "talk to you later";
+    unordered_map<string, string> translation;
+    translation["CU"] = "see you";
+    translation[":-)"] = "I¡¯m happy";
+    translation[":-("] = "I¡¯m unhappy";
+    translation[";-)"] = "wink";
+    translation[":-P"] = "stick out my tongue";
+    translation["(~.~)"] = "sleepy";
+    translation["TA"] = "totally awesome";
+    translation["CCC"] = "Canadian Computing Competition";
+    translation["CUZ"] = "because";
+    translation["TY"] = "thank-you";
+    translation["YW"] = "you¡¯re welcome";
+    translation["TTYL"] = "talk to you later";
 
-	while (true)
-	{
-		string shortForm;
-		Cin shortForm;
-		Cout(result[shortForm] != "" ? result[shortForm] : shortForm) Endl;
-		if (shortForm == "TTYL")
-			break;
-	}
+    while (true)
+    {
+        string shortForm;
+        cin >> shortForm;
+
+        string result = translation[shortForm] != "" ? translation[shortForm] : shortForm;
+        cout << result << '\n';
+
+        if (shortForm == "TTYL")
+            break;
+    }
 }
