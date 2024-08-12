@@ -29,5 +29,5 @@ int main()
     cin >> n >> p;
 
     double result = SaledPrice(n, p);
-    cout << (int)result << '\n';
+    cout << result << '\n';
 }
