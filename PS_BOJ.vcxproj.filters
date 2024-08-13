@@ -3245,7 +3245,7 @@
     <ClCompile Include="4. Platinum\Platinum 4\[P4] 01185 유럽여행.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="4. Platinum\Platinum 4\![P4] 27876 제곱수 덱 1.cpp">
+    <ClCompile Include="4. Platinum\Platinum 4\[P4] 27876 제곱수 덱 1.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="3. Gold\Gold 5\[G5] 15558 점프 게임.cpp">
@@ -3813,6 +3813,18 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="0. Unrated\[U？] Zuma 2.0： Возвращение лягушки-идола.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 5\[B5] 30087 진흥원 세미나.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 5\[B5] 30214 An Easy-Peasy Problem.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 5\[B5] 30224 Lucky 7.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 5\[B5] 30664 Loteria Falha.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
