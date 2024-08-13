@@ -3824,7 +3824,49 @@
     <ClCompile Include="1. Bronze\Bronze 5\[B5] 30224 Lucky 7.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 5\[B5] 30664 Loteria Falha.cpp">
+    <ClCompile Include="1. Bronze\Bronze 5\[B5] 31429 SUAPC 2023 Summer.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 5\[B5] 31450 Everyone is a winner.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 5\[B5] 31606 果物 %28Fruit%29.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 5\[B5] 31610 飴の袋詰め %28Drops Packing%29.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 5\[B5] 31611 火曜日 Tuesday.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 5\[B5] 31614 分 %28Minutes%29.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 5\[B5] 31654 Adding Trouble.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 28490 Area.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 28519 Планеты двух измерений.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 28648 Торговый центр.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 28808 Таблица результатов.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 28940 Дневник Гравити Фолз.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 28960 Плащ левитации.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 29097 Короли.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 29267 Случай с игрой.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
@@ -3847,5 +3889,6 @@
     <None Include="1. Bronze\Bronze 5\[B5] 27434 팩토리얼 3.py" />
     <None Include="2. Silver\Silver 4\[S4] 28086 미소녀 컴퓨터 파루빗토 쨩.py" />
     <None Include="2. Silver\Silver 5\[S5] 10826 피보나치 수 4.py" />
+    <None Include="1. Bronze\Bronze 5\[B5] 30664 Loteria Falha.py" />
   </ItemGroup>
 </Project>
