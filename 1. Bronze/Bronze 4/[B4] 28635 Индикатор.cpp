@@ -8,9 +8,9 @@ int main()
 {
     FastIO;
 
-    int a, b;
-    cin>>a >> b;
+    int m, a, b;
+    cin >> m >> a >> b;
 
-    int result = (a <= b ? a * 2 - 1 : 2 * b + 1);
+    int result = (m + b - a) % m;
     cout << result << '\n';
 }

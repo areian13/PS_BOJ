@@ -8,9 +8,16 @@ int main()
 {
     FastIO;
 
-    int a, b;
-    cin>>a >> b;
+    int n, h;
+    cin >> n >> h;
 
-    int result = (a <= b ? a * 2 - 1 : 2 * b + 1);
+    int result = 0;
+    for (int i = 0; i < n; i++)
+    {
+        int a;
+        cin >> a;
+
+        result += (a <= h);
+    }
     cout << result << '\n';
 }
