@@ -1505,7 +1505,7 @@
     <ClCompile Include="1. Bronze\Bronze 4\[B4] 28453 Previous Level.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 4\[B4] 29736 브실이와 친구가 되고 싶어 🤸‍♀️‍.cpp">
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 29736 브실이와 친구가 되고 싶어 🤸‍♀️.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 4\[B4] 29738 Goodbye, Code Jam.cpp">
@@ -3881,6 +3881,54 @@
     <ClCompile Include="1. Bronze\Bronze 4\[B4] 29546 Файлы.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 29683 Рождественская лотерея.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 29725 체스 초보 브실이.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 29826 Pakirobot Manhattanis.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 29986 Amusement Park Adventure.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 5\[B5] 26711 A+B [1].cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 2\[G2] 25619 자취방 정하기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 30031 지폐 세기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 30067 Paslėpta suma.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 30143 Cookie Piles.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 30319 Advance to Taoyuan Regional.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 30501 관공... 어찌하여 목만 오셨소....cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 30585 Поп-ит.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 2\[G2] 23033 집에 빨리 가고 싶어!.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 30658 Os últimos serão os primeiros.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 30794 가희와 클럽 오디션 1.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 31048 Last Factorial Digit.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="0. Unrated\[U0] 27903 인생.bf" />
@@ -3893,11 +3941,11 @@
     <None Include="1. Bronze\Bronze 5\[B5] 01272 엄청난 부자2 [2].py" />
     <None Include="1. Bronze\Bronze 5\[B5] 01809 Moo.gs" />
     <None Include="1. Bronze\Bronze 5\[B5] 02338 긴자리 계산 [2].py" />
-    <None Include="1. Bronze\Bronze 5\[B5] 02372 Livestock Count.ada" />
-    <None Include="1. Bronze\Bronze 5\[B5] 02377 Pottery.bas" />
+    <None Include="0. Unrated\[U0] 02372 Livestock Count.ada" />
+    <None Include="0. Unrated\[U0] 02377 Pottery.bas" />
     <None Include="1. Bronze\Bronze 5\[B5] 02393 Rook [0].cob" />
-    <None Include="1. Bronze\Bronze 5\[B5] 14337 Helicopter.vb" />
-    <None Include="1. Bronze\Bronze 5\[B5] 26711 A+B.py" />
+    <None Include="0. Unrated\[U0] 14337 Helicopter.vb" />
+    <None Include="1. Bronze\Bronze 5\[B5] 26711 A+B [2].py" />
     <None Include="1. Bronze\Bronze 5\[B5] 27434 팩토리얼 3.py" />
     <None Include="2. Silver\Silver 4\[S4] 28086 미소녀 컴퓨터 파루빗토 쨩.py" />
     <None Include="2. Silver\Silver 5\[S5] 10826 피보나치 수 4.py" />
