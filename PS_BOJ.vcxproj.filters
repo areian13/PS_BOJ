@@ -3929,6 +3929,39 @@
     <ClCompile Include="1. Bronze\Bronze 4\[B4] 31048 Last Factorial Digit.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 4\[P4] 01298 노트북의 주인을 찾아서.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 31134 A Hero Named Magnus.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 31261 НАМИСЛИХ СИ ЧИСЛО.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 31280 ФАКИР.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 3\[P3] 01258 문제 할당.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 31281 ЗЛАТНАТА СРЕДА.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 31282 ЛОВНО КУЧЕ.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 31306 Is Y a Vowel？.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 31518 Triple Sevens.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 31520 Champernowne Verification.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 31607 和の判定 %28Sum Checker%29.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="0. Unrated\[U0] 27903 인생.bf" />
