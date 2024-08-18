@@ -3,7 +3,7 @@
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
 #define lf(d) cout << fixed; cout.precision(d);
-#define ulf cout.unsetf(ios::scientific);
+#define ulf() cout.unsetf(ios::scientific);
 
 using namespace std;
 
@@ -17,7 +17,7 @@ int main()
     if (m > n)
         swap(m, n);
 
-    double result = min(n, 2 * m / a);
     lf(6);
+    double result = min(n, 2 * m / a);
     cout << result << '\n';
 }

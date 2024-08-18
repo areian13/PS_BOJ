@@ -2,7 +2,7 @@
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
 #define lf(d) cout << fixed; cout.precision(d);
-#define ulf cout.unsetf(ios::scientific);
+#define ulf() cout.unsetf(ios::scientific);
 
 using namespace std;
 
@@ -20,7 +20,7 @@ int main()
     int m;
     cin >> m;
 
-    double result = CorrectMinute(m);
     lf(1);
+    double result = CorrectMinute(m);
     cout << result << '\n';
 }

@@ -9,7 +9,7 @@ using namespace std;
 array<int, 4> dy = { 1,0,-1,0 };
 array<int, 4> dx = { 0,1,0,-1 };
 
-int BT(int y, int x, vector<vector<int>>& dist, int k, vector<vector<char>>& map)
+int BT(int y, int x, int k, vector<vector<int>>& dist, vector<vector<char>>& map)
 {
     int r = dist.size();
     int c = dist[0].size();
@@ -29,7 +29,7 @@ int BT(int y, int x, vector<vector<int>>& dist, int k, vector<vector<char>>& map
             continue;
 
         dist[ny][nx] = dist[y][x] + 1;
-        result += BT(ny, nx, dist, k, map);
+        result += BT(ny, nx, k, dist, map);
         dist[ny][nx] = -1;
     }
     return result;
@@ -52,6 +52,6 @@ int main()
     vector<vector<int>> dist(r, vector<int>(c, -1));
     dist[r - 1][0] = 1;
 
-    int result = BT(r - 1, 0, dist, k, map);
+    int result = BT(r - 1, 0, k, dist, map);
     cout << result << '\n';
 }

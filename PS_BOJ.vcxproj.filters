@@ -1775,9 +1775,6 @@
     <ClCompile Include="2. Silver\Silver 1\[S1] 30036 INK.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="2. Silver\Silver 1\![S1] 01552 도미노.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="2. Silver\Silver 1\[S1] 01105 팔.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
