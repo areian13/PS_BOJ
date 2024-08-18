@@ -5,16 +5,18 @@
 
 using namespace std;
 
-#define MAX 90
+#define MAX 116
 
-long long CountPinaryNum(int n)
+long long FakeFib(int n)
 {
     static vector<long long> dp(MAX + 1, -1);
-    if (n <= 1)
-        return dp[n] = n;
+
+    if (n <= 3)
+        return dp[n] = 1;
     if (dp[n] != -1)
         return dp[n];
-    return dp[n] = CountPinaryNum(n - 1) + CountPinaryNum(n - 2);
+
+    return dp[n] = FakeFib(n - 1) + FakeFib(n - 3);
 }
 
 int main()
@@ -24,6 +26,6 @@ int main()
     int n;
     cin >> n;
 
-    long long result = CountPinaryNum(n);
+    long long result = FakeFib(n);
     cout << result << '\n';
 }

@@ -5,16 +5,21 @@
 
 using namespace std;
 
-#define MAX 90
+#define MAX 35
 
-long long CountPinaryNum(int n)
+long long t(int n)
 {
     static vector<long long> dp(MAX + 1, -1);
-    if (n <= 1)
-        return dp[n] = n;
+
+    if (n == 0)
+        return dp[0] = 1;
     if (dp[n] != -1)
         return dp[n];
-    return dp[n] = CountPinaryNum(n - 1) + CountPinaryNum(n - 2);
+
+    long long result = 0;
+    for (int i = 0; i < n; i++)
+        result += t(i) * t(n - 1 - i);
+    return dp[n] = result;
 }
 
 int main()
@@ -24,6 +29,6 @@ int main()
     int n;
     cin >> n;
 
-    long long result = CountPinaryNum(n);
+    long long result = t(n);
     cout << result << '\n';
 }
