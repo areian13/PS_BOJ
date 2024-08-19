@@ -52,7 +52,6 @@ struct Edge
     }
 };
 
-
 array<long long, 2> MCMF(int s, int t, vector<vector<Edge*>>& graph)
 {
     int n = graph.size();
