@@ -1,89 +1,45 @@
 #include <iostream>
+#include <cstdio>
 #include <vector>
-#include <array>
-#include <string>
-#include <time.h>
-#include <algorithm>
-#include <stdlib.h>
-#include <math.h>
-#include <cmath>
-#include <queue>
-#include <stack>
-#include <deque>
-#include <map>
-#include <unordered_map>
-#include <set>
-#include <limits.h>
-#include <string.h>
 
-#define Endl << "\n"
-#define endL << "\n" <<
-#define Cout cout <<
-#define COUT cout << "OUT: " <<
-#define Cin cin >>
-#define fspc << " "
-#define spc << " " <<
-#define Enter cout << "\n"
-#define if if
-#define elif else if
-#define else else
-#define For(n) for(int i = 0; i < n; i++)
-#define Forj(n) for(int j = 0; j < n; j++)
-#define Foro(n) for(int i = 1; i <= n; i++)
-#define Forjo(n) for(int j = 1; j <= n; j++)
-#define between(small, middle, big) (small < middle && middle < big)
-#define among(small, middle, big) (small <= middle && middle <= big)
-#define stoe(container) container.begin(), container.end()
-#define lf(d) Cout fixed; cout.precision(d);
-#define ulf cout.unsetf(ios::scientific);
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
-#define PI 3.14159265359
-
-#define Vec(type, name, size) vector<type> name(size); for(type& k : name) Cin k
-
-typedef long long LLONG;
-typedef unsigned long long ULLONG;
-typedef unsigned int UINT;
 
 using namespace std;
 
-template <typename T>
-class heap : public priority_queue<T, vector<T>, greater<T>>
-{
-};
-
-array<bool, 1'000'001> sosu;
+#define MAX 1'000'000
 
 int main()
 {
-	FastIO;
+    FastIO;
 
-	fill(stoe(sosu), true);
-	for (int i = 2; i < 1'000'001; i++)
-	{
-		if (!sosu[i])
-			continue;
-		for (int j = 2; i * j < 1'000'001; j++)
-			sosu[i * j] = false;
-	}
-	sosu[1] = false;
+    vector<bool> isPrime(MAX + 1, true);
+    isPrime[0] = isPrime[1] = false;
+    for (int i = 2; i <= MAX; i++)
+    {
+        if (!isPrime[i])
+            continue;
 
-	while (true)
-	{
-		int n;
-		Cin n;
+        for (int j = 2; i * j <= MAX; j++)
+            isPrime[i * j] = false;
+    }
 
-		if (n == 0)
-			break;
 
-		int right = n;
-		while (true)
-		{
-			if (sosu[right] && sosu[n - right])
-				break;
-			right--;
-		}
+    while (true)
+    {
+        int n;
+        cin >> n;
 
-		printf("%d = %d + %d\n", n, n - right, right);
-	}
+        if (n == 0)
+            break;
+
+        int right = n;
+        while (true)
+        {
+            if (isPrime[right] && isPrime[n - right])
+                break;
+            right--;
+        }
+
+        printf("%d = %d + %d\n", n, n - right, right);
+    }
 }

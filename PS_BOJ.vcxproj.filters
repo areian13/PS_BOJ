@@ -1832,7 +1832,7 @@
     <ClCompile Include="2. Silver\Silver 1\[S1] 11278 2-SAT - 2.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="2. Silver\Silver 1\[S1] 11286 절댓값 힙 [1].cpp">
+    <ClCompile Include="2. Silver\Silver 1\[S1] 11286 절댓값 힙.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="2. Silver\Silver 1\[S1] 13335 트럭.cpp">
@@ -3548,9 +3548,6 @@
     <ClCompile Include="2. Silver\Silver 2\[S2] 11279 최대 힙.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="2. Silver\Silver 1\[S1] 11286 절댓값 힙 [2].cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="3. Gold\Gold 2\[G2] 20183 골목 대장 호석 - 효율성 2.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -4050,6 +4047,30 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 4\[B4] 32089 部員の変遷.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 3\[P3] 12424 전장 %28Large%29.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 07218 Pasislėpę romėniški skaičiai.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 10874 이교수님의 시험.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 13456 Richard Hamming.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 14209 Bridž.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 18856 피드백 [1].cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 18856 피드백 [2].cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 19572 가뭄%28Small%29.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

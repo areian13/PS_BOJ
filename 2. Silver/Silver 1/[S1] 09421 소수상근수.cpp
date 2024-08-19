@@ -1,99 +1,64 @@
 #include <iostream>
 #include <vector>
-#include <array>
-#include <string>
-#include <time.h>
-#include <algorithm>
-#include <stdlib.h>
-#include <math.h>
-#include <cmath>
-#include <queue>
-#include <stack>
-#include <deque>
-#include <map>
-#include <unordered_map>
-#include <set>
-#include <limits.h>
-#include <string.h>
 
-#define Endl << "\n"
-#define endL << "\n" <<
-#define Cout cout <<
-#define	COUT cout << "OUT: " <<
-#define Cin cin >>
-#define fspc << " "
-#define spc << " " <<
-#define Enter cout << "\n"
-#define if if
-#define elif else if
-#define else else
-#define For(n) for(int i = 0; i < n; i++)
-#define Forj(n) for(int j = 0; j < n; j++)
-#define Foro(n) for(int i = 1; i <= n; i++)
-#define Forjo(n) for(int j = 1; j <= n; j++)
-#define between(small, middle, big) (small < middle && middle < big)
-#define among(small, middle, big) (small <= middle && middle <= big)
-#define stoe(container) container.begin(), container.end()
-#define lf(d) Cout fixed; cout.precision(d);
-#define ulf cout.unsetf(ios::scientific);
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
-#define PI 3.14159265359
-
-typedef long long LLONG;
-typedef unsigned long long ULLONG;
-typedef unsigned int UINT;
 
 using namespace std;
 
-template <typename T>
-class heap : public priority_queue<T, vector<T>, greater<T>>
+#define MAX 486
+
+int Sanggeun(int n)
 {
-};
+    int result = 0;
+    while (n > 0)
+    {
+        int d = n % 10;
+        result += d * d;
+        n /= 10;
+    }
+    return result;
+}
+
+bool IsSanggeun(int n)
+{
+    vector<bool> isVisited(MAX + 1, false);
+    while (true)
+    {
+        n = Sanggeun(n);
+
+        if (isVisited[n])
+            return false;
+        if (n == 1)
+            return true;
+
+        isVisited[n] = true;
+    }
+    return false;
+}
 
 int main()
 {
-	FastIO;
+    FastIO;
 
-	int n;
-	Cin n;
+    int n;
+    cin >> n;
 
-	vector<bool> isSosu(n + 1, true);
-	isSosu[0] = false;
-	isSosu[1] = false;
-	for (int i = 2; i <= n; i++)
-	{
-		if (!isSosu[i])
-			continue;
+    vector<bool> isPrime(n + 1, true);
+    isPrime[0] = isPrime[1] = false;
+    for (int i = 2; i <= n; i++)
+    {
+        if (!isPrime[i])
+            continue;
 
-		for (int j = 2; i * j <= n; j++)
-			isSosu[i * j] = false;
-	}
-	for (int i = 0; i <= n; i++)
-	{
-		if (!isSosu[i])
-			continue;
+        for (int j = 2; i * j <= n; j++)
+            isPrime[i * j] = false;
+    }
 
-		int temp = i;
-		array<bool, 487> isVisited = { false, };
-		while (true)
-		{
-			int sum = 0;
-			while (temp)
-			{
-				sum += pow(temp % 10, 2);
-				temp /= 10;
-			}
-			temp = sum;
+    for (int i = 0; i <= n; i++)
+    {
+        if (!isPrime[i] || !IsSanggeun(i))
+            continue;
 
-			if (isVisited[temp])
-				goto IS_INFINITE;
-			if (temp == 1)
-				break;
-
-			isVisited[temp] = true;
-			
-		}
-		printf("%d,", i);
-	IS_INFINITE:;
-	}
+        cout << i << '\n';
+    }
 }
