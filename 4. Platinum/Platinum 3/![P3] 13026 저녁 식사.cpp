@@ -2,10 +2,13 @@
 #include <vector>
 #include <climits>
 #include <queue>
+#include <string>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
 
 using namespace std;
+
+#define MAX 20'000
 
 struct Edge
 {
@@ -67,7 +70,6 @@ bool CanGo(int s, int t, vector<int>& level, vector<vector<Edge*>>& graph)
             Q.push(v);
         }
     }
-
     return (level[t] != INT_MAX);
 }
 
@@ -77,9 +79,8 @@ int GetFlow(int u, int t, int flow, vector<int>& work,
     if (u == t)
         return flow;
 
-    for (int& i = work[u]; i < graph[u].size(); i++)
+    for (Edge* edge : graph[u])
     {
-        Edge* edge = graph[u][i];
         int v = edge->v;
 
         if (edge->Spare() <= 0 || level[v] != level[u] + 1)
@@ -95,7 +96,7 @@ int GetFlow(int u, int t, int flow, vector<int>& work,
     return 0;
 }
 
-int HappyCow(int s, int t, vector<vector<Edge*>>& graph)
+int MaxFlow(int s, int t, vector<vector<Edge*>>& graph)
 {
     int n = graph.size();
 
@@ -119,52 +120,47 @@ int main()
 {
     FastIO;
 
-    int n, f, d;
-    cin >> n >> f >> d;
-
-    vector<vector<Edge*>> graph(n * 2 + f + d + 2);
-    int s = n * 2 + f + d;
-    for (int i = 0; i < f; i++)
+    vector<bool> isPrime(MAX + 1, true);
+    isPrime[0] = isPrime[1] = false;
+    for (int i = 2; i <= MAX; i++)
     {
-        int u = n * 2 + i;
-        Edge::AddEdge(s, u, 1, 0, graph);
+        if (!isPrime[i])
+            continue;
+
+        for (int j = 2; i * j <= MAX; j++)
+            isPrime[i * j] = false;
     }
 
-    int t = s + 1;
-    for (int i = 0; i < d; i++)
-    {
-        int v = n * 2 + f + i;
-        Edge::AddEdge(v, t, 1, 0, graph);
-    }
+    int n;
+    cin >> n;
 
+    vector<int> a(n);
+    for (int i = 0; i < n; i++)
+        cin >> a[i];
+
+    vector<vector<Edge*>> graph(n + 2);
+    int s = n, t = s + 1;
     for (int i = 0; i < n; i++)
     {
-        int u = i * 2;
-        Edge::AddEdge(u, u + 1, 1, 0, graph);
+        int u = i;
+        if (a[i] % 2 == 0)
+            Edge::AddEdge(s, u, 1, 0, graph);
+        else
+            Edge::AddEdge(u, t, 1, 0, graph);
 
-        int fi, di;
-        cin >> fi >> di;
-
-        for (int j = 0; j < fi; j++)
+        for (int j = i + 1; j < n; j++)
         {
-            int v;
-            cin >> v;
-            v += n * 2 - 1;
+            if (!isPrime[a[i] + a[j]])
+                continue;
 
-            Edge::AddEdge(v, u, 1, 0, graph);
-        }
-
-        for (int j = 0; j < di; j++)
-        {
-            int v;
-            cin >> v;
-            v += n * 2 + f - 1;
-
-            Edge::AddEdge(u + 1, v, 1, 0, graph);
+            int v = j * 2;
+            Edge::AddEdge(u, v, 1, 1, graph);
         }
     }
 
-    int result = HappyCow(s, t, graph);
+    int flow = MaxFlow(s, t, graph);
+    cout << flow << '\n';
+    string result = (flow == n * 3 ? "Possible" : "Impossible");
     cout << result << '\n';
     Edge::DeleteEdge(graph);
 }

@@ -20,6 +20,8 @@ struct Edge
 
     int Spare()
     {
+        if (c == INT_MAX)
+            return INT_MAX;
         return c - f;
     }
     void AddFlow(int flow)
