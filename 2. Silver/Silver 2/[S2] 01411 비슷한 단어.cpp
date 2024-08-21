@@ -1,102 +1,51 @@
-#ifdef ONLINE_JUDGE
-#define _128d  __int128
-#else
-#define _128d long long
-#endif
-
 #include <iostream>
 #include <vector>
-#include <array>
 #include <string>
-#include <time.h>
-#include <algorithm>
-#include <stdlib.h>
-#include <math.h>
-#include <cmath>
-#include <queue>
-#include <stack>
-#include <deque>
-#include <map>
-#include <unordered_map>
-#include <set>
-#include <limits.h>
-#include <float.h>
-#include <string.h>
-#include <random>
-#include <type_traits>
+#include <array>
 
-#define Endl << "\n"
-#define endL << "\n" <<
-#define Cout cout <<
-#define COUT cout << "OUT: " <<
-#define Cin cin >>
-#define fspc << " "
-#define spc << " " <<
-#define Enter cout << "\n"
-#define if if
-#define elif else if
-#define else else
-#define For(n) for(int i = 0; i < n; i++)
-#define Forj(n) for(int j = 0; j < n; j++)
-#define Foro(n) for(int i = 1; i <= n; i++)
-#define Forjo(n) for(int j = 1; j <= n; j++)
-#define between(small, middle, big) (small < middle && middle < big)
-#define among(small, middle, big) (small <= middle && middle <= big)
-#define stoe(container) container.begin(), container.end()
-#define lf(d) Cout fixed; cout.precision(d);
-#define ulf cout.unsetf(ios::scientific);
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
-#define PI 3.14159265359
-
-typedef long long LLONG;
-typedef unsigned long long ULLONG;
-typedef unsigned int UINT;
 
 using namespace std;
 
-template <typename T>
-class heap : public priority_queue<T, vector<T>, greater<T>>
-{
-};
-
 bool IsSimilarString(string& a, string& b)
 {
-	array<char, 26> check1, check2;
-	fill(stoe(check1), '\0');
-	fill(stoe(check2), '\0');
+    int k = a.size();
+    
+    array<char, 26> atob = { '\0', };
+    array<char, 26> btoa = { '\0', };
 
-	For(a.size())
-	{
-		int idx1 = a[i] - 'a';
-		int idx2 = b[i] - 'a';
+    for (int i = 0; i < k; i++)
+    {
+        int c1 = a[i] - 'a';
+        int c2 = b[i] - 'a';
 
-		if (check1[idx1] == '\0' && check2[idx2] == '\0')
-		{
-			check1[idx1] = b[i];
-			check2[idx2] = a[i];
-		}
-		elif(check1[idx1] != b[i])
-			return false;
-	}
-	return true;
+        if (atob[c1] == '\0' && btoa[c2] == '\0')
+        {
+            atob[c1] = b[i];
+            btoa[c2] = a[i];
+        }
+        else if (atob[c1] != b[i] || btoa[c2] != a[i])
+            return false;
+    }
+    return true;
 }
 
 int main()
 {
-	FastIO;
+    FastIO;
 
-	int n;
-	Cin n;
+    int n;
+    cin >> n;
 
-	vector<string> word(n);
-	For(n)
-		Cin word[i];
+    vector<string> words(n);
+    for (int i = 0; i < n; i++)
+        cin >> words[i];
 
-	int result = 0;
-	For(n - 1)
-	{
-		for (int j = i + 1; j < n; j++)
-			result += IsSimilarString(word[i], word[j]);
-	}
-	Cout result Endl;
+    int result = 0;
+    for (int i = 0; i < n - 1; i++)
+    {
+        for (int j = i + 1; j < n; j++)
+            result += IsSimilarString(words[i], words[j]);
+    }
+    cout << result << '\n';
 }

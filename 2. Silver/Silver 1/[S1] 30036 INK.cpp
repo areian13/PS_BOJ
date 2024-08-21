@@ -75,7 +75,7 @@ int main()
 
     int i, n, k;
     string ink;
-    cin>>i >> n >> k >> ink;
+    cin >> i >> n >> k >> ink;
 
     vector<vector<char>> map(n, vector<char>(n));
     Pos s = { -1,-1 };
@@ -83,13 +83,13 @@ int main()
     {
         for (int j = 0; j < n; j++)
         {
-            cin>>map[i][j];
+            cin >> map[i][j];
             if (map[i][j] == '@')
                 s = { i,j };
         }
     }
     string cmds;
-    cin>> cmds;
+    cin >> cmds;
 
     int m = 0;
     int cntJump = 0;
@@ -98,7 +98,7 @@ int main()
     {
         if (cmd == 'j')
             m++;
-        else if(cmd == 'J')
+        else if (cmd == 'J')
         {
             char c = ink[cntJump % i];
             cntJump++;

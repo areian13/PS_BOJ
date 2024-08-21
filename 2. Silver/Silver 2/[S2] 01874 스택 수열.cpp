@@ -6,7 +6,7 @@
 
 using namespace std;
 
-void StackArray(vector<int>& arr)
+void PrintStackArray(vector<int>& arr)
 {
     int n = arr.size();
 
@@ -47,5 +47,5 @@ int main()
     for (int i = 0; i < n; i++)
         cin >> arr[i];
 
-    StackArray(arr);
+    PrintStackArray(arr);
 }
