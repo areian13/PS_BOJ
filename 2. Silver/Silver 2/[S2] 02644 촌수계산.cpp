@@ -18,16 +18,16 @@ int BFS(int s, int e, vector<vector<int>>& graph)
 
     while (!Q.empty())
     {
-        int cur = Q.front();
+        int u = Q.front();
         Q.pop();
 
-        for (int nxt : graph[cur])
+        for (int v : graph[u])
         {
-            if (dist[nxt] != -1)
+            if (dist[v] != -1)
                 continue;
 
-            dist[nxt] = dist[cur] + 1;
-            Q.push(nxt);
+            dist[v] = dist[u] + 1;
+            Q.push(v);
         }
     }
     return dist[e];
