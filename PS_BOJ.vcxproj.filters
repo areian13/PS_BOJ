@@ -3806,7 +3806,7 @@
     <ClCompile Include="3. Gold\Gold 1\[G1] 02357 최솟값과 최댓값.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="0. Unrated\[U？] Zuma 2.0： Возвращение лягушки-идола.cpp">
+    <ClCompile Include="0. Unrated\[U？] 29676 Zuma 2.0： Возвращение лягушки-идола.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 5\[B5] 30087 진흥원 세미나.cpp">
@@ -4185,6 +4185,42 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 25915 연세여 사랑한다.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 25965 미션 도네이션.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 26004 HI-ARC.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 26040 특정 대문자를 소문자로 바꾸기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 26145 출제비 재분배.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 26264 빅데이터？ 정보보호!.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 26594 ZOAC 5.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 26645 성장의 비약 선택권.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 27983 리본 %28Easy%29.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 28214 크림빵.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 28637 Смена стиля.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 29070 Ремонт от BB-8.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 29283 Алекс и стейк.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
