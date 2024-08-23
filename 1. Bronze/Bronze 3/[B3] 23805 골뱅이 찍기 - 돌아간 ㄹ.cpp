@@ -14,21 +14,36 @@ int main()
     for (int i = 0; i < n; i++)
     {
         for (int j = 0; j < n * 5; j++)
-            cout << '@';
+        {
+            if (j / n == 3)
+                cout << ' ';
+            else
+                cout << '@';
+        }
         cout << '\n';
     }
 
     for (int i = 0; i < n * 3; i++)
     {
-        for (int j = 0; j < n; j++)
-            cout << '@';
+        for (int j = 0; j < n * 5; j++)
+        {
+            if (j / n == 1 || j / n == 3)
+                cout << ' ';
+            else
+                cout << '@';
+        }
         cout << '\n';
     }
 
     for (int i = 0; i < n; i++)
     {
         for (int j = 0; j < n * 5; j++)
-            cout << '@';
+        {
+            if (j / n == 1)
+                cout << ' ';
+            else
+                cout << '@';
+        }
         cout << '\n';
     }
 }
