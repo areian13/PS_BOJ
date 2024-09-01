@@ -3191,12 +3191,6 @@
     <ClCompile Include="3. Gold\Gold 2\[G2] 23743 방탈출.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Contest\2024 POSTECH Programming Contest Open Contest\A번 - 글로벌 포닉스.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Contest\2024 POSTECH Programming Contest Open Contest\B번 - 예비 소집 결과 보고서.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="3. Gold\Gold 2\[G2] 28473 도로 위의 표지판.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -4325,7 +4319,34 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 05987 String Function Encoding.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 2\[B3] 05989 The Robot Plow.cpp">
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 05989 The Robot Plow.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 2\[P2] 02365 숫자판 만들기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 2\[P2] 08992 집기 게임.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 2\[P2] 09169 나는 9999번 문제를 풀 수 있다.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 5\[P5] 01708 볼록 껍질.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Contest\2024\08\2024-08-31 14%2700 2024 중앙대학교 프로그래밍 경진대회(CPC) Open Contest\A1번 - 울타리 공사.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Contest\2024\08\2024-08-31 14%2700 2024 중앙대학교 프로그래밍 경진대회(CPC) Open Contest\B1번 - 현권이와 신기한 수열.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 4\[P4] 02254 감옥 건설.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Contest\2024\09\2024-09-01 12%2700 2024 신촌지역 대학생 프로그래밍 동아리 연합 여름 대회 (SUAPC 2024 Summer) Open Contest\A번 - SWAPC.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Contest\2024\09\2024-09-01 19%2700 월간 향유회 2024. 08. Open Contest\A번 - 다음 달에 봐요.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
