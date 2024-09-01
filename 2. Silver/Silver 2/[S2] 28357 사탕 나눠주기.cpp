@@ -14,7 +14,7 @@ long long CountCandy(long long x, vector<long long>& a)
     return result;
 }
 
-long long BS(long long k, vector<long long>& a)
+long long MinCandy(long long k, vector<long long>& a)
 {
     long long start = 0;
     long long end = *max_element(a.begin(), a.end());
@@ -47,6 +47,6 @@ int main()
     for (int i = 0; i < n; i++)
         cin >> a[i];
 
-    long long result = BS(k, a);
+    long long result = MinCandy(k, a);
     cout << result << '\n';
 }

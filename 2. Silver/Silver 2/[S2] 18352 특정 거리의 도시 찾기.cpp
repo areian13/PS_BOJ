@@ -36,9 +36,6 @@ void KCity(int x, int k, vector<vector<int>>& graph, vector<int>& result)
         }
     }
     sort(result.begin(), result.end());
-
-    if (result.empty())
-        result.push_back(-1);
 }
 
 int main()
@@ -62,6 +59,11 @@ int main()
     vector<int> result;
     KCity(x, k, graph, result);
 
-    for (int x : result)
-        cout << x << '\n';
+    if (result.empty())
+        cout << -1 << '\n';
+    else
+    {
+        for (int x : result)
+            cout << x << '\n';
+    }
 }
