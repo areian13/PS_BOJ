@@ -3353,6 +3353,7 @@
     <ClCompile Include="4. Platinum\Platinum 4\[P4] 02367 파티.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 4\[P4] 03679 단순 다각형.cpp" />
     <ClCompile Include="4. Platinum\Platinum 4\[P4] 04181 Convex Hull.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>

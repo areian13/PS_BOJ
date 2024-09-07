@@ -4379,6 +4379,9 @@
     <ClCompile Include="3. Gold\Gold 5\[G5] 02170 선 긋기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 4\[P4] 03679 단순 다각형.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="0. Unrated\[U0] 27903 인생.bf" />
