@@ -23,26 +23,16 @@ struct Point
     }
 };
 
-bool IsInner(Point& p, vector<Point>& points, stack<int> S)
+bool IsInner(Point& p, vector<int>& S, vector<Point>& points)
 {
-    int start = S.top();
-    int first = S.top();
-    S.pop();
-    int second = S.top();
-    S.pop();
-
-    int ccw = Point::CCW(points[first], points[second], p);
-    while (!S.empty())
+    int k = S.size();
+    int ccw = Point::CCW(points[S[k - 1]], points[S[0]], p);
+    for (int i = 0; i < k - 1; i++)
     {
-        first = second;
-        second = S.top();
-        S.pop();
-
-        if (ccw != Point::CCW(points[first], points[second], p))
+        if (Point::CCW(points[S[i]], points[S[i + 1]], p) != ccw)
             return false;
     }
-
-    return (ccw == Point::CCW(points[second], points[start], p));
+    return true;
 }
 
 int MaxLayer(Point& p, vector<Point>& points)
@@ -77,38 +67,38 @@ int MaxLayer(Point& p, vector<Point>& points)
             }
         );
 
-        stack<int> S;
-        S.push(0);
-        S.push(1);
+        vector<int> S;
+        S.push_back(0);
+        S.push_back(1);
 
         int next = 2;
         while (next < n)
         {
             while (S.size() >= 2)
             {
-                int second = S.top();
-                S.pop();
-                int first = S.top();
+                int second = S.back();
+                S.pop_back();
+                int first = S.back();
 
                 if (Point::CCW(points[first], points[second], points[next]) > 0)
                 {
-                    S.push(second);
+                    S.push_back(second);
                     break;
                 }
             }
 
-            S.push(next);
+            S.push_back(next);
             next++;
         }
 
-        if (!IsInner(p, points, S))
+        if (!IsInner(p, S, points))
             break;
 
         result++;
         while (!S.empty())
         {
-            points.erase(points.begin() + S.top());
-            S.pop();
+            points.erase(points.begin() + S.back());
+            S.pop_back();
         }
     }
     return result;

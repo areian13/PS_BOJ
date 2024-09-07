@@ -1745,7 +1745,7 @@
     <ClCompile Include="2. Silver\Silver 2\[S2] 28357 사탕 나눠주기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="2. Silver\Silver 2\[S2] 28418 회장님께 바치는 합성함수.cpp">
+    <ClCompile Include="2. Silver\Silver 3\[S3] 28418 회장님께 바치는 합성함수.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="2. Silver\Silver 2\[S2] 29160 나의 FIFA 팀 가치는？.cpp">
@@ -1760,7 +1760,7 @@
     <ClCompile Include="2. Silver\Silver 2\[S2] 30205 전역 임무.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="2. Silver\Silver 2\[S2] 30425 Re-verse.cpp">
+    <ClCompile Include="2. Silver\Silver 1\[S1] 30425 Re-verse.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="2. Silver\Silver 2\[S2] 30506 가위 가위 가위.cpp">
@@ -4347,6 +4347,36 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="Contest\2024\09\2024-09-01 19%2700 월간 향유회 2024. 08. Open Contest\A번 - 다음 달에 봐요.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 4\[P4] 07420 맹독 방벽.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="0. Unrated\[U0] 11921 0.1.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 5\[P5] 02699 격자점 컨벡스헐.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 4\[P4] 02244 민코프스키 합.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 22341 사각형 면적.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 5\[P5] 06850 Cows.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 5\[B5] 32154 SUAPC 2024 Winter.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 2\[P2] 03878 점 분리.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 4\[P4] 04181 Convex Hull.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 5\[G5] 02170 선 긋기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

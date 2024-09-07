@@ -106,17 +106,18 @@ int BFS(int m, int n, int o, int p, int q, int r, int s, int t, int u, int v, in
             int nリ = リ + dリ[i];
             int nル = ル + dル[i];
 
-            if (nメ < 0 || nメ >= w
-                || nモ < 0 || nモ >= v
-                || nャ < 0 || nャ >= u
-                || nヤ < 0 || nヤ >= t
-                || nュ < 0 || nュ >= s
-                || nユ < 0 || nユ >= r
-                || nョ < 0 || nョ >= q
-                || nヨ < 0 || nヨ >= p
-                || nラ < 0 || nラ >= o
-                || nリ < 0 || nリ >= n
-                || nル < 0 || nル >= m)
+            if (nメ < 0 || nメ >= w ||
+                nモ < 0 || nモ >= v ||
+                nャ < 0 || nャ >= u ||
+                nヤ < 0 || nヤ >= t ||
+                nュ < 0 || nュ >= s ||
+                nユ < 0 || nユ >= r ||
+                nョ < 0 || nョ >= q ||
+                nヨ < 0 || nヨ >= p ||
+                nラ < 0 || nラ >= o ||
+                nリ < 0 || nリ >= n ||
+                nル < 0 || nル >= m
+                )
                 continue;
             if (map[nメ][nモ][nャ][nヤ][nュ][nユ][nョ][nヨ][nラ][nリ][nル] != 0)
                 continue;
