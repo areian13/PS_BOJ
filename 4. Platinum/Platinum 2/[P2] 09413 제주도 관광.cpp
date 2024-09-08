@@ -19,7 +19,7 @@ struct Edge
 
     int Spare()
     {
-        if (c == INT_MAX)
+        if (c == INT_MAX && f != INT_MAX)
             return INT_MAX;
         return c - f;
     }
@@ -47,14 +47,6 @@ struct Edge
                 delete edge;
         }
     }
-    static void InitEdge(vector<vector<Edge*>>& graph)
-    {
-        for (auto& edges : graph)
-        {
-            for (Edge* edge : edges)
-                edge->f = 0;
-        }
-    }
 };
 
 array<int, 2> MCMF(int s, int t, vector<vector<Edge*>>& graph)
@@ -65,7 +57,7 @@ array<int, 2> MCMF(int s, int t, vector<vector<Edge*>>& graph)
     while (true)
     {
         vector<int> p(n, -1);
-        vector<int> dist(n, INT_MAX);
+        vector<int> dist(n, INT_MIN);
         vector<Edge*> path(n);
         queue<int> Q;
         vector<bool> inQ(n, false);
@@ -85,7 +77,7 @@ array<int, 2> MCMF(int s, int t, vector<vector<Edge*>>& graph)
                 int v = edge->v;
                 int nd = dist[u] + edge->d;
 
-                if (edge->Spare() <= 0 || dist[v] <= nd)
+                if (edge->Spare() <= 0 || dist[v] >= nd)
                     continue;
 
                 dist[v] = nd;
@@ -120,25 +112,37 @@ int main()
 {
     FastIO;
 
-    int n, m;
-    cin >> n >> m;
+    int tc;
+    cin >> tc;
 
-    vector<vector<Edge*>> graph(n + 2);
-    for (int i = 0; i < m; i++)
+    while (tc--)
     {
-        int u, v, d;
-        cin >> u >> v >> d;
-        u--, v--;
+        int n, m;
+        cin >> n >> m;
 
-        Edge::AddEdge(u, v, 1, d, graph);
-        Edge::AddEdge(v, u, 1, d, graph);
+        vector<vector<Edge*>> graph(n * 2 + 3);
+        int s = n * 2, t = s + 2;
+        Edge::AddEdge(s, s + 1, 2, 0, graph);
+        for (int i = 0; i < n; i++)
+        {
+            int u = i * 2;
+            Edge::AddEdge(s + 1, u, 1, 0, graph);
+            Edge::AddEdge(u, u + 1, 1, 1, graph);
+            Edge::AddEdge(u + 1, t, 1, 0, graph);
+        }
+
+        for (int i = 0; i < m; i++)
+        {
+            int u, v;
+            cin >> u >> v;
+            u = (u - 1) * 2;
+            v = (v - 1) * 2;
+
+            Edge::AddEdge(u + 1, v, 1, 0, graph);
+        }
+
+        array<int, 2> result = MCMF(s, t, graph);
+        cout << result[1] << '\n';
+        Edge::DeleteEdge(graph);
     }
-
-    int s = n, t = s + 1;
-    Edge::AddEdge(s, 0, 2, 0, graph);
-    Edge::AddEdge(n - 1, t, 2, 0, graph);
-
-    array<int, 2> result = MCMF(s, t, graph);
-    cout << result[1] << '\n';
-    Edge::DeleteEdge(graph);
 }

@@ -11,5 +11,6 @@ int main()
     int n, m, k;
     cin >> n >> m >> k;
 
-    vector<long long> a();
+    int result = (k + 1) * m;
+    cout << result << '\n';
 }

@@ -3794,9 +3794,6 @@
     <ClCompile Include="4. Platinum\Platinum 4\[P4] 02188 축사 배정 [4].cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="4. Platinum\Platinum 4\[P4] 10999 구간 합 구하기 2.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="3. Gold\Gold 1\[G1] 02357 최솟값과 최댓값.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -4380,6 +4377,21 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="4. Platinum\Platinum 4\[P4] 03679 단순 다각형.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Contest\2024\09\2024-09-07 17%2700 송도고 코드마스터 2024 Open Contest\A번 - 코드마스터 2024.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Contest\2024\09\2024-09-07 17%2700 송도고 코드마스터 2024 Open Contest\B번 - 찬물 샤워.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 2\[P2] 09413 제주도 관광.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Contest\2024\09\제5회 고려대학교 MatKor Cup  2024 SummerFall Open Contest\A번 - 현대모비스 첨단 운전자 보조 시스템.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 10101 삼각형 외우기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
