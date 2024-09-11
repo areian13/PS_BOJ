@@ -4388,10 +4388,37 @@
     <ClCompile Include="4. Platinum\Platinum 2\[P2] 09413 제주도 관광.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Contest\2024\09\제5회 고려대학교 MatKor Cup  2024 SummerFall Open Contest\A번 - 현대모비스 첨단 운전자 보조 시스템.cpp">
+    <ClCompile Include="Contest\2024\09\2024-09-08 12%2730 제5회 고려대학교 MatKor Cup  2024 SummerFall Open Contest\A번 - 현대모비스 첨단 운전자 보조 시스템.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 4\[B4] 10101 삼각형 외우기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 4\[P4] 10903 Wall construction.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 5\[P5] 01786 찾기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 5\[P5] 04354 문자열 제곱 [1].cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 3\[P3] 32230 현대모비스 첨단 운전자 보조 시스템.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 5\[P5] 04354 문자열 제곱 [2].cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 5\[G5] 30453 Symmetry of Stars.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 4\[G4] 02141 우체국.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 4\[G4] 02285 우체국.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 5\[P5] 07575 바이러스.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
