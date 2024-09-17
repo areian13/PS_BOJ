@@ -4427,6 +4427,33 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 06013 Lonesome Partners.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 06014 Shorter Musical Notes.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 02914 저작권.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 06040 Hexadecimal Conversion.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 06060 Wheel Rotation.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 4\![P4] 01854 K번째 최단경로 찾기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 5\[P5] 14003 가장 긴 증가하는 부분 수열 5.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. Silver\Silver 2\[S2] 11053 가장 긴 증가하는 부분 수열.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 2\[G2] 12738 가장 긴 증가하는 부분 수열 3.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 5\[G5] 15681 트리와 쿼리.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="0. Unrated\[U0] 27903 인생.bf" />
