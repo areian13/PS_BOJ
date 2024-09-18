@@ -4454,6 +4454,24 @@
     <ClCompile Include="3. Gold\Gold 5\[G5] 15681 트리와 쿼리.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="2. Silver\Silver 1\[S1] 01747 소수&amp;팰린드롬.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 06081 Hay Expenses.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 06139 Speed Reading.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 1\[B1] 01546 평균.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. Silver\Silver 4\[S4] 01764 듣보잡 [3].cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 09253 스페셜 저지.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="0. Unrated\[U0] 27903 인생.bf" />
@@ -4475,5 +4493,6 @@
     <None Include="2. Silver\Silver 4\[S4] 28086 미소녀 컴퓨터 파루빗토 쨩.py" />
     <None Include="2. Silver\Silver 5\[S5] 10826 피보나치 수 4.py" />
     <None Include="1. Bronze\Bronze 5\[B5] 30664 Loteria Falha.py" />
+    <None Include="1. Bronze\Bronze 2\[B2] 06097 Cruel Math Teacher.py" />
   </ItemGroup>
 </Project>

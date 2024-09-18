@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include <unordered_map>
 #include <algorithm>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
@@ -15,25 +14,17 @@ int main()
     int n, m;
     cin >> n >> m;
 
-    unordered_map<string, bool> isNoHear;
-    for (int i = 0; i < n; i++)
-    {
-        string noHear;
-        cin >> noHear;
-
-        isNoHear[noHear] = true;
-    }
+    vector<string> names(n + m);
+    for (int i = 0; i < n + m; i++)
+        cin >> names[i];
+    sort(names.begin(), names.end());
 
     vector<string> result;
-    for (int i = 0; i < m; i++)
+    for (int i = 0; i < n + m - 1; i++)
     {
-        string noSee;
-        cin >> noSee;
-
-        if (isNoHear[noSee])
-            result.push_back(noSee);
+        if (names[i] == names[i + 1])
+            result.push_back(names[i]);
     }
-    sort(result.begin(), result.end());
 
     cout << result.size() << '\n';
     for (string& noHearSee : result)
