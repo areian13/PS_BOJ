@@ -4554,6 +4554,27 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 06696 Too Much Water.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 06751 From 1987 to 2013.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 1\[B1] 32350 오버킬.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 4\[P4] 17403 가장 높고 넓은 성.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 4\[P4] 28098 폭발 속에서 살아남기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 2\![G2] 32354 덱 조작과 쿼리.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. Silver\Silver 2\![S2] 01535 안녕.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 06765 Icon Scaling.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="0. Unrated\[U0] 27903 인생.bf" />
@@ -4576,5 +4597,7 @@
     <None Include="2. Silver\Silver 5\[S5] 10826 피보나치 수 4.py" />
     <None Include="1. Bronze\Bronze 5\[B5] 30664 Loteria Falha.py" />
     <None Include="1. Bronze\Bronze 2\[B2] 06097 Cruel Math Teacher.py" />
+    <None Include="1. Bronze\Bronze 2\[B2] 06736 The Idiot of the Year Contest!.py" />
+    <None Include="1. Bronze\Bronze 2\[B2] 06479 Factorial Frequencies.py" />
   </ItemGroup>
 </Project>
