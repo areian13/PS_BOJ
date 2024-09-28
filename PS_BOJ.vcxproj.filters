@@ -4575,6 +4575,15 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 06765 Icon Scaling.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Contest\2024\09\2024-09-28 14%2700 INU 코드페스티벌 2024 Open Contest\A번 - 양파 실험.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Contest\2024\09\2024-09-28 19%2700 2024 충남대학교 SW-IT Contest Open\A번 - 햄버거 정렬.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 06766 Big Bang Secrets.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="0. Unrated\[U0] 27903 인생.bf" />
