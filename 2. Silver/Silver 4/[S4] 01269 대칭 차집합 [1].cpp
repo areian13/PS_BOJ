@@ -6,8 +6,7 @@
 
 using namespace std;
 
-
-bool IsIn(int x, vector<int>& a)
+bool IsIn(int num, vector<int>& a)
 {
     int start = 0;
     int end = a.size() - 1;
@@ -16,9 +15,9 @@ bool IsIn(int x, vector<int>& a)
     {
         int mid = (start + end) / 2;
 
-        if (a[mid] < x)
+        if (a[mid] < num)
             start = mid + 1;
-        else if (x < a[mid])
+        else if (num < a[mid])
             end = mid - 1;
         else
             return true;
@@ -30,23 +29,21 @@ int main()
 {
     FastIO;
 
-    int n;
-    cin >> n;
+    int n, m;
+    cin >> n >> m;
 
     vector<int> a(n);
     for (int i = 0; i < n; i++)
         cin >> a[i];
     sort(a.begin(), a.end());
 
-    int m;
-    cin >> m;
-
+    int result = n;
     for (int i = 0; i < m; i++)
     {
-        int x;
-        cin >> x;
+        int num;
+        cin >> num;
 
-        bool result = IsIn(x, a);
-        cout << result << '\n';
+        result += (IsIn(num, a) ? -1 : +1);
     }
+    cout << result << '\n';
 }

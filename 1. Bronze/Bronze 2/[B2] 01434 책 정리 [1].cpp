@@ -16,22 +16,20 @@ int main()
     for (int i = 0; i < n; i++)
         cin >> a[i];
 
-    int left = 0;
-    int right = 0;
+    vector<int> b(m);
+    for (int i = 0; i < m; i++)
+        cin >> b[i];
 
-    int sum = 0;
     int result = 0;
-    while (true)
+    for (int i = 0, j = 0; i < n; i++)
     {
-        if (sum >= m)
-            sum -= a[left++];
-        else if (right == n)
-            break;
-        else
-            sum += a[right++];
+        while (j < m && a[i] - b[j] >= 0)
+        {
+            a[i] -= b[j];
+            j++;
+        }
 
-        if (sum == m)
-            result++;
+        result += a[i];
     }
     cout << result << '\n';
 }

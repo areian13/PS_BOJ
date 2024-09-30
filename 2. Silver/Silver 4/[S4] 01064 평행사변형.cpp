@@ -1,101 +1,62 @@
 #include <iostream>
-#include <vector>
 #include <array>
-#include <string>
-#include <time.h>
-#include <algorithm>
-#include <stdlib.h>
-#include <math.h>
+#include <cfloat>
 #include <cmath>
-#include <queue>
-#include <stack>
-#include <deque>
-#include <map>
-#include <unordered_map>
-#include <set>
-#include <limits.h>
-#include <float.h>
-#include <string.h>
+#include <algorithm>
 
-#define Endl << "\n"
-#define endL << "\n" <<
-#define Cout cout <<
-#define	COUT cout << "OUT: " <<
-#define Cin cin >>
-#define fspc << " "
-#define spc << " " <<
-#define Enter cout << "\n"
-#define if if
-#define elif else if
-#define else else
-#define For(n) for(int i = 0; i < n; i++)
-#define Forj(n) for(int j = 0; j < n; j++)
-#define Foro(n) for(int i = 1; i <= n; i++)
-#define Forjo(n) for(int j = 1; j <= n; j++)
-#define between(small, middle, big) (small < middle && middle < big)
-#define among(small, middle, big) (small <= middle && middle <= big)
-#define stoe(container) container.begin(), container.end()
-#define lf(d) Cout fixed; cout.precision(d);
-#define ulf cout.unsetf(ios::scientific);
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
-#define PI 3.14159265359
-
-typedef long long LLONG;
-typedef unsigned long long ULLONG;
-typedef unsigned int UINT;
+#define lf(d) cout << fixed; cout.precision(d);
+#define ulf cout.unsetf(ios::scientific);
 
 using namespace std;
 
-template <typename T>
-class heap : public priority_queue<T, vector<T>, greater<T>>
+struct Point
 {
+    double x, y;
+
+    static double Dist(const Point& a, const Point& b)
+    {
+        double dx = a.x - b.x;
+        double dy = a.y - b.y;
+        return sqrt(dx * dx + dy * dy);
+    }
+    static double Incline(const Point& a, const Point& b)
+    {
+        if (a.x == b.x)
+            return DBL_MAX;
+        return (a.y - b.y) / (a.x - b.x);
+    }
 };
 
-struct Coord {
-	double x, y;
-};
-
-
-double GetLine(Coord a, Coord b)
+double ParallelogramGap(array<Point, 3>& points)
 {
-	return sqrt(pow(a.x - b.x, 2) + pow(a.y - b.y, 2));
-}
+    if (Point::Incline(points[0], points[1]) == Point::Incline(points[1], points[2]))
+        return -1;
 
-double GetIncline(Coord a, Coord b)
-{
-	if (a.x == b.x)
-		return DBL_MAX;
-	return (a.y - b.y) / (a.x - b.x);
+    array<double, 3> dists;
+    for (int i = 0; i < 3; i++)
+        dists[i] = Point::Dist(points[i], points[(i + 1) % 3]);
+
+    double maxDist = 0;
+    double minDist = DBL_MAX;
+    for (int i = 0; i < 3; i++)
+    {
+        maxDist = max(maxDist, (dists[i] + dists[(i + 1) % 3]) * 2);
+        minDist = min(minDist, (dists[i] + dists[(i + 1) % 3]) * 2);
+    }
+
+    return maxDist - minDist;
 }
 
 int main()
 {
-	FastIO;
+    FastIO;
 
-	array<Coord, 3> coord;
-	array<double, 3> line;
-	double result = -1;
+    array<Point, 3> points;
+    for (int i = 0; i < 3; i++)
+        cin >> points[i].x >> points[i].y;
 
-	double maxLen = 0;
-	double minLen = DBL_MAX;
-
-	For(3)
-		Cin coord[i].x >> coord[i].y;
-	
-	For(3)
-		line[i] = GetLine(coord[i], coord[(i + 1) % 3]);
-
-	if (GetIncline(coord[0], coord[1]) == GetIncline(coord[1], coord[2]))
-		goto IS_IMPOSSIBLE;
-
-	For(3)
-	{
-		maxLen = max(maxLen, (line[i] + line[(i + 1) % 3]) * 2);
-		minLen = min(minLen, (line[i] + line[(i + 1) % 3]) * 2);
-	}
-	result = maxLen - minLen;
-
-IS_IMPOSSIBLE:
-	lf(10);
-	Cout result;
+    lf(10);
+    double result = ParallelogramGap(points);
+    cout << result << '\n';
 }
