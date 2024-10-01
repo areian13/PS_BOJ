@@ -1971,7 +1971,7 @@
     <ClCompile Include="2. Silver\Silver 4\[S4] 01246 온라인 판매.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="2. Silver\Silver 4\[S4] 01269 대칭 차집합.cpp">
+    <ClCompile Include="2. Silver\Silver 4\[S4] 01269 대칭 차집합 [1].cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="2. Silver\Silver 4\[S4] 01302 베스트셀러.cpp">
@@ -1981,9 +1981,6 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="2. Silver\Silver 4\[S4] 01388 바닥 장식.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="2. Silver\Silver 4\[S4] 01417 국회의원 선거.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="2. Silver\Silver 4\[S4] 01764 듣보잡 [1].cpp">
@@ -4600,6 +4597,24 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 01434 책 정리 [2].cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. Silver\Silver 4\[S4] 01269 대칭 차집합 [2].cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 32370 Rook.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 1\[B1] 32371 샷건.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. Silver\Silver 4\[S4] 32372 마법의 나침반.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 32400 다트판.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 32401 ANA는 회문이야.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

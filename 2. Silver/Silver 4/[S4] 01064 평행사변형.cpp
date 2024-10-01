@@ -56,7 +56,7 @@ int main()
     for (int i = 0; i < 3; i++)
         cin >> points[i].x >> points[i].y;
 
-    lf(10);
+    lf(9);
     double result = ParallelogramGap(points);
     cout << result << '\n';
 }

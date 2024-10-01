@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cmath>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
 
@@ -25,23 +24,9 @@ int main()
     int m, n;
     cin >> m >> n;
 
-    int sum = 0;
-    int min = 0;
-
-    for (int p = m; p <= n; p++)
+    for (int i = m; i <= n; i++)
     {
-        if (!IsPrime(p))
-            continue;
-
-        sum += p;
-        min = (min == 0 ? p : min);
-    }
-
-    if (sum == 0)
-        cout << -1 << '\n';
-    else
-    {
-        cout << sum << '\n';
-        cout << min << '\n';
+        if (IsPrime(i))
+            cout << i << '\n';
     }
 }

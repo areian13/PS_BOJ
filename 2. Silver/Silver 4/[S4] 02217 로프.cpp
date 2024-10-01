@@ -8,12 +8,14 @@ using namespace std;
 
 int main()
 {
+    FastIO;
+
     int n;
-    cin>>n;
+    cin >> n;
 
     vector<int> rope(n);
     for (int i = 0; i < n; i++)
-        cin>>rope[i];
+        cin >> rope[i];
     sort(rope.begin(), rope.end());
 
     int result = 0;
