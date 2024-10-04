@@ -256,7 +256,9 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 01731 추론.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 2\[B2] 01773 폭죽쇼.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 01773 폭죽쇼.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 02902 KMP는 왜 KMP일까？.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -954,9 +956,13 @@
     <ClCompile Include="2. Silver\Silver 1\[S1] 15753 Taming the Herd.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="2. Silver\Silver 3\[S3] 01463 1로 만들기 [4].cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="2. Silver\Silver 3\[S3] 01929 소수 구하기 [2].cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="2. Silver\Silver 3\[S3] 11726 2×n 타일링.cpp" />
     <ClCompile Include="2. Silver\Silver 4\[S4] 01269 대칭 차집합 [2].cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>

@@ -4659,6 +4659,12 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 01773 폭죽쇼.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="2. Silver\Silver 3\[S3] 01463 1로 만들기 [4].cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. Silver\Silver 3\[S3] 11726 2×n 타일링.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="0. Unrated\[U0] 27903 인생.bf" />

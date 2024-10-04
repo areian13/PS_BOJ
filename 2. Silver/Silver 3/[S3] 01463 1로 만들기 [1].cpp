@@ -9,18 +9,17 @@ using namespace std;
 
 int DP(int x, vector<int>& dp)
 {
-    if (x == 1)
-        return 0;
-    if (dp[x] != -1)
+    if (dp[x] != INT_MAX)
         return dp[x];
+    if (x == 1)
+        return dp[x] = 0;
 
-    int result = INT_MAX;
     if (x % 3 == 0)
-        result = min(result, DP(x / 3, dp) + 1);
+        dp[x] = min(dp[x], DP(x / 3, dp) + 1);
     if (x % 2 == 0)
-        result = min(result, DP(x / 2, dp) + 1);
-    result = min(result, DP(x - 1, dp) + 1);
-    return dp[x] = result;
+        dp[x] = min(dp[x], DP(x / 2, dp) + 1);
+    dp[x] = min(dp[x], DP(x - 1, dp) + 1);
+    return dp[x];
 }
 
 int main()
@@ -30,7 +29,7 @@ int main()
     int x;
     cin >> x;
 
-    vector<int> dp(x + 1, -1);
+    vector<int> dp(x + 1, INT_MAX);
     int result = DP(x, dp);
     cout << result << '\n';
 }

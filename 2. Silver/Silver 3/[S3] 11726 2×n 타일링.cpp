@@ -5,9 +5,10 @@
 
 using namespace std;
 
-#define MAX 11
+#define MAX 1'000
+#define MOD 10'007
 
-int Count123Sum(int n)
+int CountTile(int n)
 {
     static vector<int> dp(MAX + 1, -1);
     static bool isInited = false;
@@ -18,27 +19,20 @@ int Count123Sum(int n)
 
         dp[1] = 1;
         dp[2] = 2;
-        dp[3] = 4;
     }
 
     if (dp[n] != -1)
         return dp[n];
-    return dp[n] = Count123Sum(n - 1) + Count123Sum(n - 2) + Count123Sum(n - 3);
+    return dp[n] = (CountTile(n - 1) + CountTile(n - 2)) % MOD;
 }
 
 int main()
 {
     FastIO;
 
-    int tc;
-    cin >> tc;
+    int n;
+    cin >> n;
 
-    while (tc--)
-    {
-        int n;
-        cin >> n;
-
-        int result = Count123Sum(n);
-        cout << result << '\n';
-    }
+    int result = CountTile(n);
+    cout << result << '\n';
 }

@@ -14,11 +14,13 @@ int main()
     cin >> n;
 
     vector<int> s(n + 2);
-    for (int i = 2; i <= n + 1; i++)
+    for (int i = 2; i < n + 2; i++)
         cin >> s[i];
 
     vector<int> dp(n + 2, 0);
-    for (int i = 2; i <= n + 1; i++)
-        dp[i] = (i == 2 ? 0 : max(dp[i - 2], dp[i - 3] + s[i - 1])) + s[i];
-    cout << dp[n + 1] << '\n';
+    for (int i = 2; i < n + 2; i++)
+        dp[i] = (i == 2 ? 0 : max(dp[i - 3] + s[i - 1], dp[i - 2])) + s[i];
+
+    int result = dp[n + 1];
+    cout << result << '\n';
 }
