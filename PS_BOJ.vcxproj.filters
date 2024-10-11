@@ -4665,6 +4665,69 @@
     <ClCompile Include="2. Silver\Silver 3\[S3] 11726 2×n 타일링.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Contest\2024\10\2024-10-05 12%2700 2024 KAIST 14th ICPC Mock Competition Open Contest\F번 - Jenga Game.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Contest\2024\10\2024-10-05 14%2700 STPC 2024 Autumn Open Contest by Seoultech FLY\A번 - 바코드 닉네임.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 01871 좋은 자동차 번호판.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Contest\2024\10\2024-10-05 17%2700 2024 고려대학교 프로그래밍 경시대회 (KCPC) - Open Contest\A번 - 사랑은 고려대입니다.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 01919 애너그램 만들기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 2\[G2] 32388 현대모비스와 함께하는 편안한 주행.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 02028 자기복제수.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 13163 닉네임에 갓 붙이기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. Silver\Silver 3\[S3] 14501 퇴사.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 02139 나는 너가 살아온 날을 알고 있다.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 02145 숫자 놀이.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 02153 소수 단어.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. Silver\Silver 1\[S1] 01890 점프.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 5\[G5] 02225 합분해.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 02154 수 이어 쓰기 3.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 02386 도비의 영어 공부.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 02399 거리의 합.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 4\[G4] 05052 전화번호 목록.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 4\[P4] 05670 휴대폰 자판.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 3\[G3] 14725 개미굴.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 3\[G3] 16934 게임 닉네임.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="0. Unrated\[U0] 27903 인생.bf" />
@@ -4689,5 +4752,7 @@
     <None Include="1. Bronze\Bronze 2\[B2] 06097 Cruel Math Teacher.py" />
     <None Include="1. Bronze\Bronze 2\[B2] 06736 The Idiot of the Year Contest!.py" />
     <None Include="1. Bronze\Bronze 2\[B2] 06479 Factorial Frequencies.py" />
+    <None Include="1. Bronze\Bronze 2\[B2] 02052 지수연산.py" />
+    <None Include="1. Bronze\Bronze 2\[B2] 02408 큰 수 계산.py" />
   </ItemGroup>
 </Project>
