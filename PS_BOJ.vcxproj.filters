@@ -4728,6 +4728,9 @@
     <ClCompile Include="3. Gold\Gold 3\[G3] 16934 게임 닉네임.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 3\[P3] 03080 아름다운 이름.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="0. Unrated\[U0] 27903 인생.bf" />
