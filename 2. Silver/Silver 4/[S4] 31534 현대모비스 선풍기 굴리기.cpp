@@ -34,7 +34,7 @@ int main()
     double a, b, h;
     cin >> a >> b >> h;
 
-    double result = RollFan(a, b, h);
     lf(6);
+    double result = RollFan(a, b, h);
     cout << result << '\n';
 }

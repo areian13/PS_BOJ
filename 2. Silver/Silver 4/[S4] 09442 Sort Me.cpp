@@ -32,15 +32,18 @@ int main()
         for (int i = 0; i < n; i++)
             cin >> word[i];
 
-        sort(word.begin(), word.end(), [&w](string& a, string& b) {
-            int l = min(a.size(), b.size());
-            for (int i = 0; i < l; ++i)
+        sort(word.begin(), word.end(),
+            [&w](const string& a, const string& b)
             {
-                if (a[i] != b[i])
-                    return w[a[i] - 'A'] < w[b[i] - 'A'];
+                int l = min(a.size(), b.size());
+                for (int i = 0; i < l; ++i)
+                {
+                    if (a[i] != b[i])
+                        return w[a[i] - 'A'] < w[b[i] - 'A'];
+                }
+                return a.size() < b.size();
             }
-            return a.size() < b.size();
-        });
+        );
 
         cout << "year " << ++tc << '\n';
         for (int i = 0; i < n; i++)

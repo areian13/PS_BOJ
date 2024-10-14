@@ -2049,7 +2049,7 @@
     <ClCompile Include="2. Silver\Silver 4\[S4] 26069 붙임성 좋은 총총이.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="2. Silver\Silver 4\[S4] 27162 Yacht Dice.cpp">
+    <ClCompile Include="2. Silver\Silver 3\[S3] 27162 Yacht Dice.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="2. Silver\Silver 4\[S4] 28278 스택 2.cpp">
@@ -4737,7 +4737,16 @@
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 13366 Math Contest [2].cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="4. Platinum\Platinum 3\[P3] 16906 수열과 쿼리 20.cpp">
+    <ClCompile Include="4. Platinum\Platinum 3\[P3] 16903 수열과 쿼리 20.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 26336 Are We Stopping Again？ [1].cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 26336 Are We Stopping Again？ [2].cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 26360 Basket.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

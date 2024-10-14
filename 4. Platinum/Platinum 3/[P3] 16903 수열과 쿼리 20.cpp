@@ -65,7 +65,7 @@ struct Trie
         }
     }
 
-    string XORStr(string& str)
+    string MaxXORStr(string& str)
     {
         int d = str.size();
 
@@ -143,7 +143,7 @@ int main()
             trie->Delete(s.begin(), s.end());
         else if (t == 3)
         {
-            string xorStr = trie->XORStr(s);
+            string xorStr = trie->MaxXORStr(s);
             int result = ToDec(xorStr);
             cout << result << '\n';
         }
