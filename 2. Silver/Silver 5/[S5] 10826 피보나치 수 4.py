@@ -1,6 +1,3 @@
-import sys
-input = sys.stdin.read
-
 def fib(n):
     dp = [0 for i in range(n + 2)]
     dp[1] = 1
@@ -11,7 +8,7 @@ def fib(n):
     return dp[n]
 
 if __name__ == "__main__":
-    n = int(input().strip())
+    n = int(input())
 
     result = fib(n)
     print(result)

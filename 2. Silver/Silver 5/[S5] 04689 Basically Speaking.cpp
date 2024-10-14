@@ -1,12 +1,11 @@
 #include <iostream>
+#include <cstdio>
 #include <string>
 #include <algorithm>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
 
 using namespace std;
-
-#define SIZE 7
 
 int ctoi(char c)
 {
@@ -26,11 +25,11 @@ int BaseToDec(string& n, int b)
 {
     int result = 0;
     int d = n.size();
-    int k = 1;
+    int power = 1;
     for (int i = d - 1; i >= 0; i--)
     {
-        result += ctoi(n[i]) * k;
-        k *= b;
+        result += ctoi(n[i]) * power;
+        power *= b;
     }
     return result;
 }
@@ -51,10 +50,7 @@ string DecToBase(int n, int b)
 
 string Convert(string n, int fd, int td)
 {
-    string result = DecToBase(BaseToDec(n, fd), td);
-    if (result.size() > SIZE)
-        result = "ERROR";
-    return string(SIZE - result.size(), ' ') + result;
+    return DecToBase(BaseToDec(n, fd), td);
 }
 
 int main()
@@ -71,6 +67,6 @@ int main()
             break;
 
         string result = Convert(n, fd, td);
-        cout << result << '\n';
+        printf("%7s\n", result.size() > 7 ? "ERROR" : result.c_str());
     }
 }
