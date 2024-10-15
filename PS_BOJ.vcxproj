@@ -1343,7 +1343,7 @@
     <ClCompile Include="2. Silver\Silver 5\[S5] 14916 거스름돈 [2].cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="2. Silver\Silver 5\[S5] 28358 생일 맞추기.cpp">
+    <ClCompile Include="1. Bronze\Bronze 1\[B1] 28358 생일 맞추기.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 1\[B1] 28682 재우야 임관하자.cpp">
@@ -3273,10 +3273,10 @@
     <ClCompile Include="2. Silver\Silver 5\[S5] 01996 지뢰 찾기.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="2. Silver\Silver 5\[S5] 02018 수들의 합.cpp">
+    <ClCompile Include="2. Silver\Silver 5\[S5] 02018 수들의 합 5.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="2. Silver\Silver 5\[S5] 02034 반음.cpp">
+    <ClCompile Include="2. Silver\Silver 4\[S4] 02034 반음.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="2. Silver\Silver 5\[S5] 02563 색종이.cpp">
@@ -3318,7 +3318,7 @@
     <ClCompile Include="2. Silver\Silver 5\[S5] 24313 알고리즘 수업 - 점근적 표기 1.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="2. Silver\Silver 5\[S5] 25206 너의 학점은.cpp">
+    <ClCompile Include="2. Silver\Silver 5\[S5] 25206 너의 평점은.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="2. Silver\Silver 5\[S5] 27919 UDPC 파티.cpp">
@@ -3537,6 +3537,7 @@
     <ClCompile Include="4. Platinum\Platinum 3\[P3] 03080 아름다운 이름.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 3\[P3] 05446 용량 부족.cpp" />
     <ClCompile Include="4. Platinum\Platinum 3\[P3] 16903 수열과 쿼리 20.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>

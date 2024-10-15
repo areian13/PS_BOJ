@@ -171,7 +171,7 @@
     <ClCompile Include="1. Bronze\Bronze 1\[B1] 28255 3단 초콜릿 아이스크림.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="2. Silver\Silver 5\[S5] 28358 생일 맞추기.cpp">
+    <ClCompile Include="1. Bronze\Bronze 1\[B1] 28358 생일 맞추기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 1\[B1] 28682 재우야 임관하자.cpp">
@@ -2097,10 +2097,10 @@
     <ClCompile Include="2. Silver\Silver 5\[S5] 01996 지뢰 찾기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="2. Silver\Silver 5\[S5] 02018 수들의 합.cpp">
+    <ClCompile Include="2. Silver\Silver 5\[S5] 02018 수들의 합 5.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="2. Silver\Silver 5\[S5] 02034 반음.cpp">
+    <ClCompile Include="2. Silver\Silver 4\[S4] 02034 반음.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="2. Silver\Silver 5\[S5] 02563 색종이.cpp">
@@ -2142,7 +2142,7 @@
     <ClCompile Include="2. Silver\Silver 5\[S5] 24313 알고리즘 수업 - 점근적 표기 1.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="2. Silver\Silver 5\[S5] 25206 너의 학점은.cpp">
+    <ClCompile Include="2. Silver\Silver 5\[S5] 25206 너의 평점은.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="2. Silver\Silver 5\[S5] 27919 UDPC 파티.cpp">
@@ -4747,6 +4747,9 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 26360 Basket.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 3\[P3] 05446 용량 부족.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
