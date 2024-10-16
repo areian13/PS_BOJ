@@ -4752,6 +4752,9 @@
     <ClCompile Include="4. Platinum\Platinum 3\[P3] 05446 용량 부족.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 3\[P3] 13504 XOR 합.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="0. Unrated\[U0] 27903 인생.bf" />
