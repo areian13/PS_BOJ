@@ -64,36 +64,35 @@ struct Trie
             cntGo--;
         }
     }
-
-    string MaxXORStr(string& str)
-    {
-        int d = str.size();
-
-        string result = "";
-        Trie* trie = this;
-        for (int i = 0; i < d; i++)
-        {
-            bool next = str[i] - '0';
-            if (trie->go[next] == nullptr && trie->go[!next] == nullptr)
-            {
-                result += string(d - i, '1');
-                break;
-            }
-
-            if (trie->go[!next] != nullptr)
-            {
-                result += '1';
-                trie = trie->go[!next];
-            }
-            else
-            {
-                result += '0';
-                trie = trie->go[next];
-            }
-        }
-        return result;
-    }
 };
+
+string MaxXORStr(string& str, Trie* trie)
+{
+    int d = str.size();
+
+    string result = "";
+    for (int i = 0; i < d; i++)
+    {
+        bool next = str[i] - '0';
+        if (trie->go[next] == nullptr && trie->go[!next] == nullptr)
+        {
+            result += string(d - i, '1');
+            break;
+        }
+
+        if (trie->go[!next] != nullptr)
+        {
+            result += '1';
+            trie = trie->go[!next];
+        }
+        else
+        {
+            result += '0';
+            trie = trie->go[next];
+        }
+    }
+    return result;
+}
 
 string Bin31(int x)
 {
@@ -105,19 +104,6 @@ string Bin31(int x)
     }
     reverse(result.begin(), result.end());
 
-    return result;
-}
-int ToDec(string& n)
-{
-    int d = n.size();
-
-    int result = 0;
-    int power = 1;
-    for (int i = d - 1; i >= 0; i--)
-    {
-        result += (n[i] - '0') * power;
-        power *= 2;
-    }
     return result;
 }
 
@@ -143,8 +129,7 @@ int main()
             trie->Delete(s.begin(), s.end());
         else if (t == 3)
         {
-            string xorStr = trie->MaxXORStr(s);
-            int result = ToDec(xorStr);
+            int result = stoi(MaxXORStr(s, trie), nullptr, 2);
             cout << result << '\n';
         }
     }
