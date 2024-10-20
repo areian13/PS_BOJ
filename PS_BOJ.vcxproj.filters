@@ -4764,6 +4764,18 @@
     <ClCompile Include="5. Diamond\Diamond 5\[D5] 03692 펭귄들의 행진.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="2. Silver\Silver 1\[S1] 13258 복권 + 은행.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 02520 팬케이크 사랑.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 02592 대표값.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. Silver\Silver 4\[S4] 01359 복권.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="0. Unrated\[U0] 27903 인생.bf" />
