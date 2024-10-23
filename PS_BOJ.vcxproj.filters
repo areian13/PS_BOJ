@@ -4785,6 +4785,9 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 02704 이진법 시계.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 02711 오타맨 고창영.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="0. Unrated\[U0] 27903 인생.bf" />

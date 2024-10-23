@@ -303,7 +303,9 @@
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 02704 이진법 시계.cpp">
       <SDLCheck Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</SDLCheck>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 02711 오타맨 고창영.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 02902 KMP는 왜 KMP일까？.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
