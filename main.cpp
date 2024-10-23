@@ -13,5 +13,12 @@ int main()
 {
     FastIO;
 
+    while (true)
+    {
+        int n;
+        cin >> n;
 
+        int result = ((n % 10'000) * 3897 + (n / 100'000) * (n / 100'000)) % 10'000;
+        cout << result << '\n';
+    }
 }
