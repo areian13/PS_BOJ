@@ -1,9 +1,22 @@
 #include <iostream>
-#include <vector>
+#include <string>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
 
 using namespace std;
+
+bool IsVPS(string s)
+{
+    while (true)
+    {
+        int idx = s.find("()");
+        if (idx == string::npos)
+            break;
+        s.replace(idx, 2, "");
+    }
+
+    return s.empty();
+}
 
 int main()
 {
@@ -14,18 +27,10 @@ int main()
 
     while (tc--)
     {
-        string bracket;
-        cin >> bracket;
-
-        while (true)
-        {
-            int idx = bracket.find("()");
-            if (idx == -1)
-                break;
-            bracket.replace(idx, 2, "");
-        }
-
-        string result = (bracket.empty() ? "YES" : "NO");
+        string s;
+        cin >> s;
+      
+        string result = (IsVPS(s) ? "YES" : "NO");
         cout << result << '\n';
     }
 }

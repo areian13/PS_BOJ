@@ -6,34 +6,26 @@
 
 using namespace std;
 
-bool IsBucket(char c)
+bool IsBracket(char c)
 {
     return c == '(' || c == ')' || c == '[' || c == ']';
 }
 
-bool IsBalancedString(string str)
+bool IsBalanced(string str)
 {
     stack<char> S;
 
     for (char c : str)
     {
-        if (!IsBucket(c))
+        if (!IsBracket(c))
             continue;
 
         if (c == '(' || c == '[')
             S.push(c);
         else
         {
-            if (c == ')')
-            {
-                if (S.empty() || S.top() != '(')
-                    return false;
-            }
-            else if (c == ']')
-            {
-                if (S.empty() || S.top() != '[')
-                    return false;
-            }
+            if (S.empty() || S.top() != (c == ')' ? '(' : '['))
+                return false;
             S.pop();
         }
     }
@@ -52,7 +44,7 @@ int main()
         if (str == ".")
             break;
 
-        string result = (IsBalancedString(str) ? "yes" : "no");
+        string result = (IsBalanced(str) ? "yes" : "no");
         cout << result << '\n';
     }
 }
