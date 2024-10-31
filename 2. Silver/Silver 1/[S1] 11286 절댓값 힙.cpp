@@ -1,7 +1,6 @@
 #include <iostream>
 #include <cmath>
 #include <queue>
-#include <vector>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
 
@@ -20,6 +19,7 @@ int main()
                 return abs(a) > abs(b);
             return a > b;
         };
+
     priority_queue<int, vector<int>, decltype(comp)> absHeap(comp);
     for (int i = 0; i < n; i++)
     {

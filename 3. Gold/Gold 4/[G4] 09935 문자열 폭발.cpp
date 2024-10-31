@@ -14,7 +14,7 @@ bool IsBomb(string& word, string& bomb)
 
     for (int i = 0; i < m; i++)
     {
-        if (word[n - i - 1] != bomb[m - i - 1])
+        if (word[n - m + i] != bomb[i])
             return false;
     }
     return true;
@@ -22,17 +22,16 @@ bool IsBomb(string& word, string& bomb)
 
 string ExplodedString(string& str, string& bomb)
 {
-    int n = bomb.size();
+    int m = bomb.size();
+
     string result = "";
     for (char c : str)
     {
         result += c;
         if (IsBomb(result, bomb))
-            result.erase(result.size() - n, result.size());
+            result.resize(result.size() - m);
     }
 
-    if (result == "")
-        result = "FRULA";
     return result;
 }
 
@@ -44,5 +43,8 @@ int main()
     cin >> str >> bomb;
 
     string result = ExplodedString(str, bomb);
-    cout << result << '\n';
+    if (result.empty())
+        cout << "FRULA" << '\n';
+    else
+        cout << result << '\n';
 }

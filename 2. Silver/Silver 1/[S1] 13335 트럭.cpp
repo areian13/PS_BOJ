@@ -16,6 +16,7 @@ int main()
     for (int i = 0; i < w; i++)
         Q.push(0);
 
+    int k = 0;
     int result = 0;
     for (int i = 0; i < n; i++)
     {
@@ -24,9 +25,9 @@ int main()
 
         while (true)
         {
-            if (l + Q.front() >= t)
+            if (k - Q.front() + t <= l)
             {
-                l += Q.front() - t;
+                k += t - Q.front();
                 Q.pop();
                 Q.push(t);
 
@@ -34,7 +35,7 @@ int main()
                 break;
             }
 
-            l += Q.front();
+            k -= Q.front();
             Q.pop();
             Q.push(0);
             result++;

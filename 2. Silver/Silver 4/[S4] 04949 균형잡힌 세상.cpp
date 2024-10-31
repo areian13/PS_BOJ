@@ -24,8 +24,16 @@ bool IsBalanced(string str)
             S.push(c);
         else
         {
-            if (S.empty() || S.top() != (c == ')' ? '(' : '['))
-                return false;
+            if (c == ')')
+            {
+                if (S.empty() || S.top() != '(')
+                    return false;
+            }
+            else if (c == ']')
+            {
+                if (S.empty() || S.top() != '[')
+                    return false;
+            }
             S.pop();
         }
     }
