@@ -479,7 +479,9 @@
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 26360 Basket.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 3\[B3] 32184 디미고에 가고 싶어!.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 32184 디미고에 가고 싶어!.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 32297 문자열을 만들어요.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -3596,6 +3598,7 @@
     <ClCompile Include="4. Platinum\Platinum 2\[P2] 14904 이동하기 2.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 2\[P2] 16407 Cops and Robbers.cpp" />
     <ClCompile Include="4. Platinum\Platinum 3\[P3] 01605 반복 부분문자열.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>

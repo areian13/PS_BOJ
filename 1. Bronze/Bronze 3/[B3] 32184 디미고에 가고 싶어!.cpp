@@ -11,17 +11,6 @@ int main()
     int a, b;
     cin >> a >> b;
 
-    int result = 0;
-    if (a % 2 == 0)
-    {
-        result++;
-        a++;
-    }
-    if (b % 2 == 1)
-    {
-        result++;
-        b--;
-    }
-    result += (b - a + 1) / 2;
+    int result = (b / 2 * 2 - (a / 2 * 2 + 1) + 1) / 2 + (a % 2 == 0) + (b % 2 == 1);
     cout << result << '\n';
 }
