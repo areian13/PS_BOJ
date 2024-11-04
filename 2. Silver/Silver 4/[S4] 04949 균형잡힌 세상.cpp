@@ -14,7 +14,6 @@ bool IsBracket(char c)
 bool IsBalanced(string str)
 {
     stack<char> S;
-
     for (char c : str)
     {
         if (!IsBracket(c))

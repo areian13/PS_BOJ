@@ -23,23 +23,19 @@ int main()
         int t;
         cin >> t;
 
-        while (true)
+        while (k - Q.front() + t > l)
         {
-            if (k - Q.front() + t <= l)
-            {
-                k += t - Q.front();
-                Q.pop();
-                Q.push(t);
-
-                result++;
-                break;
-            }
-
             k -= Q.front();
             Q.pop();
             Q.push(0);
             result++;
         }
+
+        k += t - Q.front();
+        Q.pop();
+        Q.push(t);
+
+        result++;
     }
 
     while (!Q.empty())
