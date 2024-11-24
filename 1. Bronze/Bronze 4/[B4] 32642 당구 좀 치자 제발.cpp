@@ -1,7 +1,4 @@
 #include <iostream>
-#include <vector>
-#include <string>
-#include <unordered_set>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
 
@@ -14,9 +11,15 @@ int main()
     int n;
     cin >> n;
 
-    vector<int> apple(n);
+    long long result = 0;
+    int angry = 0;
     for (int i = 0; i < n; i++)
-        cin >> apple[i];
+    {
+        int r;
+        cin >> r;
 
-    vector<int> 
+        angry += (r == 1 ? +1 : -1);
+        result += angry;
+    }
+    cout << result << '\n';
 }

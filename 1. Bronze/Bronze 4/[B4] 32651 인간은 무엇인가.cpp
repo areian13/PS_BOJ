@@ -1,7 +1,5 @@
 #include <iostream>
-#include <vector>
 #include <string>
-#include <unordered_set>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
 
@@ -14,9 +12,6 @@ int main()
     int n;
     cin >> n;
 
-    vector<int> apple(n);
-    for (int i = 0; i < n; i++)
-        cin >> apple[i];
-
-    vector<int> 
+    string result = (n <= 100'000 && n % 2024 == 0 ? "Yes" : "No");
+    cout << result << '\n';
 }

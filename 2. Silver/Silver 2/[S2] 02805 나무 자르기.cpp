@@ -14,7 +14,7 @@ long long GetTree(int x, vector<int>& trees)
     return result;
 }
 
-int CutterHeight(int m, vector<int>& trees)
+int MaxCutterHeight(int m, vector<int>& trees)
 {
     int start = 0;
     int end = *max_element(trees.begin(), trees.end()) - 1;
@@ -47,6 +47,6 @@ int main()
     for (int i = 0; i < n; i++)
         cin >> trees[i];
 
-    int result = CutterHeight(m, trees);
+    int result = MaxCutterHeight(m, trees);
     cout << result << '\n';
 }

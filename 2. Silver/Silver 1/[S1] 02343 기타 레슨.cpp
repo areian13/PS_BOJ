@@ -8,23 +8,42 @@
 
 using namespace std;
 
-int CountBluray(int limit, int m, vector<int>& lecture)
+int CountBluray(int limit, vector<int>& lectures)
 {
     int cnt = 1;
     int sum = 0;
 
-    int n = lecture.size();
-    for (int i = 0; i < n; i++)
+    for (int lecture : lectures)
     {
-        if (sum + lecture[i] <= limit)
-            sum += lecture[i];
-        else if (sum + lecture[i] > limit)
+        if (sum + lecture <= limit)
+            sum += lecture;
+        else if (sum + lecture > limit)
         {
             cnt++;
-            sum = lecture[i];
+            sum = lecture;
         }
     }
     return cnt;
+}
+
+int MinBluraySize(int m, vector<int>& lectures)
+{
+    int start = *max_element(lectures.begin(), lectures.end());
+    int end = accumulate(lectures.begin(), lectures.end(), 0);
+    int result = lectures.size();
+    while (start <= end)
+    {
+        int mid = (start + end) / 2;
+        int cnt = CountBluray(mid, lectures);
+        if (cnt > m)
+            start = mid + 1;
+        else if (cnt <= m)
+        {
+            result = mid;
+            end = mid - 1;
+        }
+    }
+    return result;
 }
 
 int main()
@@ -34,24 +53,10 @@ int main()
     int n, m;
     cin >> n >> m;
 
-    vector<int> lecture(n);
+    vector<int> lectures(n);
     for (int i = 0; i < n; i++)
-        cin >> lecture[i];
+        cin >> lectures[i];
 
-    int start = *max_element(lecture.begin(), lecture.end());
-    int end = accumulate(lecture.begin(), lecture.end(), 0);
-    int result = INT_MAX;
-    while (start <= end)
-    {
-        int mid = (start + end) / 2;
-        int cnt = CountBluray(mid, m, lecture);
-        if (cnt > m)
-            start = mid + 1;
-        else if (cnt <= m)
-        {
-            result = mid;
-            end = mid - 1;
-        }
-    }
+    int result = MinBluraySize(m, lectures);
     cout << result << '\n';
 }

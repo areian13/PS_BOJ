@@ -33,18 +33,15 @@ int main()
     }
 
     vector<int> result;
-    for (int i = 1; i <= n / 2; i++)
+    for (int i = 1; i < n; i++)
     {
         int k = x[i] - x[0];
 
         if (IsAzber(k, x, mark))
             result.push_back(k);
     }
-    sort(result.begin(), result.end());
 
-    int m = result.size();
-    cout << m << '\n';
-    for (int i = 0; i < m; i++)
-        cout << result[i] << ' ';
-    cout << '\n';
+    cout << result.size() << '\n';
+    for (int k : result)
+        cout << k << '\n';
 }

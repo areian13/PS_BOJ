@@ -1,5 +1,5 @@
 #include <iostream>
-#include <unordered_map>
+#include <unordered_set>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
 
@@ -14,17 +14,20 @@ struct Vector
     {
         return a.slope == b.slope && a.dir == b.dir;
     }
+};
 
-    struct Hash
-    {
-        size_t operator()(const Vector& s) const
+namespace std
+{
+    template<>
+    struct hash<Vector> {
+        size_t operator()(const Vector& vec) const
         {
-            size_t h1 = hash<double>{}(s.slope);
-            size_t h2 = hash<bool>{}(s.dir);
+            size_t h1 = hash<double>{}(vec.slope);
+            size_t h2 = hash<bool>{}(vec.dir);
             return h1 ^ (h2 << 1);
         }
     };
-};
+}
 
 int main()
 {
@@ -33,7 +36,7 @@ int main()
     int n;
     cin >> n;
 
-    unordered_map<Vector, bool, Vector::Hash> canSee;
+    unordered_set<Vector> canSee;
     for (int i = 0; i < n; i++)
     {
         int x, y;
@@ -41,8 +44,8 @@ int main()
 
         double slope = (x == 0 ? 1e+9 : (double)y / x);
         bool dir = x > 0 || (x == 0 && y > 0);
-        Vector s = { slope, dir };
-        canSee[s] = true;
+        Vector vec = { slope, dir };
+        canSee.insert(vec);
     }
 
     int result = canSee.size();
