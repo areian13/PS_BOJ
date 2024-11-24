@@ -9,14 +9,13 @@ using namespace std;
 
 bool In99(int n)
 {
-    if (n == 1)
-        return true;
-    if (n > MAX * MAX)
-        return false;
-    for (int i = 2; i <= MAX; i++)
+    for (int i = 1; i <= MAX; i++)
     {
-        if (n % i == 0)
-            return true;
+        for (int j = 1; j <= MAX; j++)
+        {
+            if (i * j == n)
+                return true;
+        }
     }
     return false;
 }
