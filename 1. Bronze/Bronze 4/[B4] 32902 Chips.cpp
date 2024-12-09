@@ -8,8 +8,8 @@ int main()
 {
     FastIO;
 
-    string s;
-    cin >> s;
+    int k, n;
+    cin >> k >> n;
 
-    cout << s;
+    cout << n + 1 << ' ' << k * n + 1 << '\n';
 }

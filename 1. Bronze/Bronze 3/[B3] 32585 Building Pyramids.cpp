@@ -8,8 +8,9 @@ int main()
 {
     FastIO;
 
-    string s;
-    cin >> s;
+    int n;
+    cin >> n;
 
-    cout << s;
+    long long result = (1LL * n * n * n + 3LL * n * n + 2LL * n) / 6;
+    cout << result << '\n';
 }
