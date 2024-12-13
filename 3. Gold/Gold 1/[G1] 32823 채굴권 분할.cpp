@@ -27,9 +27,24 @@ struct Line
 {
     Point a, b;
 
-    static bool IsIntersecting(const Line& a, const Line& b)
+    static bool onSegment(const Point& c, const Line& l) {
+        return min(l.a.x, l.b.x) <= c.x && c.x <= max(l.a.x, l.b.x)
+            && min(l.a.y, l.b.y) <= c.y && c.y <= max(l.a.y, l.b.y);
+    }
+    static bool IsIntersecting(const Line& l1, const Line& l2)
     {
+        int ab_c = Point::CCW(l1.a, l1.b, l2.a);
+        int ab_d = Point::CCW(l1.a, l1.b, l2.b);
+        int cd_a = Point::CCW(l2.a, l2.b, l1.a);
+        int cd_b = Point::CCW(l2.a, l2.b, l1.b);
 
+        if (ab_c * ab_d < 0 && cd_a * cd_b < 0)
+            return true;
+
+        return (ab_c == 0 && onSegment(l2.a, l1))
+            || (ab_d == 0 && onSegment(l2.b, l1))
+            || (cd_a == 0 && onSegment(l1.a, l2))
+            || (cd_b == 0 && onSegment(l1.b, l2));
     }
 };
 
@@ -52,7 +67,7 @@ int main()
         cin >> ad >> bd;
 
         double ar = DToR(ad / 10.0);
-        Point a = { L * cos(ar),L * sin(ar)};
+        Point a = { L * cos(ar),L * sin(ar) };
 
         double br = DToR(bd / 10.0);
         Point b = { L * cos(br),L * sin(br) };
