@@ -26,8 +26,8 @@ int main()
     int n, m, k;
     cin >> n >> m >> k;
 
-    int r = log2(n * 2 - 1);
-    int size = pow(2, r);
+    int r = ceil(log2(n));
+    int size = 1 << r;
 
     vector<long long> arr(size * 2);
     for (int i = 0; i < n; i++)
