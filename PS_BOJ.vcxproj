@@ -1015,6 +1015,7 @@
     <ClCompile Include="1. Bronze\Bronze 4\[B4] 33026 LOL Lovers.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 5\[B5] 32498 Call for Problems.cpp" />
     <ClCompile Include="1. Bronze\Bronze 5\[B5] 32951 AI 선도대학.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>

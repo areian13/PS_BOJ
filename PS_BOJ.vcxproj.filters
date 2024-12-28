@@ -5247,6 +5247,9 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 05598 카이사르 암호.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 5\[B5] 32498 Call for Problems.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="0. Unrated\[U0] 27903 인생.bf" />
