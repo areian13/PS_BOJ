@@ -5250,6 +5250,48 @@
     <ClCompile Include="1. Bronze\Bronze 5\[B5] 32498 Call for Problems.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 21143 Magic Trick.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Contest\2024\12\2024-12-28 13%2700 마작컵 2024 - 우인전 3／4 님만 오면 ㄱ - Open Contest\1m번 - 마작 거신병 1.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Contest\2024\12\2024-12-28 13%2700 마작컵 2024 - 우인전 3／4 님만 오면 ㄱ - Open Contest\1z번 - Alea Iacta Est.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Contest\2024\12\2024-12-28 13%2700 마작컵 2024 - 우인전 3／4 님만 오면 ㄱ - Open Contest\1p번 - 이변마작 1.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Contest\2024\12\2024-12-28 13%2700 마작컵 2024 - 우인전 3／4 님만 오면 ㄱ - Open Contest\9p번 - 이변마작 9.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Contest\2024\12\2024-12-28 13%2700 마작컵 2024 - 우인전 3／4 님만 오면 ㄱ - Open Contest\4z번 - 마작에서 가장 어려운 것.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Contest\2024\12\2024-12-28 13%2700 마작컵 2024 - 우인전 3／4 님만 오면 ㄱ - Open Contest\6z번 - 나는 이 우마를 지배할 수 있다.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 33046 Alea Iacta Est.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. Silver\Silver 4\[S4] 33042 이변마작 1.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. Silver\Silver 1\[S1] 33043 이변마작 9.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. Silver\Silver 4\[S4] 33049 마작에서 가장 어려운 것.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. Silver\Silver 1\[S1] 33040 마작 거신병 1.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 5\[G5] 33051 나는 이 우마를 지배할 수 있다.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 1\[B1] 06941 Calendar.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="0. Unrated\[U0] 27903 인생.bf" />

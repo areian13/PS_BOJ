@@ -24,6 +24,8 @@ int CallTime(int n, int l, int d)
 
 int main()
 {
+    FastIO;
+
     int n, l, d;
     cin >> n >> l >> d;
 
