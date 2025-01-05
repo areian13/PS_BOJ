@@ -27,7 +27,8 @@ struct Line
 
     static bool OnSegment(const Point& p, const Line& l)
     {
-        return min(l.p0.x, l.p1.x) <= p.x && p.x <= max(l.p0.x, l.p1.x)
+        return Point::CCW(l.p0, l.p1, p) == 0
+            && min(l.p0.x, l.p1.x) <= p.x && p.x <= max(l.p0.x, l.p1.x)
             && min(l.p0.y, l.p1.y) <= p.y && p.y <= max(l.p0.y, l.p1.y);
     }
     static bool IsIntersecting(const Line& l0, const Line& l1)
@@ -40,10 +41,10 @@ struct Line
         if (ab_c * ab_d < 0 && cd_a * cd_b < 0)
             return true;
 
-        return (ab_c == 0 && OnSegment(l1.p0, l0))
-            || (ab_d == 0 && OnSegment(l1.p1, l0))
-            || (cd_a == 0 && OnSegment(l0.p0, l1))
-            || (cd_b == 0 && OnSegment(l0.p1, l1));
+        return OnSegment(l1.p0, l0)
+            || OnSegment(l1.p1, l0)
+            || OnSegment(l0.p0, l1)
+            || OnSegment(l0.p1, l1);
     }
 };
 

@@ -380,6 +380,9 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 03943 헤일스톤 수열.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 03974 Absurd prices.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 04436 엘프의 검.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -446,6 +449,12 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 05618 공약수.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 05656 비교 연산자.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 05704 팬그램.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 05974 Lucky Charms.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -470,9 +479,13 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 06139 Speed Reading.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 06246 풍선 놀이.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 06318 Box of Bricks.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 06359 만취한 상범.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 06413 Clock Patience.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -540,6 +553,9 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 32952 비트코인 반감기.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 06243 Mileage Bank.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 17201 자석 체인.cpp">
@@ -1045,6 +1061,12 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="2. Silver\Silver 4\[S4] 33049 마작에서 가장 어려운 것.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="2. Silver\Silver 5\[S5] 01251 단어 나누기.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="2. Silver\Silver 5\[S5] 02993 세 부분.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="2. Silver\Silver 5\[S5] 32942 그래프와 그래프.cpp">
@@ -4344,7 +4366,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="3. Gold\Gold 2\[G2] 17387 선분 교차 2.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="3. Gold\Gold 2\![G2] 17780 새로운 게임.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
@@ -5225,10 +5247,10 @@
     <ClCompile Include="5. Diamond\Diamond 5\[D5] 18185 라면 사기 (Small).cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Contest\2024 SCSC 서울대학교 프로그래밍 경시대회 Open Contest\A번 - 정육면체의 네 꼭짓점.cpp">
+    <ClCompile Include="Contest\2024\2024 SCSC 서울대학교 프로그래밍 경시대회 Open Contest\A번 - 정육면체의 네 꼭짓점.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Contest\2024 SCSC 서울대학교 프로그래밍 경시대회 Open Contest\!B번 - 로그프레소 마에스트로.cpp">
+    <ClCompile Include="Contest\2024\2024 SCSC 서울대학교 프로그래밍 경시대회 Open Contest\!B번 - 로그프레소 마에스트로.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Contest\2024\08\2024-08-24 18%2700 LGCPC 2024 예선 Open Contest\A번 - 고장난 계산기.cpp">
@@ -5393,19 +5415,25 @@
     <ClCompile Include="Contest\2024\12\2024-12-28 13%2700 마작컵 2024 - 우인전 3／4 님만 오면 ㄱ - Open Contest\9p번 - 이변마작 9.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Contest\SCPC 2024 Round 1\1. A보다 B가 좋아.cpp">
+    <ClCompile Include="Contest\2024\SCPC 2024 Round 1\1. A보다 B가 좋아.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Contest\SCPC 2024 Round 1\2. 배달.cpp">
+    <ClCompile Include="Contest\2024\SCPC 2024 Round 1\2. 배달.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Contest\SCPC 2024 Round 1\3. 보안망 점검.cpp">
+    <ClCompile Include="Contest\2024\SCPC 2024 Round 1\3. 보안망 점검.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Contest\SCPC 2024 Round 1\4. 딱 맞게.cpp">
+    <ClCompile Include="Contest\2024\SCPC 2024 Round 1\4. 딱 맞게.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Contest\SCPC 2024 Round 2\1. 연속 1.cpp">
+    <ClCompile Include="Contest\2024\SCPC 2024 Round 2\1. 연속 1.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Contest\2025\01\2025-01-04 13%2700 나는코더다 2024 송년대회 Open Contest\H번 - 데이브의 고민.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Contest\2025\01\2025-01-04 13%2700 나는코더다 2024 송년대회 Open Contest\J번 - 트리를 안 쓰는 트리 문제.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="main.c">
@@ -5423,22 +5451,22 @@
     <ClCompile Include="2. Silver\Silver 5\[S5] 31738 매우 어려운 문제.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Contest\2024 부산대학교 프로그래밍 대회 %28PNUPC%29 - Open Contest\A번 - 모험의 시작.cpp">
+    <ClCompile Include="Contest\2024\2024 부산대학교 프로그래밍 대회 %28PNUPC%29 - Open Contest\A번 - 모험의 시작.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Contest\2024 부산대학교 프로그래밍 대회 %28PNUPC%29 - Open Contest\B번 - 아~파트 아파트.cpp">
+    <ClCompile Include="Contest\2024\2024 부산대학교 프로그래밍 대회 %28PNUPC%29 - Open Contest\B번 - 아~파트 아파트.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Contest\2024 서강대학교 K512컵 Open Contest\A번 - K512컵 개최!.cpp">
+    <ClCompile Include="Contest\2024\2024 서강대학교 K512컵 Open Contest\A번 - K512컵 개최!.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Contest\2024 서강대학교 K512컵 Open Contest\B번 - K512에 바이러스 퍼뜨리기.cpp">
+    <ClCompile Include="Contest\2024\2024 서강대학교 K512컵 Open Contest\B번 - K512에 바이러스 퍼뜨리기.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Contest\2024 아주대학교 프로그래밍 경시대회 APC - Open Contest\A번 - 이 대회는 이제 제 겁니다.cpp">
+    <ClCompile Include="Contest\2024\2024 아주대학교 프로그래밍 경시대회 APC - Open Contest\A번 - 이 대회는 이제 제 겁니다.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Contest\DSPC 2024 Open Contest\A번 - 단원평가.cpp">
+    <ClCompile Include="Contest\2024\DSPC 2024 Open Contest\A번 - 단원평가.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
   </ItemGroup>

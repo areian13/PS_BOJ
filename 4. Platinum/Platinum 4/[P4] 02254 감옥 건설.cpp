@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
-#include <stack>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
 
@@ -13,8 +12,8 @@ struct Point
 
     static int CCW(const Point& a, const Point& b, const Point& c)
     {
-        long long ccw = (long long)(b.x - a.x) * (c.y - a.y) - (long long)(b.y - a.y) * (c.x - a.x);
-
+        long long ccw = 1LL * (b.x - a.x) * (c.y - a.y)
+            - 1LL * (b.y - a.y) * (c.x - a.x);
         if (ccw > 0)
             return +1;
         if (ccw < 0)
@@ -23,13 +22,59 @@ struct Point
     }
 };
 
-bool IsInner(Point& p, vector<int>& S, vector<Point>& points)
+void MakeConvexHull(vector<Point>& points, vector<int>& poly)
 {
-    int k = S.size();
-    int ccw = Point::CCW(points[S[k - 1]], points[S[0]], p);
-    for (int i = 0; i < k - 1; i++)
+    Point p0 = *min_element(points.begin(), points.end(),
+        [](const Point& a, const Point& b)
+        {
+            if (a.y != b.y)
+                return a.y < b.y;
+            return a.x < b.x;
+        }
+    );
+    sort(points.begin(), points.end(),
+        [&p0](const Point& a, const Point& b)
+        {
+            int ccw = Point::CCW(a, b, p0);
+            if (ccw != 0)
+                return ccw > 0;
+            if (a.y != b.y)
+                return a.y < b.y;
+            return a.x < b.x;
+        }
+    );
+
+    int n = points.size();
+    for (int i = 0; i < n; i++)
     {
-        if (Point::CCW(points[S[i]], points[S[i + 1]], p) != ccw)
+        while (poly.size() >= 2)
+        {
+            int second = poly.back();
+            poly.pop_back();
+            int first = poly.back();
+            
+            if (Point::CCW(points[first], points[second], points[i]) > 0)
+            {
+                poly.push_back(second);
+                break;
+            }
+        }
+        poly.push_back(i);
+    }
+}
+
+bool IsInner(Point& p, vector<Point>& convexHull)
+{
+    int n = convexHull.size();
+    if (n < 3)
+        return false;
+
+    int ccw = Point::CCW(convexHull[0], convexHull[1], p);
+    if (ccw == 0)
+        return false;
+    for (int i = 1; i < n; i++)
+    {
+        if (Point::CCW(convexHull[i], convexHull[(i + 1) % n], p) != ccw)
             return false;
     }
     return true;
@@ -40,66 +85,21 @@ int MaxLayer(Point& p, vector<Point>& points)
     int result = 0;
     while (points.size() >= 3)
     {
-        int n = points.size();
+        vector<int> poly;
+        MakeConvexHull(points, poly);
 
-        auto comp =
-            [](const Point& a, const Point& b)
-            {
-                if (a.y != b.y)
-                    return a.y < b.y;
-                return a.x < b.x;
-            };
+        int n = poly.size();
+        vector<Point> convexHull(n);
+        for (int i = 0; i < n; i++)
+            convexHull[i] = points[poly[i]];
 
-        Point zeroPoint = *min_element(points.begin(), points.end(), comp);
-        sort(points.begin(), points.end(),
-            [&zeroPoint](const Point& a, const Point& b)
-            {
-                long long ap = a.x - zeroPoint.x;
-                long long aq = a.y - zeroPoint.y;
-                long long bp = b.x - zeroPoint.x;
-                long long bq = b.y - zeroPoint.y;
-
-                if (aq * bp != ap * bq)
-                    return aq * bp < ap * bq;
-                if (a.y != b.y)
-                    return a.y < b.y;
-                return a.x < b.x;
-            }
-        );
-
-        vector<int> S;
-        S.push_back(0);
-        S.push_back(1);
-
-        int next = 2;
-        while (next < n)
-        {
-            while (S.size() >= 2)
-            {
-                int second = S.back();
-                S.pop_back();
-                int first = S.back();
-
-                if (Point::CCW(points[first], points[second], points[next]) > 0)
-                {
-                    S.push_back(second);
-                    break;
-                }
-            }
-
-            S.push_back(next);
-            next++;
-        }
-
-        if (!IsInner(p, S, points))
+        if (!IsInner(p, convexHull))
             break;
 
         result++;
-        while (!S.empty())
-        {
-            points.erase(points.begin() + S.back());
-            S.pop_back();
-        }
+        for (int i = n - 1; i >= 0; i--)
+            points.erase(points.begin() + poly[i]);
+
     }
     return result;
 }
