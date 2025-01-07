@@ -5322,7 +5322,16 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 06246 풍선 놀이.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 2\[B2] 06359 만취한 상범.cpp">
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 06359 만취한 상범 [1].cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 06359 만취한 상범 [2].cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 5\[B5] 32326 Conveyor Belt Sushi.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 4\[P4] 01688 지민이의 테러.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
