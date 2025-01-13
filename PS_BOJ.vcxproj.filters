@@ -3114,7 +3114,7 @@
     <ClCompile Include="3. Gold\Gold 4\[G4] 21924 도시 건설.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="3. Gold\Gold 3\[G3] 31405 반 나누기 %28Easy%29.cpp">
+    <ClCompile Include="3. Gold\Gold 2\[G2] 31405 반 나누기 %28Easy%29.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="3. Gold\Gold 2\[G2] 01368 물대기.cpp">
@@ -3303,7 +3303,7 @@
     <ClCompile Include="Contest\2024\2024 아주대학교 프로그래밍 경시대회 APC - Open Contest\A번 - 이 대회는 이제 제 겁니다.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="3. Gold\Gold 3\[G3] 06087 레이저 통신.cpp">
+    <ClCompile Include="3. Gold\Gold 3\[G3] 06087 레이저 통신 [1].cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="3. Gold\Gold 3\[G3] 09347 울타리.cpp">
@@ -4332,7 +4332,7 @@
     <ClCompile Include="Contest\2024\08\2024-08-31 14%2700 2024 중앙대학교 프로그래밍 경진대회(CPC) Open Contest\B1번 - 현권이와 신기한 수열.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="4. Platinum\Platinum 4\[P4] 02254 감옥 건설.cpp">
+    <ClCompile Include="4. Platinum\Platinum 4\[P4] 02254 감옥 건설 [1].cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="Contest\2024\09\2024-09-01 12%2700 2024 신촌지역 대학생 프로그래밍 동아리 연합 여름 대회 (SUAPC 2024 Summer) Open Contest\A번 - SWAPC.cpp">
@@ -5331,7 +5331,58 @@
     <ClCompile Include="1. Bronze\Bronze 5\[B5] 32326 Conveyor Belt Sushi.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="4. Platinum\Platinum 4\[P4] 01688 지민이의 테러.cpp">
+    <ClCompile Include="4. Platinum\Platinum 4\[P4] 01688 지민이의 테러 [2].cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 05790 Log Books.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. Silver\Silver 1\[S1] 28107 회전초밥.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 5\[G5] 17265 나의 인생에는 수학과 함께.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 5\[G5] 28291 레드스톤.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 5\[G5] 01660 캡틴 이다솜.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 32778 가희와 부역명.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 4\[P4] 02254 감옥 건설 [2].cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 3\[P3] 20670 미스테리 싸인.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Contest\2025\01\2025-01-11 14%2700 2024 경인지역 대학 연합 프로그래밍 경시대회 shake! Open Contest\A번 -  $K$-정렬.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 31244 СИМЕТРИЧНИ ЧИСЛА.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 32888 Consolidating Windows.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 4\[G4] 32994 데이브의 고민.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="5. Diamond\Diamond 3\![D3] 27425 Traveling Salesperson in an Island.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 06376 e 계산.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 4\[P4] 20149 선분 교차 3.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 4\[P4] 01688 지민이의 테러 [1].cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 3\[G3] 06087 레이저 통신 [2].cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

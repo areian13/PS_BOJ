@@ -48,10 +48,10 @@ int MinMirror(vector<vector<char>>& map)
     }
 
     vector<vector<int>> dist(h, vector<int>(w, INT_MAX));
-    dist[s.y][s.x] = true;
+    dist[s.y][s.x] = -1;
 
     priority_queue<Edge> PQ;
-    PQ.push({ s,0 });
+    PQ.push({ s,-1 });
 
     while (!PQ.empty())
     {
@@ -87,7 +87,7 @@ int MinMirror(vector<vector<char>>& map)
             }
         }
     }
-    return dist[e.y][e.x] - 1;
+    return dist[e.y][e.x];
 }
 
 
@@ -97,6 +97,7 @@ int main()
 
     int w, h;
     cin >> w >> h;
+
 
     vector<vector<char>> map(h, vector<char>(w));
     for (int i = 0; i < h; i++)

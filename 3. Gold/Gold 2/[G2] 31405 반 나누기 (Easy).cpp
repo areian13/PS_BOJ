@@ -1,9 +1,9 @@
 #include <iostream>
+#include <cstdio>
 #include <vector>
+#include <cmath>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
-#define lf(d) cout << fixed; cout.precision(d);
-#define ulf cout.unsetf(ios::scientific);
 
 using namespace std;
 
@@ -36,7 +36,7 @@ int main()
         cin >> points[i].x >> points[i].y;
 
     vector<double> preSum(n - 1, 0);
-    for (int i = 1; i < n - 1; i++)
+    for (int i = 1; i <= n - 2; i++)
         preSum[i] = preSum[i - 1] + GetTriAreaAt0(i, points);
 
     double s = preSum[n - 2] / 2;
@@ -44,11 +44,10 @@ int main()
     while (preSum[k] <= s)
         k++;
 
-    double h = s - preSum[k - 1];
-    double t = h / (preSum[k] - preSum[k - 1]);
+    double r = s - preSum[k - 1];
+    r /= preSum[k] - preSum[k - 1];
 
-    lf(12);
-    cout << "YES" << '\n';
-    cout << 1 << ' ' << 0 << '\n';
-    cout << k % n + 1 << ' ' << t << '\n';
+    printf("YES\n");
+    printf("%d %.12lf\n", 1, 0.0);
+    printf("%d %.12lf\n", k % n + 1, r);
 }
