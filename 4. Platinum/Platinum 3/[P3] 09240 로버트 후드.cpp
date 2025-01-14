@@ -1,12 +1,11 @@
 #include <iostream>
+#include <cstdio>
 #include <vector>
 #include <cmath>
 #include <algorithm>
 #include <array>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
-#define lf(d) cout << fixed; cout.precision(d);
-#define ulf cout.unsetf(ios::scientific);
 
 using namespace std;
 
@@ -14,29 +13,24 @@ struct Point
 {
     int x, y;
 
-    static int CCW(const Point& a, const Point& b, const Point& c)
+    static int CCW(Point a, Point b, Point c)
     {
-        long long ccw = (long long)(b.x - a.x) * (c.y - a.y)
-            - (long long)(b.y - a.y) * (c.x - a.x);
+        long long cross = 1LL * (b.x - a.x) * (c.y - a.y)
+            - 1LL * (b.y - a.y) * (c.x - a.x);
+        return (cross == 0 ? 0 : (cross > 0 ? +1 : -1));
+    }
 
-        if (ccw < 0)
-            return -1;
-        if (ccw > 0)
-            return +1;
-        return 0;
-    }
-    static int CCW(const Point& a, const Point& b,
-        const Point& c, const Point& d)
-    {
-        Point t = { d.x - (b.x - c.x),d.y - (b.y - c.y) };
-        return CCW(a, b, t);
-    }
-    static double Dist(const Point& a, const Point& b)
+    static double Dist(Point a, Point b)
     {
         double dx = a.x - b.x;
         double dy = a.y - b.y;
 
         return sqrt(dx * dx + dy * dy);
+    }
+
+    friend Point operator-(Point a, Point b)
+    {
+        return { {a.x - b.x},{a.y - b.y} };
     }
 };
 
@@ -99,18 +93,19 @@ double MaxDist(vector<Point>& points)
         return Point::Dist(poly[0], poly[1]);
 
     array<Point, 2> result = { Point{ 0,0 },{ 0,0 } };
-    for (int i = 0, j = 1; i < p; i++)
+    for (int i = 0, j = 0; i < p; i++)
     {
-        while (j < p * 2
-            && Point::CCW(poly[i], poly[(i + 1) % p], poly[j % p], poly[(j + 1) % p]) >= 0)
+        while (j + 1 < p &&
+            Point::CCW(poly[i + 1] - poly[i], poly[j + 1] - poly[j], { 0,0 }) >= 0)
         {
-            if (Point::Dist(result[0], result[1]) < Point::Dist(poly[i], poly[j % p]))
-                result = { poly[i], poly[j % p] };
+            double dist = Point::Dist(poly[i], poly[j]);
+            if (dist > Point::Dist(result[0], result[1]))
+                result = { poly[i], poly[j] };
             j++;
         }
-
-        if (Point::Dist(result[0], result[1]) < Point::Dist(poly[i], poly[j % p]))
-            result = { poly[i], poly[j % p] };
+        double dist = Point::Dist(poly[i], poly[j]);
+        if (dist > Point::Dist(result[0], result[1]))
+            result = { poly[i], poly[j] };
     }
     return Point::Dist(result[0], result[1]);
 }
@@ -126,7 +121,6 @@ int main()
     for (int i = 0; i < n; i++)
         cin >> points[i].x >> points[i].y;
 
-    lf(6);
     double result = MaxDist(points);
-    cout << result << '\n';
+    printf("%.6lf\n", result);
 }

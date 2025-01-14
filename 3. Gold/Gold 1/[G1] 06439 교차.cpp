@@ -67,6 +67,7 @@ struct Poly
     {
         points.resize(n);
     }
+
     bool IsIn(const Point& p)
     {
         if (n < 3)

@@ -4653,7 +4653,7 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 01731 추론.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="4. Platinum\Platinum 3\![P3] 09240 로버트 후드.cpp">
+    <ClCompile Include="4. Platinum\Platinum 3\[P3] 09240 로버트 후드.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 01773 폭죽쇼.cpp">
@@ -5383,6 +5383,27 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="3. Gold\Gold 3\[G3] 06087 레이저 통신 [2].cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 1\[G1] 06439 교차.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 2\[P2] 10254 고속도로.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 06500 랜덤 숫자 만들기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 06502 동혁 피자.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 6565 Hard to Believe, but True!.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 5\[P5] 08986 전봇대.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="5. Diamond\Diamond 5\[D5] 13310 먼 별.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
