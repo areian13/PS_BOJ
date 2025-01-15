@@ -5409,6 +5409,9 @@
     <ClCompile Include="4. Platinum\Platinum 3\[P3] 02049 가장 먼 두 점.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 1\[P1] 09276 채소 보호.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="0. Unrated\[U0] 27903 인생.bf" />
