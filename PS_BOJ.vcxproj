@@ -4052,6 +4052,7 @@
     <ClCompile Include="4. Platinum\Platinum 3\[P3] 01605 반복 부분문자열.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 3\[P3] 02049 가장 먼 두 점.cpp" />
     <ClCompile Include="4. Platinum\Platinum 3\[P3] 03033 가장 긴 문자열.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -5322,7 +5323,9 @@
     <ClCompile Include="5. Diamond\Diamond 5\[D5] 10319 좀비 아포칼립스.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="5. Diamond\Diamond 5\[D5] 13310 먼 별.cpp" />
+    <ClCompile Include="5. Diamond\Diamond 5\[D5] 13310 먼 별.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="5. Diamond\Diamond 5\[D5] 18185 라면 사기 (Small).cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
