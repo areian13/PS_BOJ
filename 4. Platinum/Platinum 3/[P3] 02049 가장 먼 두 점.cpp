@@ -86,10 +86,10 @@ pair<Point, Point> GetDiameterPoint(vector<Point>& points)
         {
             return Point::DistSq(a.first, a.second) < Point::DistSq(b.first, b.second);
         };
-    for (int i = 0, j = 0; i < h; i++)
+    for (int i = 0, j = 1; i < h; i++)
     {
         while (j + 1 < h &&
-            Point::CCW(hull[i + 1] - hull[i], hull[j + 1] - hull[j], { 0,0 }) >= 0)
+            Point::CCW({ 0,0 }, hull[i + 1] - hull[i], hull[j + 1] - hull[j]) >= 0)
         {
             result = max(result, { hull[i], hull[j] }, comp);
             j++;
