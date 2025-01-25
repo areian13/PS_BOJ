@@ -916,8 +916,13 @@
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 32795 Intuitive Elements.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 3\[B3] 32800 Bus Assignment.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 32800 Bus Assignment.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 32888 Consolidating Windows.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 32978 아 맞다 마늘.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 4\[B4] 32369 양파 실험.cpp">
