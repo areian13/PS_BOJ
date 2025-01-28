@@ -40,21 +40,27 @@ void FFT(vector<complex<double>>& f, complex<double> w)
     }
 }
 
-vector<int> Multiply(vector<complex<double>> a, vector<complex<double>> b)
+vector<int> Multiply(string& a, string& b)
 {
-    int r = ceil(log2(max(a.size(), b.size()))) + 1;
+    vector<complex<double>> ac;
+    StrToCpxs(a, ac);
+
+    vector<complex<double>> bc;
+    StrToCpxs(b, bc);
+
+    int r = ceil(log2(max(ac.size(), bc.size()))) + 1;
     int n = 1 << r;
 
-    a.resize(n);
-    b.resize(n);
+    ac.resize(n);
+    bc.resize(n);
 
     complex<double> w(cos(2 * PI / n), sin(2 * PI / n));
-    FFT(a, w);
-    FFT(b, w);
+    FFT(ac, w);
+    FFT(bc, w);
 
     vector<complex<double>> c(n);
     for (int i = 0; i < n; i++)
-        c[i] = a[i] * b[i];
+        c[i] = ac[i] * bc[i];
 
     FFT(c, conj(w));
     for (int i = 0; i < n; i++)
@@ -73,6 +79,9 @@ vector<int> Multiply(vector<complex<double>> a, vector<complex<double>> b)
         result.push_back(carry % 10);
         carry /= 10;
     }
+    while (result.size() > 1 && result.back() == 0)
+        result.pop_back();
+
     return result;
 }
 
@@ -83,16 +92,7 @@ int main()
     string a, b;
     cin >> a >> b;
 
-    vector<complex<double>> ac;
-    StrToCpxs(a, ac);
-
-    vector<complex<double>> bc;
-    StrToCpxs(b, bc);
-
-    auto result = Multiply(ac, bc);
-    while (result.size() > 1 && result.back() == 0)
-        result.pop_back();
-
+    auto result = Multiply(a, b);
     for (auto it = result.rbegin(); it != result.rend(); it++)
         cout << *it;
     cout << '\n';
