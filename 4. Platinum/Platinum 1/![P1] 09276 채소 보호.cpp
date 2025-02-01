@@ -12,7 +12,7 @@ using namespace std;
 
 struct Point
 {
-    int x, y;
+    double x, y;
 
     static double Dist(Point a, Point b)
     {
@@ -25,14 +25,6 @@ struct Point
         int cross = (b.x - a.x) * (c.y - a.y)
             - (b.y - a.y) * (c.x - a.x);
         return (cross == 0 ? 0 : (cross > 0 ? +1 : -1));
-    }
-    static double PerpendicularDist(Point a, Point b, Point c)
-    {
-        if (a.x == b.x)
-            return abs(c.x - a.x);
-
-        double m = 1.0 * (b.y - a.y) / (b.x - a.x);
-        return abs(m * c.x - c.y + (-m * a.x + a.y)) / sqrt(m * m + 1);
     }
 
     friend Point operator-(Point a, Point b)
@@ -83,7 +75,7 @@ void MakeConvexHull(vector<Point>& points, vector<int>& hullIndices)
     }
 }
 
-pair<Point, Point> GetDiameterPoint(vector<Point>& points)
+double MinFence(vector<Point>& points)
 {
     vector<int> hullIndices;
     MakeConvexHull(points, hullIndices);
@@ -93,53 +85,25 @@ pair<Point, Point> GetDiameterPoint(vector<Point>& points)
     for (int i = 0; i < h; i++)
         hull[i] = points[hullIndices[i]];
 
-    pair<Point, Point> result = { {0,0},{0,0} };
-    auto comp = [](pair<Point, Point> a, pair<Point, Point> b)
-        {
-            return Point::Dist(a.first, a.second) < Point::Dist(b.first, b.second);
-        };
-    for (int i = 0, j = 0; i < h; i++)
+    int left = 0, right = 0, top = 0, bottom = 0;
+    double result = DBL_MAX;
+    for (int i = 0; i < h; i++)
     {
-        while (j + 1 < h &&
-            Point::CCW(hull[i + 1] - hull[i], hull[j + 1] - hull[j], { 0,0 }) >= 0)
-        {
-            result = max(result, { hull[i], hull[j] }, comp);
-            j++;
-        }
-        result = max(result, { hull[i], hull[j] }, comp);
+        Point edge = hull[(i + 1) % h] - hull[i];
+
+        while (Point::CCW({ 0,0 }, edge, hull[(left + 1) % h] - hull[left]) <= 0)
+            left = (left + 1) % h;
+        while (Point::CCW({ 0,0 }, edge, hull[(right + 1) % h] - hull[right]) >= 0)
+            right = (right + 1) % h;
+        while (Point::CCW({ 0,0 }, edge, hull[(top + 1) % h] - hull[top]) <= 0)
+            top = (top + 1) % h;
+        
+
+        double w = Point::Dist(hull[left], hull[right]);
+        double h = Point::Dist(hull[bottom], hull[top]);
+        result = min(result, (w + h) * 2);
     }
     return result;
-}
-
-double MinFence(vector<Point>& points)
-{
-    int n = points.size();
-
-    auto [p0, p1] = GetDiameterPoint(points);
-
-    array<double, 2> bothDist = { 0,0 };
-    int minX = INT_MAX, minY = INT_MAX;
-    int maxX = INT_MIN, maxY = INT_MIN;
-    for (int i = 0; i < n; i++)
-    {
-        minX = min(minX, points[i].x);
-        minY = min(minY, points[i].y);
-        maxX = max(maxX, points[i].x);
-        maxY = max(maxY, points[i].y);
-
-        int ccw = Point::CCW(p0, p1, points[i]);
-        if (ccw == 0)
-            continue;
-
-        double dist = Point::PerpendicularDist(p0, p1, points[i]);
-        bothDist[ccw < 0] = dist;
-    }
-
-    double l0 = (maxX - minX) + (maxY - minY);
-    double l1 = Point::Dist(p0, p1) + bothDist[0] + bothDist[1];
-    if (Point::Dist(p0, p1) == bothDist[0] + bothDist[1])
-        l1 /= sqrt(2);
-    return min(l0, l1) * 2;
 }
 
 int main()
