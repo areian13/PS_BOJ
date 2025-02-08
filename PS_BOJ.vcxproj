@@ -572,6 +572,12 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 06929 Dressing Up.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 06930 Mod Inverse.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 06965 Censor.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 09253 스페셜 저지.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -4127,6 +4133,7 @@
     <ClCompile Include="4. Platinum\Platinum 2\[P2] 07616 교실로 가는 길.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 2\[P2] 08927 Squares.cpp" />
     <ClCompile Include="4. Platinum\Platinum 2\[P2] 08992 집기 게임.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -5682,6 +5689,9 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </None>
     <None Include="1. Bronze\Bronze 2\[B2] 06736 The Idiot of the Year Contest!.py">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="1. Bronze\Bronze 2\[B2] 06976 Divisibility by 11.py">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </None>
     <None Include="1. Bronze\Bronze 3\[B3] 13366 Math Contest [1].py">

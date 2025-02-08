@@ -5508,6 +5508,18 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 06918 The Students%27 Council Breakfast.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 06929 Dressing Up.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 06930 Mod Inverse.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 06965 Censor.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 2\[P2] 08927 Squares.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="0. Unrated\[U0] 27903 인생.bf" />
@@ -5536,5 +5548,6 @@
     <None Include="1. Bronze\Bronze 2\[B2] 02408 큰 수 계산.py" />
     <None Include="1. Bronze\Bronze 3\[B3] 13366 Math Contest [1].py" />
     <None Include="1. Bronze\Bronze 5\[B5] 13277 큰 수 곱셈 [1].py" />
+    <None Include="1. Bronze\Bronze 2\[B2] 06976 Divisibility by 11.py" />
   </ItemGroup>
 </Project>
