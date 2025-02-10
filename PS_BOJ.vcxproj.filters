@@ -5526,6 +5526,12 @@
     <ClCompile Include="5. Diamond\Diamond 4\[D5] 19586 울타리.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="5. Diamond\Diamond 4\[D4] 19586 울타리.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 3\[G3] 02252 줄 세우기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="0. Unrated\[U0] 27903 인생.bf" />

@@ -1204,6 +1204,9 @@
     <ClCompile Include="2. Silver\Silver 5\[S5] 32942 그래프와 그래프.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="3. Gold\Gold 3\[G3] 02252 줄 세우기.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="3. Gold\Gold 3\[G3] 06087 레이저 통신 [2].cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -5427,7 +5430,9 @@
     <ClCompile Include="5. Diamond\Diamond 4\[D4] 18186 라면 사기 (Large).cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="5. Diamond\Diamond 4\[D5] 19586 울타리.cpp" />
+    <ClCompile Include="5. Diamond\Diamond 4\[D4] 19586 울타리.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="5. Diamond\Diamond 5\![D5] 01031 스타 대결.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>

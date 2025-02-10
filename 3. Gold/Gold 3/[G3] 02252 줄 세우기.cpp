@@ -7,18 +7,14 @@
 
 using namespace std;
 
-int MinTime(vector<int>& w, vector<int>& indegree, vector<vector<int>>& graph)
+void PrintHeightOrder(vector<int> indegree, vector<vector<int>>& graph)
 {
     int n = graph.size();
-    vector<int> dist(n, 0);
     queue<int> Q;
     for (int i = 0; i < n; i++)
     {
         if (indegree[i] == 0)
-        {
-            dist[i] = w[i];
             Q.push(i);
-        }
     }
 
     while (!Q.empty())
@@ -26,41 +22,37 @@ int MinTime(vector<int>& w, vector<int>& indegree, vector<vector<int>>& graph)
         int u = Q.front();
         Q.pop();
 
+        cout << u + 1 << ' ';
+
         for (int v : graph[u])
         {
             indegree[v]--;
-            dist[v] = max(dist[v], dist[u] + w[v]);
 
             if (indegree[v] == 0)
                 Q.push(v);
         }
     }
-    return *max_element(dist.begin(), dist.end());
+    cout << '\n';
 }
 
 int main()
 {
     FastIO;
 
-    int n;
-    cin >> n;
+    int n, m;
+    cin >> n >> m;
 
     vector<vector<int>> graph(n);
-    vector<int> w(n), indegree(n, 0);
-    for (int u = 0; u < n; u++)
+    vector<int> indegree(n, 0);
+    for (int i = 0; i < m; i++)
     {
-        cin >> w[u] >> indegree[u];
+        int u, v;
+        cin >> u >> v;
+        u--, v--;
 
-        for (int i = 0; i < indegree[u]; i++)
-        {
-            int v;
-            cin >> v;
-            v--;
-
-            graph[v].push_back(u);
-        }
+        graph[u].push_back(v);
+        indegree[v]++;
     }
 
-    int result = MinTime(w, indegree, graph);
-    cout << result << '\n';
+    PrintHeightOrder(indegree, graph);
 }
