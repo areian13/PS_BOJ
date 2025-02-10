@@ -5409,7 +5409,7 @@
     <ClCompile Include="4. Platinum\Platinum 3\[P3] 02049 가장 먼 두 점.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="4. Platinum\Platinum 1\![P1] 09276 채소 보호.cpp">
+    <ClCompile Include="4. Platinum\Platinum 1\[P1] 09276 채소 보호.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 32661 Airfare Grants.cpp">
@@ -5518,6 +5518,12 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="4. Platinum\Platinum 2\[P2] 08927 Squares.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 06979 Maximum Distance.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="5. Diamond\Diamond 4\[D5] 19586 울타리.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
