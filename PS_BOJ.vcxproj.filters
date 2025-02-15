@@ -5523,13 +5523,22 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 06979 Maximum Distance.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="5. Diamond\Diamond 4\[D5] 19586 울타리.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="5. Diamond\Diamond 4\[D4] 19586 울타리.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="3. Gold\Gold 3\[G3] 02252 줄 세우기.cpp">
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 06992 Arithmetic Sequence.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 06993 Shift Letters.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 29133 Фома и занимательная математика.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 07015 Millennium.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 07120 String.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
