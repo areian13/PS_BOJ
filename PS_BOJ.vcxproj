@@ -675,7 +675,9 @@
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 29133 Фома и занимательная математика.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 3\[B3] 29412 Огни светофора.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 29412 Огни светофора.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 31244 СИМЕТРИЧНИ ЧИСЛА.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -992,6 +994,7 @@
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 32888 Consolidating Windows.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 32969 학술대회 참가신청.cpp" />
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 32978 아 맞다 마늘.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
