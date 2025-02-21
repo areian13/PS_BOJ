@@ -225,7 +225,7 @@ Box GetMBR(vector<Point>& points)
     MakeConvexHull(points, hullIndices);
 
     int h = hullIndices.size();
-    if (h == 1)
+    if (h <= 1)
         return Box();
 
     vector<Point> hull(h);

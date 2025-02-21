@@ -5559,6 +5559,12 @@
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 32969 학술대회 참가신청.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="5. Diamond\Diamond 4\[D4] 10466 Mailing Origami.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 33164 どら焼き %28Dorayaki%29.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="0. Unrated\[U0] 27903 인생.bf" />
