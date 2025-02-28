@@ -12,9 +12,9 @@ void MakeNextP(string& p)
     int i = 0;
     while (i <= n / 2 - (n % 2 == 0))
     {
-        char k = (p[n / 2 - i - (n % 2 == 0)] - '0' + 1) % 10 + '0';
-        p[n / 2 - i - (n % 2 == 0)] = k;
+        char k = (p[n / 2 + i] - '0' + 1) % 10 + '0';
         p[n / 2 + i] = k;
+        p[n / 2 - i - (n % 2 == 0)] = k;
         i++;
 
         if (k != '0')
