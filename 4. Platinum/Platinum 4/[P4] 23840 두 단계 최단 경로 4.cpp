@@ -50,7 +50,7 @@ void Dijkstra(int s, vector<long long>& dist, vector<vector<Edge>>& graph)
     }
 }
 
-long long TSP(int u, int t, int isVisited, vector<vector<long long>>& dists,
+long long TSP(int u, int s, int t, int isVisited, vector<vector<long long>>& dists,
     vector<vector<long long>>& dp)
 {
     int n = dists.size();
@@ -62,17 +62,25 @@ long long TSP(int u, int t, int isVisited, vector<vector<long long>>& dists,
         return dists[u][t];
 
     result = INF;
-    for (int v = 1; v < n - 1; v++)
+    for (int v = 0; v < n; v++)
     {
+        if (v == s || v == t)
+            continue;
         if (dists[u][v] == INF || isVisited & (1 << v))
             continue;
 
-        long long d = TSP(v, t, isVisited | (1 << v), dists, dp);
+        long long d = TSP(v, s, t, isVisited | (1 << v), dists, dp);
         if (d == INF)
             continue;
         result = min(result, d + dists[u][v]);
     }
     return result;
+}
+long long MinAllVisit(int s, int t, vector<vector<long long>>& dists)
+{
+    int n = dists.size();
+    vector<vector<long long>> dp(n, vector<long long>(1 << n, -1));
+    return TSP(s, s, t, 1, dists, dp);
 }
 
 int main()
@@ -114,8 +122,7 @@ int main()
             dists[i][j] = dist[y[j]];
     }
 
-    vector<vector<long long>> dp(p, vector<long long>(1 << p, -1));
-    long long result = TSP(0, p - 1, 1, dists, dp);
+    long long result = MinAllVisit(0, p - 1, dists);
     if (result == INF)
         cout << -1 << '\n';
     else
