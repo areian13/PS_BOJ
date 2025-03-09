@@ -1,106 +1,55 @@
-#ifdef ONLINE_JUDGE
-#define _128d  __int128
-#else
-#define _128d long long
-#endif
-
 #include <iostream>
 #include <vector>
-#include <array>
-#include <string>
-#include <sstream>
-#include <ctime>
+#include <climits>
 #include <algorithm>
-#include <stdio.h>
-#include <stdlib.h>
-#include <cmath>
-#include <queue>
-#include <stack>
-#include <deque>
-#include <map>
-#include <unordered_map>
-#include <set>
-#include <limits.h>
-#include <float.h>
-#include <string.h>
-#include <random>
-#include <type_traits>
 
-#define Endl << "\n"
-#define endL << "\n" <<
-#define Cout cout <<
-#define COUT cout << "OUT: " <<
-#define Cin cin >>
-#define fspc << " "
-#define spc << " " <<
-#define Enter cout << "\n"
-#define if if
-#define elif else if
-#define else else
-#define For(n) for(int i = 0; i < n; i++)
-#define Forj(n) for(int j = 0; j < n; j++)
-#define Foro(n) for(int i = 1; i <= n; i++)
-#define Forjo(n) for(int j = 1; j <= n; j++)
-#define between(small, middle, big) (small < middle && middle < big)
-#define among(small, middle, big) (small <= middle && middle <= big)
-#define stoe(container) container.begin(), container.end()
-#define lf(d) Cout fixed; cout.precision(d);
-#define ulf() cout.unsetf(ios::scientific);
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
-#define PI 3.14159265359
-
-typedef long long LLONG;
-typedef unsigned long long ULLONG;
-typedef unsigned int UINT;
 
 using namespace std;
 
-template <typename T>
-class heap : public priority_queue<T, vector<T>, greater<T>>
+#define INF INT_MAX
+
+int TSP(int u, int isVisited, vector<vector<int>>& w,
+    vector<vector<int>>& dp)
 {
-};
+    int n = w.size();
+    int& result = dp[u][isVisited];
 
-#define INF 1'000'000'000
+    if (result != -1)
+        return dp[u][isVisited];
+    if (isVisited == (1 << n) - 1)
+        return w[u][0] != 0 ? w[u][0] : INF;
 
-int TSP(int cur, int isVisited, vector<vector<int>>& map, vector<vector<int>>& dp)
-{
-	int n = map.size();
-	int result = dp[cur][isVisited];
+    result = INF;
+    for (int v = 0; v < n; v++)
+    {
+        if (w[u][v] == 0 || isVisited & (1 << v))
+            continue;
 
-	if (result != -1)
-		return result;
+        int d = TSP(v, isVisited | (1 << v), w, dp);
+        if (d == INF)
+            continue;
+        result = min(result, d + w[u][v]);
+    }
 
-	if (isVisited == (1 << n) - 1)
-	{
-		if (map[cur][0])
-			return map[cur][0];
-		return INF;
-	}
-
-	result = INF;
-	For(n)
-	{
-		if (isVisited & (1 << i) || !map[cur][i])
-			continue;
-		result = min(result, TSP(i, isVisited | (1 << i), map, dp) + map[cur][i]);
-	}
-	return dp[cur][isVisited] = result;
+    return result;
 }
 
 int main()
 {
-	FastIO;
+    FastIO;
 
-	int n;
-	Cin n;
+    int n;
+    cin >> n;
 
-	vector<vector<int>> map(n, vector<int>(n));
-	For(n)
-	{
-		Forj(n)
-			Cin map[i][j];
-	}
+    vector<vector<int>> w(n, vector<int>(n));
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+            cin >> w[i][j];
+    }
 
-	vector<vector<int>> dp(n, vector<int>(1 << n, -1));
-	Cout TSP(0, 1, map, dp) Endl;
+    vector<vector<int>> dp(n, vector<int>(1 << n, -1));
+    int result = TSP(0, 1, w, dp);
+    cout << result << '\n';
 }

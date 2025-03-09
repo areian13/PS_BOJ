@@ -147,9 +147,10 @@ Box SmallestBox(int i0, int i1, vector<Point>& hull)
     box.height = support[2].y / box.U0Len;
     return box;
 }
-void ComputeAngles(Box& box, vector<pair<double, int>>& angles, vector<Point>& hull)
+pair<double, int> GetMinAngle(Box& box, vector<Point>& hull)
 {
     int n = hull.size();
+    pair<double, int> result = { 1e+18,-1 };
     for (int i0 = 3, i1 = 0; i1 < 4; i0 = i1++)
     {
         if (box.indices[i0] == box.indices[i1])
@@ -162,19 +163,16 @@ void ComputeAngles(Box& box, vector<pair<double, int>>& angles, vector<Point>& h
         double dp = Point::Dot(D, Point::Perp(E));
         double eSqrLen = Point::Dot(E, E);
         double sinThetaSqr = (dp * dp) / eSqrLen;
-        angles.push_back({ sinThetaSqr,i0 });
+
+        if (sinThetaSqr <= result.first)
+            result = { sinThetaSqr, i0 };
     }
+    return result;
 }
-void UpdateSupport(Box& box, vector<pair<double, int>>& angles,
+void UpdateSupport(Box& box, int minAngleIndex,
     vector<Point>& hull)
 {
     int n = hull.size();
-
-    int minAngleIndex = min_element(angles.begin(), angles.end(),
-        [](const auto& a, const auto& b) {
-            return a.first < b.first;
-        }
-    )->second;
     box.indices[minAngleIndex] = (box.indices[minAngleIndex] + 1) % n;
 
     array<int, 4> nextIndices;
@@ -207,9 +205,10 @@ Box GetMABR(vector<Point>& points)
     Box box = minBox;
     for (int i = 0; i < h; i++)
     {
-        vector<pair<double, int>> angles;
-        ComputeAngles(box, angles, hull);
-        UpdateSupport(box, angles, hull);
+        int minAngleIndex = GetMinAngle(box, hull).second;
+        if (minAngleIndex == -1)
+            break;
+        UpdateSupport(box, minAngleIndex, hull);
 
         if (box.width + box.height < minBox.width + minBox.height)
             minBox = box;
@@ -229,5 +228,5 @@ int main()
         cin >> x >> y;
 
     Box result = GetMABR(points);
-    printf("%.9lf\n", (result.width + result.height) * 2);
+    printf("%.7lf\n", (result.width + result.height) * 2);
 }
