@@ -629,7 +629,9 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 07567 그릇.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 2\[B2] 07572 간지%28干支%29.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 07572 간지%28干支%29.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 09253 스페셜 저지.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -1049,6 +1051,7 @@
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 33167 じゃんけん %28Rock-Scissors-Paper%29.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 33541 2025는 무엇이 특별할까？.cpp" />
     <ClCompile Include="1. Bronze\Bronze 4\[B4] 32369 양파 실험.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
