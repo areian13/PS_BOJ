@@ -1,83 +1,14 @@
-#ifdef ONLINE_JUDGE
-#define _128d  __int128
-#else
-#define _128d long long
-#endif
-
 #include <iostream>
+#include <bit>
 #include <vector>
-#include <array>
-#include <string>
-#include <sstream>
-#include <ctime>
-#include <algorithm>
-#include <cstdio>
-#include <cstdlib>
-#include <cmath>
-#include <queue>
-#include <stack>
-#include <deque>
-#include <map>
-#include <unordered_map>
-#include <set>
 #include <climits>
-#include <cfloat>
-#include <cstring>
-#include <random>
-#include <type_traits>
-#include <numeric>
-#include <functional>
+#include <algorithm>
 
-#define Endl << "\n"
-#define endL << "\n" <<
-#define Cout cout <<
-#define COUT cout << "OUT: " <<
-#define Cin cin >>
-#define fspc << " "
-#define spc << " " <<
-#define Enter cout << "\n"
-#define if if
-#define elif else if
-#define else else
-#define For(n) for(int i = 0; i < n; i++)
-#define Forj(n) for(int j = 0; j < n; j++)
-#define Foro(n) for(int i = 1; i <= n; i++)
-#define Forjo(n) for(int j = 1; j <= n; j++)
-#define between(small, middle, big) (small < middle && middle < big)
-#define among(small, middle, big) (small <= middle && middle <= big)
-#define stoe(container) container.begin(), container.end()
-#define lf(d) Cout fixed; cout.precision(d);
-#define ulf() cout.unsetf(ios::scientific);
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
-#define PI 3.14159265359
-
-typedef long long LLONG;
-typedef unsigned long long ULLONG;
-typedef unsigned int UINT;
-typedef long double LDOUBLE;
 
 using namespace std;
 
-template <typename T>
-class heap : public priority_queue<T, vector<T>, greater<T>>
-{
-};
-
-template <typename T>
-ostream& operator<<(ostream& os, vector<T>& vec)
-{
-    for (T& value : vec)
-        os << value << ' ';
-    return os;
-}
-
-template <typename T, size_t N>
-ostream& operator<<(ostream& os, array<T, N>& vec)
-{
-    for (T& value : vec)
-        os << value << ' ';
-    return os;
-}
+#define INF INT_MAX
 
 struct Node
 {
@@ -91,16 +22,17 @@ struct Node
     }
 };
 
-Node SegTree(int start, int end, int idx, int l, int r, vector<Node>& a)
+Node SegTree(int s, int e, int l, int r, int i, vector<Node>& a)
 {
-    if (end < l || r < start)
-        return { INT_MAX,INT_MAX };
-    if (start <= l && r <= end)
-        return a[idx];
+    if (r < s || e < l)
+        return { INF,-1 };
+    if (s <= l && r <= e)
+        return a[i];
 
-    int mid = (l + r) / 2;
-    return min(SegTree(start, end, idx * 2, l, mid, a),
-        SegTree(start, end, idx * 2 + 1, mid + 1, end, a));
+    int m = (l + r) / 2;
+    Node lSeg = SegTree(s, e, l, m, i * 2, a);
+    Node rSeg = SegTree(s, e, m + 1, r, i * 2 + 1, a);
+    return min(lSeg, rSeg);
 }
 
 int main()
@@ -108,38 +40,35 @@ int main()
     FastIO;
 
     int n;
-    Cin n;
+    cin >> n;
 
-    int r = log2(2 * n - 1);
-    int size = pow(2, r);
-
-    vector<Node> a(2 * size, { INT_MAX,INT_MAX });
-    For(n)
+    int k = bit_ceil((unsigned int)n);
+    vector<Node> a(k * 2, { INF,-1 });
+    for (int i = 0; i < n; i++)
     {
-        int v;
-        Cin v;
-
-        a[size + i] = { v,i };
+        cin >> a[k + i].v;
+        a[k + i].i = i;
     }
-    for (int i = size - 1; i > 0; i--)
+
+    for (int i = k - 1; i >= 1; i--)
         a[i] = min(a[i * 2], a[i * 2 + 1]);
 
-
     int m;
-    Cin m;
+    cin >> m;
 
-    while (m--)
+    for (int t = 1; t <= m; t++)
     {
-        int op;
-        Cin op;
+        int q;
+        cin >> q;
 
-        if (op == 1)
+        if (q == 1)
         {
             int i, v;
-            Cin i >> v;
-
-            i += size - 1;
+            cin >> i >> v;
+            
+            i += k - 1;
             a[i].v = v;
+
             while (i > 1)
             {
                 i /= 2;
@@ -148,8 +77,9 @@ int main()
         }
         else
         {
-            Node result = SegTree(0, n - 1, 1, 0, size - 1, a);
-            Cout result.i + 1 Endl;
+            int s = 0, e = n - 1;
+            Node result = SegTree(s, e, 0, k - 1, 1, a);
+            cout << result.i + 1 << '\n';
         }
     }
 }
