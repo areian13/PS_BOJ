@@ -5634,6 +5634,9 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 07586 Untied Airlines.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 07597 Tennis.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="0. Unrated\[U0] 27903 인생.bf" />
