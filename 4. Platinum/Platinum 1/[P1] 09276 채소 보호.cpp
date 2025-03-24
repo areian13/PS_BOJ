@@ -1,66 +1,57 @@
 #include <iostream>
-#include <cstdio>
 #include <vector>
 #include <algorithm>
-#include <cmath>
 #include <array>
-#include <climits>
+#include <cmath>
+#include <cfloat>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
 
 using namespace std;
 
+#define INF DBL_MAX
+
 struct Point
 {
-    double x, y;
+    int x, y;
 
-    static int CCW(Point a, Point b, Point c)
+    static long long Cross(const Point& a, const Point& b, const Point& c)
     {
-        int cross = (b.x - a.x) * (c.y - a.y)
-            - (b.y - a.y) * (c.x - a.x);
+        return (long long)(b.x - a.x) * (c.y - a.y)
+            - (long long)(b.y - a.y) * (c.x - a.x);
+    }
+    static int CCW(const Point& a, const Point& b, const Point& c)
+    {
+        long long cross = Cross(a, b, c);
         return (cross == 0 ? 0 : (cross > 0 ? +1 : -1));
     }
-    static Point Perp(Point p)
-    {
-        return { p.y,-p.x };
-    }
-    static double Dot(Point a, Point b)
-    {
-        return a.x * b.x + a.y * b.y;
-    }
 
-    friend Point operator-(Point a, Point b)
+    friend Point operator - (const Point& a, const Point& b)
     {
         return { a.x - b.x,a.y - b.y };
     }
-    friend Point operator-(Point a)
+    friend long long operator * (const Point& a, const Point& b)
     {
-        return { -a.x,-a.y };
+        return (long long)a.x * b.x + (long long)a.y * b.y;
     }
-    friend Point operator*(Point a, float c)
+    friend long long operator / (const Point& a, const Point& b)
     {
-        return { a.x * c,a.y * c };
+        return (long long)a.x * b.y - (long long)a.y * b.x;
     }
-};
-
-struct Box
-{
-    array<Point, 2> U;
-    array<int, 4> indices;
-    double sqrLenU0, area, width, height;
-
-    Box()
+    friend bool operator == (const Point& a, const Point& b)
     {
-        U = { Point{0,0},{0,0} };
-        indices = { 0,0,0,0 };
-        sqrLenU0 = area = width = height = 0;
+        return a.x == b.x && a.y == b.y;
+    }
+    double Mag()
+    {
+        return hypot(x, y);
     }
 };
 
-void MakeConvexHull(vector<Point>& points, vector<int>& hullIndices)
+void MakeConvexHull(vector<Point>& points, vector<int>& indices)
 {
     Point p0 = *min_element(points.begin(), points.end(),
-        [](Point& a, Point& b)
+        [](const Point& a, const Point& b)
         {
             if (a.y != b.y)
                 return a.y < b.y;
@@ -68,7 +59,7 @@ void MakeConvexHull(vector<Point>& points, vector<int>& hullIndices)
         }
     );
     sort(points.begin(), points.end(),
-        [&p0](Point& a, Point& b)
+        [&p0](const Point& a, const Point& b)
         {
             int ccw = Point::CCW(p0, a, b);
             if (ccw != 0)
@@ -82,166 +73,60 @@ void MakeConvexHull(vector<Point>& points, vector<int>& hullIndices)
     int n = points.size();
     for (int i = 0; i < n; i++)
     {
-        while (hullIndices.size() >= 2)
+        while (indices.size() >= 2)
         {
-            int second = hullIndices.back();
-            hullIndices.pop_back();
-            int first = hullIndices.back();
+            int second = indices.back();
+            indices.pop_back();
+            int first = indices.back();
 
             if (Point::CCW(points[first], points[second], points[i]) > 0)
             {
-                hullIndices.push_back(second);
+                indices.push_back(second);
                 break;
             }
         }
 
-        hullIndices.push_back(i);
-    }
-}
-
-Box SmallestBox(int i0, int i1, vector<Point>& points)
-{
-    Box box;
-    box.U[0] = points[i1] - points[i0];
-    box.U[1] = -Point::Perp(box.U[0]);
-    box.indices = { i1,i1,i1,i1 };
-    box.sqrLenU0 = Point::Dot(box.U[0], box.U[0]);
-
-    Point& origin = points[i1];
-    vector<Point> support(4, { 0,0 });
-
-    int n = points.size();
-    for (int i = 0; i < n; i++)
-    {
-        Point diff = points[i] - origin;
-        Point v = { Point::Dot(box.U[0], diff),Point::Dot(box.U[1], diff) };
-
-        if (v.x > support[1].x ||
-            (v.x == support[1].x && v.y > support[1].y))
-        {
-            box.indices[1] = i;
-            support[1] = v;
-        }
-        if (v.y > support[2].y ||
-            (v.y == support[2].y && v.x < support[2].x))
-        {
-            box.indices[2] = i;
-            support[2] = v;
-        }
-        if (v.x < support[3].x ||
-            (v.x == support[3].x && v.y < support[3].y))
-        {
-            box.indices[3] = i;
-            support[3] = v;
-        }
+        indices.push_back(i);
     }
 
-    double width = support[1].x - support[3].x;
-    double height = support[2].y;
-    box.width = width;
-    box.height = height;
-    box.area = width * height / box.sqrLenU0;
-    return box;
+    if (indices.size() == 2 && points[indices[0]] == points[indices[1]])
+        indices.pop_back();
+    indices.shrink_to_fit();
 }
-void ComputeAngles(Box& box, vector<pair<double, int>>& angles, vector<Point>& points)
+
+double GetMABR(vector<Point>& points)
 {
-    int n = points.size();
-    for (int i0 = 3, i1 = 0; i1 < 4; i0 = i1++)
-    {
-        if (box.indices[i0] == box.indices[i1])
-            continue;
+    vector<int> indices;
+    MakeConvexHull(points, indices);
 
-        Point D = box.U[i0 % 2] * (i0 < 2 ? +1 : -1);
-        int j0 = box.indices[i0], j1 = (j0 + 1) % n;
+    int h = indices.size();
+    if (h <= 1)
+        return 0;
 
-        Point E = points[j1] - points[j0];
-        double dp = Point::Dot(D, Point::Perp(E));
-        double eSqrLen = Point::Dot(E, E);
-        double sinThetaSqr = (dp * dp) / eSqrLen;
-        angles.push_back({ sinThetaSqr,i0 });
-    }
-}
-bool UpdateSupport(Box& box, vector<pair<double, int>>& angles,
-    vector<Point>& points, vector<bool>& isVisited)
-{
-    int n = points.size();
-    int k = angles.size();
-
-    vector<int> sortIndices(k);
-    for (int i = 0; i < k; i++)
-        sortIndices[i] = i;
-    sort(sortIndices.begin(), sortIndices.end(),
-        [&angles](int a, int b)
-        {
-            return angles[a].first < angles[b].first;
-        }
-    );
-
-    auto& minAngle = angles[sortIndices[0]];
-    for (int i = 0; i < k; i++)
-    {
-        auto& angle = angles[sortIndices[i]];
-        if (angle.first == minAngle.first)
-            box.indices[angle.second] = (box.indices[angle.second] + 1) % n;
-    }
-
-    int bottom = box.indices[minAngle.second];
-    if (isVisited[bottom])
-        return false;
-    isVisited[bottom] = true;
-
-    array<int, 4> nextIndices;
-    for (int i = 0; i < 4; i++)
-        nextIndices[i] = box.indices[(minAngle.second + i) % 4];
-    box.indices = nextIndices;
-
-    int j1 = box.indices[0], j0 = (j1 - 1 + n) % n;
-    box.U[0] = points[j1] - points[j0];
-    box.U[1] = -Point::Perp(box.U[0]);
-    box.sqrLenU0 = Point::Dot(box.U[0], box.U[0]);
-
-    array<Point, 2> diff =
-    {
-        points[box.indices[1]] - points[box.indices[3]],
-        points[box.indices[2]] - points[box.indices[0]],
-    };
-    double width = Point::Dot(box.U[0], diff[0]);
-    double height = Point::Dot(box.U[1], diff[1]);
-    box.width = width;
-    box.height = height;
-    box.area = width * height / box.sqrLenU0;
-    return true;
-}
-Box GetMBR(vector<Point>& points)
-{
-    vector<int> hullIndices;
-    MakeConvexHull(points, hullIndices);
-
-    int h = hullIndices.size();
     vector<Point> hull(h);
     for (int i = 0; i < h; i++)
-        hull[i] = points[hullIndices[i]];
+        hull[i] = points[indices[i]];
 
-    vector<bool> isVisited(h, false);
-    Box minBox = SmallestBox(h - 1, 0, hull);
-    isVisited[minBox.indices[0]] = true;
-
-    Box box = minBox;
+    Point U0 = hull[1] - hull[0];
+    int r = 0, u = 0, l = 0;
+    double result = INF;
     for (int i = 0; i < h; i++)
     {
-        vector<pair<double, int>> angles;
-        ComputeAngles(box, angles, hull);
+        U0 = hull[(i + 1) % h] - hull[i];
+        while (U0 * (hull[(r + 1) % h] - hull[r % h]) > 0)
+            r++;
+        u = max(u, r);
+        while (U0 / (hull[(u + 1) % h] - hull[u % h]) > 0)
+            u++;
+        l = max(l, u);
+        while (U0 * (hull[(l + 1) % h] - hull[l % h]) < 0)
+            l++;
 
-        if (angles.size() == 0)
-            break;
-
-        if (!UpdateSupport(box, angles, hull, isVisited))
-            break;
-
-        if (box.area < minBox.area)
-            minBox = box;
+        double width = U0 * (hull[r % h] - hull[l % h]) / U0.Mag();
+        double height = U0 / (hull[u % h] - hull[i % h]) / U0.Mag();
+        result = min(result, (width + height) * 2);
     }
-    return minBox;
+    return result;
 }
 
 int main()
@@ -257,10 +142,10 @@ int main()
             break;
 
         vector<Point> points(n);
-        for (int i = 0; i < n; i++)
-            cin >> points[i].x >> points[i].y;
+        for (auto& [x, y] : points)
+            cin >> x >> y;
 
-        Box result = GetMBR(points);
-        printf("%.9lf\n", (result.width + result.height) * 2 / sqrt(result.sqrLenU0));
+        double result = GetMABR(points);
+        printf("%.5lf\n", result);
     }
 }

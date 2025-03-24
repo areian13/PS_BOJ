@@ -30,6 +30,10 @@ struct Point
     {
         return { a.x - b.x,a.y - b.y };
     }
+    friend Point operator - (const Point& a)
+    {
+        return { -a.x,-a.y };
+    }
     friend long long operator * (const Point& a, const Point& b)
     {
         return (long long)a.x * b.x + (long long)a.y * b.y;
@@ -45,6 +49,20 @@ struct Point
     double Mag()
     {
         return hypot(x, y);
+    }
+};
+
+struct Box
+{
+    array<Point, 2> U;
+    array<int, 4> indices;
+    double U0Len, width, height;
+
+    Box()
+    {
+        U = { Point{0,0},{0,0} };
+        indices = { 0,0,0,0 };
+        U0Len = width = height = 0;
     }
 };
 
@@ -91,40 +109,40 @@ void MakeConvexHull(vector<Point>& points, vector<int>& indices)
 
     if (indices.size() == 2 && points[indices[0]] == points[indices[1]])
         indices.pop_back();
-    indices.shrink_to_fit();
 }
 
-double GetMABR(vector<Point>& points)
+Box GetMABR(vector<Point>& points)
 {
     vector<int> indices;
     MakeConvexHull(points, indices);
 
     int h = indices.size();
     if (h <= 1)
-        return 0;
+        return Box();
 
     vector<Point> hull(h);
     for (int i = 0; i < h; i++)
         hull[i] = points[indices[i]];
 
     Point U0 = hull[1] - hull[0];
-    int r = 0, u = 0, l = 0;
-    double result = INF;
+    int u = 1;
+    while (U0 / (hull[(u + 1) % h] - hull[u % h]) > 0)
+        u++;
+
+    Box result;
+    result.width = result.height = INF;
     for (int i = 0; i < h; i++)
     {
         U0 = hull[(i + 1) % h] - hull[i];
-        while (U0 * (hull[(r + 1) % h] - hull[r % h]) > 0)
-            r++;
-        u = max(u, r);
         while (U0 / (hull[(u + 1) % h] - hull[u % h]) > 0)
             u++;
-        l = max(l, u);
-        while (U0 * (hull[(l + 1) % h] - hull[l % h]) < 0)
-            l++;
 
-        double width = U0 * (hull[r % h] - hull[l % h]) / U0.Mag();
         double height = U0 / (hull[u % h] - hull[i % h]) / U0.Mag();
-        result = min(result, width * height);
+        if (result.height > height)
+        {
+            result.U[0] = U0;
+            result.height = height;
+        }
     }
     return result;
 }
@@ -140,6 +158,6 @@ int main()
     for (auto& [x, y] : points)
         cin >> x >> y;
 
-    double result = GetMABR(points);
-    cout << (long long)(result + .5) << '\n';
+    Box result = GetMABR(points);
+    printf("%.6lf\n", result.height);
 }

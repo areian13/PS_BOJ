@@ -108,23 +108,16 @@ double GetMABR(vector<Point>& points)
         hull[i] = points[indices[i]];
 
     Point U0 = hull[1] - hull[0];
-    int r = 0, u = 0, l = 0;
+    int u = 1;
     double result = INF;
     for (int i = 0; i < h; i++)
     {
         U0 = hull[(i + 1) % h] - hull[i];
-        while (U0 * (hull[(r + 1) % h] - hull[r % h]) > 0)
-            r++;
-        u = max(u, r);
         while (U0 / (hull[(u + 1) % h] - hull[u % h]) > 0)
             u++;
-        l = max(l, u);
-        while (U0 * (hull[(l + 1) % h] - hull[l % h]) < 0)
-            l++;
 
-        double width = U0 * (hull[r % h] - hull[l % h]) / U0.Mag();
         double height = U0 / (hull[u % h] - hull[i % h]) / U0.Mag();
-        result = min(result, width * height);
+        result = min(result, height);
     }
     return result;
 }
@@ -133,13 +126,20 @@ int main()
 {
     FastIO;
 
-    int n;
-    cin >> n;
+    int tc = 0;
+    while (true)
+    {
+        int n;
+        cin >> n;
 
-    vector<Point> points(n);
-    for (auto& [x, y] : points)
-        cin >> x >> y;
+        if (n == 0)
+            break;
 
-    double result = GetMABR(points);
-    cout << (long long)(result + .5) << '\n';
+        vector<Point> points(n);
+        for (auto& [x, y] : points)
+            cin >> x >> y;
+
+        double result = GetMABR(points);
+        printf("Case %d: %.2lf\n", ++tc, (result * 100 + .5) / 100);
+    }
 }
