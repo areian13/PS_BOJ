@@ -680,6 +680,7 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 22341 사각형 면적.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 33171いずれか片方 %28Either, but Not Both%29.cpp" />
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 29494 Простая задача.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -4330,7 +4331,9 @@
     <ClCompile Include="4. Platinum\Platinum 3\[P3] 20670 미스테리 싸인.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="4. Platinum\Platinum 3\[P3] 27656 양궁.cpp" />
+    <ClCompile Include="4. Platinum\Platinum 3\[P3] 27656 양궁.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="4. Platinum\Platinum 3\[P3] 32230 현대모비스 첨단 운전자 보조 시스템.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
