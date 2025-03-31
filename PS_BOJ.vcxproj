@@ -656,7 +656,12 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 07789 텔레프라임.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 2\[B2] 07790 Joke.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 07790 Joke.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 08270 Tulips.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 09253 스페셜 저지.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -4242,8 +4247,9 @@
     <ClCompile Include="4. Platinum\Platinum 2\[P2] 02570 비숍2.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="4. Platinum\Platinum 2\![P2] 03002 아날로그 다이얼.cpp">
+    <ClCompile Include="4. Platinum\Platinum 2\[P2] 03002 아날로그 다이얼.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <SDLCheck Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</SDLCheck>
     </ClCompile>
     <ClCompile Include="4. Platinum\Platinum 2\[P2] 03295 단방향 링크 네트워크.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
@@ -4288,6 +4294,9 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="4. Platinum\Platinum 2\[P2] 16407 Cops and Robbers.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 2\![P2] 17353 하늘에서 떨어지는 1, 2, ..., R-L+1개의 별.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="4. Platinum\Platinum 3\[P3] 01168 요세푸스 문제 2.cpp">
@@ -5605,6 +5614,7 @@
     <ClCompile Include="4. Platinum\Platinum 2\[P2] 14750 Jerry and Tom.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="5. Diamond\Diamond 5\[D5] 01077 넓이.cpp" />
     <ClCompile Include="5. Diamond\Diamond 5\[D5] 03692 펭귄들의 행진.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -5807,6 +5817,12 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Contest\2025\01\2025-01-11 14%2700 2024 경인지역 대학 연합 프로그래밍 경시대회 shake! Open Contest\A번 -  $K$-정렬.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Contest\2025\03\2025-03-29 14%2700 2025 중앙대학교 프로그래밍 경진대회(CPC) Open Contest\A1번 - 하늘에서 떨어지는 $N$개의 별.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Contest\2025\03\2025-03-29 14%2700 2025 중앙대학교 프로그래밍 경진대회(CPC) Open Contest\A2번 - L-트로미노 타일링.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="main.c">

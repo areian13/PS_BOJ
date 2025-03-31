@@ -5685,13 +5685,28 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 07770 아즈텍 피라미드.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="4. Platinum\Platinum 2\![P2] 03002 아날로그 다이얼.cpp">
+    <ClCompile Include="4. Platinum\Platinum 2\[P2] 03002 아날로그 다이얼.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 07789 텔레프라임.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 07790 Joke.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Contest\2025\03\2025-03-29 14%2700 2025 중앙대학교 프로그래밍 경진대회(CPC) Open Contest\A1번 - 하늘에서 떨어지는 $N$개의 별.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Contest\2025\03\2025-03-29 14%2700 2025 중앙대학교 프로그래밍 경진대회(CPC) Open Contest\A2번 - L-트로미노 타일링.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 08270 Tulips.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 2\![P2] 17353 하늘에서 떨어지는 1, 2, ..., R-L+1개의 별.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="5. Diamond\Diamond 5\[D5] 01077 넓이.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
