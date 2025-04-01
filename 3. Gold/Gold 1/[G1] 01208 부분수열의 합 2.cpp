@@ -1,97 +1,49 @@
 #include <iostream>
 #include <vector>
-#include <array>
-#include <string>
-#include <time.h>
 #include <algorithm>
-#include <stdlib.h>
-#include <math.h>
-#include <cmath>
-#include <queue>
-#include <stack>
-#include <deque>
-#include <map>
-#include <unordered_map>
-#include <set>
-#include <limits.h>
-#include <float.h>
-#include <string.h>
 
-#define Endl << "\n"
-#define endL << "\n" <<
-#define Cout cout <<
-#define	COUT cout << "OUT: " <<
-#define Cin cin >>
-#define fspc << " "
-#define spc << " " <<
-#define Enter cout << "\n"
-#define if if
-#define elif else if
-#define else else
-#define For(n) for(int i = 0; i < n; i++)
-#define Forj(n) for(int j = 0; j < n; j++)
-#define Foro(n) for(int i = 1; i <= n; i++)
-#define Forjo(n) for(int j = 1; j <= n; j++)
-#define between(small, middle, big) (small < middle && middle < big)
-#define among(small, middle, big) (small <= middle && middle <= big)
-#define stoe(container) container.begin(), container.end()
-#define lf(d) Cout fixed; cout.precision(d);
-#define ulf cout.unsetf(ios::scientific);
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
-#define PI 3.14159265359
-
-typedef long long LLONG;
-typedef unsigned long long ULLONG;
-typedef unsigned int UINT;
 
 using namespace std;
 
-template <typename T>
-class heap : public priority_queue<T, vector<T>, greater<T>>
+void MakeSums(int s, int e, int sum, vector<int>& sums, vector<int>& a)
 {
-};
+    if (s > e)
+    {
+        sums.push_back(sum);
+        return;
+    }
 
-int n, s;
-vector<int> arr;
-unordered_map<int, int> UMP;
-LLONG result = 0;
-
-void LeftSearch(int idx, int sum)
-{
-	if (idx == n / 2)
-	{
-		UMP[sum]++;
-		return;
-	}
-	LeftSearch(idx + 1, sum + arr[idx]);
-	LeftSearch(idx + 1, sum);
+    MakeSums(s + 1, e, sum, sums, a);
+    MakeSums(s + 1, e, sum + a[s], sums, a);
 }
 
-void RightSearch(int idx, int sum)
-{
-	if (idx == n)
-	{
-		result += UMP[s - sum];
-		return;
-	}
-	RightSearch(idx + 1, sum + arr[idx]);
-	RightSearch(idx + 1, sum);
-}
 int main()
 {
-	FastIO;
+    FastIO;
 
-	Cin n >> s;
-	
-	arr.resize(n);
-	For(n)
-		Cin arr[i];
-	sort(stoe(arr));
+    int n, s;
+    cin >> n >> s;
 
-	LeftSearch(0, 0);
-	RightSearch(n / 2, 0);
+    vector<int> a(n);
+    for (int i = 0; i < n; i++)
+        cin >> a[i];
+    sort(a.begin(), a.end());
 
-	if (s == 0)
-		result--;
-	Cout result;
+    vector<int> left, right;
+    MakeSums(0, n / 2, 0, left, a);
+    MakeSums(n / 2 + 1, n - 1, 0, right, a);
+
+    sort(left.begin(), left.end());
+    sort(right.begin(), right.end());
+
+    long long result = 0;
+    for (int l : left)
+    {
+        auto u = upper_bound(right.begin(), right.end(), s - l);
+        auto d = lower_bound(right.begin(), right.end(), s - l);
+        result += u - d;
+    }
+    result -= (s == 0);
+    cout << result << '\n';
 }
