@@ -7,36 +7,16 @@
 
 using namespace std;
 
-int SegTree(int s, int e, int l, int r, int i, vector<int>& arr)
+int SegTree(int v, int s, int e, int i, vector<int>& arr)
 {
-    if (r < s || e < l)
-        return 0;
-    if (s <= l && r <= e)
-        return arr[i];
+    if (s == e)
+        return s;
 
-    int m = (l + r) / 2;
-    int lSeg = SegTree(s, e, l, m, i * 2, arr);
-    int rSeg = SegTree(s, e, m + 1, r, i * 2 + 1, arr);
-    return lSeg + rSeg;
-}
-
-int BS(int i, int n, int k, vector<int>& arr)
-{
-    int s = 0, e = n - 1;
-    int result = e;
-    while (s <= e)
-    {
-        int m = (s + e) / 2;
-        int sum = SegTree(0, m, 0, k - 1, 1, arr);
-        if (sum < i)
-            s = m + 1;
-        else
-        {
-            result = m;
-            e = m - 1;
-        }
-    }
-    return result;
+    int m = (s + e) / 2;
+    if (arr[i * 2] >= v)
+        return SegTree(v, s, m, i * 2, arr);
+    else
+        return SegTree(v - arr[i * 2], m + 1, e, i * 2 + 1, arr);
 }
 
 int main()
@@ -78,7 +58,7 @@ int main()
         }
         else
         {
-            int result = BS(i, n, k, arr);
+            int result = SegTree(i, 0, k - 1, 1, arr);
             cout << result + 1 << '\n';
         }
     }

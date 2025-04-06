@@ -25,7 +25,7 @@
     <Text Include="1. Bronze\Bronze 5\[B5] 10189 Hook.txt" />
     <Text Include="1. Bronze\Bronze 5\[B5] 11942 고려대는 사랑입니다.txt" />
     <Text Include="1. Bronze\Bronze 5\[B5] 24900 한별 찍기.txt" />
-    <Text Include="3. Gold\Gold 2\[G2] 13317 한 번 남았다 [2].txt" />
+    <Text Include="3. Gold\Gold 3\[G3] 13317 한 번 남았다 [2].txt" />
     <Text Include="3. Gold\Gold 4\[G4] 23483 Construct Points.txt" />
     <Text Include="2. Silver\Silver 5\[S5] 15549 if.txt" />
   </ItemGroup>
@@ -2409,7 +2409,7 @@
     <ClCompile Include="3. Gold\Gold 3\[G3] 11437 LCA [2].cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="3. Gold\Gold 2\[G2] 13317 한 번 남았다 [1].cpp">
+    <ClCompile Include="3. Gold\Gold 3\[G3] 13317 한 번 남았다 [1].cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="3. Gold\Gold 3\[G3] 14427 수열과 쿼리 15.cpp">
@@ -5707,6 +5707,45 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="5. Diamond\Diamond 5\[D5] 01077 넓이.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 21875 Innohorse.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 08320 직사각형을 만드는 방법.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 33674 하늘에서 떨어지는 %24N%24개의 별.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 1\[B1] 33675 L-트로미노 타일링.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 33689 CPDU.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. Silver\Silver 5\[S5] 33690 포린드롬.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 08436 Kamil.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 11319 Count Me In.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. Silver\Silver 5\[S5] 10814 나이순 정렬 [1].cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. Silver\Silver 5\[S5] 10814 나이순 정렬 [2].cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 33192 Divar’s Salaries.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 1\![P1] 04149 큰 수 소인수분해.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 1\[P1] 05615 아파트 임대.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
