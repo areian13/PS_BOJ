@@ -10,10 +10,9 @@ int Min8(string& l, string& r)
     if (l.size() != r.size())
         return 0;
 
-    int n = l.size();
-
+    int m = r.size();
     int result = 0;
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < m; i++)
     {
         if (l[i] != r[i])
             break;
