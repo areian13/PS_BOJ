@@ -5796,6 +5796,24 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 08724 Pinezki.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 08728 Grusze i jabłonie.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 5\[G5] 11729 하노이 탑 이동 순서.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 08772 Szyfr Cezara.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 08818 Deski.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 08836 Złodziejki.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 08912 Sales.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="0. Unrated\[U0] 27903 인생.bf" />
@@ -5826,6 +5844,9 @@
     <None Include="1. Bronze\Bronze 5\[B5] 13277 큰 수 곱셈 [1].py" />
     <None Include="1. Bronze\Bronze 2\[B2] 06976 Divisibility by 11.py" />
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py">
+      <Filter>소스 파일</Filter>
+    </None>
+    <None Include="1. Bronze\Bronze 2\[B2] 08846 Wymiana żarówki.py">
       <Filter>소스 파일</Filter>
     </None>
   </ItemGroup>
