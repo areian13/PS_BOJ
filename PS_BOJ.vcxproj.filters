@@ -5868,6 +5868,15 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 09228 Check Digits.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 09243 파일 완전 삭제.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Contest\2025\04\2025-05-10 14%2700 월간 향유회 2025. 04-05. Open Contest\A번 - 도로 공사.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. Silver\Silver 5\[S5] 26876 New Time.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="0. Unrated\[U0] 27903 인생.bf" />
