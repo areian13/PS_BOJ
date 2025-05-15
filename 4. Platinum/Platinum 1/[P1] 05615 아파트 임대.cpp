@@ -23,20 +23,18 @@ ull Power(ull a, ull b, ull mod)
 
 bool Miller(ull n, ull a)
 {
-    if (n <= 1)
-        return false;
-    if (n == 2 || n == a)
+    if (n % a == 0)
         return true;
 
-    ull k = n - 1;
+    ull d = n - 1;
     while (true)
     {
-        ull temp = Power(a, k, n);
-        if (temp == n - 1)
+        ull temp = Power(a, d, n);
+        if (d % 2 == 1)
+            return (temp == 1 || temp == n - 1);
+        else if (temp == n - 1)
             return true;
-        if (k % 2 == 1)
-            return temp == 1 || temp == n - 1;
-        k /= 2;
+        d /= 2;
     }
 }
 

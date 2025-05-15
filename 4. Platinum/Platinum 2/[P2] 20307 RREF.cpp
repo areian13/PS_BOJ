@@ -8,7 +8,8 @@
 using namespace std;
 
 #ifdef ONLINE_JUDGE
-#define __int128  __int128
+#include <string>
+#include <algorithm>
 
 ostream& operator<<(ostream& os, __int128 value)
 {
@@ -28,9 +29,8 @@ ostream& operator<<(ostream& os, __int128 value)
     reverse(result.begin(), result.end());
     return os << result;
 }
-
 #else
-#define __int128 long long
+typedef long long __int128;
 #endif
 
 template <typename T>

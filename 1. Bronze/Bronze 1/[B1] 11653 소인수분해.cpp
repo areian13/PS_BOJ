@@ -9,7 +9,8 @@ void GetPrimeFactors(int n, vector<int>& primeFactors)
 {
     while (n != 1)
     {
-        for (int i = 2; i <= n; i++)
+        int u = n;
+        for (int i = 2; i * i <= n; i++)
         {
             if (n % i == 0)
             {
@@ -17,6 +18,12 @@ void GetPrimeFactors(int n, vector<int>& primeFactors)
                 n /= i;
                 break;
             }
+        }
+
+        if (n == u)
+        {
+            primeFactors.push_back(n);
+            n = 1;
         }
     }
 }
