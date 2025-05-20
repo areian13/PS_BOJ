@@ -4,6 +4,7 @@
 #include <numeric>
 #include <cmath>
 #include <algorithm>
+#include <unordered_map>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
 
@@ -85,7 +86,7 @@ namespace pollard_rho
             if (g == n)
             {
                 a = b = rand() % (n - 2) + 2;
-                c = rand() % 20 + 1;
+                c = rand() % 2 + 1;
             }
 
             a = f(a);
@@ -106,6 +107,21 @@ namespace pollard_rho
     }
 }
 
+ll phi(ll n)
+{
+    unordered_map<ll, int> cnt;
+    for (ll factor : pollard_rho::factorize(n))
+        cnt[factor]++;
+
+    ll result = 1;
+    for (auto& pa : cnt)
+    {
+        ll p = miller_rabin::power(pa.first, pa.second, n + 1);
+        result *= p - p / pa.first;
+    }
+    return result;
+}
+
 int main()
 {
     FastIO;
@@ -113,6 +129,6 @@ int main()
     ll n;
     cin >> n;
 
-    for (auto f : pollard_rho::factorize(n))
-        cout << f << '\n';
+    ll result = phi(n);
+    cout << result << '\n';
 }

@@ -5,7 +5,7 @@
 
 using namespace std;
 
-#define MAX 11
+#define MAX 10
 
 int Count123Sum(int n)
 {
@@ -15,12 +15,11 @@ int Count123Sum(int n)
     if (!isInited)
     {
         isInited = true;
-
-        dp[1] = 1;
-        dp[2] = 2;
-        dp[3] = 4;
+        dp[0] = 1;
     }
 
+    if (n < 0)
+        return 0;
     if (dp[n] != -1)
         return dp[n];
     return dp[n] = Count123Sum(n - 1) + Count123Sum(n - 2) + Count123Sum(n - 3);
@@ -30,10 +29,10 @@ int main()
 {
     FastIO;
 
-    int tc;
-    cin >> tc;
+    int TC;
+    cin >> TC;
 
-    while (tc--)
+    for (int tc = 1; tc <= TC; tc++)
     {
         int n;
         cin >> n;

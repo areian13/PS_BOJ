@@ -30,7 +30,7 @@ ostream& operator<<(ostream& os, __int128 value)
     return os << result;
 }
 #else
-typedef long long __int128;
+#define __int128 long long
 #endif
 
 template <typename T>

@@ -5868,7 +5868,7 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 09243 파일 완전 삭제.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Contest\2025\04\2025-05-10 14%2700 월간 향유회 2025. 04-05. Open Contest\A번 - 도로 공사.cpp">
+    <ClCompile Include="Contest\2025\05\2025-05-10 14%2700 월간 향유회 2025. 04-05. Open Contest\A번 - 도로 공사.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="2. Silver\Silver 5\[S5] 26876 New Time.cpp">
@@ -5887,6 +5887,33 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="4. Platinum\Platinum 1\[P1] 04149 큰 수 소인수분해.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 09313 Integer Flipping.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Contest\2025\05\2025-05-17 14%2750 2025 서울대학교 SCSC 프로그래밍 경시대회 Open Contest\A번 - 레퓨닛의 덧셈.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="5. Diamond\Diamond 5\[D5] 13926 gcd%28n, k%29 = 1.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 1\[G1] 11689 GCD%28n, k%29 = 1.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Contest\2025\05\2025-05-18 13%2700 2025 인하대학교 프로그래밍 경진대회(IUPC) Open Contest\A번 - 인경호 울타리 공사.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="5. Diamond\Diamond 5\![D5] 16214 N과 M.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. Silver\Silver 2\[S2] 01912 연속합.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 33277 국방시계.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 33528 Alphabetic Shift.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
