@@ -1,12 +1,11 @@
 #include <iostream>
+#include <cstdio>
 #include <vector>
 #include <cmath>
 #include <algorithm>
 #include <array>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
-#define lf(d) cout << fixed; cout.precision(d);
-#define ulf() cout.unsetf(ios::scientific);
 
 using namespace std;
 
@@ -15,7 +14,7 @@ using namespace std;
 struct Edge
 {
     int u, v;
-    long long c, t;
+    int c, t;
 };
 
 int Find(int u, vector<int>& p)
@@ -58,7 +57,8 @@ double MaxEarnPerTime(int n, int f, vector<Edge>& edges)
     {
         double mid = (start + end) / 2;
 
-        sort(edges.begin(), edges.end(), [mid](const Edge& a, const Edge& b)
+        sort(edges.begin(), edges.end(),
+            [mid](const Edge& a, const Edge& b)
             {
                 return mid * a.t + a.c < mid * b.t + b.c;
             }
@@ -94,7 +94,6 @@ int main()
         edges[i] = { u,v,c,t };
     }
 
-    lf(4);
     double result = MaxEarnPerTime(n, f, edges);
-    cout << result << '\n';
+    printf("%.4lf\n", result);
 }

@@ -1,5 +1,4 @@
 #include <iostream>
-#include <string>
 
 using namespace std;
 
@@ -10,6 +9,7 @@ using namespace std;
  * Description : FastIO implementation for cin, cout.
  */
 
+#include <string>
 constexpr int SZ = 1 << 18;
 
 class INPUT {

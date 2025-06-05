@@ -73,6 +73,6 @@ int main()
         x[i] %= c;
     }
 
-    long long result = MST(a, b, c, d, x);;
+    long long result = MST(a, b, c, d, x);
     cout << result << '\n';
 }
