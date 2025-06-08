@@ -783,6 +783,9 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 09433 Zombie Invasion.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 09437 사라진 페이지 찾기.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 09546 3000번 버스.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -814,6 +817,9 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 09377 String LD.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 5\[B5] 33515 노트북 세 대를 가지고 왔다.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 20571 Elevators.cpp">
@@ -5741,6 +5747,9 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="4. Platinum\Platinum 4\[P4] 27876 제곱수 덱 1.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 5\![P5] 01214 쿨한 물건 구매.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="4. Platinum\Platinum 5\[P5] 01321 군인.cpp">
