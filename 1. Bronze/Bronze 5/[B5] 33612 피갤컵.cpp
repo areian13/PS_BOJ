@@ -8,7 +8,9 @@ int main()
 {
     FastIO;
 
-    int 학번 = 202211441;
-    int CODE = ((학번 % 10000) * 3897 + (학번 / 100000) * (학번 / 100000)) % 10000;
-    cout << CODE << '\n';
+    int n;
+    cin >> n;
+
+    int result = 2024 * 12 + 7 + (n - 1) * 7;
+    cout << result / 12 << ' ' << result % 12 + 1 << '\n';
 }

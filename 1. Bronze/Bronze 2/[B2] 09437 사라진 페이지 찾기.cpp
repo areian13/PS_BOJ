@@ -21,8 +21,7 @@ int main()
         int p;
         cin >> p;
 
-        int s = (p + 1) / 2 * 2;
-        s -= (s == p);
+        int s = p + (p % 2 ? +1 : -1);
         array<int, 3> result = { s,n - s + 1,n - p + 1 };
         sort(result.begin(), result.end());
         for (int i = 0; i < 3; i++)
