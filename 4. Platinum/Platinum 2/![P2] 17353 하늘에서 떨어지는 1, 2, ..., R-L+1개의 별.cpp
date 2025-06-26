@@ -30,7 +30,7 @@ struct SegTree
     SegTree(vector<int>& a)
     {
         n = a.size();
-        t = bit_ceil((unsigned int)n);
+        t = bit_ceil(a.size());
 
         tree.resize(t * 2);
         lazy.resize(t * 2, 0);
@@ -47,7 +47,7 @@ struct SegTree
 
         if (l != r)
         {
-            long long lv = Op(s, l, (l + r) / 2).Sum();
+            long long lv = Op(s, l, (l + r + 1) / 2).Sum();
             lazy[i * 2] += lv;
             lazy[i * 2 + 1] += lazy[i] - lv;
         }
@@ -113,15 +113,15 @@ int main()
 
     SegTree seg(a);
 
-    int Q;
-    cin >> Q;
+    int QC;
+    cin >> QC;
 
-    for (int q = 1; q <= Q; q++)
+    for (int qc = 1; qc <= QC; qc++)
     {
-        int query;
-        cin >> query;
+        int q;
+        cin >> q;
 
-        if (query == 1)
+        if (q == 1)
         {
             int l, r;
             cin >> l >> r;

@@ -21,20 +21,21 @@ int main()
     int result = 0;
     for (int x = 0; x < a; x++)
     {
-        int speed = a;
         int cnt = 0, cur = 0;
+        int ta = a;
         bool wasSleep = false;
         for (int i : t)
         {
-            if (!wasSleep && cur + b * x + speed - x <= i)
+            if (!wasSleep && cur + (ta - x) + b * x <= i)
             {
-                speed -= x;
-                wasSleep = true;
+                ta -= x;
                 cur += b * x;
+                wasSleep = true;
             }
-            if (cur + speed <= i)
+
+            if (cur + ta <= i)
             {
-                cur += speed;
+                cur += ta;
                 cnt++;
             }
         }

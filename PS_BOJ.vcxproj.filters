@@ -6009,9 +6009,6 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 09756 Goldbach %28Extension of Goldbach’s Conjecture%29.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="3. Gold\Gold 3\![G3] 31219 세계 일주.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="4. Platinum\Platinum 3\[P3] 13537 수열과 쿼리 1.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -6055,6 +6052,27 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 09883 Morton Numbers.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 3\[G3] 28037 3차원 좌표변환.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 2\![P2] 03683 고양이와 개.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 3\[G3] 01069 집으로.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 4\![P4] 10000 원 영역.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="5. Diamond\Diamond 5\![D5] 01830 거리.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 1\![G1] 32032 만보기 대행 서비스.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 10203 Count Vowels.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

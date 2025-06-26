@@ -12,14 +12,15 @@ struct Node
     int d, r, c;
 };
 
-array<int, 6> dd = { 0,0,1,0,0,-1 };
+array<int, 6> dd = { 1,0,0,-1,0,0 };
 array<int, 6> dr = { 0,1,0,0,-1,0 };
-array<int, 6> dc = { 1,0,0,-1,0,0 };
+array<int, 6> dc = { 0,0,1,0,0,-1 };
 
 void BFS(int k, int i, int j,
     vector<vector<vector<bool>>>& isVisited,
-    vector<vector<char>>& map)
+    vector<vector<int>>& map)
 {
+    int l = isVisited.size();
     int n = isVisited[0].size();
     int m = isVisited[0][0].size();
 
@@ -38,24 +39,16 @@ void BFS(int k, int i, int j,
             int nr = r + dr[i];
             int nc = c + dc[i];
 
-            if (nd < 0 || nd >= 2 || nr < 0 || nr >= n || nc < 0 || nc >= m)
+            if (nd < 0 || nd >= l || nr < 0 || nr >= n || nc < 0 || nc >= m)
                 continue;
             if (isVisited[nd][nr][nc])
                 continue;
+            if ((r / 2 == nr / 2) && (c / 2 == nc / 2)
+                && (i % 3 != map[r / 2][c / 2]))
+                continue;
 
-            if (r / 2 == nr / 2 && c / 2 == nc / 2)
-            {
-                if (i % 3 == map[r / 2][c / 2])
-                {
-                    isVisited[nd][nr][nc] = true;
-                    Q.push({ nd,nr,nc });
-                }
-            }
-            else if (i % 3 != 2)
-            {
-                isVisited[nd][nr][nc] = true;
-                Q.push({ nd,nr,nc });
-            }
+            isVisited[nd][nr][nc] = true;
+            Q.push({ nd,nr,nc });
         }
     }
 }
@@ -67,7 +60,7 @@ int main()
     int n, m;
     cin >> n >> m;
 
-    vector<vector<char>> map(n, vector<char>(m));
+    vector<vector<int>> map(n, vector<int>(m));
     for (int i = 0; i < n; i++)
     {
         for (int j = 0; j < m; j++)
@@ -75,11 +68,11 @@ int main()
             char c;
             cin >> c;
 
-            map[i][j] = (c == 'H' ? 0 : (c == 'I' ? 1 : 2));
+            map[i][j] = (c == 'O' ? 0 : (c == 'I' ? 1 : 2));
         }
     }
 
-    vector isVisited(2, vector(n * 2, vector(m * 2, false)));
+    vector isVisited(2, vector(n * 2, vector<bool>(m * 2, false)));
     int result = 0;
     for (int k = 0; k < 2; k++)
     {
@@ -90,8 +83,8 @@ int main()
                 if (isVisited[k][i][j])
                     continue;
 
-                result++;
                 BFS(k, i, j, isVisited, map);
+                result++;
             }
         }
     }
