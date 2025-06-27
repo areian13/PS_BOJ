@@ -6075,6 +6075,12 @@
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 10203 Count Vowels.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 31125 Dice.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. Silver\Silver 1\[S1] 16192 Voronoi Diagram Returns.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="0. Unrated\[U0] 27903 인생.bf" />
