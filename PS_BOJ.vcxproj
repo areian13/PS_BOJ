@@ -828,6 +828,10 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 09884 Euclid.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 09891 Rect.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 09896 Gray.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 10675 Cow Routing.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -6034,7 +6038,9 @@
     <ClCompile Include="5. Diamond\Diamond 5\[D5] 18185 라면 사기 (Small).cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="5. Diamond\Diamond 5\[D5] 21182 Weird Flecks, But OK.cpp" />
+    <ClCompile Include="5. Diamond\Diamond 5\[D5] 21182 Weird Flecks, But OK.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="Contest\2024\2024 SCSC 서울대학교 프로그래밍 경시대회 Open Contest\A번 - 정육면체의 네 꼭짓점.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
