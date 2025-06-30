@@ -17,8 +17,8 @@ long long MinDist(long long l, long long r, long long d)
     if (l > r)
         swap(l, r);
 
-    long long result = (d / (l + r)) * (l + r);
-    d %= (l + r);
+    long long result = ((d + l + r - 1) / (l + r) - 1) * (l + r);
+    d -= result;
 
     long long a = (l + r + d) * 2;
     long long b = l * 4 + r * 2 + d;

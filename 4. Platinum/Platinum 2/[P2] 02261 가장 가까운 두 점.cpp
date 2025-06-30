@@ -28,7 +28,7 @@ struct Point
     }
 };
 
-pair<Point, Point> DC(int l, int r, vector<Point>& points, vector<Point>& temp)
+pair<Point, Point> DC(int l, int r, vector<Point>& points)
 {
     static auto comp = [](pair<Point, Point> a, pair<Point, Point> b)
         {
@@ -41,12 +41,12 @@ pair<Point, Point> DC(int l, int r, vector<Point>& points, vector<Point>& temp)
     int mid = (l + r) / 2;
     int midX = points[mid].x;
 
-    pair<Point, Point> lMin = DC(l, mid, points, temp);
-    pair<Point, Point> rMin = DC(mid + 1, r, points, temp);
+    pair<Point, Point> lMin = DC(l, mid, points);
+    pair<Point, Point> rMin = DC(mid + 1, r, points);
     pair<Point, Point> result = min(lMin, rMin, comp);
     double dist = sqrt(Point::DistSq(result.first, result.second));
 
-    temp.clear();
+    vector<Point> temp;
     for (int i = l; i <= r; i++)
     {
         if (abs(points[i].x - midX) < dist)
@@ -66,7 +66,7 @@ pair<Point, Point> getClosestPoint(vector<Point>& points)
 {
     sort(points.begin(), points.end(), Point::compX);
     vector<Point> temp;
-    return DC(0, points.size() - 1, points, temp);
+    return DC(0, points.size() - 1, points);
 }
 
 int main()
