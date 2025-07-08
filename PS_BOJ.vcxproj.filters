@@ -6198,6 +6198,15 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 10551 STROJOPIS.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 10643 FUNGHI.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 2\![P2] 10839 미술관.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. Silver\Silver 3\[S3] 27965 N결수.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="0. Unrated\[U0] 27903 인생.bf" />
@@ -6234,6 +6243,9 @@
       <Filter>소스 파일</Filter>
     </None>
     <None Include="1. Bronze\Bronze 2\[B2] 09916 Zeros.py">
+      <Filter>소스 파일</Filter>
+    </None>
+    <None Include="1. Bronze\Bronze 2\[B2] 10696 Prof. Ossama.py">
       <Filter>소스 파일</Filter>
     </None>
   </ItemGroup>
