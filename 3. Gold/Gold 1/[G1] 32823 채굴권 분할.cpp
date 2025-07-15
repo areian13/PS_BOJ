@@ -6,52 +6,56 @@
 
 using namespace std;
 
-#define PI 3.14159265359
-#define L 1'000
+const double PI = acos(-1);
 
 struct Point
 {
     double x, y;
 
+    Point()
+    {
+        x = y = 0;
+    }
+    Point(double t, double l)
+    {
+        t = t * PI / 180;
+
+        x = l * cos(t);
+        y = l * sin(t);
+    }
     static int CCW(const Point& a, const Point& b, const Point& c)
     {
-        double ccw = (a.x * b.y + b.x * c.y + c.x * a.y)
-            - (a.y * b.x + b.y * c.x + c.y * a.x);
-        if (ccw == 0)
-            return 0;
-        return (ccw > 0 ? +1 : -1);
+        double ccw = (b.x - a.x) * (c.y - a.y)
+            - (b.y - a.y) * (c.x - a.x);
+        return (ccw > 0) - (ccw < 0);
     }
 };
-
 struct Line
 {
     Point a, b;
 
-    static bool onSegment(const Point& c, const Line& l) {
-        return min(l.a.x, l.b.x) <= c.x && c.x <= max(l.a.x, l.b.x)
-            && min(l.a.y, l.b.y) <= c.y && c.y <= max(l.a.y, l.b.y);
-    }
-    static bool IsIntersecting(const Line& l1, const Line& l2)
+    static bool OnSegment(const Line& l, const Point& p)
     {
-        int ab_c = Point::CCW(l1.a, l1.b, l2.a);
-        int ab_d = Point::CCW(l1.a, l1.b, l2.b);
-        int cd_a = Point::CCW(l2.a, l2.b, l1.a);
-        int cd_b = Point::CCW(l2.a, l2.b, l1.b);
+        return Point::CCW(l.a, l.b, p) == 0
+            && min(l.a.x, l.b.x) <= p.x && p.x <= max(l.a.x, l.b.x)
+            && min(l.a.y, l.b.y) <= p.y && p.y <= max(l.a.y, l.b.y);
+    }
+    static bool IsIntersecting(const Line& l0, const Line& l1)
+    {
+        auto& [a, b] = l0;
+        auto& [c, d] = l1;
+
+        int ab_c = Point::CCW(a, b, c);
+        int ab_d = Point::CCW(a, b, d);
+        int cd_a = Point::CCW(c, d, a);
+        int cd_b = Point::CCW(c, d, b);
 
         if (ab_c * ab_d < 0 && cd_a * cd_b < 0)
             return true;
-
-        return (ab_c == 0 && onSegment(l2.a, l1))
-            || (ab_d == 0 && onSegment(l2.b, l1))
-            || (cd_a == 0 && onSegment(l1.a, l2))
-            || (cd_b == 0 && onSegment(l1.b, l2));
+        return OnSegment(l0, c) || OnSegment(l0, d)
+            || OnSegment(l1, a) || OnSegment(l1, b);
     }
 };
-
-double DToR(double d)
-{
-    return d * PI / 180;
-}
 
 int main()
 {
@@ -63,32 +67,16 @@ int main()
     vector<Line> lines(n);
     for (int i = 0; i < n; i++)
     {
-        int ad, bd;
-        cin >> ad >> bd;
+        int a, b;
+        cin >> a >> b;
 
-        double ar = DToR(ad / 10.0);
-        Point a = { L * cos(ar),L * sin(ar) };
-
-        double br = DToR(bd / 10.0);
-        Point b = { L * cos(br),L * sin(br) };
-
-        lines[i] = { a,b };
+        lines[i] = { Point(a * 0.1, 1'000), Point(b * 0.1, 1'000) };
     }
 
-    int ad, al;
-    cin >> ad >> al;
+    int at, al, bt, bl;
+    cin >> at >> al >> bt >> bl;
 
-    double ar = DToR(ad / 10.0);
-    Point a = { al * cos(ar), al * sin(ar) };
-
-    int bd, bl;
-    cin >> bd >> bl;
-
-    double br = DToR(bd / 10.0);
-    Point b = { bl * cos(br), bl * sin(br) };
-
-    Line l = { a,b };
-
+    Line l = { Point(at * 0.1, al), Point(bt * 0.1, bl) };
     int cnt = 0;
     for (int i = 0; i < n; i++)
         cnt += Line::IsIntersecting(l, lines[i]);

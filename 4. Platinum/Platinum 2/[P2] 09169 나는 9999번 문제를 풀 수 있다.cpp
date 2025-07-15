@@ -1,19 +1,17 @@
 #include <iostream>
-#include <vector>
-#include <array>
-#include <cmath>
 #include <climits>
+#include <vector>
 #include <queue>
-#include <algorithm>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
 
 using namespace std;
 
+const int INF = INT_MAX;
+
 struct Edge
 {
-    int v;
-    int c, f;
+    int v, c, f;
     Edge* rev;
 
     Edge() : Edge(-1, 0) {}
@@ -21,8 +19,8 @@ struct Edge
 
     int Spare()
     {
-        if (c == INT_MAX && f != INT_MAX)
-            return INT_MAX;
+        if (c == INF && f != INF)
+            return INF;
         return c - f;
     }
     void AddFlow(int flow)
@@ -30,9 +28,26 @@ struct Edge
         f += flow;
         rev->f -= flow;
     }
+};
+struct MF
+{
+    int n, s, t;
+    vector<vector<Edge*>> graph;
 
-    static void AddEdge(int u, int v, int c1, int c2,
-        vector<vector<Edge*>>& graph)
+    MF(int n, int s, int t) : n(n), s(s), t(t)
+    {
+        graph.resize(n);
+    }
+    ~MF()
+    {
+        for (auto& edges : graph)
+        {
+            for (Edge* edge : edges)
+                delete edge;
+        }
+    }
+
+    void AddEdge(int u, int v, int c1, int c2)
     {
         Edge* e1 = new Edge(v, c1);
         Edge* e2 = new Edge(u, c2);
@@ -41,86 +56,76 @@ struct Edge
         graph[u].push_back(e1);
         graph[v].push_back(e2);
     }
-    static void DeleteEdge(vector<vector<Edge*>>& graph)
+
+    bool CanGo(vector<int>& level)
     {
-        for (auto& edges : graph)
+        queue<int> Q;
+        Q.push(s);
+        level[s] = 0;
+
+        while (!Q.empty())
         {
-            for (Edge* edge : edges)
-                delete edge;
+            int u = Q.front();
+            Q.pop();
+
+            for (Edge* edge : graph[u])
+            {
+                int v = edge->v;
+
+                if (edge->Spare() <= 0 || level[v] != -1)
+                    continue;
+
+                level[v] = level[u] + 1;
+                Q.push(v);
+            }
         }
+
+        return level[t] != -1;
     }
-};
-
-bool CanGo(int s, int t, vector<int>& level, vector<vector<Edge*>>& graph)
-{
-    level[s] = 0;
-
-    queue<int> Q;
-    Q.push(s);
-
-    while (!Q.empty())
+    int GetFlow(int u, int flow, vector<int>& work, vector<int>& level)
     {
-        int u = Q.front();
-        Q.pop();
+        if (u == t)
+            return flow;
 
-        for (Edge* edge : graph[u])
+        for (int& i = work[u]; i < graph[u].size(); i++)
         {
+            Edge* edge = graph[u][i];
             int v = edge->v;
 
-            if (edge->Spare() <= 0 || level[v] != INT_MAX)
+            if (edge->Spare() <= 0 || level[v] != level[u] + 1)
                 continue;
 
-            level[v] = level[u] + 1;
-            Q.push(v);
+            int tFlow = GetFlow(v, min(flow, edge->Spare()), work, level);
+            if (tFlow > 0)
+            {
+                edge->AddFlow(tFlow);
+                return tFlow;
+            }
         }
+        return 0;
     }
 
-    return (level[t] != INT_MAX);
-}
-
-int GetFlow(int u, int t, int flow, vector<int>& work,
-    vector<int>& level, vector<vector<Edge*>>& graph)
-{
-    if (u == t)
-        return flow;
-
-    for (int& i = work[u]; i < graph[u].size(); i++)
+    int MaxFlow()
     {
-        Edge* edge = graph[u][i];
-        int v = edge->v;
-
-        if (edge->Spare() <= 0 || level[v] != level[u] + 1)
-            continue;
-
-        int tFlow = GetFlow(v, t, min(flow, edge->Spare()), work, level, graph);
-        if (tFlow > 0)
+        int result = 0;
+        while (true)
         {
-            edge->AddFlow(tFlow);
-            return tFlow;
+            vector<int> level(n, -1);
+            if (!CanGo(level))
+                break;
+
+            vector<int> work(n, 0);
+            while (true)
+            {
+                int flow = GetFlow(s, INF, work, level);
+                if (flow == 0)
+                    break;
+                result += flow;
+            }
         }
+        return result;
     }
-    return 0;
-}
-
-int MaxFlow(int s, int t, vector<vector<Edge*>>& graph)
-{
-    int n = graph.size();
-
-    int result = 0;
-    while (true)
-    {
-        vector<int> level(n, INT_MAX);
-        if (!CanGo(s, t, level, graph))
-            break;
-
-        vector<int> work(n, 0);
-        int flow = GetFlow(s, t, INT_MAX, work, level, graph);
-        if (flow == 0)
-            break;
-        result += flow;
-    }
-    return result;
-}
+};
 
 int main()
 {
@@ -134,19 +139,17 @@ int main()
         if (n == 0 && m == 0)
             break;
 
-        vector<vector<Edge*>> graph(n + 2);
         int s = n, t = s + 1;
-
-        vector<int> k(n);
+        MF mf(n + 2, s, t);
         for (int i = 0; i < n; i++)
         {
-            cin >> k[i];
+            int k;
+            cin >> k;
 
-            int u = i;
-            if (k[i] == 0)
-                Edge::AddEdge(s, u, 1, 0, graph);
+            if (k == 0)
+                mf.AddEdge(s, i, 1, 0);
             else
-                Edge::AddEdge(u, t, 1, 0, graph);
+                mf.AddEdge(i, t, 1, 0);
         }
 
         for (int i = 0; i < m; i++)
@@ -155,11 +158,10 @@ int main()
             cin >> u >> v;
             u--, v--;
 
-            Edge::AddEdge(u, v, 1, 1, graph);
+            mf.AddEdge(u, v, 1, 1);
         }
 
-        int result = MaxFlow(s, t, graph);
+        int result = mf.MaxFlow();
         cout << result << '\n';
-        Edge::DeleteEdge(graph);
     }
 }

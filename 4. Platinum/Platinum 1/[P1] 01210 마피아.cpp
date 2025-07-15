@@ -2,6 +2,7 @@
 #include <climits>
 #include <vector>
 #include <queue>
+#include <algorithm>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
 
@@ -125,25 +126,72 @@ struct MF
         }
         return result;
     }
+
+    vector<int> FullEdge()
+    {
+        int flow = MaxFlow();
+
+        vector<bool> isVisited(n, false);
+        queue<int> Q;
+        isVisited[s] = true;
+        Q.push(s);
+
+        while (!Q.empty())
+        {
+            int u = Q.front();
+            Q.pop();
+
+            for (Edge* edge : graph[u])
+            {
+                int v = edge->v;
+                if (isVisited[v])
+                    continue;
+                if (edge->Spare() <= 0)
+                    continue;
+
+                Q.push(v);
+                isVisited[v] = true;
+            }
+        }
+
+        vector<int> result;
+        for (int i = 0; i < n; i += 2)
+        {
+            if (isVisited[i] && !isVisited[i + 1])
+                result.push_back(i / 2);
+        }
+        return result;
+    }
 };
 
 int main()
 {
     FastIO;
 
-    int n, p;
-    cin >> n >> p;
+    int n, m, s, t;
+    cin >> n >> m >> s >> t;
+    s = (s - 1) * 2, t = (t - 1) * 2 + 1;
 
-    MF mf(n, 0, 1);
-    for (int i = 0; i < p; i++)
+    MF mf(n * 2, s, t);
+    for (int i = 0; i < n; i++)
+    {
+        int c;
+        cin >> c;
+
+        mf.AddEdge(i * 2, i * 2 + 1, c);
+    }
+
+    for (int i = 0; i < m; i++)
     {
         int u, v;
         cin >> u >> v;
         u--, v--;
 
-        mf.AddEdge(u, v, 1);
+        mf.AddEdge(u * 2 + 1, v * 2, INF);
+        mf.AddEdge(v * 2 + 1, u * 2, INF);
     }
 
-    int result = mf.MaxFlow();
-    cout << result << '\n';
+    vector<int> result = mf.FullEdge();
+    for (int u : result)
+        cout << u + 1 << ' ';
 }

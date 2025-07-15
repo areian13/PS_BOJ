@@ -2,6 +2,7 @@
 #include <climits>
 #include <vector>
 #include <queue>
+#include <algorithm>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
 
@@ -34,7 +35,7 @@ struct MF
     vector<vector<Edge*>> graph;
     int n, s, t;
 
-    MF(int n, int s, int t) : n(n), s(s), t(t)
+    MF(int n) : n(n), s(-1), t(-1)
     {
         graph.resize(n);
     }
@@ -125,25 +126,117 @@ struct MF
         }
         return result;
     }
+
+    vector<Edge*> FullEdges()
+    {
+        int flow = MaxFlow();
+
+        vector<bool> isVisited(n, false);
+        queue<int> Q;
+        isVisited[s] = true;
+        Q.push(s);
+
+        vector<Edge*> result;
+        while (!Q.empty())
+        {
+            int u = Q.front();
+            Q.pop();
+
+            for (Edge* edge : graph[u])
+            {
+                int v = edge->v;
+                if (isVisited[v])
+                    continue;
+                if (edge->Spare() <= 0)
+                {
+                    if (edge->Spare() == 0)
+                        result.push_back(edge);
+                    continue;
+                }
+
+                Q.push(v);
+                isVisited[v] = true;
+            }
+        }
+        return result;
+    }
 };
+
+bool CanGo(int s, int t, vector<vector<Edge*>>& graph)
+{
+    int n = graph.size();
+
+    vector<bool> isVisited(n, false);
+    queue<int> Q;
+    isVisited[s] = true;
+    Q.push(s);
+
+    while (!Q.empty())
+    {
+        int u = Q.front();
+        Q.pop();
+
+        for (Edge* edge : graph[u])
+        {
+            int v = edge->v;
+
+            if (isVisited[v] || edge->c == 0)
+                continue;
+
+            isVisited[v] = true;
+            Q.push(v);
+        }
+    }
+    return isVisited[t];
+}
 
 int main()
 {
     FastIO;
 
-    int n, p;
-    cin >> n >> p;
+    int n, m;
+    cin >> n >> m;
 
-    MF mf(n, 0, 1);
-    for (int i = 0; i < p; i++)
+    MF mf(n);
+    for (int i = 0; i < m; i++)
     {
-        int u, v;
-        cin >> u >> v;
+        int u, v, c;
+        cin >> u >> v >> c;
         u--, v--;
 
-        mf.AddEdge(u, v, 1);
+        mf.AddEdge(u, v, c);
+        mf.AddEdge(u, v, c);
     }
 
-    int result = mf.MaxFlow();
+    cin >> mf.s >> mf.t;
+    mf.s--, mf.t--;
+
+    vector<Edge*> full = mf.FullEdges();
+    sort(full.begin(), full.end(),
+        [](auto& a, auto& b) { return a->c < b->c; }
+    );
+
+    int result = 0;
+    while (true)
+    {
+        Edge* minEdge = full.back();
+        full.pop_back();
+
+        int minC = minEdge->c;
+        minEdge->c = 0;
+        minEdge->rev->c = 0;
+
+        if (!CanGo(mf.s, mf.t, mf.graph))
+        {
+            for (auto& edges : mf.graph)
+            {
+                for (Edge* edge : edges)
+                    result += edge->c;
+            }
+            result /= 2;
+            result += minC;
+            break;
+        }
+    }
     cout << result << '\n';
 }

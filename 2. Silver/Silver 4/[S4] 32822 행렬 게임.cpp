@@ -28,22 +28,20 @@ int main()
             cin >> b[i][j];
     }
 
-    vector<int> maxDiff(n, -1);
-    int result = 0;
-    for (int tc = 1; tc <= m; tc++)
+    vector<int> memo(n, 0);
+    for (int j = 0; j < n; j++)
     {
-        int q;
-        cin >> q;
-        q--;
+        for (int i = 0; i < n; i++)
+            memo[j] = max(memo[j], abs(a[i][j] - b[i][j]));
+    }
 
-        if (maxDiff[q] == -1)
-        {
-            int diff = 0;
-            for (int i = 0; i < n; i++)
-                diff = max(diff, abs(a[i][q] - b[i][q]));
-            maxDiff[q] = diff;
-        }
-        result += maxDiff[q];
+    int result = 0;
+    for (int i = 0; i < m; i++)
+    {
+        int p;
+        cin >> p;
+
+        result += memo[p - 1];
     }
     cout << result << '\n';
 }
