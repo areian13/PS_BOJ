@@ -6267,6 +6267,24 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 10864 친구.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 5\[B5] 34052 체육은 수학과목 입니다 2.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. Silver\Silver 3\[S3] 34053 도미노 게임.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 3\[G3] 34060 로봇 청소기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 2\[G2] 34056 콘서트.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 11007 Inverse Move-to-Front Transform.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 11091 알파벳 전부 쓰기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="0. Unrated\[U0] 27903 인생.bf" />
