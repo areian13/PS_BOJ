@@ -115,10 +115,10 @@ double GetMABR(vector<Point>& points)
         U0 = hull[(i + 1) % h] - hull[i];
         while (U0 * (hull[(r + 1) % h] - hull[r % h]) > 0)
             r++;
-        u = max(u, r);
+        u = max(u, r + 1);
         while (U0 / (hull[(u + 1) % h] - hull[u % h]) > 0)
             u++;
-        l = max(l, u);
+        l = max(l, u + 1);
         while (U0 * (hull[(l + 1) % h] - hull[l % h]) < 0)
             l++;
 
