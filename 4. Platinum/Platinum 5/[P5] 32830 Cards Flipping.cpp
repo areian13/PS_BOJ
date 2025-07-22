@@ -19,10 +19,12 @@ struct UF
         u = Find(u), v = Find(v);
         if (u == v)
             return;
+        if (p[u] > p[v])
+            swap(u, v);
         p[u] += p[v], p[v] = u;
     }
 
-    int Count(int u) { return -p[Find(u)]; }
+    int Size(int u) { return -p[Find(u)]; }
 };
 
 int main()
@@ -32,27 +34,22 @@ int main()
     int n;
     cin >> n;
 
-    vector<vector<int>> cards(n, vector<int>(2));
-    for (int j = 0; j < 2; j++)
-    {
-        for (int i = 0; i < n; i++)
-            cin >> cards[i][j];
-    }
+    vector<int> a(n), b(n);
+    for (int i = 0; i < n; i++)
+        cin >> a[i];
+    for (int i = 0; i < n; i++)
+        cin >> b[i];
 
     UF uf(MAX);
     for (int i = 0; i < n; i++)
-        uf.Union(cards[i][0], cards[i][1]);
+        uf.Union(a[i], b[i]);
 
     vector<int> cnt(MAX, 0);
     for (int i = 0; i < n; i++)
-        cnt[uf.Find(cards[i][0])]++;
+        cnt[uf.Find(a[i])]++;
 
     int result = 0;
     for (int i = 0; i < MAX; i++)
-    {
-        if (uf.Find(i) != i)
-            continue;
-        result += min(uf.Count(i), cnt[i]);
-    }
+        result += min(uf.Size(i), cnt[i]);
     cout << result << '\n';
 }
