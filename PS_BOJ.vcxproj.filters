@@ -1674,7 +1674,7 @@
     <ClCompile Include="2. Silver\Silver 2\[S2] 01012 유기농 배추.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="2. Silver\Silver 2\[S2] 01182 부분수열의 합.cpp">
+    <ClCompile Include="2. Silver\Silver 2\[S2] 01182 부분수열의 합 [1].cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="2. Silver\Silver 2\[S2] 01260 DFS와 BFS.cpp">
@@ -5055,9 +5055,6 @@
     <ClCompile Include="2. Silver\Silver 4\[S4] 32822 행렬 게임.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="3. Gold\Gold 4\[G4] 32825 숫자 할당.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="3. Gold\Gold 1\[G1] 32823 채굴권 분할.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -6283,6 +6280,36 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 11091 알파벳 전부 쓰기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 4\[G4] 04803 트리.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 4\[G4] 10216 Count Circle Groups.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 4\[G4] 12893 적의 적.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 5\[G5] 01717 집합의 표현.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 5\[G5] 07511 소셜 네트워킹 어플리케이션.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 5\[G5] 17352 여러분의 다리가 되어 드리겠습니다!.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 5\[G5] 24391 귀찮은 해강이.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 4\[G4] 32825 숫자 할당 [1].cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4. Platinum\Platinum 5\![P5] 32830 Cards Flipping.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2. Silver\Silver 2\[S2] 01182 부분수열의 합 [2].cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
