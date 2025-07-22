@@ -6291,6 +6291,12 @@
     <ClCompile Include="3. Gold\Gold 4\[G4] 12893 적의 적.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+<<<<<<< HEAD
+=======
+    <ClCompile Include="3. Gold\Gold 4\[G4] 14595 동방 프로젝트 %28Large%29.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+>>>>>>> 07c92ec4121ff2f2372b91f9c87118b93d518d80
     <ClCompile Include="3. Gold\Gold 5\[G5] 01717 집합의 표현.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -6306,10 +6312,62 @@
     <ClCompile Include="3. Gold\Gold 4\[G4] 32825 숫자 할당 [1].cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="4. Platinum\Platinum 5\![P5] 32830 Cards Flipping.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="2. Silver\Silver 2\[S2] 01182 부분수열의 합 [2].cpp">
+=======
+    <ClCompile Include="4. Platinum\Platinum 5\[P5] 32830 Cards Flipping.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="5. Diamond\Diamond 5\![D5] 20150 선분 교차 4.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 4\[G4] 15789 CTP 왕국은 한솔 왕국을 이길 수 있을까？.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 4\[G4] 16168 퍼레이드.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 4\[G4] 17250 은하철도.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 4\[G4] 18116 로봇 조립.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 4\[G4] 19593 다도해.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 4\[G4] 20955 민서의 응급 수술.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 4\[G4] 23324 어려운 모든 정점 쌍 최단 거리.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 4\[G4] 25187 고인물이 싫어요.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 4\[G4] 28118 안전한 건설 계획.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 4\[G4] 32177 에어드롭.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 4\[G4] 34064 밤%28Time For The Moon Night%29.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 3\[G3] 01696 색 막대.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="3. Gold\Gold 2\[G2] 01466 그림 고치기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 11094 꿍 가라사대.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 11098 첼시를 도와줘!.cpp">
+>>>>>>> 07c92ec4121ff2f2372b91f9c87118b93d518d80
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
