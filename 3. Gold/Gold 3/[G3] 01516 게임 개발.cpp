@@ -1,106 +1,54 @@
-#ifdef ONLINE_JUDGE
-#define _128d  __int128
-#else
-#define _128d long long
-#endif
-
 #include <iostream>
 #include <vector>
-#include <array>
-#include <string>
-#include <time.h>
-#include <algorithm>
-#include <stdlib.h>
-#include <math.h>
-#include <cmath>
 #include <queue>
-#include <stack>
-#include <deque>
-#include <map>
-#include <unordered_map>
-#include <set>
-#include <limits.h>
-#include <float.h>
-#include <string.h>
-#include <random>
-#include <type_traits>
 
-#define Endl << "\n"
-#define endL << "\n" <<
-#define Cout cout <<
-#define COUT cout << "OUT: " <<
-#define Cin cin >>
-#define fspc << " "
-#define spc << " " <<
-#define Enter cout << "\n"
-#define if if
-#define elif else if
-#define else else
-#define For(n) for(int i = 0; i < n; i++)
-#define Forj(n) for(int j = 0; j < n; j++)
-#define Foro(n) for(int i = 1; i <= n; i++)
-#define Forjo(n) for(int j = 1; j <= n; j++)
-#define between(small, middle, big) (small < middle && middle < big)
-#define among(small, middle, big) (small <= middle && middle <= big)
-#define stoe(container) container.begin(), container.end()
-#define lf(d) Cout fixed; cout.precision(d);
-#define ulf cout.unsetf(ios::scientific);
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
-#define PI 3.14159265359
-
-typedef long long LLONG;
-typedef unsigned long long ULLONG;
-typedef unsigned int UINT;
 
 using namespace std;
 
-template <typename T>
-class heap : public priority_queue<T, vector<T>, greater<T>>
-{
-};
-
 int main()
 {
-	FastIO;
+    FastIO;
 
-	int n;
-	Cin n;
+    int n;
+    cin >> n;
 
-	vector<int> time(n + 1), indegree(n + 1, 0), result(n + 1);
-	vector<vector<int>> edge(n + 1);
-	queue<int> Q;
-	Foro(n)
-	{
-		Cin time[i];
-		while (true)
-		{
-			int pre;
-			Cin pre;
+    vector<int> time(n + 1), indegree(n + 1, 0), result(n + 1);
+    vector<vector<int>> edge(n + 1);
+    queue<int> Q;
+    for (int i = 1; i <= n; i++)
+    {
+        cin >> time[i];
+        while (true)
+        {
+            int pre;
+            cin >> pre;
 
-			if (pre == -1)
-				break;
+            if (pre == -1)
+                break;
 
-			indegree[i]++;
-			edge[pre].push_back(i);
-		}
-		if (indegree[i] == 0)
-		{
-			result[i] = time[i];
-			Q.push(i); 
-		}
-	}
-	Foro(n)
-	{
-		int cur = Q.front();
-		Q.pop();
+            indegree[i]++;
+            edge[pre].push_back(i);
+        }
+        if (indegree[i] == 0)
+        {
+            result[i] = time[i];
+            Q.push(i);
+        }
+    }
+    for (int i = 1; i <= n; i++)
+    {
+        int cur = Q.front();
+        Q.pop();
 
-		for (int nxt : edge[cur])
-		{
-			result[nxt] = max(result[nxt], result[cur] + time[nxt]);
-			if (--indegree[nxt] == 0)
-				Q.push(nxt);
-		}
-	}
-	Foro(n)
-		Cout result[i] Endl;
+        for (int nxt : edge[cur])
+        {
+            result[nxt] = max(result[nxt], result[cur] + time[nxt]);
+            if (--indegree[nxt] == 0)
+                Q.push(nxt);
+        }
+    }
+
+    for (int i = 1; i <= n; i++)
+        cout << result[i] << '\n';
 }

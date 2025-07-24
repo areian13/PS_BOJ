@@ -13,9 +13,7 @@ struct Pos
 
 struct Edge
 {
-    int u;
-    int v;
-    int d;
+    int u, v, d;
 
     friend bool operator<(const Edge& a, const Edge& b)
     {

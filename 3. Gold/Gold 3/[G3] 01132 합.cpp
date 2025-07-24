@@ -1,98 +1,55 @@
 #include <iostream>
-#include <vector>
 #include <array>
 #include <string>
-#include <time.h>
-#include <algorithm>
-#include <stdlib.h>
-#include <math.h>
 #include <cmath>
-#include <queue>
-#include <stack>
-#include <deque>
-#include <map>
-#include <unordered_map>
-#include <set>
-#include <limits.h>
-#include <string.h>
+#include <algorithm>
 
-#define Endl << "\n"
-#define endL << "\n" <<
-#define Cout cout <<
-#define	COUT cout << "OUT: " <<
-#define Cin cin >>
-#define fspc << " "
-#define spc << " " <<
-#define Enter cout << "\n"
-#define if if
-#define elif else if
-#define else else
-#define For(n) for(int i = 0; i < n; i++)
-#define Forj(n) for(int j = 0; j < n; j++)
-#define Foro(n) for(int i = 1; i <= n; i++)
-#define Forjo(n) for(int j = 1; j <= n; j++)
-#define between(small, middle, big) (small < middle && middle < big)
-#define among(small, middle, big) (small <= middle && middle <= big)
-#define stoe(container) container.begin(), container.end()
-#define lf(d) Cout fixed; cout.precision(d);
-#define ulf cout.unsetf(ios::scientific);
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
-#define PI 3.14159265359
-
-typedef long long LLONG;
-typedef unsigned long long ULLONG;
-typedef unsigned int UINT;
 
 using namespace std;
 
-template <typename T>
-class heap : public priority_queue<T, vector<T>, greater<T>>
+struct AlpInfo
 {
-};
-
-struct AlpInfo {
-	LLONG num;
-	bool cantZero;
+    long long num;
+    bool cantZero;
 };
 
 bool CompAlp(AlpInfo& a, AlpInfo& b)
 {
-	return a.num < b.num;
+    return a.num < b.num;
 }
 
 int main()
 {
-	FastIO;
+    FastIO;
 
-	array<AlpInfo, 10> alp = { {0, false}, };
+    int n;
+    cin >> n;
 
-	int n;
-	Cin n;
-	
-	For(n)
-	{
-		string str;
-		Cin str;
+    array<AlpInfo, 10> alp = { {0, false}, };
+    for (int i = 0; i < n; i++)
+    {
+        string str;
+        cin >> str;
 
-		for (LLONG j = 0; j < str.size(); j++)
-			alp[str[j] - 'A'].num += pow(10, str.size() - j - 1);
-		alp[str[0] - 'A'].cantZero = true;
-	}
-	
-	sort(stoe(alp), CompAlp);
-	
-	for (LLONG i = 0; i < 10; i++)
-	{
-		if (!alp[i].cantZero)
-		{
-			for (int j = i; j > 0; j--)
-				alp[j] = alp[j - 1];
-			break;
-		}
-	}
-	
-	LLONG result = 0;
-	for (LLONG i = 9; i >= 0; i--)
-		result += i * alp[i].num;
-	Cout result;
+        for (long long j = 0; j < str.size(); j++)
+            alp[str[j] - 'A'].num += pow(10, str.size() - j - 1);
+        alp[str[0] - 'A'].cantZero = true;
+    }
+    sort(alp.begin(), alp.end(), CompAlp);
+
+    for (long long i = 0; i < 10; i++)
+    {
+        if (!alp[i].cantZero)
+        {
+            for (int j = i; j > 0; j--)
+                alp[j] = alp[j - 1];
+            break;
+        }
+    }
+
+    long long result = 0;
+    for (long long i = 9; i >= 0; i--)
+        result += i * alp[i].num;
+    cout << result << '\n';
 }
