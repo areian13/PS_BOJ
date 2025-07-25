@@ -717,7 +717,6 @@
     <ClCompile Include="3. Gold\Gold 5\[G5] 30855 Fraction.cpp" />
     <ClCompile Include="3. Gold\Gold 5\[G5] 32358 근성아 일하자.cpp" />
     <ClCompile Include="2. Silver\Silver 2\[S2] 01058 친구.cpp" />
-    <ClCompile Include="2. Silver\Silver 2\![S2] 01535 안녕.cpp" />
     <ClCompile Include="2. Silver\Silver 2\[S2] 01780 종이의 개수.cpp" />
     <ClCompile Include="2. Silver\Silver 2\[S2] 02232 지뢰.cpp" />
     <ClCompile Include="2. Silver\Silver 2\[S2] 02644 촌수계산.cpp" />
@@ -1490,7 +1489,6 @@
     <ClCompile Include="3. Gold\Gold 1\[G1] 01944 복제 로봇.cpp" />
     <ClCompile Include="3. Gold\Gold 1\![G1] 15422 Bumped!.cpp" />
     <ClCompile Include="3. Gold\Gold 1\![G1] 23242 Histogram.cpp" />
-    <ClCompile Include="3. Gold\Gold 1\![G1] 26655 바벨탑.cpp" />
     <ClCompile Include="3. Gold\Gold 1\[G1] 01016 제곱 ㄴㄴ 수.cpp" />
     <ClCompile Include="3. Gold\Gold 1\[G1] 01019 책 페이지.cpp" />
     <ClCompile Include="3. Gold\Gold 1\[G1] 01035 조각 움직이기.cpp" />
@@ -1679,7 +1677,6 @@
     <ClCompile Include="3. Gold\Gold 1\[G1] 28019 산지니의 여행계획.cpp" />
     <ClCompile Include="3. Gold\Gold 1\[G1] 28297 차량 모듈 제작.cpp" />
     <ClCompile Include="3. Gold\Gold 2\![G2] 02835 인기도 조사.cpp" />
-    <ClCompile Include="3. Gold\Gold 2\![G2] 09527 1의 개수 세기.cpp" />
     <ClCompile Include="3. Gold\Gold 2\![G2] 21276 계보 복원가 호석.cpp" />
     <ClCompile Include="3. Gold\Gold 2\[G2] 01033 칵테일.cpp" />
     <ClCompile Include="3. Gold\Gold 2\[G2] 01135 뉴스 전하기.cpp" />
@@ -1723,14 +1720,10 @@
     <ClCompile Include="3. Gold\Gold 2\[G2] 23743 방탈출.cpp" />
     <ClCompile Include="3. Gold\Gold 2\[G2] 28473 도로 위의 표지판.cpp" />
     <ClCompile Include="3. Gold\Gold 2\[G2] 29199 활쏘기 대결.cpp" />
-    <ClCompile Include="3. Gold\Gold 3\![G3] 01082 방 번호.cpp" />
-    <ClCompile Include="3. Gold\Gold 3\![G3] 01332 풀자.cpp" />
-    <ClCompile Include="3. Gold\Gold 3\![G3] 02904 수학은 너무 쉬워.cpp" />
     <ClCompile Include="3. Gold\Gold 3\[G3] 01005 ACM Craft.cpp" />
     <ClCompile Include="3. Gold\Gold 3\[G3] 01022 소용돌이 예쁘게 출력하기.cpp" />
     <ClCompile Include="3. Gold\Gold 3\[G3] 01039 교환.cpp" />
     <ClCompile Include="3. Gold\Gold 3\[G3] 01132 합.cpp" />
-    <ClCompile Include="3. Gold\Gold 3\[G3] 01379 강의실 2.cpp" />
     <ClCompile Include="3. Gold\Gold 3\[G3] 01414 불우이웃돕기.cpp" />
     <ClCompile Include="3. Gold\Gold 3\[G3] 01516 게임 개발.cpp" />
     <ClCompile Include="3. Gold\Gold 3\[G3] 01600 말이 되고픈 원숭이.cpp" />
@@ -1805,8 +1798,6 @@
     <ClCompile Include="3. Gold\Gold 3\[G3] 23801 두 단계 최단 경로 2.cpp" />
     <ClCompile Include="3. Gold\Gold 3\[G3] 31791 바이러스 공격.cpp" />
     <ClCompile Include="3. Gold\Gold 3\[G3] 31829 첫 차 타기.cpp" />
-    <ClCompile Include="3. Gold\Gold 4\![G4] 01083 소트.cpp" />
-    <ClCompile Include="3. Gold\Gold 4\![G4] 02600 구슬게임.cpp" />
     <ClCompile Include="3. Gold\Gold 4\![G4] 29007 SAVE the World (Small).cpp" />
     <ClCompile Include="3. Gold\Gold 4\[G4] 01062 가르침.cpp" />
     <ClCompile Include="3. Gold\Gold 4\[G4] 01197 최소 스패닝 트리.cpp" />
@@ -1837,7 +1828,7 @@
     <ClCompile Include="3. Gold\Gold 4\[G4] 03584 가장 가까운 공통 조상.cpp" />
     <ClCompile Include="3. Gold\Gold 4\[G4] 04485 녹색 옷 입은 애가 젤다지？.cpp" />
     <ClCompile Include="3. Gold\Gold 4\[G4] 04781 사탕 가게.cpp" />
-    <ClCompile Include="3. Gold\Gold 4\[G4] 06467 전력난.cpp" />
+    <ClCompile Include="3. Gold\Gold 4\[G4] 06497 전력난.cpp" />
     <ClCompile Include="3. Gold\Gold 4\[G4] 06595 프로거 [1].cpp" />
     <ClCompile Include="3. Gold\Gold 4\[G4] 06595 프로거 [2].cpp" />
     <ClCompile Include="3. Gold\Gold 4\[G4] 07662 이중 우선순위 큐.cpp" />
@@ -2118,6 +2109,7 @@
     <ClCompile Include="3. Gold\Gold 3\[G3] 01939 중량제한.cpp" />
     <ClCompile Include="3. Gold\Gold 3\[G3] 11085 군사 이동.cpp" />
     <ClCompile Include="3. Gold\Gold 3\[G3] 15809 전국시대.cpp" />
+    <ClCompile Include="3. Gold\Gold 3\[G3] 16957 체스판 위의 공.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
