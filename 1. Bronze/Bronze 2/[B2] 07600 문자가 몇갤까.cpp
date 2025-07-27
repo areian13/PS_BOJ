@@ -18,17 +18,17 @@ int main()
         if (s == "#")
             break;
 
-        array<bool, 26> isUsed = { false, };
-        int result = 0;
+        int has = 0;
         for (char c : s)
         {
             c |= 32;
             if ('a' <= c && c <= 'z')
-            {
-                result += !isUsed[c - 'a'];
-                isUsed[c - 'a'] = true;
-            }
+                has |= (1 << (c - 'a'));
         }
+
+        int result = 0;
+        for (int i = 0; i < 26; i++)
+            result += !!(has & (1 << i));
         cout << result << '\n';
     }
 }

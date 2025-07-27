@@ -10,10 +10,11 @@ bool HasProblem(string& s)
     int n = s.size();
     for (int i = 0; i < n - 6; i++)
     {
-        string p = s.substr(i, 7);
-        for (char& c : p)
+        string problem = s.substr(i, 7);
+        for (char& c : problem)
             c |= 32;
-        if (p == "problem")
+
+        if (problem == "problem")
             return true;
     }
     return false;
@@ -32,7 +33,7 @@ int main()
             break;
 
         bool result = HasProblem(s);
-        if (result == true)
+        if (result)
             cout << "yes" << '\n';
         else
             cout << "no" << '\n';

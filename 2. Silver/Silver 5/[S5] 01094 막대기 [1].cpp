@@ -4,12 +4,12 @@
 
 using namespace std;
 
-int BitCount(int x)
+int Count1Bit(int x)
 {
     int result = 0;
     while (x > 0)
     {
-        result += (x % 2);
+        result += x & 1;
         x >>= 1;
     }
     return result;
@@ -22,6 +22,6 @@ int main()
     int x;
     cin >> x;
 
-    int result = BitCount(x);
+    int result = Count1Bit(x);
     cout << result << '\n';
 }

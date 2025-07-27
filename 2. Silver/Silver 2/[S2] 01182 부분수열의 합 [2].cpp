@@ -28,5 +28,6 @@ int main()
 
         result += (sum == s);
     }
+
     cout << result << '\n';
 }
