@@ -12,17 +12,14 @@ struct Point
 {
     double x, y;
 
-    Point()
+    Point() { x = y = 0; }
+    Point(double d, double l)
     {
-        x = y = 0;
-    }
-    Point(double t, double l)
-    {
-        t = t * PI / 180;
-
+        double t = d * PI / 180;
         x = l * cos(t);
         y = l * sin(t);
     }
+
     static int CCW(const Point& a, const Point& b, const Point& c)
     {
         double ccw = (b.x - a.x) * (c.y - a.y)
@@ -40,20 +37,18 @@ struct Line
             && min(l.a.x, l.b.x) <= p.x && p.x <= max(l.a.x, l.b.x)
             && min(l.a.y, l.b.y) <= p.y && p.y <= max(l.a.y, l.b.y);
     }
-    static bool IsIntersecting(const Line& l0, const Line& l1)
+    static bool IsIntersecting(const Line& l1, const Line& l2)
     {
-        auto& [a, b] = l0;
-        auto& [c, d] = l1;
+        auto& [a, b] = l1;
+        auto& [c, d] = l2;
 
-        int ab_c = Point::CCW(a, b, c);
-        int ab_d = Point::CCW(a, b, d);
-        int cd_a = Point::CCW(c, d, a);
-        int cd_b = Point::CCW(c, d, b);
+        int ab_c = Point::CCW(a, b, c), ab_d = Point::CCW(a, b, d);
+        int cd_a = Point::CCW(c, d, a), cd_b = Point::CCW(c, d, b);
 
         if (ab_c * ab_d < 0 && cd_a * cd_b < 0)
             return true;
-        return OnSegment(l0, c) || OnSegment(l0, d)
-            || OnSegment(l1, a) || OnSegment(l1, b);
+        return OnSegment(l1, c) || OnSegment(l1, d)
+            || OnSegment(l2, a) || OnSegment(l2, b);
     }
 };
 
@@ -67,21 +62,22 @@ int main()
     vector<Line> lines(n);
     for (int i = 0; i < n; i++)
     {
-        int a, b;
-        cin >> a >> b;
+        int d1, d2;
+        cin >> d1 >> d2;
 
-        lines[i] = { Point(a * 0.1, 1'000), Point(b * 0.1, 1'000) };
+        lines[i] = { Point(d1 * 0.1,1'000),Point(d2 * 0.1,1'000) };
     }
 
-    int at, al, bt, bl;
-    cin >> at >> al >> bt >> bl;
+    int d1, l1, d2, l2;
+    cin >> d1 >> l1 >> d2 >> l2;
 
-    Line l = { Point(at * 0.1, al), Point(bt * 0.1, bl) };
+    Line l = { Point(d1 * 0.1,l1),Point(d2 * 0.1,l2) };
     int cnt = 0;
-    for (int i = 0; i < n; i++)
-        cnt += Line::IsIntersecting(l, lines[i]);
+    for (Line& line : lines)
+        cnt += Line::IsIntersecting(l, line);
 
-    if (cnt % 2 == 0)
+    bool result = cnt % 2 == 0;
+    if (result)
         cout << "YES" << '\n';
     else
         cout << "NO" << '\n';

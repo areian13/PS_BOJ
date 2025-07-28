@@ -1518,7 +1518,7 @@
     <ClCompile Include="3. Gold\Gold 5\[G5] 02447 별 찍기 - 10.cpp" />
     <ClCompile Include="3. Gold\Gold 5\[G5] 02660 회장뽑기.cpp" />
     <ClCompile Include="3. Gold\Gold 5\[G5] 15681 트리와 쿼리.cpp" />
-    <ClCompile Include="3. Gold\Gold 5\[G5] 30453 Symmetry of Stars.cpp" />
+    <ClCompile Include="3. Gold\Gold 4\[G4] 30453 Symmetry of Stars.cpp" />
     <ClCompile Include="4. Platinum\Platinum 1\[P1] 05398 틀렸습니다.cpp" />
     <ClCompile Include="4. Platinum\Platinum 1\[P1] 05651 완전 중요한 간선.cpp" />
     <ClCompile Include="4. Platinum\Platinum 1\[P1] 06241 Dining.cpp" />
@@ -2121,6 +2121,12 @@
     <ClCompile Include="3. Gold\Gold 2\[G2] 03108 로고.cpp" />
     <ClCompile Include="1. Bronze\Bronze 5\[B5] 02744 대소문자 바꾸기.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 11145 Is it a Number？.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 11149 Decode the Message.cpp" />
+    <ClCompile Include="3. Gold\Gold 2\[G2] 04195 친구 네트워크.cpp" />
+    <ClCompile Include="3. Gold\Gold 2\[G2] 10888 두 섬간의 이동.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 11195 Peragrams.cpp" />
+    <ClCompile Include="4. Platinum\Platinum 2\![P2] 32827 Two Rings.cpp" />
+    <ClCompile Include="3. Gold\Gold 3\[G3] 29618 미술 시간.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
