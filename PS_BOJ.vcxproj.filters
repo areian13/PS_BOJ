@@ -2127,6 +2127,11 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 11195 Peragrams.cpp" />
     <ClCompile Include="4. Platinum\Platinum 2\![P2] 32827 Two Rings.cpp" />
     <ClCompile Include="3. Gold\Gold 3\[G3] 29618 미술 시간.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 04201 Snakes and Ladders.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 11269 Cryptographer’s Conundrum.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 11296 가격.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 5\[B5] 32458 Just Round Down.cpp" />
+    <ClCompile Include="3. Gold\Gold 3\[G3] 33579 디미 그래프.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
