@@ -1,25 +1,9 @@
 #include <iostream>
 #include <vector>
-#include <algorithm>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
 
 using namespace std;
-
-struct UnionFind
-{
-    vector<int> p;
-
-    UnionFind(int n) { p.resize(n, -1); }
-    int Find(int u) { return p[u] < 0 ? u : p[u] = Find(p[u]); }
-    void Union(int u, int v)
-    {
-        u = Find(u), v = Find(v);
-        if (u == v)
-            return;
-        p[min(u, v)] = max(u, v);
-    }
-};
 
 void DFS(int p, int u, vector<bool>& isVisited, vector<vector<int>>& graph,
     int& cntCircle)
@@ -76,7 +60,6 @@ int main()
     cin >> n >> m;
 
     vector<vector<int>> graph(n);
-    UnionFind uf(n);
     for (int i = 0; i < m; i++)
     {
         int u, v;

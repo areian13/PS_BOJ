@@ -2132,6 +2132,9 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 11296 가격.cpp" />
     <ClCompile Include="1. Bronze\Bronze 5\[B5] 32458 Just Round Down.cpp" />
     <ClCompile Include="3. Gold\Gold 3\[G3] 33579 디미 그래프.cpp" />
+    <ClCompile Include="3. Gold\Gold 2\[G2] 15502 K-균등 문자열.cpp" />
+    <ClCompile Include="3. Gold\Gold 2\[G2] 15559 내 선물을 받아줘.cpp" />
+    <ClCompile Include="3. Gold\Gold 2\[G2] 16402 제국.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
