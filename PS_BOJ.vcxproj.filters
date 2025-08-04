@@ -2135,6 +2135,14 @@
     <ClCompile Include="3. Gold\Gold 2\[G2] 15502 K-균등 문자열.cpp" />
     <ClCompile Include="3. Gold\Gold 2\[G2] 15559 내 선물을 받아줘.cpp" />
     <ClCompile Include="3. Gold\Gold 2\[G2] 16402 제국.cpp" />
+    <ClCompile Include="2. Silver\Silver 3\[S3] 06571 피보나치 수의 개수.cpp" />
+    <ClCompile Include="2. Silver\Silver 3\[S3] 14494 다이나믹이 뭐예요？.cpp" />
+    <ClCompile Include="2. Silver\Silver 3\[S3] 08394 악수.cpp" />
+    <ClCompile Include="2. Silver\Silver 3\[S3] 09711 피보나치.cpp" />
+    <ClCompile Include="2. Silver\Silver 3\[S3] 14607 피자 %28Large%29 [1].cpp" />
+    <ClCompile Include="2. Silver\Silver 3\[S3] 14607 피자 %28Large%29 [2].cpp" />
+    <ClCompile Include="2. Silver\Silver 3\[S3] 17175 피보나치는 지겨웡~.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 11297 Cypher.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
