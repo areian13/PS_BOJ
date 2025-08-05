@@ -2148,7 +2148,6 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 11328 Strfry.cpp" />
     <ClCompile Include="4. Platinum\Platinum 5\[P5] 30449 Reafy 수열 [1].cpp" />
     <ClCompile Include="4. Platinum\Platinum 5\[P5] 30449 Reafy 수열 [2].cpp" />
-    <ClCompile Include="5. Diamond\Diamond 4\[D4] 20151 선분 교차 5.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
