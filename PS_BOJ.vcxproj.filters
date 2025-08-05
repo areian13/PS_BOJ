@@ -2017,7 +2017,7 @@
     <ClCompile Include="5. Diamond\Diamond 5\[D5] 13926 gcd%28n, k%29 = 1.cpp" />
     <ClCompile Include="5. Diamond\Diamond 5\![D5] 16214 N과 M.cpp" />
     <ClCompile Include="5. Diamond\Diamond 5\[D5] 18185 라면 사기 (Small).cpp" />
-    <ClCompile Include="5. Diamond\Diamond 5\![D5] 20150 선분 교차 4.cpp" />
+    <ClCompile Include="5. Diamond\Diamond 5\[D5] 20150 선분 교차 4.cpp" />
     <ClCompile Include="5. Diamond\Diamond 5\[D5] 21182 Weird Flecks, But OK.cpp" />
     <ClCompile Include="Contest\2024\2024 SCSC 서울대학교 프로그래밍 경시대회 Open Contest\A번 - 정육면체의 네 꼭짓점.cpp" />
     <ClCompile Include="Contest\2024\2024 SCSC 서울대학교 프로그래밍 경시대회 Open Contest\!B번 - 로그프레소 마에스트로.cpp" />
@@ -2143,6 +2143,12 @@
     <ClCompile Include="2. Silver\Silver 3\[S3] 14607 피자 %28Large%29 [2].cpp" />
     <ClCompile Include="2. Silver\Silver 3\[S3] 17175 피보나치는 지겨웡~.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 11297 Cypher.cpp" />
+    <ClCompile Include="4. Platinum\Platinum 5\![P5] 16566 카드 게임.cpp" />
+    <ClCompile Include="2. Silver\Silver 3\[S3] 17212 달나라 토끼를 위한 구매대금 지불 도우미.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 11328 Strfry.cpp" />
+    <ClCompile Include="4. Platinum\Platinum 5\[P5] 30449 Reafy 수열 [1].cpp" />
+    <ClCompile Include="4. Platinum\Platinum 5\[P5] 30449 Reafy 수열 [2].cpp" />
+    <ClCompile Include="5. Diamond\Diamond 4\[D4] 20151 선분 교차 5.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
