@@ -23,18 +23,19 @@ struct Point
 struct Line
 {
     Point a, b;
+    int i;
 
     long double YatX(int x) const { return 1.l * (b.y - a.y) / (b.x - a.x) * (x - a.x) + a.y; }
     static bool OnSegment(const Line& l, const Point& p)
     {
         return Point::CCW(l.a, l.b, p) == 0
-            && min(l.a.x, l.b.x) <= p.x && p.x <= max(l.a.x, l.b.x)
-            && min(l.a.y, l.b.y) <= p.y && p.y <= max(l.a.y, l.b.y);
+            && min(l.a.x, l.b.x) < p.x && p.x < max(l.a.x, l.b.x)
+            && min(l.a.y, l.b.y) < p.y && p.y < max(l.a.y, l.b.y);
     }
     static bool IsCross(const Line& l1, const Line& l2)
     {
-        auto& [a, b] = l1;
-        auto& [c, d] = l2;
+        auto& [a, b, i] = l1;
+        auto& [c, d, j] = l2;
 
         int ab_cd = Point::CCW(a, b, c) * Point::CCW(a, b, d);
         int cd_ab = Point::CCW(c, d, a) * Point::CCW(c, d, b);
@@ -60,6 +61,11 @@ struct Event
         return a.p.y < b.p.y;
     }
 };
+
+bool IsAdj(int i, int j, int n)
+{
+    return (i + 1) % n == j || (j + 1) % n == i;
+}
 
 bool HasCross(vector<Line>& lines)
 {
@@ -88,17 +94,22 @@ bool HasCross(vector<Line>& lines)
         if (!isEnd)
         {
             auto u = mts.insert(lines[idx]);
-            auto v = next(u), p = prev(u);
-            if (v != mts.end() && Line::IsCross(*u, *v))
+            auto v = next(u);
+            if (v != mts.end() &&
+                Line::IsCross(*u, *v))
                 return true;
-            if (u != mts.begin() && Line::IsCross(*u, *p))
+            if (u != mts.begin() &&
+                Line::IsCross(*prev(u), *u))
                 return true;
         }
         else
         {
             auto u = mts.lower_bound(lines[idx]);
-            auto v = next(u), p = prev(u);
-            if (u != mts.begin() && v != mts.end() && Line::IsCross(*p, *v))
+            if (u == mts.end())
+                continue;
+            auto v = next(u);
+            if (u != mts.begin() && v != mts.end() &&
+                Line::IsCross(*prev(u), *v))
                 return true;
             mts.erase(u);
         }
@@ -110,22 +121,28 @@ int main()
 {
     FastIO;
 
-    int n;
-    cin >> n;
-
-    vector<Line> lines(n);
-    for (int i = 0; i < n; i++)
+    while (true)
     {
-        int x1, y1, x2, y2;
-        cin >> x1 >> y1 >> x2 >> y2;
+        int n;
+        cin >> n;
 
-        Point a = { x1,y1 }, b = { x2,y2 };
-        if (a > b)
-            swap(a, b);
+        if (n == 0)
+            break;
 
-        lines[i] = { a,b };
+        vector<Point> points(n);
+        for (auto& point : points)
+            cin >> point.x >> point.y;
+
+        vector<Line> lines(n);
+        for (int i = 0; i < n; i++)
+        {
+            Point a = points[i], b = points[(i + 1) % n];
+            if (a > b)
+                swap(a, b);
+            lines[i] = { a,b,i };
+        }
+
+        bool result = HasCross(lines);
+        cout << result << '\n';
     }
-
-    bool result = HasCross(lines);
-    cout << result << '\n';
 }
