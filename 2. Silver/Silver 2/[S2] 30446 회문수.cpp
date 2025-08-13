@@ -9,12 +9,12 @@ void MakeNextP(string& p)
 {
     int n = p.size();
 
-    int i = 0;
-    while (i <= n / 2 - (n % 2 == 0))
+    int i = 0, j = ~n & 1;
+    while (i <= n / 2 - j)
     {
         char k = (p[n / 2 + i] - '0' + 1) % 10 + '0';
         p[n / 2 + i] = k;
-        p[n / 2 - i - (n % 2 == 0)] = k;
+        p[n / 2 - i - j] = k;
         i++;
 
         if (k != '0')

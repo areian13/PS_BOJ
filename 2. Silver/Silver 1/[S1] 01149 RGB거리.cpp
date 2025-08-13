@@ -12,8 +12,8 @@ int MinPrice(int idx, int color, vector<array<int, 3>>& home, vector<array<int, 
 {
     int n = home.size();
 
-    if (idx == n - 1)
-        return home[idx][color];
+    if (idx >= n)
+        return 0;
     if (dp[idx][color] != 0)
         return dp[idx][color];
 
