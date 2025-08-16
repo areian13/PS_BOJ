@@ -2167,6 +2167,8 @@
     <ClCompile Include="2. Silver\Silver 2\[S2] 01024 수열의 합.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 11431 Mr. Gorbachev, Tear Down This Wall!.cpp" />
     <ClCompile Include="2. Silver\Silver 3\[S3] 01003 피보나치 함수.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 11531 ACM 대회 채점.cpp" />
+    <ClCompile Include="Contest\2025\08\2025-08-16 11%2701 BCF 2025\X번 - 잃어버린 섬.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
