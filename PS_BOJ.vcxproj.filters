@@ -2162,6 +2162,11 @@
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 13627 Dangerous Dive.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 14487 욱제는 효도쟁이야!!.cpp" />
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 24405 Eye of Sauron.cpp" />
+    <ClCompile Include="4. Platinum\Platinum 4\[P4] 10255 교차점.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 28812 Доставка.cpp" />
+    <ClCompile Include="2. Silver\Silver 2\[S2] 01024 수열의 합.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 11431 Mr. Gorbachev, Tear Down This Wall!.cpp" />
+    <ClCompile Include="2. Silver\Silver 3\[S3] 01003 피보나치 함수.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
