@@ -12,10 +12,6 @@ struct Point
     double x, y;
 
     friend auto operator <=> (const Point& a, const Point& b) = default;
-    friend Point operator + (const Point& a, const Point& b) { return { a.x + b.x,a.y + b.y }; }
-    friend Point operator - (const Point& a, const Point& b) { return { a.x - b.x,a.y - b.y }; }
-    friend Point operator * (const Point& a, double d) { return { a.x * d,a.y * d }; }
-
     static int CCW(const Point& a, const Point& b, const Point& c)
     {
         long long ccw = 1LL * (b.x - a.x) * (c.y - a.y)

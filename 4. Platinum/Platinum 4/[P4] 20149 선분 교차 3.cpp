@@ -2,26 +2,33 @@
 #include <cstdio>
 #include <algorithm>
 #include <vector>
+#include <set>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
 
 using namespace std;
 
+const double EPS = 1e-6;
+bool IsZero(double val) { return abs(val) < EPS; }
+
 struct Point
 {
     double x, y;
 
+    friend auto operator <=> (const Point& a, const Point& b) = default;
+    friend Point operator + (const Point& a, const Point& b) { return { a.x + b.x,a.y + b.y }; }
+    friend Point operator - (const Point& a, const Point& b) { return { a.x - b.x,a.y - b.y }; }
+    friend Point operator * (const Point& a, double d) { return { a.x * d,a.y * d }; }
+
+    static double dot(const Point& a, const Point& b) { return { a.x * b.x + a.y * b.y }; }
+    static double cross(const Point& a, const Point& b) { return { a.x * b.y - a.y * b.x }; }
+
     static int CCW(const Point& a, const Point& b, const Point& c)
     {
-        double cross = (b.x - a.x) * (c.y - a.y)
-            - (b.y - a.y) * (c.x - a.x);
-        return (cross == 0 ? 0 : (cross > 0 ? +1 : -1));
+        double ccw = cross(b - a, c - b);
+        return (IsZero(ccw) ? 0 : (ccw > 0 ? +1 : -1));
     }
 
-    friend bool operator==(const Point& a, const Point& b)
-    {
-        return a.x == b.x && a.y == b.y;
-    }
     friend istream& operator>>(istream& is, Point& p)
     {
         is >> p.x >> p.y;
@@ -46,37 +53,18 @@ struct Line
         auto& [a, b] = l0;
         auto& [c, d] = l1;
 
-        int ab_c = Point::CCW(a, b, c);
-        int ab_d = Point::CCW(a, b, d);
-        int cd_a = Point::CCW(c, d, a);
-        int cd_b = Point::CCW(c, d, b);
+        int ab_cd = Point::CCW(a, b, c) * Point::CCW(a, b, d);
+        int cd_ab = Point::CCW(c, d, a) * Point::CCW(c, d, b);
 
-        if (ab_c * ab_d < 0 && cd_a * cd_b < 0)
-        {
-            double a1 = b.y - a.y;
-            double b1 = a.x - b.x;
-            double c1 = a1 * a.x + b1 * a.y;
+        if (ab_cd < 0 && cd_ab < 0)
+            return { a + (b - a) * (Point::cross(c - a, d - c) / Point::cross(b - a, d - c)) };
 
-            double a2 = d.y - c.y;
-            double b2 = c.x - d.x;
-            double c2 = a2 * c.x + b2 * c.y;
-
-            double d = a1 * b2 - a2 * b1;
-            double x = (b2 * c1 - b1 * c2) / d;
-            double y = (a1 * c2 - a2 * c1) / d;
-
-            return vector<Point>{{ x, y }};
-        }
-
-        vector<Point> intersections;
-        if (OnSegment(l0, c)) intersections.push_back(c);
-        if (OnSegment(l0, d)) intersections.push_back(d);
-        if (OnSegment(l1, a)) intersections.push_back(a);
-        if (OnSegment(l1, b)) intersections.push_back(b);
-
-        if (intersections.size() == 2 && intersections[0] == intersections[1])
-            return vector<Point>{intersections[0]};
-        return intersections;
+        set<Point> inters;
+        if (OnSegment(l0, c)) inters.insert(c);
+        if (OnSegment(l0, d)) inters.insert(d);
+        if (OnSegment(l1, a)) inters.insert(a);
+        if (OnSegment(l1, b)) inters.insert(b);
+        return vector<Point>(inters.begin(), inters.end());
     }
 
     friend istream& operator>>(istream& is, Line& l)
@@ -94,12 +82,7 @@ int main()
     cin >> l0 >> l1;
 
     vector<Point> result = Line::GetIntersections(l0, l1);
-    if (result.empty())
-        printf("0\n");
-    else
-    {
-        printf("1\n");
-        if (result.size() == 1)
-            printf("%.9lf %.9lf\n", result[0].x, result[0].y);
-    }
+    printf("%d\n", !result.empty());
+    if (result.size() == 1)
+        printf("%.9lf %.9lf\n", result[0].x, result[0].y);
 }

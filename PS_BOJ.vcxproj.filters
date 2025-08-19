@@ -2169,6 +2169,11 @@
     <ClCompile Include="2. Silver\Silver 3\[S3] 01003 피보나치 함수.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 11531 ACM 대회 채점.cpp" />
     <ClCompile Include="Contest\2025\08\2025-08-16 11%2701 BCF 2025\X번 - 잃어버린 섬.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 11575 Affine Cipher.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 29829 Palindroom.cpp" />
+    <ClCompile Include="0. Unrated\![U0] 09995 HM과 TM.cpp" />
+    <ClCompile Include="5. Diamond\Diamond 3\![D3] 01266 일어나!.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 11587 MARKO.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
