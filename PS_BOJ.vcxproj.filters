@@ -2176,6 +2176,7 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 11587 MARKO.cpp" />
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 26201 Finding Maximal Non-Trivial Monotones.cpp" />
     <ClCompile Include="4. Platinum\Platinum 5\[P5] 27718 선분 교차 EX.cpp" />
+    <ClCompile Include="4. Platinum\Platinum 3\[P3] 04792 레드 블루 스패닝 트리.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
