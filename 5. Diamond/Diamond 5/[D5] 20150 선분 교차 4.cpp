@@ -7,20 +7,31 @@
 
 using namespace std;
 
+const double EPS = 1e-6;
+bool IsZero(double val) { return abs(val) < EPS; }
+
 struct Point
 {
-    double x, y;
+    int x, y;
 
     friend auto operator <=> (const Point& a, const Point& b) = default;
     friend Point operator + (const Point& a, const Point& b) { return { a.x + b.x,a.y + b.y }; }
     friend Point operator - (const Point& a, const Point& b) { return { a.x - b.x,a.y - b.y }; }
-    friend Point operator * (const Point& a, double d) { return { a.x * d,a.y * d }; }
+    friend Point operator * (const Point& a, int d) { return { a.x * d,a.y * d }; }
+
+    static long long dot(const Point& a, const Point& b) { return 1LL * a.x * b.x + 1LL * a.y * b.y; }
+    static long long cross(const Point& a, const Point& b) { return 1LL * a.x * b.y - 1LL * a.y * b.x; }
 
     static int CCW(const Point& a, const Point& b, const Point& c)
     {
-        long long ccw = 1LL * (b.x - a.x) * (c.y - a.y)
-            - 1LL * (b.y - a.y) * (c.x - a.x);
-        return ccw != 0 ? ccw > 0 ? +1 : -1 : 0;
+        long long ccw = cross(b - a, c - b);
+        return (IsZero(ccw) ? 0 : (ccw > 0 ? +1 : -1));
+    }
+
+    friend istream& operator >> (istream& is, Point& p)
+    {
+        is >> p.x >> p.y;
+        return is;
     }
 };
 
@@ -47,6 +58,14 @@ struct Line
             return true;
         return OnSegment(l1, c) || OnSegment(l1, d)
             || OnSegment(l2, a) || OnSegment(l2, b);
+    }
+
+    friend istream& operator >> (istream& is, Line& l)
+    {
+        is >> l.a >> l.b;
+        if (l.a > l.b)
+            swap(l.a, l.b);
+        return is;
     }
 };
 struct Event
@@ -118,17 +137,8 @@ int main()
     cin >> n;
 
     vector<Line> lines(n);
-    for (int i = 0; i < n; i++)
-    {
-        int x1, y1, x2, y2;
-        cin >> x1 >> y1 >> x2 >> y2;
-
-        Point a = { x1,y1 }, b = { x2,y2 };
-        if (a > b)
-            swap(a, b);
-
-        lines[i] = { a,b };
-    }
+    for (Line& line : lines)
+        cin >> line;
 
     bool result = HasCross(lines);
     cout << result << '\n';

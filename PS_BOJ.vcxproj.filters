@@ -2174,6 +2174,8 @@
     <ClCompile Include="0. Unrated\![U0] 09995 HM과 TM.cpp" />
     <ClCompile Include="5. Diamond\Diamond 3\![D3] 01266 일어나!.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 11587 MARKO.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 26201 Finding Maximal Non-Trivial Monotones.cpp" />
+    <ClCompile Include="4. Platinum\Platinum 5\[P5] 27718 선분 교차 EX.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />

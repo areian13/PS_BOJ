@@ -29,7 +29,7 @@ struct Point
         return (IsZero(ccw) ? 0 : (ccw > 0 ? +1 : -1));
     }
 
-    friend istream& operator >> (istream& is, Point& p)
+    friend istream& operator>>(istream& is, Point& p)
     {
         is >> p.x >> p.y;
         return is;
@@ -38,16 +38,17 @@ struct Point
 
 struct Line
 {
-    Point a, b;
+    Point p0, p1;
 
     static bool OnSegment(const Line& l, const Point& p)
     {
         auto& [a, b] = l;
-        return Point::CCW(a, b, p) == 0
-            && min(a.x, b.x) <= p.x && p.x <= max(a.x, b.x)
+        if (Point::CCW(a, b, p) != 0)
+            return false;
+        return min(a.x, b.x) <= p.x && p.x <= max(a.x, b.x)
             && min(a.y, b.y) <= p.y && p.y <= max(a.y, b.y);
     }
-    static vector<Point> GetIntersections(const Line& l0, const Line& l1)
+    static int CrossType(const Line& l0, const Line& l1)
     {
         auto& [a, b] = l0;
         auto& [c, d] = l1;
@@ -56,21 +57,22 @@ struct Line
         int cd_ab = Point::CCW(c, d, a) * Point::CCW(c, d, b);
 
         if (ab_cd < 0 && cd_ab < 0)
-            return { a + (b - a) * (Point::cross(c - a, d - c) / Point::cross(b - a, d - c)) };
+            return 2;
 
         set<Point> inters;
         if (OnSegment(l0, c)) inters.insert(c);
         if (OnSegment(l0, d)) inters.insert(d);
         if (OnSegment(l1, a)) inters.insert(a);
         if (OnSegment(l1, b)) inters.insert(b);
-        return vector<Point>(inters.begin(), inters.end());
+
+        if (inters.size() >= 2)
+            return 3;
+        return inters.size();
     }
 
-    friend istream& operator >> (istream& is, Line& l)
+    friend istream& operator>>(istream& is, Line& l)
     {
-        is >> l.a >> l.b;
-        if (l.a > l.b)
-            swap(l.a, l.b);
+        is >> l.p0 >> l.p1;
         return is;
     }
 };
@@ -79,11 +81,24 @@ int main()
 {
     FastIO;
 
-    Line l0, l1;
-    cin >> l0 >> l1;
+    int n;
+    cin >> n;
 
-    vector<Point> result = Line::GetIntersections(l0, l1);
-    printf("%d\n", !result.empty());
-    if (result.size() == 1)
-        printf("%.9lf %.9lf\n", result[0].x, result[0].y);
+    vector<Line> lines(n);
+    for (int i = 0; i < n; i++)
+        cin >> lines[i];
+
+    vector<vector<int>> result(n, vector<int>(n, 3));
+    for (int i = 0; i < n - 1; i++)
+    {
+        for (int j = i + 1; j < n; j++)
+            result[i][j] = result[j][i] = Line::CrossType(lines[i], lines[j]);
+    }
+
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+            cout << result[i][j];
+        cout << '\n';
+    }
 }
