@@ -12,7 +12,7 @@ long long SigBit(long long n)
 
     long long result = 0;
     for (int i = 0; i < d; i++)
-        result += (n >> i + 1) * (1LL << i) + (((n >> i) & 1) & (n % (1LL << i)));
+        result += (n >> i + 1) * (1LL << i) + ((n >> i) & 1) * (n % (1LL << i));
     return result;
 }
 
