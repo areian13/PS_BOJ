@@ -1911,6 +1911,7 @@
     <ClCompile Include="3. Gold\Gold 2\[G2] 04195 친구 네트워크.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="3. Gold\Gold 2\[G2] 09527 1의 개수 세기.cpp" />
     <ClCompile Include="3. Gold\Gold 2\[G2] 10888 두 섬간의 이동.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
