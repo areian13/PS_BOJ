@@ -18,7 +18,7 @@ namespace std
         {
             size_t seed = 0;
             for (int x : v)
-                seed ^= hash<int>{}(x)+0x9e3779b9 + (seed << 6) + (seed >> 2);
+                seed ^= hash<int>{}(x) + 0x9e3779b9 + (seed << 6) + (seed >> 2);
             return seed;
         }
     };
