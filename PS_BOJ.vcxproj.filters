@@ -2182,6 +2182,24 @@
     <ClCompile Include="3. Gold\Gold 2\[G2] 09527 1의 개수 세기.cpp" />
     <ClCompile Include="3. Gold\Gold 1\[G1] 28707 배열 정렬.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 11605 Magic Trick.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 01977 완전제곱수.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 11606 Egg Drop.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 11608 Complexity.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 11636 Stand on Zanzibar.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 11640 Scaling Recipes.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 11680 Dice Cup.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 11760 Mastering Mastermind.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 11816 8진수, 10진수, 16진수.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 11880 개미.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 26513 Egg Drop.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 33868 스티커 나눠주기.cpp" />
+    <ClCompile Include="2. Silver\Silver 3\[S3] 17484 진우의 달 여행 %28Small%29.cpp" />
+    <ClCompile Include="3. Gold\Gold 2\![G2] 13334 철로.cpp" />
+    <ClCompile Include="4. Platinum\Platinum 5\![P5] 01799 비숍.cpp" />
+    <ClCompile Include="4. Platinum\Platinum 5\[P5] 02162 선분 그룹.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 11922 BELA.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 11944 NN.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 11949 번호표 교환.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
