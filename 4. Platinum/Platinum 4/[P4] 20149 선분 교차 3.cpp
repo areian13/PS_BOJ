@@ -47,7 +47,7 @@ struct Line
             && min(a.x, b.x) <= p.x && p.x <= max(a.x, b.x)
             && min(a.y, b.y) <= p.y && p.y <= max(a.y, b.y);
     }
-    static vector<Point> GetIntersections(const Line& l0, const Line& l1)
+    static vector<Point> GetInters(const Line& l0, const Line& l1)
     {
         auto& [a, b] = l0;
         auto& [c, d] = l1;
@@ -82,7 +82,7 @@ int main()
     Line l0, l1;
     cin >> l0 >> l1;
 
-    vector<Point> result = Line::GetIntersections(l0, l1);
+    vector<Point> result = Line::GetInters(l0, l1);
     printf("%d\n", !result.empty());
     if (result.size() == 1)
         printf("%.9lf %.9lf\n", result[0].x, result[0].y);
