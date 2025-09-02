@@ -2203,6 +2203,7 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 12044 Robot Rock Band %28Small%29.cpp" />
     <ClCompile Include="4. Platinum\Platinum 5\[P5] 10875 뱀.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 07513 준살 프로그래밍 대회.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 5\[B5] 23234 The World Responds.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
