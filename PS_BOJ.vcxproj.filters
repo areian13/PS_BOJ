@@ -2204,6 +2204,13 @@
     <ClCompile Include="4. Platinum\Platinum 5\[P5] 10875 뱀.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 07513 준살 프로그래밍 대회.cpp" />
     <ClCompile Include="1. Bronze\Bronze 5\[B5] 23234 The World Responds.txt" />
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 33166 鉄道旅行 3 %28Railway Trip 3%29.cpp" />
+    <ClCompile Include="4. Platinum\Platinum 3\![P3] 01142 피자.cpp" />
+    <ClCompile Include="4. Platinum\Platinum 2\![P2] 02336 굉장한 학생.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 14914 사과와 바나나 나눠주기.cpp" />
+    <ClCompile Include="4. Platinum\Platinum 5\[P5] 01572 중앙값.cpp" />
+    <ClCompile Include="4. Platinum\Platinum 5\[P5] 09426 중앙값 측정.cpp" />
+    <ClCompile Include="4. Platinum\Platinum 5\[P5] 01777 순열복원.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
