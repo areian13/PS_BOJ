@@ -2210,7 +2210,10 @@
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 14914 사과와 바나나 나눠주기.cpp" />
     <ClCompile Include="4. Platinum\Platinum 5\[P5] 01572 중앙값.cpp" />
     <ClCompile Include="4. Platinum\Platinum 5\[P5] 09426 중앙값 측정.cpp" />
-    <ClCompile Include="4. Platinum\Platinum 5\[P5] 01777 순열복원.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 12074 Googol String %28Small%29.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 02355 시그마.cpp" />
+    <ClCompile Include="2. Silver\Silver 3\[S3] 25706 자전거 묘기.cpp" />
+    <ClCompile Include="2. Silver\Silver 3\[S3] 27446 랩실에서 잘 자요.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />

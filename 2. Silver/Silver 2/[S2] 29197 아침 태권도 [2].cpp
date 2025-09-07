@@ -19,8 +19,7 @@ int main()
         int x, y;
         cin >> x >> y;
 
-        double radian = atan2(y, x);
-        canSee.insert(radian);
+        canSee.insert(atan2(y, x));
     }
 
     int result = canSee.size();
