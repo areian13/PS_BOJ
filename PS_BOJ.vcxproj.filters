@@ -2214,6 +2214,8 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 02355 시그마.cpp" />
     <ClCompile Include="2. Silver\Silver 3\[S3] 25706 자전거 묘기.cpp" />
     <ClCompile Include="2. Silver\Silver 3\[S3] 27446 랩실에서 잘 자요.cpp" />
+    <ClCompile Include="3. Gold\Gold 4\[G4] 14938 서강그라운드.cpp" />
+    <ClCompile Include="2. Silver\Silver 3\[S3] 32981 찐 Even Number.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
