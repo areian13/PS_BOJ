@@ -2216,6 +2216,10 @@
     <ClCompile Include="2. Silver\Silver 3\[S3] 27446 랩실에서 잘 자요.cpp" />
     <ClCompile Include="3. Gold\Gold 4\[G4] 14938 서강그라운드.cpp" />
     <ClCompile Include="2. Silver\Silver 3\[S3] 32981 찐 Even Number.cpp" />
+    <ClCompile Include="2. Silver\Silver 3\[S3] 33989 벚꽃과 단풍.cpp" />
+    <ClCompile Include="2. Silver\Silver 2\[S2] 01535 안녕.cpp" />
+    <ClCompile Include="2. Silver\Silver 5\[S5] 27964 콰트로치즈피자.cpp" />
+    <ClCompile Include="2. Silver\Silver 2\[S2] 03541 상근타워.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
