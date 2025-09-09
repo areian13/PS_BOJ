@@ -38,8 +38,7 @@ int main()
                 continue;
 
             sum += v;
-            cnt++;
-            if (cnt == n)
+            if (++cnt == n)
                 break;
         }
 

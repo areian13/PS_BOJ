@@ -2221,6 +2221,12 @@
     <ClCompile Include="2. Silver\Silver 5\[S5] 27964 콰트로치즈피자.cpp" />
     <ClCompile Include="2. Silver\Silver 2\[S2] 03541 상근타워.cpp" />
     <ClCompile Include="2. Silver\Silver 1\[S1] 17503 맥주 축제.cpp" />
+    <ClCompile Include="3. Gold\Gold 5\[G5] 02421 저금통.cpp" />
+    <ClCompile Include="A.cpp" />
+    <ClCompile Include="B.cpp" />
+    <ClCompile Include="C.cpp" />
+    <ClCompile Include="D.cpp" />
+    <ClCompile Include="E.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />

@@ -6,6 +6,7 @@
 
 using namespace std;
 
+#define MAX_N 500'000
 #define MAX_D 18
 
 int main()
