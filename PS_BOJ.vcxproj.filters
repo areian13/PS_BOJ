@@ -2220,6 +2220,7 @@
     <ClCompile Include="2. Silver\Silver 2\[S2] 01535 안녕.cpp" />
     <ClCompile Include="2. Silver\Silver 5\[S5] 27964 콰트로치즈피자.cpp" />
     <ClCompile Include="2. Silver\Silver 2\[S2] 03541 상근타워.cpp" />
+    <ClCompile Include="2. Silver\Silver 1\[S1] 17503 맥주 축제.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />

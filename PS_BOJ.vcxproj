@@ -1858,6 +1858,7 @@
     <ClCompile Include="2. Silver\Silver 1\[S1] 16192 Voronoi Diagram Returns.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="2. Silver\Silver 1\[S1] 17503 맥주 축제.cpp" />
     <ClCompile Include="2. Silver\Silver 1\[S1] 28107 회전초밥.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
