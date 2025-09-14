@@ -18,7 +18,6 @@ int main()
         int n;
         cin >> n;
 
-        array<int, 5> result = { 0, };
         int sixty = n / 60, ten = n % 60 / 10, one = n % 10;
 
         if (one > 5)
@@ -28,6 +27,7 @@ int main()
         if (ten < 0 && one == 5)
             ten++, one -= 10;
 
+        array<int, 5> result = { 0, };
         result[0] = sixty;
         result[1 + (ten < 0)] = abs(ten);
         result[3 + (one < 0)] = abs(one);
