@@ -13,13 +13,13 @@ int main()
     int n;
     cin >> n;
 
-    vector<int> rope(n);
+    vector<int> ropes(n);
     for (int i = 0; i < n; i++)
-        cin >> rope[i];
-    sort(rope.begin(), rope.end());
+        cin >> ropes[i];
+    sort(ropes.begin(), ropes.end());
 
     int result = 0;
     for (int i = 0; i < n; i++)
-        result = max(result, rope[i] * (n - i));
+        result = max(result, ropes[i] * (n - i));
     cout << result << '\n';
 }

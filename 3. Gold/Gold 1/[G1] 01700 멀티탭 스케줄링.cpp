@@ -5,19 +5,18 @@
 
 using namespace std;
 
-
 int main()
 {
     FastIO;
 
     int n, k;
-    cin>>n >> k;
+    cin >> n >> k;
 
     vector<int> order(k);
     vector<vector<int>> orderSeqs(k + 1);
     for (int i = 0; i < k; i++)
     {
-        cin>>order[i];
+        cin >> order[i];
         orderSeqs[order[i]].push_back(i);
     }
 
@@ -56,14 +55,14 @@ int main()
                 outPlugIdx = j;
                 break;
             }
-            else if(orderSeqs[plug[j]].back() > lastPlug)
+            else if (orderSeqs[plug[j]].back() > lastPlug)
             {
                 outPlug = plug[j];
                 outPlugIdx = j;
                 lastPlug = orderSeqs[plug[j]].back();
             }
         }
-            
+
         isPlugged[outPlug] = false;
         plug.erase(plug.begin() + outPlugIdx);
 

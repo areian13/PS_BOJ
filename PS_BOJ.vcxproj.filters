@@ -2222,11 +2222,26 @@
     <ClCompile Include="2. Silver\Silver 2\[S2] 03541 상근타워.cpp" />
     <ClCompile Include="2. Silver\Silver 1\[S1] 17503 맥주 축제.cpp" />
     <ClCompile Include="3. Gold\Gold 5\[G5] 02421 저금통.cpp" />
-    <ClCompile Include="A.cpp" />
-    <ClCompile Include="B.cpp" />
-    <ClCompile Include="C.cpp" />
-    <ClCompile Include="D.cpp" />
-    <ClCompile Include="E.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 01864 문어 숫자.cpp" />
+    <ClCompile Include="2. Silver\Silver 3\[S3] 09536 여우는 어떻게 울지？.cpp" />
+    <ClCompile Include="3. Gold\Gold 5\[G5] 19940 피자 오븐 [1].cpp" />
+    <ClCompile Include="노태윤 수\A.cpp" />
+    <ClCompile Include="노태윤 수\B.cpp" />
+    <ClCompile Include="노태윤 수\C.cpp" />
+    <ClCompile Include="노태윤 수\D.cpp" />
+    <ClCompile Include="노태윤 수\E.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 33701 새천년관.txt" />
+    <ClCompile Include="3. Gold\Gold 4\[G4] 10282 해킹.cpp" />
+    <ClCompile Include="2. Silver\Silver 2\[S2] 01699 제곱수의 합.cpp" />
+    <ClCompile Include="2. Silver\Silver 3\[S3] 17626 Four Squares.cpp" />
+    <ClCompile Include="2. Silver\Silver 2\[S2] 01793 타일링.cpp" />
+    <ClCompile Include="2. Silver\Silver 2\[S2] 01965 상자넣기.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 33883 Acentuación del idioma español.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 12166 Standing Ovation %28Small%29.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 12167 Standing Ovation %28Large%29.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 12174 #include 〈Google I／O.h〉.cpp" />
+    <ClCompile Include="2. Silver\Silver 2\[S2] 03947 폴하버의 삼각형.cpp" />
+    <ClCompile Include="3. Gold\Gold 5\[G5] 19940 피자 오븐 [2].cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />

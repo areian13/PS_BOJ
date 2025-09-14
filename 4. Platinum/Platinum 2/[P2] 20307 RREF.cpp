@@ -11,7 +11,7 @@ using namespace std;
 #include <string>
 #include <algorithm>
 
-ostream& operator<<(ostream& os, __int128 value)
+ostream& operator << (ostream& os, __int128 value)
 {
     bool isNega = value < 0;
     if (isNega)
