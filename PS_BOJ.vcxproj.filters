@@ -2242,6 +2242,9 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 12174 #include 〈Google I／O.h〉.cpp" />
     <ClCompile Include="2. Silver\Silver 2\[S2] 03947 폴하버의 삼각형.cpp" />
     <ClCompile Include="3. Gold\Gold 5\[G5] 19940 피자 오븐 [2].cpp" />
+    <ClCompile Include="2. Silver\Silver 2\[S2] 03976 역습.cpp" />
+    <ClCompile Include="2. Silver\Silver 2\[S2] 04097 수익.cpp" />
+    <ClCompile Include="2. Silver\Silver 2\[S2] 09658 돌 게임 4.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
