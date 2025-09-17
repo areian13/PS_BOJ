@@ -2245,6 +2245,7 @@
     <ClCompile Include="2. Silver\Silver 2\[S2] 03976 역습.cpp" />
     <ClCompile Include="2. Silver\Silver 2\[S2] 04097 수익.cpp" />
     <ClCompile Include="2. Silver\Silver 2\[S2] 09658 돌 게임 4.cpp" />
+    <ClCompile Include="2. Silver\Silver 2\[S2] 10164 격자상의 경로.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
