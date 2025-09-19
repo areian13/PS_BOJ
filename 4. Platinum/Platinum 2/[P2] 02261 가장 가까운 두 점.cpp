@@ -18,10 +18,7 @@ struct Point
         long long dy = a.y - b.y;
         return dx * dx + dy * dy;
     }
-    static bool compX(Point& a, Point& b)
-    {
-        return a.x < b.x;
-    }
+    friend auto operator <=> (const Point& a, const Point& b) = default;
     static bool compY(Point& a, Point& b)
     {
         return a.y < b.y;
@@ -64,7 +61,7 @@ pair<Point, Point> DC(int l, int r, vector<Point>& points)
 
 pair<Point, Point> getClosestPoint(vector<Point>& points)
 {
-    sort(points.begin(), points.end(), Point::compX);
+    sort(points.begin(), points.end());
     vector<Point> temp;
     return DC(0, points.size() - 1, points);
 }
@@ -77,8 +74,8 @@ int main()
     cin >> n;
 
     vector<Point> points(n);
-    for (int i = 0; i < n; i++)
-        cin >> points[i].x >> points[i].y;
+    for (auto& [x, y] : points)
+        cin >> x >> y;
 
     pair<Point, Point> result = getClosestPoint(points);
     cout << Point::DistSq(result.first, result.second) << '\n';

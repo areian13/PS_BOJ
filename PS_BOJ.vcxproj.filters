@@ -2246,6 +2246,14 @@
     <ClCompile Include="2. Silver\Silver 2\[S2] 04097 수익.cpp" />
     <ClCompile Include="2. Silver\Silver 2\[S2] 09658 돌 게임 4.cpp" />
     <ClCompile Include="2. Silver\Silver 2\[S2] 10164 격자상의 경로.cpp" />
+    <ClCompile Include="2. Silver\Silver 2\[S2] 11048 이동하기.cpp" />
+    <ClCompile Include="2. Silver\Silver 2\[S2] 11051 이항 계수 2.cpp" />
+    <ClCompile Include="2. Silver\Silver 2\[S2] 11568 민균이의 계략.cpp" />
+    <ClCompile Include="2. Silver\Silver 2\[S2] 11867 박스 나누기 게임.cpp" />
+    <ClCompile Include="4. Platinum\Platinum 1\[P1] 01221 가까운 점.cpp" />
+    <ClCompile Include="4. Platinum\Platinum 4\[P4] 01217 하우스 M.D..cpp" />
+    <ClCompile Include="4. Platinum\Platinum 4\[P4] 18133 가톨릭대학교에 워터 슬라이드를？？.cpp" />
+    <ClCompile Include="4. Platinum\Platinum 2\[P2] 01143 경찰.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />

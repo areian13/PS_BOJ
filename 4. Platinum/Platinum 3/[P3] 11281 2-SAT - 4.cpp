@@ -1,157 +1,113 @@
-#ifdef ONLINE_JUDGE
-#define _128d  __int128
-#else
-#define _128d long long
-#endif
-
 #include <iostream>
 #include <vector>
-#include <array>
-#include <string>
-#include <time.h>
-#include <algorithm>
-#include <stdlib.h>
-#include <math.h>
-#include <cmath>
-#include <queue>
 #include <stack>
-#include <deque>
-#include <map>
-#include <unordered_map>
-#include <set>
-#include <limits.h>
-#include <float.h>
-#include <string.h>
-#include <random>
-#include <type_traits>
+#include <algorithm>
 
-
-#define Endl << "\n"
-#define endL << "\n" <<
-#define Cout cout <<
-#define COUT cout << "OUT: " <<
-#define Cin cin >>
-#define fspc << " "
-#define spc << " " <<
-#define Enter cout << "\n"
-#define if if
-#define elif else if
-#define else else
-#define For(n) for(int i = 0; i < n; i++)
-#define Forj(n) for(int j = 0; j < n; j++)
-#define Foro(n) for(int i = 1; i <= n; i++)
-#define Forjo(n) for(int j = 1; j <= n; j++)
-#define between(small, middle, big) (small < middle && middle < big)
-#define among(small, middle, big) (small <= middle && middle <= big)
-#define stoe(container) container.begin(), container.end()
-#define lf(d) Cout fixed; cout.precision(d);
-#define ulf cout.unsetf(ios::scientific);
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
-#define PI 3.14159265359
-
-typedef long long LLONG;
-typedef unsigned long long ULLONG;
-typedef unsigned int UINT;
 
 using namespace std;
 
-template <typename T>
-class heap : public priority_queue<T, vector<T>, greater<T>>
+struct SCC
 {
+    vector<vector<int>> groups;
+    vector<int> nthGroup;
+    int g = 0;
+
+    SCC(vector<vector<int>>& graph)
+    {
+        int n = graph.size();
+        nthGroup.resize(n);
+        vector<int> depth(n, -1);
+        vector<bool> finish(n, false);
+        stack<int> stk;
+        int d = 0;
+        for (int u = 0; u < n; u++)
+        {
+            if (depth[u] == -1)
+                DFS(u, d, depth, finish, stk, graph);
+        }
+    }
+
+    int DFS(int u, int& d, vector<int>& depth, vector<bool>& finish,
+        stack<int>& stk, vector<vector<int>>& graph)
+    {
+        depth[u] = d++;
+        stk.push(u);
+
+        int p = depth[u];
+        for (int v : graph[u])
+        {
+            if (depth[v] == -1)
+                p = min(p, DFS(v, d, depth, finish, stk, graph));
+            else if (!finish[v])
+                p = min(p, depth[v]);
+        }
+
+        if (p == depth[u])
+        {
+            vector<int> group;
+            while (true)
+            {
+                int t = stk.top();
+                stk.pop();
+
+                group.push_back(t);
+                nthGroup[t] = g;
+                finish[t] = true;
+
+                if (t == u)
+                    break;
+            }
+            groups.push_back(group);
+            g++;
+        }
+        return p;
+    }
 };
-
-vector<vector<int>> edge;
-vector<int> nthDFS, nthSCC;
-vector<bool> isFinished;
-
-stack<int> S;
-
-int cntDFS = 0, cntSCC = 0;
-
-int DFS(int cur)
-{
-	nthDFS[cur] = ++cntDFS;
-	S.push(cur);
-
-	int result = nthDFS[cur];
-	for (int nxt : edge[cur])
-	{
-		if (nthDFS[nxt] == 0)
-			result = min(result, DFS(nxt));
-		elif(!isFinished[nxt])
-			result = min(result, nthDFS[nxt]);
-	}
-
-	if (result == nthDFS[cur])
-	{
-		while (true)
-		{
-			int top = S.top();
-			S.pop();
-
-			isFinished[top] = true;
-			nthSCC[top] = cntSCC;
-			if (top == cur)
-				break;
-		}
-		cntSCC++;
-	}
-	return result;
-}
 
 int main()
 {
-	FastIO;
+    FastIO;
 
-	int n, m;
-	Cin n >> m;
+    int n, m;
+    cin >> n >> m;
 
-	edge.resize(2 * n);
-	nthDFS.resize(2 * n);
-	nthSCC.resize(2 * n);
-	isFinished.resize(2 * n);
+    vector<vector<int>> graph(n * 2);
+    for (int i = 0; i < m; i++)
+    {
+        int l, r;
+        cin >> l >> r;
 
-	For(m)
-	{
-		int l, r;
-		Cin l >> r;
+        l = (l < 0 ? -(l + 1) * 2 : l * 2 - 1);
+        r = (r < 0 ? -(r + 1) * 2 : r * 2 - 1);
 
-		l = (l < 0 ? -(l + 1) * 2 : l * 2 - 1);
-		r = (r < 0 ? -(r + 1) * 2 : r * 2 - 1);
+        graph[l & 1 ? l - 1 : l + 1].push_back(r);
+        graph[r & 1 ? r - 1 : r + 1].push_back(l);
+    }
 
-		edge[l % 2 == 0 ? l + 1 : l - 1].push_back(r);
-		edge[r % 2 == 0 ? r + 1 : r - 1].push_back(l);
-	}
+    SCC scc(graph);
+    bool result = true;
+    for (int i = 0; i < n; i++)
+        result &= (scc.nthGroup[i * 2] != scc.nthGroup[i * 2 + 1]);
+    cout << result << '\n';
 
-	For(2 * n)
-	{
-		if (nthDFS[i] == 0)
-			DFS(i);
-	}
+    if (result)
+    {
+        vector<int> state(n, -1);
+        vector<pair<int, int>> p(n * 2);
+        for (int i = 0; i < n * 2; i++)
+            p[i] = { scc.nthGroup[i], i };
+        sort(p.begin(), p.end());
 
-	bool result = true;
-	For(n)
-		result &= (nthSCC[i * 2] != nthSCC[i * 2 + 1]);
-	Cout result Endl;
+        for (int i = n * 2 - 1; i >= 0; i--)
+        {
+            int idx = p[i].second;
+            if (state[idx / 2] == -1)
+                state[idx / 2] = ~idx & 1;
+        }
 
-	if (result)
-	{
-		vector<int> state(n, -1);
-
-		vector<pair<int, int>> p(2 * n);
-		For(2 * n)
-			p[i] = { nthSCC[i],i };
-		sort(stoe(p));
-
-		for (int i = 2 * n - 1; i >= 0; i--)
-		{
-			int idx = p[i].second;
-
-			if (state[idx / 2] == -1)
-				state[idx / 2] = (idx % 2 == 0);
-		}
-
-		For(n)
-			Cout state[i] fspc;
-	}
+        for (int i = 0; i < n; i++)
+            cout << state[i] << ' ';
+        cout << '\n';
+    }
 }

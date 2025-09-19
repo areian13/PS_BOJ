@@ -16,8 +16,8 @@ struct SCC
     SCC(vector<vector<int>>& graph)
     {
         int n = graph.size();
-        vector<int> nthDFS(n, -1);
         nthGroup.resize(n);
+        vector<int> nthDFS(n, -1);
         vector<bool> finish(n, false);
         stack<int> stk;
         int d = 0;
@@ -65,46 +65,33 @@ struct SCC
     }
 };
 
-int dsum(int v)
-{
-    int sum = 0;
-    while (v > 0)
-    {
-        sum += v % 10;
-        v /= 10;
-    }
-    return sum;
-}
-
-int DP(int u, SCC& scc, vector<vector<int>>& graph, vector<int>& dp)
-{
-    if (dp[u] != -1)
-        return dp[u];
-
-    dp[u] = scc.groups[scc.nthGroup[u]].size();
-    for (int v : graph[u])
-    {
-        if (scc.nthGroup[u] != scc.nthGroup[v])
-            dp[u] += DP(v, scc, graph, dp);
-    }
-    return dp[u];
-}
-
 int main()
 {
     FastIO;
 
-    int n;
-    cin >> n;
+    int n, m;
+    cin >> n >> m;
 
-    vector<vector<int>> graph(n + 1);
-    for (int i = 1; i <= n; i++)
-        graph[i].push_back((i + dsum(i) - 1) % n + 1);
+    vector<vector<int>> graph(n);
+    for (int i = 0; i < m; i++)
+    {
+        int u, v;
+        cin >> u >> v;
+        u--, v--;
+
+        graph[u].push_back(v);
+    }
 
     SCC scc(graph);
-    vector<int> dp(n + 1, -1);
+    vector<int> ind(scc.g);
+    for (int u = 0; u < n; u++)
+    {
+        for (int v : graph[u])
+            ind[scc.nthGroup[v]] += (scc.nthGroup[v] != scc.nthGroup[u]);
+    }
+
     int result = 0;
-    for (int i = 1; i <= n; i++)
-        result = max(result, DP(i, scc, graph, dp));
+    for (int i : ind)
+        result += (i == 0);
     cout << result << '\n';
 }

@@ -1,6 +1,8 @@
 #include <iostream>
+#include <cstdio>
 #include <vector>
 #include <stack>
+#include <algorithm>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
 
@@ -68,25 +70,56 @@ int main()
 {
     FastIO;
 
-    int n, m;
-    cin>> n >> m;
+    int n;
+    cin >> n;
 
-    vector<vector<int>> graph(n * 2);
-    for (int i = 0; i < m; i++)
+    vector<int> c(n);
+    for (int i = 0; i < n; i++)
+        cin >> c[i];
+
+    vector<vector<int>> graph(n);
+    for (int i = 0; i < n; i++)
     {
-        int l, r;
-        cin>>l >> r;
-
-        l = (l < 0 ? -(l + 1) * 2 : l * 2 - 1);
-        r = (r < 0 ? -(r + 1) * 2 : r * 2 - 1);
-
-        graph[l & 1 ? l - 1 : l + 1].push_back(r);
-        graph[r & 1 ? r - 1 : r + 1].push_back(l);
+        for (int j = 0; j < n; j++)
+        {
+            char v;
+            cin >> v;
+            if (v == 'Y')
+                graph[i].push_back(j);
+        }
     }
 
     SCC scc(graph);
-    bool result = true;
-    for (int i = 0; i < n; i++)
-        result &= (scc.nthGroup[i * 2] != scc.nthGroup[i * 2 + 1]);
-    cout << result << '\n';
+    vector<int> ind(scc.g, 0);
+    vector<vector<int>> c2(scc.g);
+    for (int u = 0; u < n; u++)
+    {
+        c2[scc.nthGroup[u]].push_back(c[u]);
+        for (int v : graph[u])
+            ind[scc.nthGroup[v]] += (scc.nthGroup[u] != scc.nthGroup[v]);
+    }
+
+    vector<int> unuses;
+    int sum = 0, cnt = 0;
+    for (int i = 0; i < scc.g; i++)
+    {
+        sort(c2[i].begin(), c2[i].end());
+        for (int j = 0; j < c2[i].size(); j++)
+        {
+            if (j == 0 && ind[i] == 0)
+                sum += c2[i][j], cnt++;
+            else
+                unuses.push_back(c2[i][j]);
+        }
+    }
+
+    sort(unuses.begin(), unuses.end());
+    for (int unuse : unuses)
+    {
+        if (sum <= unuse * cnt)
+            break;
+        sum += unuse, cnt++;
+    }
+
+    printf("%.9llf\n", 1.l * sum / cnt);
 }
