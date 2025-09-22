@@ -19,15 +19,11 @@ int main()
             cin >> map[i][j];
     }
 
-    vector<vector<int>> dp(n, vector<int>(m));
-    for (int i = 0; i < n; i++)
+    vector<vector<int>> dp(n + 1, vector<int>(m + 1, 0));
+    for (int i = 1; i <= n; i++)
     {
-        for (int j = 0; j < m; j++)
-        {
-            int u = i == 0 ? 0 : dp[i - 1][j];
-            int l = j == 0 ? 0 : dp[i][j - 1];
-            dp[i][j] = max(u, l) + map[i][j];
-        }
+        for (int j = 1; j <= m; j++)
+            dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]) + map[i - 1][j - 1];
     }
-    cout << dp[n - 1][m - 1] << '\n';
+    cout << dp[n][m] << '\n';
 }

@@ -1996,7 +1996,7 @@
     <ClCompile Include="4. Platinum\Platinum 5\[P5] 32034 동전 쌍 뒤집기.cpp" />
     <ClCompile Include="4. Platinum\Platinum 5\[P5] 32830 Cards Flipping.cpp" />
     <ClCompile Include="4. Platinum\Platinum 5\[P5] 33616 판드랄추.cpp" />
-    <ClCompile Include="5. Diamond\Diamond 3\![D3] 27425 Traveling Salesperson in an Island.cpp" />
+    <ClCompile Include="5. Diamond\Diamond 3\[D3] 27425 Traveling Salesperson in an Island.cpp" />
     <ClCompile Include="5. Diamond\Diamond 4\![D4] 13569 Rounding.cpp" />
     <ClCompile Include="5. Diamond\Diamond 4\![D4] 07057 A highway and the seven dwarfs.cpp" />
     <ClCompile Include="5. Diamond\Diamond 4\[D4] 10466 Mailing Origami.cpp" />
@@ -2254,6 +2254,15 @@
     <ClCompile Include="4. Platinum\Platinum 4\[P4] 01217 하우스 M.D..cpp" />
     <ClCompile Include="4. Platinum\Platinum 4\[P4] 18133 가톨릭대학교에 워터 슬라이드를？？.cpp" />
     <ClCompile Include="4. Platinum\Platinum 2\[P2] 01143 경찰.cpp" />
+    <ClCompile Include="3. Gold\Gold 3\[G3] 34330 금오리 🦆.cpp" />
+    <ClCompile Include="2. Silver\Silver 2\[S2] 14231 박스 포장.cpp" />
+    <ClCompile Include="2. Silver\Silver 2\[S2] 14430 자원 캐기.cpp" />
+    <ClCompile Include="2. Silver\Silver 2\[S2] 15988 1, 2, 3 더하기 3.cpp" />
+    <ClCompile Include="2. Silver\Silver 2\[S2] 16493 최대 페이지 수.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 05239 Chess Puzzle.cpp" />
+    <ClCompile Include="2. Silver\Silver 2\[S2] 17213 과일 서리.cpp" />
+    <ClCompile Include="3. Gold\Gold 4\[G4] 12875 칙령.cpp" />
+    <ClCompile Include="2. Silver\Silver 2\[S2] 17216 가장 큰 감소 부분 수열.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
