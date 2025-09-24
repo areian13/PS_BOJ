@@ -2263,6 +2263,9 @@
     <ClCompile Include="2. Silver\Silver 2\[S2] 17213 과일 서리.cpp" />
     <ClCompile Include="3. Gold\Gold 4\[G4] 12875 칙령.cpp" />
     <ClCompile Include="2. Silver\Silver 2\[S2] 17216 가장 큰 감소 부분 수열.cpp" />
+    <ClCompile Include="2. Silver\Silver 2\[S2] 17271 리그 오브 레전설 %28Small%29.cpp" />
+    <ClCompile Include="2. Silver\Silver 2\[S2] 17291 새끼치기.cpp" />
+    <ClCompile Include="2. Silver\Silver 2\[S2] 18249 욱제가 풀어야 하는 문제.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
