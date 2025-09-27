@@ -2268,6 +2268,7 @@
     <ClCompile Include="2. Silver\Silver 2\[S2] 18249 욱제가 풀어야 하는 문제.cpp" />
     <ClCompile Include="2. Silver\Silver 2\[S2] 18353 병사 배치하기.cpp" />
     <ClCompile Include="2. Silver\Silver 2\[S2] 19621 회의실 배정 2.cpp" />
+    <ClCompile Include="2. Silver\Silver 2\[S2] 19622 회의실 배정 3.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
