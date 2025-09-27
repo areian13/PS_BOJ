@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include <cmath>
+#include <bit>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
 
@@ -72,7 +72,7 @@ int main()
         graph[v].push_back({ u,w });
     }
 
-    int k = log2(n) + 1;
+    int k = bit_width((unsigned)n);
     vector<vector<int>> parent(n, vector<int>(k, -1));
     vector<int> depth(n, -1), dist(n, -1);
     depth[0] = dist[0] = 0;
