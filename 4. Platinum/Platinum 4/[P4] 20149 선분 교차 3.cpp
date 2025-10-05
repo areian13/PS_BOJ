@@ -20,12 +20,12 @@ struct Point
     friend Point operator - (const Point& a, const Point& b) { return { a.x - b.x,a.y - b.y }; }
     friend Point operator * (const Point& a, double d) { return { a.x * d,a.y * d }; }
 
-    static double dot(const Point& a, const Point& b) { return a.x * b.x + a.y * b.y; }
-    static double cross(const Point& a, const Point& b) { return a.x * b.y - a.y * b.x; }
+    friend double operator * (const Point& a, const Point& b) { return a.x * b.x + a.y * b.y; }
+    friend double operator / (const Point& a, const Point& b) { return a.x * b.y - a.y * b.x; }
 
     static int CCW(const Point& a, const Point& b, const Point& c)
     {
-        double ccw = cross(b - a, c - b);
+        double ccw = (b - a) / (c - a);
         return (IsZero(ccw) ? 0 : (ccw > 0 ? +1 : -1));
     }
 
@@ -56,7 +56,7 @@ struct Line
         int cd_ab = Point::CCW(c, d, a) * Point::CCW(c, d, b);
 
         if (ab_cd < 0 && cd_ab < 0)
-            return { a + (b - a) * (Point::cross(c - a, d - c) / Point::cross(b - a, d - c)) };
+            return { a + (b - a) * (((c - a) / (d - c)) / ((b - a) / (d - c))) };
 
         set<Point> inters;
         if (OnSegment(l0, c)) inters.insert(c);

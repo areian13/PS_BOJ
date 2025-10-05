@@ -10,6 +10,8 @@ using namespace std;
 struct Point
 {
     double x, y;
+
+    friend double operator / (const Point& a, const Point& b) { return a.x * b.y - a.y * b.x; }
 };
 
 double GetArea(vector<Point>& points)
@@ -18,10 +20,7 @@ double GetArea(vector<Point>& points)
 
     double result = 0;
     for (int i = 0; i < n; i++)
-    {
-        result += points[i].x * points[(i + 1) % n].y;
-        result -= points[i].y * points[(i + 1) % n].x;
-    }
+        result += points[i] / points[(i + 1) % n];
     return abs(result) / 2;
 }
 

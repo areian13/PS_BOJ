@@ -2269,6 +2269,15 @@
     <ClCompile Include="2. Silver\Silver 2\[S2] 18353 병사 배치하기.cpp" />
     <ClCompile Include="2. Silver\Silver 2\[S2] 19621 회의실 배정 2.cpp" />
     <ClCompile Include="2. Silver\Silver 2\[S2] 19622 회의실 배정 3.cpp" />
+    <ClCompile Include="2. Silver\Silver 2\[S2] 20162 간식 파티.cpp" />
+    <ClCompile Include="2. Silver\Silver 2\[S2] 21555 빛의 돌 옮기기.cpp" />
+    <ClCompile Include="2. Silver\Silver 2\[S2] 22114 창영이와 점프.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 33179 Hezardastan’s Annual Report.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 5\[B5] 34217 찾아오시는 길.cpp" />
+    <ClCompile Include="2. Silver\Silver 2\[S2] 22857 가장 긴 짝수 연속한 부분 수열 %28small%29.cpp" />
+    <ClCompile Include="2. Silver\Silver 2\[S2] 22971 증가하는 부분 수열의 개수.cpp" />
+    <ClCompile Include="2. Silver\Silver 2\[S2] 23560 약.cpp" />
+    <ClCompile Include="2. Silver\Silver 2\[S2] 24419 알고리즘 수업 - 행렬 경로 문제 2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />

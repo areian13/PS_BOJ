@@ -11,39 +11,40 @@ struct SCC
 {
     vector<vector<int>> groups;
     vector<int> nthGroup;
-    int g = 0;
+    int g;
 
     SCC(vector<vector<int>>& graph)
     {
         int n = graph.size();
         nthGroup.resize(n);
-        vector<int> depth(n, -1);
+        vector<int> dfsn(n, -1);
         vector<bool> finish(n, false);
         stack<int> stk;
         int d = 0;
         for (int u = 0; u < n; u++)
         {
-            if (depth[u] == -1)
-                DFS(u, d, depth, finish, stk, graph);
+            if (dfsn[u] == -1)
+                DFS(u, d, dfsn, finish, stk, graph);
         }
+        g = groups.size();
     }
 
-    int DFS(int u, int& d, vector<int>& depth, vector<bool>& finish,
+    int DFS(int u, int& d, vector<int>& dfsn, vector<bool>& finish,
         stack<int>& stk, vector<vector<int>>& graph)
     {
-        depth[u] = d++;
+        dfsn[u] = d++;
         stk.push(u);
 
-        int p = depth[u];
+        int p = dfsn[u];
         for (int v : graph[u])
         {
-            if (depth[v] == -1)
-                p = min(p, DFS(v, d, depth, finish, stk, graph));
+            if (dfsn[v] == -1)
+                p = min(p, DFS(v, d, dfsn, finish, stk, graph));
             else if (!finish[v])
-                p = min(p, depth[v]);
+                p = min(p, dfsn[v]);
         }
 
-        if (p == depth[u])
+        if (p == dfsn[u])
         {
             vector<int> group;
             while (true)
@@ -59,7 +60,6 @@ struct SCC
                     break;
             }
             groups.push_back(group);
-            g++;
         }
         return p;
     }
