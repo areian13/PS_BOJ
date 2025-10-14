@@ -2278,6 +2278,20 @@
     <ClCompile Include="2. Silver\Silver 2\[S2] 22971 증가하는 부분 수열의 개수.cpp" />
     <ClCompile Include="2. Silver\Silver 2\[S2] 23560 약.cpp" />
     <ClCompile Include="2. Silver\Silver 2\[S2] 24419 알고리즘 수업 - 행렬 경로 문제 2.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 5\[B5] 327750 가희와 4시간의 벽 1.cpp" />
+    <ClCompile Include="Contest\2025\10\2025-10-11 14%2700 ICPC Korea 예선\A.cpp" />
+    <ClCompile Include="Contest\2025\10\2025-10-11 14%2700 ICPC Korea 예선\B.cpp" />
+    <ClCompile Include="Contest\2025\10\2025-10-11 14%2700 ICPC Korea 예선\C.cpp" />
+    <ClCompile Include="Contest\2025\10\2025-10-11 14%2700 ICPC Korea 예선\D.cpp" />
+    <ClCompile Include="Contest\2025\10\2025-10-11 14%2700 ICPC Korea 예선\E.cpp" />
+    <ClCompile Include="Contest\2025\10\2025-10-11 14%2700 ICPC Korea 예선\F.cpp" />
+    <ClCompile Include="Contest\2025\10\2025-10-11 14%2700 ICPC Korea 예선\G.cpp" />
+    <ClCompile Include="Contest\2025\10\2025-10-11 14%2700 ICPC Korea 예선\H.cpp" />
+    <ClCompile Include="Contest\2025\10\2025-10-11 14%2700 ICPC Korea 예선\I.cpp" />
+    <ClCompile Include="Contest\2025\10\2025-10-11 14%2700 ICPC Korea 예선\A1.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 33571 구멍.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 19813 Dates.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 24795 Saving Princess Peach.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
