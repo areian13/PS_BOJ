@@ -263,7 +263,7 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 11094 꿍 가라사대.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 11098 첼시를 도와줘!.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 11104 Fridge of Your Dreams.cpp" />
-    <ClCompile Include="1. Bronze\Bronze 2\[B2] 12603 Store Credit Small.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 12603 Store Credit %28Small%29.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 13458 시험 감독.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 14963 Cezar.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 16172 나는 친구가 적다 %28Large%29.cpp" />
@@ -2292,6 +2292,11 @@
     <ClCompile Include="1. Bronze\Bronze 4\[B4] 33571 구멍.cpp" />
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 19813 Dates.cpp" />
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 24795 Saving Princess Peach.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 12184 GBus count %28Small%29.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 05990 Barn Echoes.cpp" />
+    <ClCompile Include="2. Silver\Silver 1\[S1] 02688 줄어들지 않아.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 12185 GBus count %28Large%29.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 12353 Dr. Spaceman의 특별한 알고리즘.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
