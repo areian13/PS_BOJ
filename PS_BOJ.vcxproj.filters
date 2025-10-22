@@ -2297,6 +2297,9 @@
     <ClCompile Include="2. Silver\Silver 1\[S1] 02688 줄어들지 않아.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 12185 GBus count %28Large%29.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 12353 Dr. Spaceman의 특별한 알고리즘.cpp" />
+    <ClCompile Include="2. Silver\Silver 1\[S1] 03372 보드 점프.cpp" />
+    <ClCompile Include="2. Silver\Silver 1\[S1] 03359 사각 사각.cpp" />
+    <ClCompile Include="2. Silver\Silver 1\[S1] 02780 비밀번호.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
