@@ -2300,6 +2300,12 @@
     <ClCompile Include="2. Silver\Silver 1\[S1] 03372 보드 점프.cpp" />
     <ClCompile Include="2. Silver\Silver 1\[S1] 03359 사각 사각.cpp" />
     <ClCompile Include="2. Silver\Silver 1\[S1] 02780 비밀번호.cpp" />
+    <ClCompile Include="2. Silver\Silver 1\[S1] 03407 맹세.cpp" />
+    <ClCompile Include="2. Silver\Silver 1\[S1] 10571 다이아몬드.cpp" />
+    <ClCompile Include="2. Silver\Silver 1\[S1] 04883 삼각 그래프.cpp" />
+    <ClCompile Include="3. Gold\Gold 3\[G3] 25342 최대 최소공배수.cpp" />
+    <ClCompile Include="2. Silver\Silver 1\[S1] 11052 카드 구매하기.cpp" />
+    <ClCompile Include="2. Silver\Silver 1\[S1] 11057 오르막 수.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
