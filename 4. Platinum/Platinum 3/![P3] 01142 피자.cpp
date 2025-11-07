@@ -9,19 +9,19 @@
 using namespace std;
 
 const int INF = INT_MAX;
-const double EPS = 1e-5;
-bool IsZero(double d) { return abs(d) < EPS; }
-const double PI = acos(-1);
+const long double EPS = 1e-10;
+bool IsZero(long double d) { return abs(d) < EPS; }
+const long double PI = acos(-1.L);
 
 struct Point
 {
-    double x, y;
+    long double x, y;
 
     friend Point operator + (const Point& a, const Point& b) { return { a.x + b.x,a.y + b.y }; }
     friend Point operator - (const Point& a, const Point& b) { return { a.x - b.x,a.y - b.y }; }
-    friend Point operator * (const Point& p, double d) { return { p.x * d,p.y * d }; }
+    friend Point operator * (const Point& p, long double d) { return { p.x * d,p.y * d }; }
 
-    static double dot(const Point& a, const Point& b) { return a.x * b.x + a.y * b.y; }
+    static long double dot(const Point& a, const Point& b) { return a.x * b.x + a.y * b.y; }
 
     friend bool operator == (const Point& a, const Point& b) { return IsZero(a.x - b.x) && IsZero(a.y - b.y); }
 };
@@ -32,7 +32,7 @@ struct Line
     Point getSymPoint(const Point& p)
     {
         Point v = b - a;
-        double t = Point::dot(p - a, v) / Point::dot(v, v);
+        long double t = Point::dot(p - a, v) / Point::dot(v, v);
         Point h = a + v * t;
         return h * 2 - p;
     }
@@ -65,7 +65,7 @@ int CountCut(vector<Point>& points)
     if (n == 0 || n == 1 && points[0] == Point{ 0,0 })
         return INF;
 
-    set<double> result;
+    set<long double> result;
     for (int i = 0; i < n; i++)
     {
         if (points[i] == Point{ 0,0 })
@@ -77,7 +77,7 @@ int CountCut(vector<Point>& points)
                 p = { -points[i].y,points[i].x };
             if (CanCut(p, points))
             {
-                double t = atan2(p.y, p.x);
+                long double t = atan2(p.y, p.x);
                 if (t < 0) t += PI;
                 if (t >= PI) t -= PI;
                 result.insert(t);

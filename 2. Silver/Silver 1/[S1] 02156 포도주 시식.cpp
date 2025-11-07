@@ -1,25 +1,20 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
 
 using namespace std;
 
-int MaxWine(int d, int k, vector<int>& wine, vector<vector<int>>& dp)
+int MaxWine(int d, vector<int>& wine, vector<int>& dp)
 {
-    int n = wine.size();
+    if (d < 0) return 0;
+    if (dp[d] != -1) return dp[d];
 
-    if (d >= n)
-        return 0;
-    if (dp[d][k] != -1)
-        return dp[d][k];
-
-    static vector<vector<int>> graph = { {0,1},{2,3},{0,1},{2} };
-
-    int result = 0;
-    for (int nk : graph[k])
-        result = max(result, wine[d] * (nk & 1) + MaxWine(d + 1, nk, wine, dp));
-    return dp[d][k] = result;
+    int a = wine[d] + (d == 0 ? 0 : wine[d - 1]) + MaxWine(d - 3, wine, dp);
+    int b = wine[d] + MaxWine(d - 2, wine, dp);
+    int c = MaxWine(d - 1, wine, dp);
+    return dp[d] = max({ a,b,c });
 }
 
 int main()
@@ -33,7 +28,7 @@ int main()
     for (int i = 0; i < n; i++)
         cin >> wine[i];
 
-    vector<vector<int>> dp(n, vector<int>(4, -1));
-    int result = MaxWine(0, 0, wine, dp);
+    vector<int> dp(n, -1);
+    int result = MaxWine(n - 1, wine, dp);
     cout << result << '\n';
 }
