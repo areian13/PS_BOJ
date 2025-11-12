@@ -1614,7 +1614,7 @@
     <ClCompile Include="4. Platinum\Platinum 3\[P3] 01151 그림자.cpp" />
     <ClCompile Include="4. Platinum\Platinum 4\[P4] 01280 나무 심기.cpp" />
     <ClCompile Include="4. Platinum\Platinum 4\[P4] 01298 노트북의 주인을 찾아서.cpp" />
-    <ClCompile Include="4. Platinum\Platinum 4\![P4] 01854 K번째 최단경로 찾기.cpp" />
+    <ClCompile Include="4. Platinum\Platinum 4\[P4] 01854 K번째 최단경로 찾기.cpp" />
     <ClCompile Include="4. Platinum\Platinum 4\[P4] 01688 지민이의 테러 [1].cpp" />
     <ClCompile Include="4. Platinum\Platinum 4\[P4] 01688 지민이의 테러 [2].cpp" />
     <ClCompile Include="4. Platinum\Platinum 4\[P4] 02188 축사 배정 [2].cpp" />
@@ -2318,13 +2318,22 @@
     <ClCompile Include="2. Silver\Silver 1\[S1] 15724 주지수.cpp" />
     <ClCompile Include="2. Silver\Silver 1\[S1] 15966 군계일학 [1].cpp" />
     <ClCompile Include="2. Silver\Silver 1\[S1] 15966 군계일학 [2].cpp" />
-    <ClCompile Include="5. Diamond\Diamond 5\![D5] 01130 종이 레이싱.cpp" />
+    <ClCompile Include="5. Diamond\Diamond 5\[D5] 01130 종이 레이싱.cpp" />
     <ClCompile Include="4. Platinum\Platinum 5\[P5] 02243 사탕상자.cpp" />
     <ClCompile Include="2. Silver\Silver 1\[S1] 10844 쉬운 계단 수.cpp" />
     <ClCompile Include="4. Platinum\Platinum 4\[P4] 14245 XOR.cpp" />
     <ClCompile Include="3. Gold\Gold 1\[G1] 11505 구간 곱 구하기.cpp" />
     <ClCompile Include="2. Silver\Silver 1\[S1] 15990 1, 2, 3 더하기 5.cpp" />
     <ClCompile Include="2. Silver\Silver 1\[S1] 15991 1, 2, 3 더하기 6.cpp" />
+    <ClCompile Include="2. Silver\Silver 1\[S1] 15992 1, 2, 3 더하기 7.cpp" />
+    <ClCompile Include="3. Gold\Gold 5\[G5] 16400 소수 화폐.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 5\[B5] 33161 鉛筆 2 %28Pencils 2%29.cpp" />
+    <ClCompile Include="5. Diamond\Diamond 4\![D4] 04001 미노타우르스 미궁.cpp" />
+    <ClCompile Include="4. Platinum\Platinum 4\[P4] 02517 달리기.cpp" />
+    <ClCompile Include="2. Silver\Silver 1\[S1] 16194 카드 구매하기 2.cpp" />
+    <ClCompile Include="2. Silver\Silver 1\[S1] 16195 1, 2, 3 더하기 9.cpp" />
+    <ClCompile Include="3. Gold\Gold 2\[G2] 27519 소수의 합.cpp" />
+    <ClCompile Include="4. Platinum\Platinum 5\[P5] 03770 대한민국.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />

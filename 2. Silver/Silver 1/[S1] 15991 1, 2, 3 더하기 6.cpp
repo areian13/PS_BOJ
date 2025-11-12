@@ -18,9 +18,7 @@ int Sum123(int n)
     dp[n] = 0;
     for (int k : {3, 2, 1})
     {
-        if (k * 2 > n)
-            continue;
-
+        if (k * 2 > n) continue;
         dp[n] += Sum123(n - k * 2);
         dp[n] %= MOD;
     }
