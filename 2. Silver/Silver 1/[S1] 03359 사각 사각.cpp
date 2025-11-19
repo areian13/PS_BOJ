@@ -12,19 +12,21 @@ int main()
     int n;
     cin >> n;
 
-    vector<vector<int>> rs(n, vector<int>(2)), dp(n, vector<int>(2, 0));
-    for (auto& r : rs)
-        cin >> r[0] >> r[1];
+    vector<vector<int>> r(n, vector<int>(2));
+    for (int i = 0; i < n; i++)
+        cin >> r[i][0] >> r[i][1];
 
-    dp[0] = rs[0];
+    vector<vector<int>> dp(n, vector<int>(2, 0));
+    dp[0] = r[0];
     for (int i = 1; i < n; i++)
     {
         for (int j = 0; j < 2; j++)
         {
             for (int k = 0; k < 2; k++)
-                dp[i][j] = max(dp[i][j], dp[i - 1][k] + abs(rs[i - 1][!k] - rs[i][!j]) + rs[i][j]);
+                dp[i][j] = max(dp[i][j], dp[i - 1][k] + abs(r[i - 1][!k] - r[i][!j]) + r[i][j]);
         }
     }
 
-    cout << max(dp[n - 1][0], dp[n - 1][1]) << '\n';
+    int result = max(dp[n - 1][0], dp[n - 1][1]);
+    cout << result << '\n';
 }

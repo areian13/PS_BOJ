@@ -6,7 +6,8 @@
 
 using namespace std;
 
-#define MAX 10'000
+const int MAX = 10'000;
+const int INF = INT_MAX;
 
 struct Edge
 {
@@ -26,18 +27,16 @@ int main()
         int s, e, w;
         cin >> s >> e >> w;
 
-        graph[s].push_back({ e,w });
+        graph[e].push_back({ s,w });
     }
 
-    vector<int> dist(MAX + 1, INT_MAX);
-    for (int i = 0; i <= MAX; i++)
+    vector<int> dp(MAX + 1, INF);
+    dp[0] = 0;
+    for (int i = 1; i <= d; i++)
     {
-        dist[i] = min(dist[i], (i == 0 ? 0 : dist[i - 1] + 1));
-
-        for (Edge& edge : graph[i])
-            dist[edge.v] = min(dist[edge.v], dist[i] + edge.d);
+        dp[i] = min(dp[i], dp[i - 1] + 1);
+        for (auto& [v, d] : graph[i])
+            dp[i] = min(dp[i], dp[v] + d);
     }
-
-    int result = dist[d];
-    cout << result << '\n';
+    cout << dp[d] << '\n';
 }

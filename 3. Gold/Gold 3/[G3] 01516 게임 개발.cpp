@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <queue>
+#include <algorithm>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
 
@@ -13,42 +14,49 @@ int main()
     int n;
     cin >> n;
 
-    vector<int> time(n + 1), indegree(n + 1, 0), result(n + 1);
-    vector<vector<int>> edge(n + 1);
-    queue<int> Q;
-    for (int i = 1; i <= n; i++)
+    vector<vector<int>> graph(n);
+    vector<int> t(n), ind(n, 0);
+    for (int i = 0; i < n; i++)
     {
-        cin >> time[i];
+        cin >> t[i];
+
         while (true)
         {
-            int pre;
-            cin >> pre;
-
-            if (pre == -1)
+            int u;
+            cin >> u;
+            if (u == -1)
                 break;
-
-            indegree[i]++;
-            edge[pre].push_back(i);
-        }
-        if (indegree[i] == 0)
-        {
-            result[i] = time[i];
-            Q.push(i);
+            ind[i]++;
+            graph[u - 1].push_back(i);
         }
     }
-    for (int i = 1; i <= n; i++)
+
+    vector<int> dist(n, 0);
+    queue<int> Q;
+    for (int i = 0; i < n; i++)
     {
-        int cur = Q.front();
+        if (ind[i] != 0)
+            continue;
+        dist[i] = t[i];
+        Q.push(i);
+    }
+
+    while (!Q.empty())
+    {
+        int u = Q.front();
         Q.pop();
 
-        for (int nxt : edge[cur])
+        for (int v : graph[u])
         {
-            result[nxt] = max(result[nxt], result[cur] + time[nxt]);
-            if (--indegree[nxt] == 0)
-                Q.push(nxt);
+            dist[v] = max(dist[v], dist[u]);
+            if (--ind[v] == 0)
+            {
+                dist[v] += t[v];
+                Q.push(v);
+            }
         }
     }
 
-    for (int i = 1; i <= n; i++)
-        cout << result[i] << '\n';
+    for (int i = 0; i < n; i++)
+        cout << dist[i] << '\n';
 }

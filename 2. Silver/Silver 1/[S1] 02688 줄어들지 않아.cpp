@@ -6,10 +6,10 @@
 using namespace std;
 
 #define MAX 64
-vector<vector<long long>> dp(MAX + 1, vector<long long>(10, -1));
 
 long long DP(int n, int d)
 {
+    static vector<vector<long long>> dp(MAX + 1, vector<long long>(10, -1));
     if (n == 0) return 1;
     if (dp[n][d] != -1) return dp[n][d];
 

@@ -7,16 +7,19 @@
 
 using namespace std;
 
-int SegTree(int start, int end, int idx, int l, int r, vector<int>& arr)
-{
-    if (end < l || r < start)
-        return INT_MAX;
-    if (start <= l && r <= end)
-        return arr[idx];
+const int INF = INT_MAX;
 
-    int mid = (l + r) / 2;
-    return min(SegTree(start, end, idx * 2, l, mid, arr),
-        SegTree(start, end, idx * 2 + 1, mid + 1, r, arr));
+int Query(int s, int e, int l, int r, int i, vector<int>& seg)
+{
+    if (r < s || e < l)
+        return INF;
+    if (s <= l && r <= e)
+        return seg[i];
+
+    int m = (l + r) / 2;
+    int lq = Query(s, e, l, m, i * 2, seg);
+    int rq = Query(s, e, m + 1, r, i * 2 + 1, seg);
+    return min(lq, rq);
 }
 
 int main()
@@ -26,21 +29,20 @@ int main()
     int n, m;
     cin >> n >> m;
 
-    int t = bit_ceil((unsigned int)n);
-
-    vector<int> arr(t * 2, INT_MAX);
+    int t = bit_ceil(1u * n);
+    vector<int> seg(t * 2, INF);
     for (int i = 0; i < n; i++)
-        cin >> arr[t + i];
+        cin >> seg[t + i];
     for (int i = t - 1; i > 0; i--)
-        arr[i] = min(arr[i * 2], arr[i * 2 + 1]);
+        seg[i] = min(seg[i * 2], seg[i * 2 + 1]);
 
-    while (m--)
+    for (int qc = 1; qc <= m; qc++)
     {
         int a, b;
         cin >> a >> b;
         a--, b--;
 
-        int result = SegTree(a, b, 1, 0, t - 1, arr);
+        int result = Query(a, b, 0, t - 1, 1, seg);
         cout << result << '\n';
     }
 }

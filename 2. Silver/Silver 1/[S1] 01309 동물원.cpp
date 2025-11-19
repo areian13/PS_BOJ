@@ -11,14 +11,11 @@ using namespace std;
 int Lion(int d, vector<int>& dp)
 {
     int n = dp.size();
+    if (d >= n) return 1;
+    if (dp[d] != -1) return dp[d];
 
-    if (d >= n)
-        return 1;
-    if (dp[d] != -1)
-        return dp[d];
-
-    int a = Lion(d + 1, dp) * 2 % MOD;
-    int b = Lion(d + 2, dp) % MOD;
+    int a = Lion(d + 1, dp) * 2;
+    int b = Lion(d + 2, dp);
     return dp[d] = (a + b) % MOD;
 }
 

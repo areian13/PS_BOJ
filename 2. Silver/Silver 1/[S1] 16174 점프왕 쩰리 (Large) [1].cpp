@@ -2,7 +2,6 @@
 #include <vector>
 #include <queue>
 #include <array>
-#include <string>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
 
@@ -23,11 +22,11 @@ int main()
     int n;
     cin >> n;
 
-    vector<vector<int>> map(n, vector<int>(n));
+    vector<vector<int>> grid(n, vector<int>(n));
     for (int i = 0; i < n; i++)
     {
         for (int j = 0; j < n; j++)
-            cin >> map[i][j];
+            cin >> grid[i][j];
     }
 
     vector<vector<bool>> isVisited(n, vector<bool>(n, false));
@@ -42,13 +41,13 @@ int main()
         int x = Q.front().x;
         Q.pop();
 
-        if (map[y][x] == -1)
+        if (grid[y][x] == -1)
             break;
 
         for (int i = 0; i < 2; i++)
         {
-            int ny = y + dy[i] * map[y][x];
-            int nx = x + dx[i] * map[y][x];
+            int ny = y + dy[i] * grid[y][x];
+            int nx = x + dx[i] * grid[y][x];
 
             if (ny < 0 || ny >= n || nx < 0 || nx >= n)
                 continue;
@@ -60,6 +59,5 @@ int main()
         }
     }
 
-    string result = (isVisited[n - 1][n - 1] ? "HaruHaru" : "Hing");
-    cout << result << '\n';
+    cout << (isVisited[n - 1][n - 1] ? "HaruHaru" : "Hing") << '\n';
 }

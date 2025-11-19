@@ -1,12 +1,14 @@
 #include <iostream>
 #include <cstdio>
 #include <vector>
-#include <array>
-#include <queue>
+#include <climits>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
 
 using namespace std;
+
+const int MAX = 1'000;
+const int INF = INT_MAX;
 
 int main()
 {
@@ -15,40 +17,28 @@ int main()
     int n;
     cin >> n;
 
-    vector<int> num(n);
+    vector<int> a(n);
     for (int i = 0; i < n; i++)
-        cin >> num[i];
+        cin >> a[i];
 
     int k;
     cin >> k;
 
-    array<int, 1'001> dist = { 0, };
-
-    queue<int> Q;
-    Q.push(0);
-
-    while (!Q.empty())
+    vector<int> dist(MAX + 1, INF);
+    dist[0] = 0;
+    for (int i = 1; i <= MAX; i++)
     {
-        int u = Q.front();
-        Q.pop();
-
-        if (dist[u] == k)
-            continue;
-
-        for (int i = 0; i < n; i++)
+        for (int j : a)
         {
-            int v = u + num[i];
-
-            if (dist[v] != 0 && dist[v] <= dist[u] + 1)
-                continue;
-
-            dist[v] = dist[u] + 1;
-            Q.push(v);
+            if (i < j) continue;
+            if (dist[i - j] == k) continue;
+            dist[i] = min(dist[i], dist[i - j] + 1);
         }
     }
 
-    int idx = 1;
-    while (dist[idx] != 0)
-        idx++;
-    printf("%s win at %d\n", (idx % 2 == 0 ? "holsoon" : "jjaksoon"), idx);
+    int result = 0;
+    while (result < MAX && dist[result] != INF)
+        result++;
+
+    printf("%s win at %d\n", (result & 1 ? "jjaksoon" : "holsoon"), result);
 }
