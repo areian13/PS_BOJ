@@ -11,13 +11,6 @@ int main()
     int n;
     cin >> n;
 
-    int result = 1, pre = 0;
     for (int i = 0; i < n; i++)
-    {
-        int a;
-        cin >> a;
-        pre = min(pre + 1, a);
-        result = max(result, pre);
-    }
-    cout << result << '\n';
+        cout << "I love DGU" << '\n';
 }

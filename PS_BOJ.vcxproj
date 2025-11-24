@@ -753,7 +753,7 @@
     <ClCompile Include="1. Bronze\Bronze 4\[B4] 33701 새천년관.txt">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 5\[B5] 327750 가희와 4시간의 벽 1.cpp">
+    <ClCompile Include="1. Bronze\Bronze 5\[B5] 32775 가희와 4시간의 벽 1.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 5\[B5] 33161 鉛筆 2 %28Pencils 2%29.cpp">
@@ -763,6 +763,15 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 5\[B5] 34281 Class Photo.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 5\[B5] 34665 가희와 교통 요금.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 5\[B5] 34691 대전과학고등학교를 사랑하십니까？.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="1. Bronze\Bronze 5\[B5] 34721 역사를 걸으면 동국이 보이고.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="2. Silver\Silver 1\[S1] 02502 떡 먹는 호랑이.cpp">
@@ -1011,7 +1020,7 @@
     <ClCompile Include="4. Platinum\Platinum 3\![P3] 01273 샷.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="4. Platinum\Platinum 4\![P4] 01161 버스.cpp">
+    <ClCompile Include="4. Platinum\Platinum 4\[P4] 01161 버스.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="4. Platinum\Platinum 4\[P4] 01217 하우스 M.D..cpp">
@@ -1042,6 +1051,12 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="5. Diamond\Diamond 5\[D5] 01130 종이 레이싱.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="5. Diamond\Diamond 5\[D5] 05051 피타고라스의 정리.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="5. Diamond\Diamond 5\[D5] 13575 보석 가게.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="5. Diamond\Diamond 5\[D5] 17104 골드바흐 파티션 2.cpp">

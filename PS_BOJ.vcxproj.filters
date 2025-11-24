@@ -2278,7 +2278,7 @@
     <ClCompile Include="2. Silver\Silver 2\[S2] 22971 증가하는 부분 수열의 개수.cpp" />
     <ClCompile Include="2. Silver\Silver 2\[S2] 23560 약.cpp" />
     <ClCompile Include="2. Silver\Silver 2\[S2] 24419 알고리즘 수업 - 행렬 경로 문제 2.cpp" />
-    <ClCompile Include="1. Bronze\Bronze 5\[B5] 327750 가희와 4시간의 벽 1.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 5\[B5] 32775 가희와 4시간의 벽 1.cpp" />
     <ClCompile Include="Contest\2025\10\2025-10-11 14%2700 ICPC Korea 예선\A.cpp" />
     <ClCompile Include="Contest\2025\10\2025-10-11 14%2700 ICPC Korea 예선\B.cpp" />
     <ClCompile Include="Contest\2025\10\2025-10-11 14%2700 ICPC Korea 예선\C.cpp" />
@@ -2335,7 +2335,7 @@
     <ClCompile Include="3. Gold\Gold 2\[G2] 27519 소수의 합.cpp" />
     <ClCompile Include="4. Platinum\Platinum 5\[P5] 03770 대한민국.cpp" />
     <ClCompile Include="2. Silver\Silver 4\[S4] 11656 접미사 배열.cpp" />
-    <ClCompile Include="4. Platinum\Platinum 4\![P4] 01161 버스.cpp" />
+    <ClCompile Include="4. Platinum\Platinum 4\[P4] 01161 버스.cpp" />
     <ClCompile Include="1. Bronze\Bronze 5\[B5] 34281 Class Photo.cpp" />
     <ClCompile Include="1. Bronze\Bronze 1\[B1] 27865 랜덤 게임？.cpp" />
     <ClCompile Include="2. Silver\Silver 1\[S1] 16456 하와와 대학생쨩 하와이로 가는 거시와요~.cpp" />
@@ -2355,6 +2355,11 @@
     <ClCompile Include="5. Diamond\Diamond 4\[D4] 11385 씽크스몰.cpp" />
     <ClCompile Include="2. Silver\Silver 1\[S1] 20312 CPU 벤치마킹.cpp" />
     <ClCompile Include="2. Silver\Silver 1\[S1] 21317 징검다리 건너기.cpp" />
+    <ClCompile Include="5. Diamond\Diamond 5\[D5] 05051 피타고라스의 정리.cpp" />
+    <ClCompile Include="5. Diamond\Diamond 5\[D5] 13575 보석 가게.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 5\[B5] 34691 대전과학고등학교를 사랑하십니까？.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 5\[B5] 34665 가희와 교통 요금.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 5\[B5] 34721 역사를 걸으면 동국이 보이고.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
