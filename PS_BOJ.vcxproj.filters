@@ -2345,7 +2345,7 @@
     <ClCompile Include="2. Silver\Silver 1\[S1] 02502 떡 먹는 호랑이.cpp" />
     <ClCompile Include="2. Silver\Silver 1\[S1] 16174 점프왕 쩰리 %28Large%29 [2].cpp" />
     <ClCompile Include="2. Silver\Silver 1\[S1] 17391 무한 부스터 [2].cpp" />
-    <ClCompile Include="4. Platinum\Platinum 3\![P3] 01273 샷.cpp" />
+    <ClCompile Include="4. Platinum\Platinum 3\[P3] 01273 샷.cpp" />
     <ClCompile Include="5. Diamond\Diamond 5\[D5] 17104 골드바흐 파티션 2.cpp" />
     <ClCompile Include="4. Platinum\Platinum 1\[P1] 17134 르모앙의 추측.cpp" />
     <ClCompile Include="4. Platinum\Platinum 1\[P1] 01067 이동.cpp" />
@@ -2360,6 +2360,32 @@
     <ClCompile Include="1. Bronze\Bronze 5\[B5] 34691 대전과학고등학교를 사랑하십니까？.cpp" />
     <ClCompile Include="1. Bronze\Bronze 5\[B5] 34665 가희와 교통 요금.cpp" />
     <ClCompile Include="1. Bronze\Bronze 5\[B5] 34721 역사를 걸으면 동국이 보이고.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 5\[B5] 34362 Above.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 1\[B1] 09285 Watering - 1.txt" />
+    <ClCompile Include="2. Silver\Silver 5\[S5] 03711 학번.cpp" />
+    <ClCompile Include="5. Diamond\Diamond 3\![D3] 01046 그림자.cpp" />
+    <ClCompile Include="2. Silver\Silver 1\[S1] 21600 계단.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 08727 Farby.cpp" />
+    <ClCompile Include="5. Diamond\Diamond 4\![D4] 14882 다항식과 쿼리.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 34552 디딤돌 장학금.cpp" />
+    <ClCompile Include="4. Platinum\Platinum 1\[P1] 32573 Cowpproximation.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 06122 Time Cards.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 13224 Chop Cup.cpp" />
+    <ClCompile Include="2. Silver\Silver 1\[S1] 22342 계산 로봇.cpp" />
+    <ClCompile Include="2. Silver\Silver 1\[S1] 22869 징검다리 건너기 %28small%29.cpp" />
+    <ClCompile Include="2. Silver\Silver 1\[S1] 22871 징검다리 건너기 %28large%29.cpp" />
+    <ClCompile Include="2. Silver\Silver 3\[S3] 34682 Inverse Look-and-Say.cpp" />
+    <ClCompile Include="3. Gold\Gold 5\[G5] 34677 최적의 분할.cpp" />
+    <ClCompile Include="3. Gold\Gold 4\![G4] 34685 이차 방정식.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 07194 Harmoonia.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 34115 먼 카드.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 13300 방 배정.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 17608 막대기.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 15969 행복.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 18406 럭키 스트레이트.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 14697 방 배정하기.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 34845 강의평.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 12605 단어순서 뒤집기.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />

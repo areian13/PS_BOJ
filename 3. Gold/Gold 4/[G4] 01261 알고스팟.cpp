@@ -9,11 +9,11 @@ using namespace std;
 
 struct Pos
 {
-    int y, x;
+    int r, c;
 };
 
-array<int, 4> dy = { 0,-1,0,1 };
-array<int, 4> dx = { 1,0,-1,0 };
+array<int, 4> dr = { 0,-1,0,1 };
+array<int, 4> dc = { 1,0,-1,0 };
 
 int BFS(vector<vector<char>>& map)
 {
@@ -28,24 +28,23 @@ int BFS(vector<vector<char>>& map)
 
     while (!Q.empty())
     {
-        int y = Q.front().y;
-        int x = Q.front().x;
+        auto [r, c] = Q.front();
         Q.pop();
 
         for (int i = 0; i < 4; i++)
         {
-            int ny = y + dy[i];
-            int nx = x + dx[i];
+            int nr = r + dr[i];
+            int nc = c + dc[i];
 
-            if (ny < 0 || ny >= n || nx < 0 || nx >= m)
+            if (nr < 0 || nr >= n || nc < 0 || nc >= m)
                 continue;
 
-            int nd = dist[y][x] + (map[ny][nx] == '1');
-            if (nd >= dist[ny][nx])
+            int nd = dist[r][c] + (map[nr][nc] == '1');
+            if (nd >= dist[nr][nc])
                 continue;
 
-            dist[ny][nx] = nd;
-            Q.push({ ny,nx });
+            dist[nr][nc] = nd;
+            Q.push({ nr,nc });
         }
     }
 

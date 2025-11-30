@@ -29,11 +29,11 @@ int main()
     for (auto& v : g)
         cout << v[3] << ' ' << v[0] << ' ' << v[1] << ' ' << v[2] << '\n';
 
-    sort(g.begin(), g.end(),
+    /*sort(g.begin(), g.end(),
         [](const auto& a, const auto& b) { return a[0] < b[0]; }
     );
 
     cout << '\n';
     for (auto& v : g)
-        cout << v[3] << ' ' << v[0] << ' ' << v[1] << ' ' << v[2] << '\n';
+        cout << v[3] << ' ' << v[0] << ' ' << v[1] << ' ' << v[2] << '\n';*/
 }

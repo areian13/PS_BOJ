@@ -9,19 +9,21 @@ int main()
 {
     FastIO;
 
-    int n, x;
-    cin >> n >> x;
+    int n;
+    cin >> n;
 
-    int sum = 0;
+    vector<int> h(n);
     for (int i = 0; i < n; i++)
-    {
-        int a;
-        cin >> a;
-        sum += a;
-    }
+        cin >> h[i];
 
-    int result = 0;
-    while ((sum + 100 * result) < x * (n + result))
-        result++;
+    int result = 0, maxH = 0;
+    for (int i = n - 1; i >= 0; i--)
+    {
+        if (maxH < h[i])
+        {
+            maxH = h[i];
+            result++;
+        }
+    }
     cout << result << '\n';
 }

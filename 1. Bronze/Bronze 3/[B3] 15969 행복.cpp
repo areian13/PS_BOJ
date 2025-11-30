@@ -1,5 +1,4 @@
 #include <iostream>
-#include <vector>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
 
@@ -9,19 +8,18 @@ int main()
 {
     FastIO;
 
-    int n, x;
-    cin >> n >> x;
+    int n;
+    cin >> n;
 
-    int sum = 0;
+    int maxS = 0, minS = 1'000;
     for (int i = 0; i < n; i++)
     {
-        int a;
-        cin >> a;
-        sum += a;
+        int s;
+        cin >> s;
+        maxS = max(maxS, s);
+        minS = min(minS, s);
     }
 
-    int result = 0;
-    while ((sum + 100 * result) < x * (n + result))
-        result++;
+    int result = maxS - minS;
     cout << result << '\n';
 }

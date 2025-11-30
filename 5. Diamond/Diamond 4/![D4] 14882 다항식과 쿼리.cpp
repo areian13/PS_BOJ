@@ -6,8 +6,8 @@
 
 using namespace std;
 
-const int MOD = 998'244'353;
-const int W = 3;
+const int MOD = 786'433;
+const int W = 10;
 
 int Power(int a, int b)
 {
@@ -65,39 +65,23 @@ void NTT(vector<int>& v, bool inv = false)
     }
 }
 
-void Multiply(vector<int> a, vector<int> b, vector<int>& c)
-{
-    int n = bit_ceil(max(a.size(), b.size())) * 2;
-    a.resize(n), b.resize(n), c.resize(n);
-    NTT(a, false), NTT(b, false);
-
-    for (int i = 0; i < n; i++)
-        c[i] = 1LL * a[i] * b[i] % MOD;
-    NTT(c, true);
-}
-
 int main()
 {
     FastIO;
 
     int n;
     cin >> n;
+    n++;
 
-    vector<int> a(n, 0), b(n, 0), c;
-    for (int i = 1; i < n; i++)
-    {
-        a[1LL * i * i % n]++;
-        b[2LL * i * i % n]++;
-    }
+    vector<int> a(n);
+    for (int i = 0; i < n; i++)
+        cin >> a[i];
+    n = bit_ceil(1u * n);
+    a.resize(n);
+    NTT(a, false);
 
-    Multiply(a, a, c);
-    long long result = 0;
-    for (int i = 1; i < n; i++)
+    for (int i = 0; i < n; i++)
     {
-        int k = 1LL * i * i % n;
-        int t = c[k] + c[k + n];
-        int s = b[k];
-        result += (t - s) / 2 + s;
+        cout << a[i] << '\n';
     }
-    cout << result << '\n';
 }

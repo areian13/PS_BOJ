@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cmath>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
 
@@ -9,8 +8,8 @@ int Z(int k, int r, int c)
 {
     if (k == 1)
         return 0;
+    k >>= 1;
 
-    k /= 2;
     int p = (r >= k) * 2 + (c >= k);
     r %= k;
     c %= k;
@@ -24,7 +23,6 @@ int main()
     int n, r, c;
     cin >> n >> r >> c;
 
-    int k = pow(2, n);
-    int result = Z(k, r, c);
+    int result = Z(1 << n, r, c);
     cout << result << '\n';
 }

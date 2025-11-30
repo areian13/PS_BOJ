@@ -1,0 +1,17 @@
+aa#bb|aaacc
+abaab|bbbca
+bbacc|aa#aa
+aabac|ababb
+abbaa|bbaab
+-----+-----
+aaacc|aabbb
+bbbcd|a#ccc
+aaadd|bbbaa
+bbbcc|aaaca
+#aaac|bbbcc
+-----+-----
+aaabb|aaacc
+bbbcb|bbbcb
+aaacc|aaa#b
+bbb#b|bbbcb
+aaabb|aaacc
