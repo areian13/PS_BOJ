@@ -2386,6 +2386,11 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 14697 방 배정하기.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 34845 강의평.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 12605 단어순서 뒤집기.cpp" />
+    <ClCompile Include="2. Silver\Silver 1\[S1] 23029 시식 코너는 나의 것.cpp" />
+    <ClCompile Include="4. Platinum\Platinum 4\![P4] 34684 Mountain.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 1\[B1] 10372 Alarm Clock.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 12778 CTP공국으로 이민 가자.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 12780 원피스.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
