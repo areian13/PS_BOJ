@@ -2391,6 +2391,13 @@
     <ClCompile Include="1. Bronze\Bronze 1\[B1] 10372 Alarm Clock.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 12778 CTP공국으로 이민 가자.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 12780 원피스.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 12813 이진수 연산.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 12517 Centauri Prime %28Small1%29.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 12518 Centauri Prime %28Small2%29.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 13235 팰린드롬.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 13877 이건 무슨 진법이지？.cpp" />
+    <ClCompile Include="4. Platinum\Platinum 3\![P3] 23765 다각형의 넓이.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 13304 방 배정.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
