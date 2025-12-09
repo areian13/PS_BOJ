@@ -2398,6 +2398,8 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 13877 이건 무슨 진법이지？.cpp" />
     <ClCompile Include="4. Platinum\Platinum 3\![P3] 23765 다각형의 넓이.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 13304 방 배정.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 13410 거꾸로 구구단.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 1\[B1] 01672 DNA 해독.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
