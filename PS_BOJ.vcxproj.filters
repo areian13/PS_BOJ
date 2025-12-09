@@ -2225,11 +2225,6 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 01864 문어 숫자.cpp" />
     <ClCompile Include="2. Silver\Silver 3\[S3] 09536 여우는 어떻게 울지？.cpp" />
     <ClCompile Include="3. Gold\Gold 5\[G5] 19940 피자 오븐 [1].cpp" />
-    <ClCompile Include="노태윤 수\A.cpp" />
-    <ClCompile Include="노태윤 수\B.cpp" />
-    <ClCompile Include="노태윤 수\C.cpp" />
-    <ClCompile Include="노태윤 수\D.cpp" />
-    <ClCompile Include="노태윤 수\E.cpp" />
     <ClCompile Include="1. Bronze\Bronze 4\[B4] 33701 새천년관.txt" />
     <ClCompile Include="3. Gold\Gold 4\[G4] 10282 해킹.cpp" />
     <ClCompile Include="2. Silver\Silver 2\[S2] 01699 제곱수의 합.cpp" />
