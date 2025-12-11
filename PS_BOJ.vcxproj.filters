@@ -2396,6 +2396,7 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 13410 거꾸로 구구단.cpp" />
     <ClCompile Include="1. Bronze\Bronze 1\[B1] 01672 DNA 해독.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 13419 탕수육.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 13420 사칙연산.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
