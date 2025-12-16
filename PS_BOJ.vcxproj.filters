@@ -2397,6 +2397,10 @@
     <ClCompile Include="1. Bronze\Bronze 1\[B1] 01672 DNA 해독.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 13419 탕수육.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 13420 사칙연산.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 5\[B5] 34849 이중 반복문.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 25495 에어팟.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 1\[B1] 02804 크로스워드 만들기.cpp" />
+    <ClCompile Include="2. Silver\Silver 5\[S5] 18221 교수님 저는 취업할래요.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
