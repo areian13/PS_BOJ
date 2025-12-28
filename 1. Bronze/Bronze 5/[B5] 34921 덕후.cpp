@@ -1,5 +1,4 @@
 #include <iostream>
-#include <string>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
 
@@ -9,11 +8,9 @@ int main()
 {
     FastIO;
 
-    int n;
-    cin >> n;
+    int a, t;
+    cin >> a >> t;
 
-    string result(n, 'S');
-    for (int i = 2; i < n; i += 3)
-        result[i] = 'H';
+    int result = max(10 + 2 * (25 - a + t), 0);
     cout << result << '\n';
 }

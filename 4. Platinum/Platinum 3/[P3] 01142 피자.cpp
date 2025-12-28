@@ -9,19 +9,19 @@
 using namespace std;
 
 const int INF = INT_MAX;
-const long double EPS = 1e-10;
-bool IsZero(long double d) { return abs(d) < EPS; }
-const long double PI = acos(-1.L);
+const double EPS = 1e-7;
+bool IsZero(double d) { return abs(d) < EPS; }
+const double PI = acos(-1);
 
 struct Point
 {
-    long double x, y;
+    double x, y;
 
     friend Point operator + (const Point& a, const Point& b) { return { a.x + b.x,a.y + b.y }; }
     friend Point operator - (const Point& a, const Point& b) { return { a.x - b.x,a.y - b.y }; }
-    friend Point operator * (const Point& p, long double d) { return { p.x * d,p.y * d }; }
+    friend Point operator * (const Point& p, double d) { return { p.x * d,p.y * d }; }
 
-    static long double dot(const Point& a, const Point& b) { return a.x * b.x + a.y * b.y; }
+    static double dot(const Point& a, const Point& b) { return a.x * b.x + a.y * b.y; }
 
     friend bool operator == (const Point& a, const Point& b) { return IsZero(a.x - b.x) && IsZero(a.y - b.y); }
 };
@@ -32,7 +32,9 @@ struct Line
     Point getSymPoint(const Point& p)
     {
         Point v = b - a;
-        long double t = Point::dot(p - a, v) / Point::dot(v, v);
+        if (IsZero(Point::dot(v, v)))
+            return a * 2 - p;
+        double t = Point::dot(p - a, v) / Point::dot(v, v);
         Point h = a + v * t;
         return h * 2 - p;
     }
@@ -40,11 +42,8 @@ struct Line
 
 bool CanCut(Point p, vector<Point>& points)
 {
-    if (p == Point{ 0,0 })
-        return false;
-
-    p.x *= 5'000, p.y *= 5'000;
-    Line l = { p.x,p.y,-p.x,-p.y };
+    p = p * 50'000;
+    Line l = { p,p * -1 };
 
     for (auto& i : points)
     {
@@ -55,7 +54,6 @@ bool CanCut(Point p, vector<Point>& points)
         if (!has)
             return false;
     }
-
     return true;
 }
 
@@ -65,7 +63,12 @@ int CountCut(vector<Point>& points)
     if (n == 0 || n == 1 && points[0] == Point{ 0,0 })
         return INF;
 
-    set<long double> result;
+    auto comp = [](const double& a, const double& b)
+        {
+            if (IsZero(a - b)) return false;
+            return a < b;
+        };
+    set<double, decltype(comp)> result(comp);
     for (int i = 0; i < n; i++)
     {
         if (points[i] == Point{ 0,0 })
@@ -77,13 +80,14 @@ int CountCut(vector<Point>& points)
                 p = { -points[i].y,points[i].x };
             if (CanCut(p, points))
             {
-                long double t = atan2(p.y, p.x);
+                double t = atan2(p.y, p.x);
                 if (t < 0) t += PI;
                 if (t >= PI) t -= PI;
                 result.insert(t);
             }
         }
     }
+
     return result.size();
 }
 

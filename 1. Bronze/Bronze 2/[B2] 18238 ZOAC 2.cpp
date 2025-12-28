@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <algorithm>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
 
@@ -9,11 +10,15 @@ int main()
 {
     FastIO;
 
-    int n;
-    cin >> n;
+    string s;
+    cin >> s;
 
-    string result(n, 'S');
-    for (int i = 2; i < n; i += 3)
-        result[i] = 'H';
+    char p = 'A';
+    int result = 0;
+    for (char c : s)
+    {
+        result += min(abs(c - p), abs(abs(c - p) - 26));
+        p = c;
+    }
     cout << result << '\n';
 }

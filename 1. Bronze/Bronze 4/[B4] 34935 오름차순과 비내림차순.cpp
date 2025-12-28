@@ -1,5 +1,5 @@
 #include <iostream>
-#include <string>
+#include <vector>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
 
@@ -12,8 +12,12 @@ int main()
     int n;
     cin >> n;
 
-    string result(n, 'S');
-    for (int i = 2; i < n; i += 3)
-        result[i] = 'H';
+    vector<long long> a(n);
+    for (int i = 0; i < n; i++)
+        cin >> a[i];
+
+    bool result = true;
+    for (int i = 0; i < n - 1; i++)
+        result &= (a[i] != a[i + 1]);
     cout << result << '\n';
 }

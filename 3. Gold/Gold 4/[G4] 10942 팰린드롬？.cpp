@@ -5,17 +5,6 @@
 
 using namespace std;
 
-bool IsPalin(int s, int e, vector<int>& num, vector<vector<bool>>& dp)
-{
-    if (dp[s][e] == true)
-        return true;
-
-    if (s == e || s + 1 == e)
-        return dp[s][e] = (num[s] == num[e]);
-
-    return dp[s][e] = ((num[s] == num[e]) && IsPalin(s + 1, e - 1, num, dp));
-}
-
 int main()
 {
     FastIO;
@@ -23,19 +12,28 @@ int main()
     int n;
     cin >> n;
 
-    vector<int> num(n + 1);
-    for (int i = 1; i <= n; i++)
-        cin >> num[i];
+    vector<int> a(n);
+    for (int i = 0; i < n; i++)
+        cin >> a[i];
+    
+    vector<vector<bool>> isPalin(n, vector<bool>(n, false));
+    for (int i = 0; i < n; i++)
+        isPalin[i][i] = true;
+    for (int l = 2; l <= n; l++)
+    {
+        for (int i = 0, j = i + l - 1; j < n; i++, j++)
+            isPalin[i][j] = (a[i] == a[j] && (l == 2 || isPalin[i + 1][j - 1]));
+    }
 
     int m;
     cin >> m;
 
-    vector<vector<bool>> dp(n + 1, vector<bool>(n + 1, false));
-    while (m--)
+    for (int i = 0; i < m; i++)
     {
         int s, e;
         cin >> s >> e;
+        s--, e--;
 
-        cout << IsPalin(s, e, num, dp) << '\n';
+        cout << isPalin[s][e] << '\n';
     }
 }
