@@ -2435,6 +2435,7 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 16916 부분 문자열.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 21756 지우개.cpp" />
     <ClCompile Include="2. Silver\Silver 5\[S5] 25178 두라무리 휴지.cpp" />
+    <ClCompile Include="2. Silver\Silver 4\[S4] 01358 하키.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
