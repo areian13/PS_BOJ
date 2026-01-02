@@ -2425,6 +2425,16 @@
     <ClCompile Include="3. Gold\Gold 2\[G2] 15824 너 봄에는 캡사이신이 맛있단다.cpp" />
     <ClCompile Include="4. Platinum\Platinum 5\[P5] 13141 Ignition.cpp" />
     <ClCompile Include="2. Silver\Silver 4\[S4] 33257 상현이의 물리학및실험1 실험 대작전.cpp" />
+    <ClCompile Include="2. Silver\Silver 3\[S3] 02121 넷이 놀기.cpp" />
+    <ClCompile Include="4. Platinum\Platinum 5\![P5] 01086 박성원.cpp" />
+    <ClCompile Include="2. Silver\Silver 2\[S2] 23757 아이들과 선물 상자.cpp" />
+    <ClCompile Include="2. Silver\Silver 2\[S2] 32186 역시 내 이세계 수열은 잘못됐다.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 34823 YCPC 점수.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 1\[B1] 15881 Pen Pineapple Apple Pen.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 1\[B1] 06546 Edge.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 16916 부분 문자열.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 21756 지우개.cpp" />
+    <ClCompile Include="2. Silver\Silver 5\[S5] 25178 두라무리 휴지.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
