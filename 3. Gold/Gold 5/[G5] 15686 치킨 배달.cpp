@@ -1,119 +1,73 @@
 #include <iostream>
 #include <vector>
-#include <array>
-#include <string>
-#include <time.h>
-#include <algorithm>
-#include <stdlib.h>
-#include <math.h>
+#include <climits>
 #include <cmath>
-#include <queue>
-#include <stack>
-#include <deque>
-#include <map>
-#include <unordered_map>
-#include <set>
-#include <limits.h>
-#include <string.h>
 
-#define Endl << "\n"
-#define endL << "\n" <<
-#define Cout cout <<
-#define COUT cout << "OUT: " <<
-#define Cin cin >>
-#define fspc << " "
-#define spc << " " <<
-#define Enter cout << "\n"
-#define if if
-#define elif else if
-#define else else
-#define For(n) for(int i = 0; i < n; i++)
-#define Forj(n) for(int j = 0; j < n; j++)
-#define Foro(n) for(int i = 1; i <= n; i++)
-#define Forjo(n) for(int j = 1; j <= n; j++)
-#define between(small, middle, big) (small < middle && middle < big)
-#define among(small, middle, big) (small <= middle && middle <= big)
-#define stoe(container) container.begin(), container.end()
-#define lf(d) Cout fixed; cout.precision(d);
-#define ulf cout.unsetf(ios::scientific);
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
-#define PI 3.14159265359
-
-typedef long long LLONG;
-typedef unsigned long long ULLONG;
-typedef unsigned int UINT;
 
 using namespace std;
 
-template <typename T>
-class heap : public priority_queue<T, vector<T>, greater<T>>
+const int INF = INT_MAX;
+
+struct Pos
 {
+    int r, c;
 };
 
-struct Pos {
-	int y, x;
-};
-
-vector<Pos> home, chicken;
-vector<bool> isAvailable;
-int result = INT_MAX;
-
-int Dist(Pos a, Pos b)
+int CityDist(vector<Pos>& homes, vector<Pos>& chickens)
 {
-	return abs(a.y - b.y) + abs(a.x - b.x);
+    int result = 0;
+    for (auto& [hr, hc] : homes)
+    {
+        int dist = INF;
+        for (auto& [cr, cc] : chickens)
+            dist = min(dist, abs(hr - cr) + abs(hc - cc));
+        result += dist;
+    }
+    return result;
 }
 
-void ChickenStreet(int idx, int cnt, int m)
+int MinCityDist(int d, int k, vector<Pos>& homes,
+    vector<Pos>& chickens, vector<Pos>& survived)
 {
-	if (cnt == m)
-	{
-		int temp = 0;
-		For(home.size())
-		{
-			int dist = INT_MAX;
-			Forj(chicken.size())
-			{
-				if (isAvailable[j])
-					dist = min(dist, Dist(home[i], chicken[j]));
-			}
-			temp += dist;
-		}
-		result = min(result, temp);
-		return;
-	}
+    int n = homes.size();
+    int c = chickens.size();
+    int m = survived.size();
+    if (k == m)
+        return CityDist(homes, survived);
 
-	if (idx == chicken.size())
-		return;
-
-	isAvailable[idx] = true;
-	ChickenStreet(idx + 1, cnt + 1, m);
-
-	isAvailable[idx] = false;
-	ChickenStreet(idx + 1, cnt, m);
+    int result = INF;
+    for (int i = d; i < c; i++)
+    {
+        survived[k] = chickens[i];
+        result = min(result, MinCityDist(i + 1, k + 1, homes, chickens, survived));
+    }
+    return result;
 }
 
 int main()
 {
-	FastIO;
+    FastIO;
 
-	int n, m;
-	Cin n >> m;
+    int n, m;
+    cin >> n >> m;
 
-	For(n)
-	{
-		Forj(n)
-		{
-			int state;
-			Cin state;
+    vector<Pos> homes, chickens;
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            int p;
+            cin >> p;
 
-			if (state == 1)
-				home.push_back({ i,j });
-			elif(state == 2)
-				chicken.push_back({ i,j });
-		}
-	}
-	isAvailable.resize(chicken.size(), false);
+            if (p == 1)
+                homes.push_back({ i,j });
+            else if (p == 2)
+                chickens.push_back({ i,j });
+        }
+    }
 
-	ChickenStreet(0, 0, m);
-	Cout result;
+    vector<Pos> survived(m);
+    int result = MinCityDist(0, 0, homes, chickens, survived);
+    cout << result << '\n';
 }

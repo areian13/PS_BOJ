@@ -24,6 +24,14 @@ struct Point
     static double dot(const Point& a, const Point& b) { return a.x * b.x + a.y * b.y; }
 
     friend bool operator == (const Point& a, const Point& b) { return IsZero(a.x - b.x) && IsZero(a.y - b.y); }
+    friend bool operator < (const Point& a, const Point& b)
+    {
+        if (a == b)
+            return false;
+        if (!IsZero(a.x - b.x))
+            return a.x < b.x;
+        return a.y < b.y;
+    }
 };
 struct Line
 {
@@ -40,7 +48,7 @@ struct Line
     }
 };
 
-bool CanCut(Point p, vector<Point>& points)
+bool CanCut(Point p, vector<Point>& points, set<Point>& has)
 {
     p = p * 50'000;
     Line l = { p,p * -1 };
@@ -48,10 +56,7 @@ bool CanCut(Point p, vector<Point>& points)
     for (auto& i : points)
     {
         Point sp = l.getSymPoint(i);
-        bool has = false;
-        for (auto& j : points)
-            has |= (j == sp);
-        if (!has)
+        if (has.count(sp) == 0)
             return false;
     }
     return true;
@@ -69,6 +74,7 @@ int CountCut(vector<Point>& points)
             return a < b;
         };
     set<double, decltype(comp)> result(comp);
+    set<Point> has(points.begin(), points.end());
     for (int i = 0; i < n; i++)
     {
         if (points[i] == Point{ 0,0 })
@@ -78,7 +84,7 @@ int CountCut(vector<Point>& points)
             Point p = (points[i] + points[j]) * 0.5;
             if (p == Point{ 0,0 })
                 p = { -points[i].y,points[i].x };
-            if (CanCut(p, points))
+            if (CanCut(p, points, has))
             {
                 double t = atan2(p.y, p.x);
                 if (t < 0) t += PI;

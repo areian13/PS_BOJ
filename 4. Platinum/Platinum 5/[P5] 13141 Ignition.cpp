@@ -11,7 +11,7 @@ const int INF = INT_MAX;
 
 struct Edge
 {
-    int v, w;
+    int u, v, w;
 };
 
 int main()
@@ -21,20 +21,17 @@ int main()
     int n, m;
     cin >> n >> m;
 
-    vector<vector<Edge>> graph(n);
+    vector<Edge> edges(m);
     vector<vector<int>> mat(n, vector<int>(n, INF));
     for (int i = 0; i < n; i++)
         mat[i][i] = 0;
-    for (int i = 0; i < m; i++)
+    for (auto& [u, v, w] : edges)
     {
-        int s, e, l;
-        cin >> s >> e >> l;
-        s--, e--;
+        cin >> u >> v >> w;
+        u--, v--;
 
-        mat[s][e] = min(mat[s][e], l);
-        mat[e][s] = mat[s][e];
-        graph[s].push_back({ e,l });
-        graph[e].push_back({ s,l });
+        mat[u][v] = min(mat[u][v], w);
+        mat[v][u] = mat[u][v];
     }
 
     for (int k = 0; k < n; k++)
@@ -54,15 +51,10 @@ int main()
     for (int s = 0; s < n; s++)
     {
         double maxT = 0;
-        for (int u = 0; u < n; u++)
+        for (auto& [u, v, w] : edges)
         {
-            maxT = max(maxT, 1. * mat[s][u]);
-            for (auto& [v, w] : graph[u])
-            {
-                if (mat[s][u] + w <= mat[s][v])
-                    continue;
-                maxT = max(maxT, mat[s][u] + (w - abs(mat[s][v] - mat[s][u])) / 2.);
-            }
+            int dw = abs(mat[s][u] - mat[s][v]);
+            maxT = max(maxT, max(mat[s][u], mat[s][v]) + (w - dw) / 2.);
         }
         result = min(result, maxT);
     }

@@ -2436,6 +2436,15 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 21756 지우개.cpp" />
     <ClCompile Include="2. Silver\Silver 5\[S5] 25178 두라무리 휴지.cpp" />
     <ClCompile Include="2. Silver\Silver 4\[S4] 01358 하키.cpp" />
+    <ClCompile Include="2. Silver\Silver 4\[S4] 14670 병약한 영정.cpp" />
+    <ClCompile Include="2. Silver\Silver 2\[S2] 25511 값이 k인 트리 노드의 깊이.cpp" />
+    <ClCompile Include="2. Silver\Silver 2\[S2] 07345 다항식의 나머지 연산.cpp" />
+    <ClCompile Include="2. Silver\Silver 1\[S1] 24954 물약 구매.cpp" />
+    <ClCompile Include="3. Gold\Gold 1\[G1] 27653 최소 트리 분할.cpp" />
+    <ClCompile Include="3. Gold\Gold 2\[G2] 12944 재미있는 숫자 놀이.cpp" />
+    <ClCompile Include="3. Gold\Gold 2\[G2] 17544 Canyon Crossing.cpp" />
+    <ClCompile Include="4. Platinum\Platinum 5\[P5] 15708 미네크래프트.cpp" />
+    <ClCompile Include="4. Platinum\Platinum 5\[P5] 05551 쇼핑몰.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
