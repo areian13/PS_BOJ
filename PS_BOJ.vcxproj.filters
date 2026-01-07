@@ -2445,6 +2445,9 @@
     <ClCompile Include="3. Gold\Gold 2\[G2] 17544 Canyon Crossing.cpp" />
     <ClCompile Include="4. Platinum\Platinum 5\[P5] 15708 미네크래프트.cpp" />
     <ClCompile Include="4. Platinum\Platinum 5\[P5] 05551 쇼핑몰.cpp" />
+    <ClCompile Include="3. Gold\Gold 3\[G3] 17436 소수의 배수.cpp" />
+    <ClCompile Include="2. Silver\Silver 1\[S1] 24392 영재의 징검다리.cpp" />
+    <ClCompile Include="2. Silver\Silver 1\[S1] 24464 득수 밥 먹이기.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
