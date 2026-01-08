@@ -2457,6 +2457,13 @@
     <ClCompile Include="2. Silver\Silver 4\[S4] 02578 빙고.cpp" />
     <ClCompile Include="2. Silver\Silver 3\[S3] 21735 눈덩이 굴리기.cpp" />
     <ClCompile Include="2. Silver\Silver 1\[S1] 16564 히오스 프로게이머.cpp" />
+    <ClCompile Include="2. Silver\Silver 1\[S1] 28103 대회 상품 정하기.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 22864 피로도.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 16171 나는 친구가 적다 %28Small%29.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 16917 양념 반 후라이드 반.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 17389 보너스 점수.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 17173 배수들의 합.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 17249 태보태보 총난타.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
