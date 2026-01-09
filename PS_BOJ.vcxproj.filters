@@ -2464,6 +2464,8 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 17389 보너스 점수.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 17173 배수들의 합.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 17249 태보태보 총난타.cpp" />
+    <ClCompile Include="4. Platinum\Platinum 5\[P5] 22957 짝수싫어수.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 5\[B5] 33165 徒競走 %28Footrace%29.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />

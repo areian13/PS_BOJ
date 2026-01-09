@@ -32,6 +32,18 @@ struct Node {
 };
 
 
-int main() {
-
+void Make2DArr(int n, int m) {
+    vector<vector<int>> arr(n, vector<int>(m));
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++)
+            arr[i][j] = rand();
+    }
 }
+
+int main() {
+    srand((unsigned)time(NULL));
+    PrintFuncTime(Make2DArr, 200'000, 5);
+    PrintFuncTime(Make2DArr, 5, 200'000);
+}
+
+
