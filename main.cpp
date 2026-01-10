@@ -26,24 +26,51 @@ auto PrintFuncTimeImpl(const char* name, Func&& func, Args&&... args)
 #define PrintFuncTime(func, ...) \
     PrintFuncTimeImpl(#func, func, __VA_ARGS__)
 
-
-struct Node {
-    int a;
-};
-
-
-void Make2DArr(int n, int m) {
-    vector<vector<int>> arr(n, vector<int>(m));
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < m; j++)
-            arr[i][j] = rand();
+void IF(vector<int>& arr) {
+    int cnt = 0;
+    for (int v : arr) {
+        if (v >= 0)
+            v++;
     }
+    cout << cnt << '\n';
+}
+void Comp(vector<int>& arr) {
+    int cnt = 0;
+    for (int v : arr)
+        cnt += (v >= 0);
+    cout << cnt << '\n';
+}
+void Bit(vector<int>& arr) {
+    int cnt = 0;
+    for (int v : arr)
+        cnt += ((unsigned)v >> 31) ^ 1;
+    cout << cnt << '\n';
+}
+
+void Just(vector<int>& arr) {
+    vector<int> holsu;
+    for (int v : arr) {
+        if (v & 1)
+            holsu.push_back(v);
+    }
+}
+void Reserve(vector<int>& arr) {
+    vector<int> holsu;
+    holsu.reserve(arr.size() / 2 + 10);
+    for (int v : arr) {
+        if (v & 1)
+            holsu.push_back(v);
+    }
+    holsu.shrink_to_fit();
 }
 
 int main() {
     srand((unsigned)time(NULL));
-    PrintFuncTime(Make2DArr, 200'000, 5);
-    PrintFuncTime(Make2DArr, 5, 200'000);
+    int n = 100'000'000;
+    vector<int> arr(n);
+    for (int i = 0; i < n; i++)
+        arr[i] = (rand() % n) * (rand() % 2 ? +1 : -1);
+
+    PrintFuncTime(Just, arr);
+    PrintFuncTime(Reserve, arr);
 }
-
-
