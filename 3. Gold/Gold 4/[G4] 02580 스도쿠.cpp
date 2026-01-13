@@ -1,71 +1,89 @@
 #include <iostream>
-#include <array>
+#include <vector>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
 
 using namespace std;
 
-array<array<int, 9>, 9> sudoku;
-array<array<bool, 10>, 9> row;
-array<array<bool, 10>, 9> col;
-array<array<bool, 10>, 9> sqr;
-
-void Toggle(int y, int x, int num)
+struct Sudoku
 {
-    row[y][num] = !row[y][num];
-    col[x][num] = !col[x][num];
-    sqr[y / 3 * 3 + x / 3][num] = !sqr[y / 3 * 3 + x / 3][num];
-}
+    vector<vector<int>> grid, rs, cs, gs;
+    bool find;
 
-void DFS(int cnt)
-{
-    if (cnt == 81)
+    Sudoku(vector<vector<int>>& grid) : grid(grid), find(false)
     {
+        rs.resize(9, vector<int>(10, false));
+        cs = gs = rs;
+
         for (int i = 0; i < 9; i++)
         {
             for (int j = 0; j < 9; j++)
-                cout << sudoku[i][j] << ' ';
-            cout << '\n';
+                Switch(i, j, grid[i][j]);
         }
-        exit(0);
+        MakeSudoku(0);
     }
 
-    int y = cnt / 9;
-    int x = cnt % 9;
-
-    if (sudoku[y][x] == 0)
+    void Switch(int r, int c, int v)
     {
-        for (int i = 1; i <= 9; i++)
+        if (v == 0) return;
+        rs[r][v] ^= 1;
+        cs[c][v] ^= 1;
+        gs[r / 3 * 3 + c / 3][v] ^= 1;
+    }
+    void MakeSudoku(int v)
+    {
+        if (find) return;
+        if (v == 81)
         {
-            if (row[y][i] || col[x][i] || sqr[y / 3 * 3 + x / 3][i])
-                continue;
+            find = true;
+            return;
+        }
 
-            Toggle(y, x, i);
-            sudoku[y][x] = i;
+        int r = v / 9;
+        int c = v % 9;
 
-            DFS(cnt + 1);
+        if (grid[r][c] != 0)
+            MakeSudoku(v + 1);
+        else
+        {
+            for (int i = 1; i <= 9; i++)
+            {
+                if (rs[r][i] || cs[c][i] || gs[r / 3 * 3 + c / 3][i])
+                    continue;
 
-            sudoku[y][x] = 0;
-            Toggle(y, x, i);
+                Switch(r, c, i);
+                grid[r][c] = i;
+
+                MakeSudoku(v + 1);
+                if (find) return;
+
+                grid[r][c] = 0;
+                Switch(r, c, i);
+            }
         }
     }
-    else
-        DFS(cnt + 1);
-}
+};
 
 int main()
 {
     FastIO;
 
+    vector<vector<int>> grid(9, vector<int>(9));
     for (int i = 0; i < 9; i++)
     {
         for (int j = 0; j < 9; j++)
-        {
-            cin >> sudoku[i][j];
-            if (sudoku[i][j] != 0)
-                Toggle(i, j, sudoku[i][j]);
-        }
+            cin >> grid[i][j];
     }
 
-    DFS(0);
+    Sudoku sudoku(grid);
+    if (!sudoku.find) cout << -1 << '\n';
+    else
+    {
+        for (int i = 0; i < 9; i++)
+        {
+            for (int j = 0; j < 9; j++)
+                cout << sudoku.grid[i][j] << ' ';
+            cout << '\n';
+        }
+    }
 }
