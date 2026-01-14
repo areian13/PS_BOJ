@@ -2475,7 +2475,18 @@
     <ClCompile Include="2. Silver\Silver 1\[S1] 25633 도미노 넘어뜨리기.cpp" />
     <ClCompile Include="4. Platinum\Platinum 4\[P4] 05529 저택.cpp" />
     <ClCompile Include="4. Platinum\Platinum 1\[P1] 20176 Needle.cpp" />
-    <ClCompile Include="5. Diamond\Diamond 4\[D4] 14882 다항식과 쿼리.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 16561 3의 배수.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 14910 오르막.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 22966 가장 쉬운 문제를 찾는 문제.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 20528 끝말잇기.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 20299 3대 측정.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 14624 전북대학교.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 20001 고무오리 디버깅.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 17826 나의 학점은？.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 14726 신용카드 판별.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 16283 Farm.cpp" />
+    <ClCompile Include="4. Platinum\Platinum 5\[P5] 01086 박성원.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 34722 출제자가 몇 명.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
