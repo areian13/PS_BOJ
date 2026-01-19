@@ -2487,6 +2487,25 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 16283 Farm.cpp" />
     <ClCompile Include="4. Platinum\Platinum 5\[P5] 01086 박성원.cpp" />
     <ClCompile Include="1. Bronze\Bronze 4\[B4] 34722 출제자가 몇 명.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 27982 큐브 더미.cpp" />
+    <ClCompile Include="2. Silver\Silver 5\[S5] 22935 이진 딸기.cpp" />
+    <ClCompile Include="2. Silver\Silver 4\[S4] 32386 KCPC에 등장할 알고리즘 맞히기.cpp" />
+    <ClCompile Include="2. Silver\Silver 3\[S3] 20116 상자의 균형.cpp" />
+    <ClCompile Include="5. Diamond\Diamond 5\![D5] 05377 승혁이의 과외돌이네 집 탈출하기.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 14563 완전수.cpp" />
+    <ClCompile Include="2. Silver\Silver 2\[S2] 21599 아이템 배치하기.cpp" />
+    <ClCompile Include="2. Silver\Silver 1\[S1] 14653 너의 이름은.cpp" />
+    <ClCompile Include="2. Silver\Silver 1\[S1] 21868 미적분학 입문하기.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 16769 Mixing Milk.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 21313 문어.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 12791 Starman.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 15351 인생 점수.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 21734 SMUPC의 등장.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 14954 Happy Number.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 15814 야바위 대장.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 17466 N! mod P %281%29.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 20205 교수님 그림이 깨지는데요？.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 14915 진수 변환기.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
