@@ -16,13 +16,13 @@ int main()
     array<int, 2> result = { 1,1 };
     bool dir = true;
     int n = 1;
-    for (int i = 0; i < x - 1; i++)
+    for (int i = 1; i < x; i++)
     {
         if (result[dir] == n)
         {
             result[dir]++;
             n++;
-            dir = !dir;
+            dir ^= 1;
         }
         else
         {

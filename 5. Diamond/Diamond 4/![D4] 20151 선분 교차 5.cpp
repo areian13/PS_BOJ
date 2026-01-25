@@ -56,8 +56,10 @@ struct Line
 
         if (ab_cd < 0 && cd_ab < 0)
             return true;
-        return OnSegment(l1, c) || OnSegment(l1, d)
-            || OnSegment(l2, a) || OnSegment(l2, b);
+        return OnSegment(l1, c) && c != a && c != b
+            || OnSegment(l1, d) && d != a && d != b
+            || OnSegment(l2, a) && a != c && a != d
+            || OnSegment(l2, b) && b != c && b != d;
     }
 
     friend istream& operator >> (istream& is, Line& l)

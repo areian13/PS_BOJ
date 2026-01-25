@@ -71,58 +71,20 @@ struct Event
 {
     Point p;
     int idx;
-    bool isEnd;
+    int type;
 
     friend bool operator < (const Event& a, const Event& b)
     {
         if (a.p.x != b.p.x) return a.p.x < b.p.x;
-        if (a.isEnd != b.isEnd) return a.isEnd < b.isEnd;
+        if (a.type != b.type) return a.type < b.type;
         return a.p.y < b.p.y;
     }
 };
 
-bool HasCross(vector<Line>& lines)
+int CountCross(vector<Line>& lines)
 {
     int n = lines.size();
 
-    vector<Event> events(n * 2);
-    for (int i = 0; i < n; i++)
-    {
-        events[i * 2 + 0] = { lines[i].a,i,false };
-        events[i * 2 + 1] = { lines[i].b,i,true };
-    }
-    sort(events.begin(), events.end());
-
-    int curX;
-    auto comp = [&curX](const Line& a, const Line& b)
-        {
-            double t = a.YatX(curX) - b.YatX(curX);
-            if (!IsZero(t)) return t < 0;
-            return a.a < b.a;
-        };
-    multiset<Line, decltype(comp)> mts(comp);
-    for (auto& [p, idx, isEnd] : events)
-    {
-        curX = p.x;
-        if (!isEnd)
-        {
-            auto u = mts.insert(lines[idx]);
-            auto v = next(u), p = prev(u);
-            if (v != mts.end() && Line::IsCross(*u, *v))
-                return true;
-            if (u != mts.begin() && Line::IsCross(*u, *p))
-                return true;
-        }
-        else
-        {
-            auto u = mts.lower_bound(lines[idx]);
-            auto v = next(u), p = prev(u);
-            if (u != mts.begin() && v != mts.end() && Line::IsCross(*p, *v))
-                return true;
-            mts.erase(u);
-        }
-    }
-    return false;
 }
 
 int main()
@@ -136,6 +98,6 @@ int main()
     for (Line& line : lines)
         cin >> line;
 
-    bool result = HasCross(lines);
+    int result = CountCross(lines);
     cout << result << '\n';
 }
