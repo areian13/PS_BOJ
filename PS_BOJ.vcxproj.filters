@@ -2539,6 +2539,13 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 21867 Java Bitecode.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 14593 2017 아주대학교 프로그래밍 경시대회 %28Large%29.cpp" />
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 14592 2017 아주대학교 프로그래밍 경시대회 %28Small%29.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 15995 잉여역수 구하기.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 19946 2의 제곱수 계산하기.cpp" />
+    <ClCompile Include="4. Platinum\Platinum 5\[P5] 01948 임계경로.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 23813 회전.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 31458 !!초콜릿 중독 주의!!.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 16462 %27나교수%27 교수님의 악필.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 14471 포인트 카드.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
