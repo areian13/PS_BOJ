@@ -2546,6 +2546,7 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 31458 !!초콜릿 중독 주의!!.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 16462 %27나교수%27 교수님의 악필.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 14471 포인트 카드.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 17027 Shell Game.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
