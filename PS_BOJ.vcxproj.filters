@@ -2547,6 +2547,11 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 16462 %27나교수%27 교수님의 악필.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 14471 포인트 카드.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 17027 Shell Game.cpp" />
+    <ClCompile Include="2. Silver\Silver 2\[S2] 34044 인간도.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 17838 커맨드.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 29701 모스 부호.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 16770 The Bucket List.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 18245 이상한 나라의 암호.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
