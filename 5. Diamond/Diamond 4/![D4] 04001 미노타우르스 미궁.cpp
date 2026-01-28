@@ -20,7 +20,7 @@ int Sum(int sr, int sc, int er, int ec, vector<vector<int>>& ps)
     return ps[er][ec] - ps[er][sc - 1] - ps[sr - 1][ec] + ps[sr - 1][sc - 1];
 }
 
-bool BFS(Pos s, Pos t, Pos vs, Pos ve, vector<vector<char>>& grid, bool flag = false)
+bool BFS(Pos s, Pos t, Pos vs, Pos ve, vector<vector<char>>& grid)
 {
     int n = grid.size();
     int m = grid[0].size();
@@ -51,99 +51,87 @@ bool BFS(Pos s, Pos t, Pos vs, Pos ve, vector<vector<char>>& grid, bool flag = f
             Q.push({ nr,nc });
         }
     }
-
-    if (!flag)
-        return visit[t.r][t.c];
-
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = 0; j < m; j++)
-        {
-            if (grid[i][j] == '.' && !visit[i][j])
-                grid[i][j] = '#';
-        }
-    }
     return visit[t.r][t.c];
 }
-int Wall(int l, int r, int c, vector<vector<int>>& ps)
-{
-    int n = ps.size() - 1;
-    int m = ps[0].size() - 1;
 
-    int sum = 0;
-    if (r == 1 || c == 1 || c + l - 1 == m ||
-        Sum(r - 1, c - 1, r - 1, c + l, ps) != l + 2 ||
-        Sum(r - 1, c - 1, r - 1, c + l, ps) != 0)
-        sum++;
-    if (r + l - 1 == n || c == 1 || c + l - 1 == m ||
-        Sum(r + l, c - 1, r + l, c + l, ps) != l + 2 ||
-        Sum(r + l, c - 1, r + l, c + l, ps) != 0)
-        sum++;
-    if (r == 1 || r + l - 1 == n || c == 1 ||
-        Sum(r - 1, c - 1, r + l, c - 1, ps) != l + 2)
-        sum++;
-    if (r == 1 || r + l - 1 == n || c + l - 1 == m ||
-        Sum(r - 1, c + l, r + l, c + l, ps) != l + 2)
-        sum++;
-    return sum;
+bool WorthBlocking(int r, int c, int l,
+    vector<vector<int>>& pr, vector<vector<int>>& pc)
+{
+    int cnt = 0;
+    cnt += pr[r - 1][c + l - 1] - pr[r - 1][c - 1];
+    cnt += pr[r + l][c + l - 1] - pr[r + l][c - 1];
+    cnt += pc[r + l - 1][c - 1] - pc[r - 1][c - 1];
+    cnt += pc[r + l - 1][c + l] - pc[r - 1][c + l];
+    return cnt >= 2;
 }
 
-vector<int> Type(int l, vector<vector<int>>& ps, vector<vector<char>>& grid)
+vector<int> Type(int l, vector<vector<int>>& ps,
+    vector<vector<int>>& pr, vector<vector<int>>& pc,
+    vector<vector<char>>& grid)
 {
-    int n = grid.size() - 1;
-    int m = grid[0].size() - 1;
+    int n = grid.size() - 2;
+    int m = grid[0].size() - 2;
 
-    bool tried = false;
+    bool remain = false;
     for (int i = 1; i + l - 1 <= n; i++)
     {
         for (int j = 1; j + l - 1 <= m; j++)
         {
-            if (i == 1 && j == 1 || i + l - 1 == n && j + l - 1 == m)
+            if (i == 1 && j == 1 ||
+                i + l - 1 == n && j + l - 1 == m)
                 continue;
             if (Sum(i, j, i + l - 1, j + l - 1, ps) != l * l)
                 continue;
-            if (Wall(l, i, j, ps) <= 1)
-                continue;
 
-            tried = true;
-            if (!BFS({ 1,1 }, { n,m }, { i,j }, { i + l - 1,j + l - 1 }, grid))
-                return { l,i,j };
+            remain = true;
+
+            if (WorthBlocking(i, j, l, pr, pc))
+            {
+                if (!BFS({ 1,1 }, { n,m }, { i,j }, { i + l - 1,j + l - 1 }, grid))
+                    return { l,i,j };
+            }
         }
     }
 
-    if (tried) return { -1 };
-    return { -2 };
+    return { remain ? -1 : -2 };
 }
 
 vector<int> Barrier(vector<vector<char>>& grid)
 {
-    int n = grid.size() - 1;
-    int m = grid[0].size() - 1;
+    int n = grid.size() - 2;
+    int m = grid[0].size() - 2;
 
-    BFS({ 1,1 }, { n,m }, { -1,-1 }, { -1,-1 }, grid, true);
-
-    vector<vector<int>> ps(n + 1, vector<int>(m + 1, 0));
-    for (int i = 1; i <= n; i++)
+    vector<vector<int>> ps(n + 2, vector<int>(m + 2, 0)), pr, pc;
+    pr = pc = ps;
+    for (int i = 1; i <= n + 1; i++)
     {
-        for (int j = 1; j <= m; j++)
+        for (int j = 1; j <= m + 1; j++)
+        {
             ps[i][j] = ps[i - 1][j] + ps[i][j - 1] - ps[i - 1][j - 1] + (grid[i][j] == '.');
+            pr[i][j] = pr[i][j - 1] + (grid[i][j - 1] == '#' && grid[i][j] == '.');
+        }
+    }
+    for (int j = 1; j <= m + 1; j++)
+    {
+        for (int i = 1; i <= n + 1; i++)
+            pc[i][j] = pc[i - 1][j] + (grid[i - 1][j] == '#' && grid[i][j] == '.');
     }
 
-    int s = 1, e = min(n, m);
-    vector<int> result = { e + 1,-1,-1 };
-    while (s <= e)
+    int l = 1, r = min(n, m);
+    vector<int> result = { r + 1,-1,-1 };
+    while (l <= r)
     {
-        int m = (s + e) / 2;
-        vector<int> t = Type(m, ps, grid);
+        int m = (l + r) / 2;
+        vector<int> t = Type(m, ps, pr, pc, grid);
 
         if (t[0] == -1)
-            s = m + 1;
+            l = m + 1;
         else if (t[0] == -2)
-            e = m - 1;
+            r = m - 1;
         else
         {
             result = min(result, t);
-            e = m - 1;
+            r = m - 1;
         }
     }
 
@@ -159,7 +147,7 @@ int main()
     int w, h;
     cin >> w >> h;
 
-    vector<vector<char>> grid(h + 1, vector<char>(w + 1, '#'));
+    vector<vector<char>> grid(h + 2, vector<char>(w + 2, '#'));
     for (int i = 1; i <= h; i++)
     {
         for (int j = 1; j <= w; j++)

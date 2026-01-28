@@ -1812,7 +1812,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="5. Diamond\Diamond 4\![D4] 04001 미노타우르스 미궁.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="5. Diamond\Diamond 4\![D4] 09244 핀볼.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
@@ -2399,7 +2400,7 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 32952 비트코인 반감기.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="1. Bronze\Bronze 2\[B2] 6565 Hard to Believe, but True!.cpp">
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 06565 Hard to Believe, but True!.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 06877 Mouse Move.cpp">

@@ -293,7 +293,7 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 32626 SPC에 가는 길.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 32685 4-LSB.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 32952 비트코인 반감기.cpp" />
-    <ClCompile Include="1. Bronze\Bronze 2\[B2] 6565 Hard to Believe, but True!.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 06565 Hard to Believe, but True!.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 06877 Mouse Move.cpp" />
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 05790 Log Books.cpp" />
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 06243 Mileage Bank.cpp" />
