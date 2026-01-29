@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
-#include <algorithm>
 #include <set>
+#include <queue>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
 
@@ -12,20 +12,20 @@ bool IsZero(double val) { return abs(val) < EPS; }
 
 struct Point
 {
-    int x, y;
+    double x, y;
 
     friend auto operator <=> (const Point& a, const Point& b) = default;
     friend Point operator + (const Point& a, const Point& b) { return { a.x + b.x,a.y + b.y }; }
     friend Point operator - (const Point& a, const Point& b) { return { a.x - b.x,a.y - b.y }; }
-    friend Point operator * (const Point& a, int d) { return { a.x * d,a.y * d }; }
+    friend Point operator * (const Point& a, double d) { return { a.x * d,a.y * d }; }
 
-    static long long dot(const Point& a, const Point& b) { return 1LL * a.x * b.x + 1LL * a.y * b.y; }
-    static long long cross(const Point& a, const Point& b) { return 1LL * a.x * b.y - 1LL * a.y * b.x; }
+    static double dot(const Point& a, const Point& b) { return a.x * b.x + a.y * b.y; }
+    static double cross(const Point& a, const Point& b) { return a.x * b.y - a.y * b.x; }
 
     static int CCW(const Point& a, const Point& b, const Point& c)
     {
-        long long ccw = cross(b - a, c - b);
-        return (ccw == 0 ? 0 : (ccw > 0 ? +1 : -1));
+        double ccw = cross(b - a, c - b);
+        return (IsZero(ccw) ? 0 : (ccw > 0 ? +1 : -1));
     }
 
     friend istream& operator >> (istream& is, Point& p)
@@ -39,7 +39,7 @@ struct Line
 {
     Point a, b;
 
-    double YatX(int x) const { return 1. * (b.y - a.y) / (b.x - a.x) * (x - a.x) + a.y; }
+    double YatX(int x) const { return (b.y - a.y) / (b.x - a.x) * (x - a.x) + a.y; }
     static bool OnSegment(const Line& l, const Point& p)
     {
         return Point::CCW(l.a, l.b, p) == 0
@@ -63,29 +63,61 @@ struct Line
     friend istream& operator >> (istream& is, Line& l)
     {
         is >> l.a >> l.b;
-        if (l.a > l.b) swap(l.a, l.b);
         return is;
     }
+};
+
+enum EventType
+{
+    START, END, INTERSECTION, VERTICAL
 };
 struct Event
 {
     Point p;
-    int idx;
-    int type;
+    EventType type;
+    double value;
+    vector<Line> ls;
 
-    friend bool operator < (const Event& a, const Event& b)
-    {
-        if (a.p.x != b.p.x) return a.p.x < b.p.x;
-        if (a.type != b.type) return a.type < b.type;
-        return a.p.y < b.p.y;
-    }
+    Event(const Point& p, const Line& l, EventType type) 
+        : p(p), value(p.x), type(type) { ls.push_back(l); }
+    Event(const Point& p, const vector<Line>& ls, EventType type)
+        : p(p), value(p.x), type(type), ls(ls) {}
 };
 
-int CountCross(vector<Line>& lines)
+struct BentelyOttmann
 {
-    int n = lines.size();
+    inline static auto comp = [](const Event& a, const Event& b) { return a.value > b.value; };
 
-}
+    priority_queue<Event, vector<Event>, decltype(comp)> events;
+    set<Line, Line> activeLines;
+    vector<pair<Line, Line>> intersections;
+
+    BentelyOttmann(vector<Line> lines) : events(comp)
+    {
+        for (auto& line : lines)
+        {
+            auto& [a, b] = line;
+            if (a > b)
+                swap(a, b);
+
+            if (a.x == b.x)
+                events.push(Event(a, line, EventType::VERTICAL));
+            else
+            {
+                events.push(Event(a, line, EventType::START));
+                events.push(Event(b, line, EventType::END));
+            }
+        }
+
+        while (!events.empty())
+        {
+            Event e = events.top();
+            events.pop();
+
+
+        }
+    }
+};
 
 int main()
 {
@@ -98,6 +130,6 @@ int main()
     for (Line& line : lines)
         cin >> line;
 
-    int result = CountCross(lines);
-    cout << result << '\n';
+    BentelyOttmann bo(lines);
+    cout << bo.intersections.size() << '\n';
 }

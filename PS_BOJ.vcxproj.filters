@@ -2552,6 +2552,16 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 29701 모스 부호.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 16770 The Bucket List.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 18245 이상한 나라의 암호.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 14710 고장난 시계.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 35149 NEMODEMIC.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 23055 공사장 표지판.cpp" />
+    <ClCompile Include="2. Silver\Silver 2\[S2] 31288 캬루.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 26529 Bunnies.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 17946 피자는 나눌 수록 커지잖아요.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 15874 Caesar Cipher.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 24544 카카오뷰 큐레이팅 효용성 분석.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 23320 홍익 절대평가.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 23738 Ресторан.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
