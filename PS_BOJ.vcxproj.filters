@@ -2580,6 +2580,10 @@
     <ClCompile Include="3. Gold\Gold 5\[G5] 32208 Knight Cruising.cpp" />
     <ClCompile Include="5. Diamond\Diamond 5\[D5] 13674 Torres de Telefonia Celular.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 16944 강력한 비밀번호.cpp" />
+    <ClCompile Include="2. Silver\Silver 4\[S4] 25426 일차함수들.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 20494 스시.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 14530 The Lost Cow.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 22113 창영이와 버스.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
