@@ -2562,6 +2562,24 @@
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 24544 카카오뷰 큐레이팅 효용성 분석.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 23320 홍익 절대평가.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 23738 Ресторан.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 31995 게임말 올려놓기.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 34071 첫 번째 문제는 정말 쉬운 문제일까？.cpp" />
+    <ClCompile Include="2. Silver\Silver 5\[S5] 11004 K번째 수.cpp" />
+    <ClCompile Include="2. Silver\Silver 5\[S5] 34668 가희와 후쿠오카 공항.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 31844 창고지기.cpp" />
+    <ClCompile Include="2. Silver\Silver 4\[S4] 20186 수 고르기.cpp" />
+    <ClCompile Include="2. Silver\Silver 3\[S3] 05911 선물.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 14625 냉동식품.cpp" />
+    <ClCompile Include="2. Silver\Silver 2\[S2] 03042 트리플렛.cpp" />
+    <ClCompile Include="2. Silver\Silver 1\[S1] 32291 $x$와 $x+1$의 차이.cpp" />
+    <ClCompile Include="2. Silver\Silver 3\[S3] 03474 교수가 된 현우.cpp" />
+    <ClCompile Include="2. Silver\Silver 1\[S1] 09333 돈 갚기.cpp" />
+    <ClCompile Include="2. Silver\Silver 1\[S1] 24369 알고리즘 수업 - 점근적 표기 5.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 34161 OO0OO.cpp" />
+    <ClCompile Include="2. Silver\Silver 5\[S5] 06054 피터팬 프레임.cpp" />
+    <ClCompile Include="3. Gold\Gold 5\[G5] 32208 Knight Cruising.cpp" />
+    <ClCompile Include="5. Diamond\Diamond 5\[D5] 13674 Torres de Telefonia Celular.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 16944 강력한 비밀번호.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />

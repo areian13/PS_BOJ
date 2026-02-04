@@ -1,83 +1,12 @@
-#ifdef ONLINE_JUDGE
-#define _128d  __int128
-#else
-#define _128d long long
-#endif
-
 #include <iostream>
 #include <vector>
 #include <array>
-#include <string>
-#include <sstream>
-#include <ctime>
-#include <algorithm>
-#include <cstdio>
-#include <cstdlib>
-#include <cmath>
-#include <queue>
-#include <stack>
-#include <deque>
-#include <map>
 #include <unordered_map>
-#include <set>
-#include <climits>
-#include <cfloat>
-#include <cstring>
-#include <random>
-#include <type_traits>
-#include <numeric>
-#include <functional>
+#include <string>
 
-#define Endl << "\n"
-#define endL << "\n" <<
-#define Cout cout <<
-#define COUT cout << "OUT: " <<
-#define Cin cin >>
-#define fspc << " "
-#define spc << " " <<
-#define Enter cout << "\n"
-#define if if
-#define elif else if
-#define else else
-#define For(n) for(int i = 0; i < n; i++)
-#define Forj(n) for(int j = 0; j < n; j++)
-#define Foro(n) for(int i = 1; i <= n; i++)
-#define Forjo(n) for(int j = 1; j <= n; j++)
-#define between(small, middle, big) (small < middle && middle < big)
-#define among(small, middle, big) (small <= middle && middle <= big)
-#define stoe(container) container.begin(), container.end()
-#define lf(d) Cout fixed; cout.precision(d);
-#define ulf() cout.unsetf(ios::scientific);
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
-#define PI 3.14159265359
-
-typedef long long LLONG;
-typedef unsigned long long ULLONG;
-typedef unsigned int UINT;
-typedef long double LDOUBLE;
 
 using namespace std;
-
-template <typename T>
-class heap : public priority_queue<T, vector<T>, greater<T>>
-{
-};
-
-template <typename T>
-ostream& operator<<(ostream& os, vector<T>& vec)
-{
-    for (T& value : vec)
-        os << value << ' ';
-    return os;
-}
-
-template <typename T, size_t N>
-ostream& operator<<(ostream& os, array<T, N>& vec)
-{
-    for (T& value : vec)
-        os << value << ' ';
-    return os;
-}
 
 struct Pos
 {
@@ -171,7 +100,7 @@ struct Player
     int DirIdx(char dir)
     {
         string rdlu = "RDLU";
-        For(4)
+        for (int i = 0; i < 4; i++)
         {
             if (dir == rdlu[i])
                 return i;
@@ -227,9 +156,9 @@ struct Player
         Accessary item = accessay[{y, x}];
         if (item.type == 'W')
             weapon = stoi(item.effect);
-        elif(item.type == 'A')
+        else if (item.type == 'A')
             armor = stoi(item.effect);
-        elif(item.type == 'O')
+        else if (item.type == 'O')
         {
             if (cntAccessory < 4 && !hasAccessory[item.effect])
             {
@@ -301,19 +230,19 @@ struct Player
     }
     void Print()
     {
-        For(n)
+        for (int i = 0; i < n; i++)
         {
-            Forj(m)
-                Cout(curPoint == Pos{ i, j } && !isDead ? '@' : grid[i][j]);
-            Enter;
+            for (int j = 0; j < m; j++)
+                cout << (curPoint == Pos{ i, j } && !isDead ? '@' : grid[i][j]);
+            cout << '\n';
         }
-        Cout "Passed Turns : " << turn  Endl;
-        Cout "LV : " << level Endl;
-        Cout "HP : " << curHP << '/' << maxHP Endl;
-        Cout "ATT : " << attack << '+' << weapon Endl;
-        Cout "DEF : " << defence << '+' << armor Endl;
-        Cout "EXP : " << curEXP << '/' << maxEXP Endl;
-        Cout endingComment Endl;
+        cout << "Passed Turns : " << turn << '\n';
+        cout << "LV : " << level << '\n';
+        cout << "HP : " << curHP << '/' << maxHP << '\n';
+        cout << "ATT : " << attack << '+' << weapon << '\n';
+        cout << "DEF : " << defence << '+' << armor << '\n';
+        cout << "EXP : " << curEXP << '/' << maxEXP << '\n';
+        cout << endingComment << '\n';
     }
 };
 Player player;
@@ -323,16 +252,16 @@ int main()
 {
     FastIO;
 
-    Cin n >> m;
+    cin >> n >> m;
     grid.resize(n, vector<char>(m));
 
     int k = 0;
     int l = 0;
-    For(n)
+    for (int i = 0; i < n; i++)
     {
-        Forj(m)
+        for (int j = 0; j < m; j++)
         {
-            Cin grid[i][j];
+            cin >> grid[i][j];
             if (grid[i][j] == '@')
             {
                 player.curPoint = player.spawnPoint = { i,j };
@@ -346,24 +275,24 @@ int main()
     }
 
     string s;
-    Cin s;
+    cin >> s;
 
-    For(k)
+    for (int i = 0; i < k; i++)
     {
         int r, c, w, a, h, e;
         string name;
-        Cin r >> c >> name >> w >> a >> h >> e;
+        cin >> r >> c >> name >> w >> a >> h >> e;
         r--, c--;
 
         monster[{r, c}] = { name,w,a,h,h,e,(grid[r][c] == 'M') };
     }
 
-    For(l)
+    for (int i = 0; i < l; i++)
     {
         int r, c;
         char type;
         string effect;
-        Cin r >> c >> type >> effect;
+        cin >> r >> c >> type >> effect;
         r--, c--;
 
         accessay[{r, c}] = { type,effect };
@@ -378,9 +307,9 @@ int main()
         int x = player.curPoint.x;
         if (grid[y][x] == '^')
             player.StepSpikeTrap();
-        elif(grid[y][x] == 'B')
+        else if (grid[y][x] == 'B')
             player.GetItem(y, x);
-        elif(grid[y][x] == '&' || grid[y][x] == 'M')
+        else if (grid[y][x] == '&' || grid[y][x] == 'M')
             player.FightMonster(y, x);
 
         if (player.isDead || player.isKilledBoss)
