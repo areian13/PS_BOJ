@@ -2584,6 +2584,10 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 20494 스시.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 14530 The Lost Cow.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 22113 창영이와 버스.cpp" />
+    <ClCompile Include="2. Silver\Silver 4\[S4] 31460 초콜릿과 11과 팰린드롬.cpp" />
+    <ClCompile Include="2. Silver\Silver 2\[S2] 17123 배열 놀이.cpp" />
+    <ClCompile Include="2. Silver\Silver 1\[S1] 32206 아보와 킨텍스.cpp" />
+    <ClCompile Include="2. Silver\Silver 1\[S1] 31001 주식 시뮬레이션.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
