@@ -2628,6 +2628,9 @@
     <ClCompile Include="2. Silver\Silver 5\[S5] 23253 자료구조는 정말 최고야.cpp" />
     <ClCompile Include="2. Silver\Silver 3\[S3] 04172 sqrt log sin.cpp" />
     <ClCompile Include="1. Bronze\Bronze 5\[B5] 33170 ブラックジャック %28Blackjack%29.cpp" />
+    <ClCompile Include="2. Silver\Silver 4\[S4] 14397 해변.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 1\[B1] 23969 알고리즘 수업 - 버블 정렬 2.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 1\[B1] 34850 포도주 상인.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
