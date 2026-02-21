@@ -2631,6 +2631,10 @@
     <ClCompile Include="2. Silver\Silver 4\[S4] 14397 해변.cpp" />
     <ClCompile Include="1. Bronze\Bronze 1\[B1] 23969 알고리즘 수업 - 버블 정렬 2.cpp" />
     <ClCompile Include="1. Bronze\Bronze 1\[B1] 34850 포도주 상인.cpp" />
+    <ClCompile Include="2. Silver\Silver 4\[S4] 25338 바지 구매.cpp" />
+    <ClCompile Include="2. Silver\Silver 3\[S3] 17204 죽음의 게임.cpp" />
+    <ClCompile Include="2. Silver\Silver 2\[S2] 02823 유턴 싫어.cpp" />
+    <ClCompile Include="2. Silver\Silver 4\[S4] 02670 연속부분최대곱.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
