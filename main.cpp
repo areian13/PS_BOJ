@@ -1,76 +1,41 @@
 #include <iostream>
-#include <string>
-#include <chrono>
+#include <vector>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
 
 using namespace std;
-using namespace chrono;
 
-template <typename Func, typename... Args>
-auto PrintFuncTimeImpl(const char* name, Func&& func, Args&&... args)
--> decltype(func(std::forward<Args>(args)...))
+int main()
 {
-    auto start = chrono::steady_clock::now();
+    FastIO;
 
-    func(std::forward<Args>(args)...);
+    int n, k;
+    cin >> n >> k;
 
-    auto end = chrono::steady_clock::now();
-    auto duration =
-        chrono::duration_cast<chrono::microseconds>(end - start);
-
-    cout << "[" << name << "] "
-        << duration.count() << " us\n";
-}
-
-#define PrintFuncTime(func, ...) \
-    PrintFuncTimeImpl(#func, func, __VA_ARGS__)
-
-void IF(vector<int>& arr) {
-    int cnt = 0;
-    for (int v : arr) {
-        if (v >= 0)
-            v++;
-    }
-    cout << cnt << '\n';
-}
-void Comp(vector<int>& arr) {
-    int cnt = 0;
-    for (int v : arr)
-        cnt += (v >= 0);
-    cout << cnt << '\n';
-}
-void Bit(vector<int>& arr) {
-    int cnt = 0;
-    for (int v : arr)
-        cnt += ((unsigned)v >> 31) ^ 1;
-    cout << cnt << '\n';
-}
-
-void Just(vector<int>& arr) {
-    vector<int> holsu;
-    for (int v : arr) {
-        if (v & 1)
-            holsu.push_back(v);
-    }
-}
-void Reserve(vector<int>& arr) {
-    vector<int> holsu;
-    holsu.reserve(arr.size() / 2 + 10);
-    for (int v : arr) {
-        if (v & 1)
-            holsu.push_back(v);
-    }
-    holsu.shrink_to_fit();
-}
-
-int main() {
-    srand((unsigned)time(NULL));
-    int n = 100'000'000;
-    vector<int> arr(n);
+    vector<vector<int>> p(n, vector<int>(k));
+    vector<pair<int, int>> maxP(k, { 0,0 });
     for (int i = 0; i < n; i++)
-        arr[i] = (rand() % n) * (rand() % 2 ? +1 : -1);
+    {
+        for (int j = 0; j < k; j++)
+        {
+            cin >> p[i][j];
+            if (p[i][j] > maxP[j].first)
+            {
+                maxP[j].first = p[i][j];
+                maxP[j].second = 1;
+            }
+            else if (p[i][j] == maxP[j].first)
+                maxP[j].second++;
+        }
+    }
 
-    PrintFuncTime(Just, arr);
-    PrintFuncTime(Reserve, arr);
+    int result = 0;
+    for (int i = 0; i < n; i++)
+    {
+        bool can = false;
+        for (int j = 0; j < k; j++)
+            can |= (p[i][j] == maxP[j].first && maxP[j].second == 1);
+        result += can;
+    }
+    cout << result << '\n';
 }

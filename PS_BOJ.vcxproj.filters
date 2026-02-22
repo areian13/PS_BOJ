@@ -2635,6 +2635,15 @@
     <ClCompile Include="2. Silver\Silver 3\[S3] 17204 죽음의 게임.cpp" />
     <ClCompile Include="2. Silver\Silver 2\[S2] 02823 유턴 싫어.cpp" />
     <ClCompile Include="2. Silver\Silver 4\[S4] 02670 연속부분최대곱.cpp" />
+    <ClCompile Include="2. Silver\Silver 4\[S4] 02491 수열.cpp" />
+    <ClCompile Include="2. Silver\Silver 4\[S4] 09507 Generations of Tribbles.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 34922 사각지대.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 34563 궁핍한 모그.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 1\[B1] 07466 Honey and Milk Land.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 1\[B1] 13552 구와 쿼리.cpp" />
+    <ClCompile Include="2. Silver\Silver 4\[S4] 31713 행운을 빌어요.cpp" />
+    <ClCompile Include="2. Silver\Silver 2\[S2] 13908 비밀번호.cpp" />
+    <ClCompile Include="2. Silver\Silver 1\[S1] 24467 혼자 하는 윷놀이.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
