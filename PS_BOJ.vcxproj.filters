@@ -2644,6 +2644,10 @@
     <ClCompile Include="2. Silver\Silver 4\[S4] 31713 행운을 빌어요.cpp" />
     <ClCompile Include="2. Silver\Silver 2\[S2] 13908 비밀번호.cpp" />
     <ClCompile Include="2. Silver\Silver 1\[S1] 24467 혼자 하는 윷놀이.cpp" />
+    <ClCompile Include="2. Silver\Silver 1\[S1] 13011 사탕의 밀도.cpp" />
+    <ClCompile Include="3. Gold\Gold 5\[G5] 32945 극한직업 - 영양사 선생님.cpp" />
+    <ClCompile Include="4. Platinum\Platinum 5\[P5] 10523 직선 찾기.cpp" />
+    <ClCompile Include="4. Platinum\Platinum 5\[P5] 16287 Parcel.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
