@@ -76,7 +76,7 @@ int main()
                 if (mst.Find(u) != mst.Find(v))
                     cout << "UNKNOWN" << '\n';
                 else
-
+                    ;
             }
         }
     }
