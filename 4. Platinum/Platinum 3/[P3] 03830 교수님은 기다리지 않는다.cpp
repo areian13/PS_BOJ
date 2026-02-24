@@ -7,38 +7,35 @@
 
 using namespace std;
 
-const int INF = INT_MAX;
-
 struct MST
 {
-    vector<int> p;
+    vector<int> p, d;
 
-    MST(int n) { p.resize(n, -1); }
-    int Find(int u) { return p[u] < 0 ? u : p[u] = Find(p[u]); }
-    void Union(int u, int v)
+    MST(int n)
     {
-        u = Find(u), v = Find(v);
-        if (u == v) return;
-        if (p[u] > p[v]) swap(u, v);
-        p[u] += p[v], p[v] = u;
+        p.resize(n, -1);
+        d.resize(n, 0);
+    }
+    int Find(int u)
+    {
+        if (p[u] < 0) return u;
+
+        int parent = Find(p[u]);
+        d[u] += d[p[u]];
+        return p[u] = parent;
+    }
+    void Union(int u, int v, int w)
+    {
+        int ur = Find(u), vr = Find(v);
+        if (ur == vr) return;
+
+        if (p[ur] > p[vr])
+            swap(ur, vr), swap(u, v), w *= -1;
+
+        d[vr] = d[u] - d[v] + w;
+        p[ur] += p[vr], p[vr] = ur;
     }
 };
-
-int Gap(int p, int u, int t, vector<vector<int>>& graph,
-    map<int, map<int, int>>& dp)
-{
-    if (dp[u].count(t) == 1)
-        return dp[u][t];
-
-    int result = 0;
-    for (int v : graph[u])
-    {
-        if (v == p)
-            continue;
-        result += Gap(u, v, t, graph, dp) + dp[u][v];
-    }
-    return dp[u][t] = result;
-}
 
 int main()
 {
@@ -53,7 +50,6 @@ int main()
             break;
 
         MST mst(n);
-        vector<vector<int>> graph(n);
         for (int i = 0; i < m; i++)
         {
             char c;
@@ -69,14 +65,14 @@ int main()
                 if (mst.Find(u) == mst.Find(v))
                     continue;
 
-                mst.Union(u, v);
+                mst.Union(u, v, w);
             }
             else
             {
                 if (mst.Find(u) != mst.Find(v))
                     cout << "UNKNOWN" << '\n';
                 else
-                    ;
+                    cout << mst.d[v] - mst.d[u] << '\n';
             }
         }
     }
