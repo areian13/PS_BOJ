@@ -54,7 +54,6 @@ int main()
 
         MST mst(n);
         vector<vector<int>> graph(n);
-        map<int, map<int, int>> dp;
         for (int i = 0; i < m; i++)
         {
             char c;
@@ -71,17 +70,13 @@ int main()
                     continue;
 
                 mst.Union(u, v);
-                dp[u][v] = w;
-                dp[v][u] = -w;
-                graph[u].push_back(v);
-                graph[v].push_back(u);
             }
             else
             {
                 if (mst.Find(u) != mst.Find(v))
                     cout << "UNKNOWN" << '\n';
                 else
-                    cout << Gap(-1, u, v, graph, dp) << '\n';
+
             }
         }
     }
