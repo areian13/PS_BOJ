@@ -2172,7 +2172,6 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 11575 Affine Cipher.cpp" />
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 29829 Palindroom.cpp" />
     <ClCompile Include="0. Unrated\![U0] 09995 HM과 TM.cpp" />
-    <ClCompile Include="5. Diamond\Diamond 3\![D3] 01266 일어나!.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 11587 MARKO.cpp" />
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 26201 Finding Maximal Non-Trivial Monotones.cpp" />
     <ClCompile Include="4. Platinum\Platinum 5\[P5] 27718 선분 교차 EX.cpp" />
@@ -2453,7 +2452,7 @@
     <ClCompile Include="2. Silver\Silver 5\[S5] 34924 PAUL 문자열 %28Easy%29.cpp" />
     <ClCompile Include="4. Platinum\Platinum 5\[P5] 02568 전깃줄 - 2.cpp" />
     <ClCompile Include="2. Silver\Silver 4\[S4] 09372 상근이의 여행.cpp" />
-    <ClCompile Include="4. Platinum\Platinum 3\![P3] 03830 교수님은 기다리지 않는다.cpp" />
+    <ClCompile Include="4. Platinum\Platinum 3\[P3] 03830 교수님은 기다리지 않는다.cpp" />
     <ClCompile Include="2. Silver\Silver 4\[S4] 02578 빙고.cpp" />
     <ClCompile Include="2. Silver\Silver 3\[S3] 21735 눈덩이 굴리기.cpp" />
     <ClCompile Include="2. Silver\Silver 1\[S1] 16564 히오스 프로게이머.cpp" />
@@ -2507,7 +2506,7 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 20205 교수님 그림이 깨지는데요？.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 14915 진수 변환기.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 16676 근우의 다이어리 꾸미기.cpp" />
-    <ClCompile Include="5. Diamond\Diamond 1\![D1] 01266 일어나!.cpp" />
+    <ClCompile Include="5. Diamond\Diamond 1\[D1] 01266 일어나!.cpp" />
     <ClCompile Include="5. Diamond\Diamond 4\![D4] 20151 선분 교차 5.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 21567 숫자의 개수 2.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 16675 두 개의 손.cpp" />
@@ -2648,6 +2647,7 @@
     <ClCompile Include="3. Gold\Gold 5\[G5] 32945 극한직업 - 영양사 선생님.cpp" />
     <ClCompile Include="4. Platinum\Platinum 5\[P5] 10523 직선 찾기.cpp" />
     <ClCompile Include="4. Platinum\Platinum 5\[P5] 16287 Parcel.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 34758 KUPC에 어서 오세요.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
