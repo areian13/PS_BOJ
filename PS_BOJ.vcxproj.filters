@@ -2648,6 +2648,7 @@
     <ClCompile Include="4. Platinum\Platinum 5\[P5] 10523 직선 찾기.cpp" />
     <ClCompile Include="4. Platinum\Platinum 5\[P5] 16287 Parcel.cpp" />
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 34758 KUPC에 어서 오세요.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 16497 대출 요청.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
