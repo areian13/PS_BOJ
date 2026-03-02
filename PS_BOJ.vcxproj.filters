@@ -2649,6 +2649,16 @@
     <ClCompile Include="4. Platinum\Platinum 5\[P5] 16287 Parcel.cpp" />
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 34758 KUPC에 어서 오세요.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 16497 대출 요청.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 1\[B1] 33924 신묘마루의 요술망치.cpp" />
+    <ClCompile Include="2. Silver\Silver 4\[S4] 04921 나무 블록.cpp" />
+    <ClCompile Include="2. Silver\Silver 1\[S1] 29360 양동이 게임.cpp" />
+    <ClCompile Include="3. Gold\Gold 5\[G5] 09204 체스.cpp" />
+    <ClCompile Include="3. Gold\Gold 2\[G2] 22946 원 이동하기 1.cpp" />
+    <ClCompile Include="2. Silver\Silver 4\[S4] 16218 힘 겨루기.cpp" />
+    <ClCompile Include="2. Silver\Silver 3\[S3] 31845 카드 교환.cpp" />
+    <ClCompile Include="2. Silver\Silver 1\[S1] 01821 수들의 합 6.cpp" />
+    <ClCompile Include="2. Silver\Silver 1\[S1] 34201 거울.cpp" />
+    <ClCompile Include="3. Gold\Gold 5\![G5] 33942 MEX의 MEX.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />

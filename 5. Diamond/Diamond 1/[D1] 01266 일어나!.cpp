@@ -180,16 +180,16 @@ struct BentelyOttmann
                 auto u = activeSegments.insert(segments[i0]);
                 auto p = prev(u), v = next(u);
                 if (u != activeSegments.begin() && Segment::IsIntersect(*p, *u))
-                    Push(*p, *u);
+                    PushIntersection(*p, *u);
                 if (v != activeSegments.end() && Segment::IsIntersect(*u, *v))
-                    Push(*u, *v);
+                    PushIntersection(*u, *v);
             }
             else if (type == EventType::END)
             {
                 auto u = activeSegments.lower_bound(segments[i0]);
                 auto p = prev(u), v = next(u);
                 if (u != activeSegments.begin() && v != activeSegments.end() && Segment::IsIntersect(*p, *v))
-                    Push(*p, *v);
+                    PushIntersection(*p, *v);
                 activeSegments.erase(u);
             }
             else if (type == EventType::INTERSECTION)
@@ -208,16 +208,16 @@ struct BentelyOttmann
                 auto upper = activeSegments.insert(b), above = next(upper);
 
                 if (lower != activeSegments.begin() && Segment::IsIntersect(*lower, *below))
-                    Push(*lower, *below);
+                    PushIntersection(*lower, *below);
                 if (above != activeSegments.end() && Segment::IsIntersect(*upper, *above))
-                    Push(*upper, *above);
+                    PushIntersection(*upper, *above);
 
                 after = false;
             }
         }
     }
 
-    void Push(const Segment& a, const Segment& b)
+    void PushIntersection(const Segment& a, const Segment& b)
     {
         int i0 = segIndex[a], i1 = segIndex[b];
 

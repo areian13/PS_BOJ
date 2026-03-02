@@ -1,7 +1,4 @@
 #include <iostream>
-#include <string>
-#include <vector>
-#include <algorithm>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
 
@@ -11,8 +8,14 @@ int main()
 {
     FastIO;
 
-    int n;
-    string s;
-    cin >> n >> s;
-    n *= 3;
+    int TC;
+    cin >> TC;
+
+    for (int tc = 1; tc <= TC; tc++)
+    {
+        long long n;
+        cin >> n;
+
+
+    }
 }
