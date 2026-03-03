@@ -567,7 +567,7 @@
     <ClCompile Include="3. Gold\Gold 5\[G5] 17352 여러분의 다리가 되어 드리겠습니다!.cpp" />
     <ClCompile Include="3. Gold\Gold 5\[G5] 24391 귀찮은 해강이.cpp" />
     <ClCompile Include="3. Gold\Gold 5\[G5] 28291 레드스톤.cpp" />
-    <ClCompile Include="3. Gold\Gold 5\![G5] 28683 피타! 피타! 피타츄!.cpp" />
+    <ClCompile Include="3. Gold\Gold 5\[G5] 28683 피타! 피타! 피타츄!.cpp" />
     <ClCompile Include="3. Gold\Gold 5\[G5] 32029 지금 자면 꿈을 꾸지만.cpp" />
     <ClCompile Include="3. Gold\Gold 5\[G5] 33051 나는 이 우마를 지배할 수 있다.cpp" />
     <ClCompile Include="3. Gold\Gold 1\[G1] 06439 교차.cpp" />
@@ -1903,7 +1903,7 @@
     <ClCompile Include="3. Gold\Gold 5\[G5] 13549 숨바꼭질 3.cpp" />
     <ClCompile Include="3. Gold\Gold 5\[G5] 14217 그래프 탐색.cpp" />
     <ClCompile Include="3. Gold\Gold 5\[G5] 14271 그리드 게임.cpp" />
-    <ClCompile Include="3. Gold\Gold 5\![G5] 14677 병약한 윤호.cpp" />
+    <ClCompile Include="3. Gold\Gold 5\[G5] 14677 병약한 윤호.cpp" />
     <ClCompile Include="3. Gold\Gold 5\[G5] 14284 간선 이어가기 2.cpp" />
     <ClCompile Include="3. Gold\Gold 5\[G5] 14714 홍삼 게임 %28Easy%29.cpp" />
     <ClCompile Include="3. Gold\Gold 5\[G5] 14728 벼락치기 [1].cpp" />
@@ -2659,6 +2659,8 @@
     <ClCompile Include="2. Silver\Silver 1\[S1] 01821 수들의 합 6.cpp" />
     <ClCompile Include="2. Silver\Silver 1\[S1] 34201 거울.cpp" />
     <ClCompile Include="3. Gold\Gold 5\![G5] 33942 MEX의 MEX.cpp" />
+    <ClCompile Include="3. Gold\Gold 1\![G1] 04198 열차정렬.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 33651 Vandalism.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />

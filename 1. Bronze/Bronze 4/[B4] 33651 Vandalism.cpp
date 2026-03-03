@@ -1,7 +1,5 @@
 #include <iostream>
 #include <string>
-#include <vector>
-#include <algorithm>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
 
@@ -11,8 +9,14 @@ int main()
 {
     FastIO;
 
-    int n;
     string s;
-    cin >> n >> s;
-    n *= 3;
+    cin >> s;
+
+    string result = "";
+    for (char c : (string)"UAPC")
+    {
+        if (s.find(c) == -1)
+            result += c;
+    }
+    cout << result << '\n';
 }

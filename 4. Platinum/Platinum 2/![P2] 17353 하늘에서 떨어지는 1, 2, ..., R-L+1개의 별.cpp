@@ -11,23 +11,17 @@ long long Sum(long long n)
 {
     return n * (n + 1) / 2;
 }
-
-struct Op
+long long Sum(int s, int l, int r)
 {
-    int s, l, r;
+    return Sum(r - s + 1) - Sum(l - s);
+}
 
-    long long Sum()
-    {
-        return ::Sum(r - s + 1) - ::Sum(l - s);
-    }
-};
-
-struct SegTree
+struct Lazy
 {
     int n, t;
     vector<long long> tree, lazy;
 
-    SegTree(vector<int>& a)
+    Lazy(vector<int>& a)
     {
         n = a.size();
         t = bit_ceil(a.size());
@@ -47,7 +41,7 @@ struct SegTree
 
         if (l != r)
         {
-            long long lv = Op(s, l, (l + r + 1) / 2).Sum();
+            long long lv = Sum(s, l, r);
             lazy[i * 2] += lv;
             lazy[i * 2 + 1] += lazy[i] - lv;
         }
@@ -95,15 +89,6 @@ int main()
 {
     FastIO;
 
-    /*while (true)
-    {
-        int a, b, c;
-        cin >> a >> b >> c;
-        a--,b--,c--;
-
-        cout << Op(a, b, c).Sum() << '\n';
-    }*/
-
     int n;
     cin >> n;
 
@@ -111,7 +96,7 @@ int main()
     for (int i = 0; i < n; i++)
         cin >> a[i];
 
-    SegTree seg(a);
+    Lazy seg(a);
 
     int QC;
     cin >> QC;
