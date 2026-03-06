@@ -2664,6 +2664,7 @@
     <ClCompile Include="1. Bronze\Bronze 4\[B4] 34534 와우산 스탬프 투어.cpp" />
     <ClCompile Include="1. Bronze\Bronze 1\[B1] 10448 유레카 이론.cpp" />
     <ClCompile Include="1. Bronze\Bronze 4\[B4] 33810 SciComLove %282025%29.cpp" />
+    <ClCompile Include="2. Silver\Silver 4\[S4] 10432 데이터 스트림의 섬.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
