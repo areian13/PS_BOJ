@@ -2665,6 +2665,12 @@
     <ClCompile Include="1. Bronze\Bronze 1\[B1] 10448 유레카 이론.cpp" />
     <ClCompile Include="1. Bronze\Bronze 4\[B4] 33810 SciComLove %282025%29.cpp" />
     <ClCompile Include="2. Silver\Silver 4\[S4] 10432 데이터 스트림의 섬.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 04641 Doubles.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 17285 XORChic.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 20953 고고학자 예린.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 29713 브실이의 띠부띠부씰 컬렉션 🍪.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 29716 풀만한문제.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 33572 자세히 보아야 예쁘다.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
