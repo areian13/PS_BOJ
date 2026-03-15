@@ -2677,6 +2677,14 @@
     <ClCompile Include="2. Silver\Silver 3\[S3] 02371 파일 구별하기.cpp" />
     <ClCompile Include="2. Silver\Silver 1\[S1] 11497 통나무 건너뛰기.cpp" />
     <ClCompile Include="3. Gold\Gold 2\[G2] 12015 가장 긴 증가하는 부분 수열 2 [2].cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 30009 포지션 제로.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 5\[B5] 02438 별 찍기 - 1.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 11720 숫자의 합.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 02501 약수 구하기.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 1\[B1] 29724 🍎📦 %27사과상자%27에 들어있는 것은 무엇？ 현금？.cpp" />
+    <ClCompile Include="2. Silver\Silver 4\[S4] 03699 주차 빌딩.cpp" />
+    <ClCompile Include="2. Silver\Silver 3\[S3] 03254 김밥 21개.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 14551 Card Game Contest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
