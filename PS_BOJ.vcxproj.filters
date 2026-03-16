@@ -2685,6 +2685,8 @@
     <ClCompile Include="2. Silver\Silver 4\[S4] 03699 주차 빌딩.cpp" />
     <ClCompile Include="2. Silver\Silver 3\[S3] 03254 김밥 21개.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 14551 Card Game Contest.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 17487 타자 연습.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 31832 팀명 정하기 2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
