@@ -2687,6 +2687,14 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 14551 Card Game Contest.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 17487 타자 연습.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 31832 팀명 정하기 2.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 31496 자작나무가 없소~.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 25755 거울반사.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 25558 내비게이션.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 34073 DORO.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 26041 비슷한 전화번호 표시.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 34306 M-Climb Road.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 1\[B1] 17176 암호해독기.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 32751 햄버거.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
