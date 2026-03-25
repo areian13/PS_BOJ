@@ -2695,6 +2695,8 @@
     <ClCompile Include="1. Bronze\Bronze 4\[B4] 34306 M-Climb Road.cpp" />
     <ClCompile Include="1. Bronze\Bronze 1\[B1] 17176 암호해독기.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 32751 햄버거.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 25165 영리한 아리의 포탈 타기.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 03631 Cutting a Block.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
