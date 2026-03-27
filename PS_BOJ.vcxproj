@@ -3740,7 +3740,7 @@
     <ClCompile Include="3. Gold\Gold 2\[G2] 10888 두 섬간의 이동.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="3. Gold\Gold 2\![G2] 13334 철로.cpp">
+    <ClCompile Include="3. Gold\Gold 2\[G2] 13334 철로.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="3. Gold\Gold 2\[G2] 15502 K-균등 문자열.cpp">
