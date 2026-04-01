@@ -2697,7 +2697,18 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 32751 햄버거.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 25165 영리한 아리의 포탈 타기.cpp" />
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 03631 Cutting a Block.cpp" />
-    <ClCompile Include="4. Platinum\Platinum 3\[P3] 01533 길의 개수.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 1\[B1] 02999 비밀 이메일.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 1\[B1] 17950 스노우볼.cpp" />
+    <ClCompile Include="3. Gold\Gold 2\[G2] 14565 역원%28Inverse%29 구하기.cpp" />
+    <ClCompile Include="4. Platinum\Platinum 3\![P3] 01533 길의 개수.cpp" />
+    <ClCompile Include="4. Platinum\Platinum 5\![P5] 03955 캔디 분배.cpp" />
+    <ClCompile Include="Contest\2026\03\28 19%2700 2026 UNIST-DGIST-POSTECH 연합 프로그래밍 경진대회 (2026 UDPC) Open Contest\A.cpp" />
+    <ClCompile Include="Contest\2026\03\28 19%2700 2026 UNIST-DGIST-POSTECH 연합 프로그래밍 경진대회 (2026 UDPC) Open Contest\B.cpp" />
+    <ClCompile Include="2. Silver\Silver 5\[S5] 21966 %28중략%29.cpp" />
+    <ClCompile Include="2. Silver\Silver 1\[S1] 01850 최대공약수.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 18795 이동하기 3.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 23292 코딩 바이오리듬.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 29145 Можно и отдохнуть.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
