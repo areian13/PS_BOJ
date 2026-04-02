@@ -2709,6 +2709,7 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 18795 이동하기 3.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 23292 코딩 바이오리듬.cpp" />
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 29145 Можно и отдохнуть.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 25576 찾았다 악질.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
