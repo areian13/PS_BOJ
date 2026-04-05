@@ -2710,6 +2710,14 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 23292 코딩 바이오리듬.cpp" />
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 29145 Можно и отдохнуть.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 25576 찾았다 악질.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 25905 장인은 도구를 탓하지 않는다.cpp" />
+    <ClCompile Include="3. Gold\Gold 2\[G2] 16565 N포커.cpp" />
+    <ClCompile Include="4. Platinum\Platinum 5\[P5] 13977 이항 계수와 쿼리.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 29734 집에선 안돼잉.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 12606 Reverse Words %28Large%29.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 30877 X marks the Spot.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 34346 대각선.cpp" />
+    <ClCompile Include="2. Silver\Silver 5\[S5] 09237 이장님 초대.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />

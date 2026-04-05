@@ -2,6 +2,8 @@
 #include <vector>
 #include <algorithm>
 #include <cmath>
+#include <cfloat>
+#include <queue>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
 
@@ -51,7 +53,7 @@ struct Line
     }
 };
 
-void MakeHull(vector<Point>& points, vector<int>& indices) {
+vector<Point> GetHull(vector<Point>& points) {
     Point p0 = *min_element(points.begin(), points.end(),
         [](const Point& a, const Point& b)
         {
@@ -70,19 +72,21 @@ void MakeHull(vector<Point>& points, vector<int>& indices) {
     );
 
     int n = points.size();
+    vector<Point> hull;
     for (int c = 0; c < n; c++)
     {
-        while (indices.size() >= 2)
+        while (hull.size() >= 2)
         {
-            int b = indices[indices.size() - 1];
-            int a = indices[indices.size() - 2];
+            Point& b = hull[hull.size() - 1];
+            Point& a = hull[hull.size() - 2];
 
-            if (Point::CCW(points[a], points[b], points[c]) > 0)
+            if (Point::CCW(a, b, points[c]) >= 0)
                 break;
-            indices.pop_back();
+            hull.pop_back();
         }
-        indices.push_back(c);
+        hull.push_back(points[c]);
     }
+    return hull;
 }
 
 bool IsIn(const Point& p, vector<Point>& hull)
@@ -107,69 +111,31 @@ bool IsIn(const Point& p, vector<Point>& hull)
     return Point::CCW(hull[start], hull[end], p) > 0;
 }
 
-void Insert(Point& p, vector<Point>& hull)
-{
-    int h = hull.size();
-    if (find(hull.begin(), hull.end(), p) != hull.end())
-        return;
-
-    for (int i = 0; i < h; i++)
-    {
-        Line l = { hull[i], hull[(i + 1) % h] };
-        if (Line::OnLine(l, p))
-        {
-            hull.insert(hull.begin() + i + 1, p);
-            return;
-        }
-    }
-    return;
-}
-
 double MinDist(Point& s, Point& t, vector<Point>& points)
 {
-    vector<int> indices;
-    MakeHull(points, indices);
-
-    int h = indices.size();
-    vector<Point> hull(h);
-    for (int i = 0; i < h; i++)
-        hull[i] = points[indices[i]];
+    vector<Point> hull = GetHull(points);
 
     if (IsIn(s, hull) || IsIn(t, hull))
         return -1;
 
-    hull.push_back(s);
-    hull.push_back(t);
+    hull.push_back(s), hull.push_back(t);
+    hull = GetHull(hull);
 
-    indices.resize(0);
-    MakeHull(hull, indices);
+    int n = hull.size();
+    int i = 0, j = 0;
+    while (i < n && hull[i] != s)
+        i++;
+    while (j < n && hull[j] != t)
+        j++;
 
-    int k = indices.size();
-    vector<Point> phull(k);
-    for (int i = 0; i < k; i++)
-        phull[i] = hull[indices[i]];
+    if (i >= n || j >= n) return Point::Dist(s, t);
 
-    int si = find(phull.begin(), phull.end(), s) - phull.begin();
-    int ti = find(phull.begin(), phull.end(), t) - phull.begin();
-
-    if ((si == k) ^ (ti == k))
-        return Point::Dist(s, t);
-
-    Insert(s, phull);
-    Insert(t, phull);
-    k = phull.size();
-
-    si = find(phull.begin(), phull.end(), s) - phull.begin();
-    ti = find(phull.begin(), phull.end(), t) - phull.begin();
-
-    double rd = 0;
-    for (int i = si; i != ti; i = (i + 1) % k)
-        rd += Point::Dist(phull[i], phull[(i + 1) % k]);
-    double ld = 0;
-    for (int i = si; i != ti; i = (i - 1 + k) % k)
-        ld += Point::Dist(phull[i], phull[(i - 1 + k) % k]);
-
-    return min(rd, ld);
+    double l = 0, r = 0;
+    for (int k = i; k != j; k = (k + 1) % n)
+        l += Point::Dist(hull[k], hull[(k + 1) % n]);
+    for (int k = i; k != j; k = (k - 1 + n) % n)
+        r += Point::Dist(hull[k], hull[(k - 1 + n) % n]);
+    return min(l, r);
 }
 
 int main()
@@ -195,6 +161,6 @@ int main()
         if (result == -1)
             printf("IMPOSSIBLE\n");
         else
-            printf("%.6lf\n", result);
+            printf("%.3lf\n", result);
     }
 }
