@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 #include <vector>
 #include <algorithm>
 #include <cmath>
@@ -26,31 +26,6 @@ struct Point
         return sqrt(dx * dx + dy * dy);
     }
     friend auto operator <=> (const Point& a, const Point& b) = default;
-};
-struct Line
-{
-    Point a, b;
-
-    static bool OnLine(const Line& l, const Point& p)
-    {
-        return Point::CCW(l.a, l.b, p) == 0
-            && min(l.a.x, l.b.x) <= p.x && p.x <= max(l.a.x, l.b.x)
-            && min(l.a.y, l.b.y) <= p.y && p.y <= max(l.a.y, l.b.y);
-    }
-    static bool IsCross(const Line& l0, const Line& l1, bool bound = true)
-    {
-        auto& [a, b] = l0;
-        auto& [c, d] = l1;
-
-        int ab_cd = Point::CCW(a, b, c) * Point::CCW(a, b, d);
-        int cd_ab = Point::CCW(c, d, a) * Point::CCW(c, d, b);
-
-        if (ab_cd < 0 && cd_ab < 0)
-            return true;
-        if (!bound) return false;
-        return OnLine(l0, c) || OnLine(l0, d)
-            || OnLine(l1, a) || OnLine(l1, b);
-    }
 };
 
 vector<Point> GetHull(vector<Point>& points) {
@@ -80,7 +55,7 @@ vector<Point> GetHull(vector<Point>& points) {
             Point& b = hull[hull.size() - 1];
             Point& a = hull[hull.size() - 2];
 
-            if (Point::CCW(a, b, points[c]) >= 0)
+            if (Point::CCW(a, b, points[c]) > 0)
                 break;
             hull.pop_back();
         }
@@ -92,24 +67,22 @@ vector<Point> GetHull(vector<Point>& points) {
 bool IsIn(const Point& p, vector<Point>& hull)
 {
     int n = hull.size();
-    if (n < 3)
-        return false;
-    if (Point::CCW(hull[0], hull[1], p) <= 0)
-        return false;
-    if (Point::CCW(hull[0], hull[n - 1], p) >= 0)
-        return false;
+    if (n < 3) return false;
+    if (Point::CCW(hull[0], hull[1], p) <= 0) return false;
+    if (Point::CCW(hull[0], hull[n - 1], p) >= 0) return false;
 
     int start = 1, end = n - 1;
-    while (start + 1 < end) {
+    while (start + 1 < end)
+    {
         int mid = (start + end) / 2;
-
-        if (Point::CCW(hull[0], hull[mid], p) > 0)
-            start = mid;
-        else
-            end = mid;
+        if (Point::CCW(hull[0], hull[mid], p) > 0) start = mid;
+        else end = mid;
     }
     return Point::CCW(hull[start], hull[end], p) > 0;
 }
+
+int next(int i, int n) { return (i + 1) % n; }
+int prev(int i, int n) { return (i - 1 + n) % n; }
 
 double MinDist(Point& s, Point& t, vector<Point>& points)
 {
@@ -123,18 +96,18 @@ double MinDist(Point& s, Point& t, vector<Point>& points)
 
     int n = hull.size();
     int i = 0, j = 0;
-    while (i < n && hull[i] != s)
-        i++;
-    while (j < n && hull[j] != t)
-        j++;
+    while (i < n && Point::CCW(hull[i], hull[next(i, n)], s) > 0) i++;
+    while (j < n && Point::CCW(hull[j], hull[next(j, n)], t) > 0) j++;
 
-    if (i >= n || j >= n) return Point::Dist(s, t);
+    if (i == j || i >= n || j >= n || n <= 3) // 필자는 || n <= 3을 넣는 것이 옳다고 생각하나, 현재는 없는 것이 맞았습니다가 뜨고 있음.
+        return Point::Dist(s, t);
 
-    double l = 0, r = 0;
-    for (int k = i; k != j; k = (k + 1) % n)
-        l += Point::Dist(hull[k], hull[(k + 1) % n]);
-    for (int k = i; k != j; k = (k - 1 + n) % n)
-        r += Point::Dist(hull[k], hull[(k - 1 + n) % n]);
+    double l = Point::Dist(s, hull[next(i, n)]) + Point::Dist(hull[j], t);
+    double r = Point::Dist(s, hull[i]) + Point::Dist(hull[next(j, n)], t);
+    for (int k = next(i, n); k != j; k = next(k, n))
+        l += Point::Dist(hull[k], hull[next(k, n)]);
+    for (int k = i; k != next(j, n); k = prev(k, n))
+        r += Point::Dist(hull[k], hull[prev(k, n)]);
     return min(l, r);
 }
 
