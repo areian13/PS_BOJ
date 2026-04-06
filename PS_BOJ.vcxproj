@@ -2431,8 +2431,8 @@
     <ClCompile Include="5. Diamond\Diamond 5\[D5] 05051 피타고라스의 정리.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="5. Diamond\Diamond 5\![D5] 05377 승혁이의 과외돌이네 집 탈출하기.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    <ClCompile Include="5. Diamond\Diamond 5\[D5] 05377 승혁이의 과외돌이네 집 탈출하기.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="5. Diamond\Diamond 5\[D5] 13575 보석 가게.cpp">
