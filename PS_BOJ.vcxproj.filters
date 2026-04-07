@@ -2721,6 +2721,7 @@
     <ClCompile Include="5. Diamond\Diamond 5\[D5] 05377 승혁이의 과외돌이네 집 탈출하기.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 33702 비밀번호.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 33702 돈복사.cpp" />
+    <ClCompile Include="4. Platinum\Platinum 5\[P5] 15678 연세워터파크.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
