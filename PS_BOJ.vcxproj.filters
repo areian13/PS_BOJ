@@ -2724,6 +2724,7 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 33963 돈복사.cpp" />
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 33909 알파벳 블록.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 15122 Forbidden Zero.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 32860 수수수수퍼노바.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
