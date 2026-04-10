@@ -2,8 +2,6 @@
 #include <vector>
 #include <algorithm>
 #include <cmath>
-#include <cfloat>
-#include <queue>
 
 #define FastIO ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)
 
@@ -26,6 +24,17 @@ struct Point
         return sqrt(dx * dx + dy * dy);
     }
     friend auto operator <=> (const Point& a, const Point& b) = default;
+};
+struct Line
+{
+    Point a, b;
+
+    static bool OnLine(const Line& l, const Point& p)
+    {
+        return Point::CCW(l.a, l.b, p) == 0
+            && min(l.a.x, l.b.x) <= p.x && p.x <= max(l.a.x, l.b.x)
+            && min(l.a.y, l.b.y) <= p.y && p.y <= max(l.a.y, l.b.y);
+    }
 };
 
 vector<Point> GetHull(vector<Point>& points) {
@@ -91,6 +100,11 @@ double MinDist(Point& s, Point& t, vector<Point>& points)
     if (IsIn(s, hull) || IsIn(t, hull))
         return -1;
 
+    if (hull.size() == 2 &&
+        (Line::OnLine({ hull[0],hull[1] }, s) ||
+            Line::OnLine({ hull[0],hull[1] }, t)))
+        return Point::Dist(s, t);
+
     hull.push_back(s), hull.push_back(t);
     hull = GetHull(hull);
 
@@ -99,7 +113,7 @@ double MinDist(Point& s, Point& t, vector<Point>& points)
     while (i < n && Point::CCW(hull[i], hull[next(i, n)], s) > 0) i++;
     while (j < n && Point::CCW(hull[j], hull[next(j, n)], t) > 0) j++;
 
-    if (i == j || i >= n || j >= n || n <= 3) // 필자는 || n <= 3을 넣는 것이 옳다고 생각하나, 현재는 없는 것이 맞았습니다가 뜨고 있음.
+    if (i == j || i >= n || j >= n)
         return Point::Dist(s, t);
 
     double l = Point::Dist(s, hull[next(i, n)]) + Point::Dist(hull[j], t);
