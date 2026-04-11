@@ -2725,6 +2725,9 @@
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 33909 알파벳 블록.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 15122 Forbidden Zero.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 32860 수수수수퍼노바.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 27891 특별한 학교 이름 암호화.cpp" />
+    <ClCompile Include="2. Silver\Silver 4\[S4] 35466 대회 장소 정하기.cpp" />
+    <ClCompile Include="2. Silver\Silver 2\[S2] 35467 Swap-LIS.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
