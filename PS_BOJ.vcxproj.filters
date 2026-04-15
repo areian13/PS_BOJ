@@ -2728,6 +2728,19 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 27891 특별한 학교 이름 암호화.cpp" />
     <ClCompile Include="2. Silver\Silver 4\[S4] 35466 대회 장소 정하기.cpp" />
     <ClCompile Include="2. Silver\Silver 2\[S2] 35467 Swap-LIS.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 1\[B1] 02947 나무 조각.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 14686 Sum Game.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 20977 JOI ソート %28JOI Sort%29.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 31497 생일 축하합니다~.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 32529 래환이의 여자친구 사귀기 대작전.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 33488 아름다운 수열.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 34009 Bob부 멍충이.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 34619 소대 배정.cpp" />
+    <ClCompile Include="2. Silver\Silver 1\[S1] 03218 spam.cpp" />
+    <ClCompile Include="2. Silver\Silver 1\[S1] 14225 부분수열의 합.cpp" />
+    <ClCompile Include="2. Silver\Silver 4\[S4] 16677 악마 게임.cpp" />
+    <ClCompile Include="3. Gold\Gold 5\[G5] 20951 유아와 곰두리차.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 16408 Poker Hand.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
