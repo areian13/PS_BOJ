@@ -199,6 +199,7 @@
     <ClCompile Include="0. Unrated\[U0] 12096 .cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="0. Unrated\[U0] 16076 휴식이 필요해.txt" />
     <ClCompile Include="0. Unrated\[U0] 18017 총알의 속도.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>

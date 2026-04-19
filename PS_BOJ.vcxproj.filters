@@ -2748,6 +2748,7 @@
     <ClCompile Include="4. Platinum\Platinum 4\[P4] 14939 불 끄기.cpp" />
     <ClCompile Include="4. Platinum\Platinum 3\[P3] 01006 습격자 초라기.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 25773 Number Maximization.cpp" />
+    <ClCompile Include="0. Unrated\[U0] 16076 휴식이 필요해.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
