@@ -2425,7 +2425,6 @@
     <ClCompile Include="4. Platinum\Platinum 5\[P5] 13141 Ignition.cpp" />
     <ClCompile Include="2. Silver\Silver 4\[S4] 33257 상현이의 물리학및실험1 실험 대작전.cpp" />
     <ClCompile Include="2. Silver\Silver 3\[S3] 02121 넷이 놀기.cpp" />
-    <ClCompile Include="4. Platinum\Platinum 5\![P5] 01086 박성원.cpp" />
     <ClCompile Include="2. Silver\Silver 2\[S2] 23757 아이들과 선물 상자.cpp" />
     <ClCompile Include="2. Silver\Silver 2\[S2] 32186 역시 내 이세계 수열은 잘못됐다.cpp" />
     <ClCompile Include="1. Bronze\Bronze 4\[B4] 34823 YCPC 점수.cpp" />
@@ -2741,6 +2740,14 @@
     <ClCompile Include="2. Silver\Silver 4\[S4] 16677 악마 게임.cpp" />
     <ClCompile Include="3. Gold\Gold 5\[G5] 20951 유아와 곰두리차.cpp" />
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 16408 Poker Hand.cpp" />
+    <ClCompile Include="4. Platinum\Platinum 5\[P5] 17401 일하는 세포.cpp" />
+    <ClCompile Include="4. Platinum\Platinum 5\[P5] 14517 팰린드롬 개수 구하기 %28Large%29.cpp" />
+    <ClCompile Include="4. Platinum\Platinum 4\[P4] 03176 도로 네트워크.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 15184 Letter Count.cpp" />
+    <ClCompile Include="4. Platinum\Platinum 4\[P4] 02618 경찰차.cpp" />
+    <ClCompile Include="4. Platinum\Platinum 4\[P4] 14939 불 끄기.cpp" />
+    <ClCompile Include="4. Platinum\Platinum 3\[P3] 01006 습격자 초라기.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 25773 Number Maximization.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
