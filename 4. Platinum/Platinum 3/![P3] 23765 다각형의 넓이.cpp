@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstdio>
 #include <vector>
 #include <algorithm>
 
@@ -60,6 +61,58 @@ double Area(vector<Point>& points)
     }
     return abs(result) / 2.;
 }
+double Area(vector<int>& idx, vector<Point>& points)
+{
+    int n = idx.size();
+    long long result = 0;
+    for (int i = 0; i < n; i++)
+    {
+        Point& p0 = points[idx[i]];
+        Point& p1 = points[idx[(i + 1) % n]];
+        result += 1LL * p0.x * p1.y - 1LL * p0.y * p1.x;
+    }
+    return abs(result) / 2.;
+}
+
+double KPoly(int k, int d, vector<int>& idx, vector<Point>& hull,
+    vector<vector<double>>& dp)
+{
+    if (dp[k][d] != -1) return dp[k][d];
+    if (k == 0) return Area(idx, hull);
+
+    int h = hull.size();
+    dp[k][d] = 0;
+    for (int i = d + 1; i < h; i++)
+    {
+        idx[k - 1] = i;
+        dp[k][d] = max(dp[k][d], KPoly(k - 1, i, idx, hull, dp));
+    }
+    return dp[k][d];
+}
+
+double MaxKPoly(int k, vector<Point>& points)
+{
+    vector<int> indices;
+    MakeHull(points, indices);
+
+    int h = indices.size();
+    vector<Point> hull(h);
+    for (int i = 0; i < h; i++)
+        hull[i] = points[indices[i]];
+
+    if (h <= k)
+        return Area(hull);
+
+    double result = 0;
+    vector dp(k, vector(h, vector(h, -1.)));
+    vector<int> idx(k);
+    for (int i = 0; i < h; i++)
+    {
+        idx[k - 1] = i;
+        result = max(result, KPoly(k - 1, i, idx, hull, dp));
+    }
+    return result;
+}
 
 int main()
 {
@@ -72,18 +125,6 @@ int main()
     for (auto& [x, y] : points)
         cin >> x >> y;
 
-    vector<int> idx;
-    MakeHull(points, idx);
-
-    int h = idx.size();
-    vector<Point> hull(h);
-    for (int i = 0; i < h; i++)
-        hull[i] = points[idx[i]];
-
-    if (h <= k)
-        printf("%.1lf\n", Area(hull));
-    else
-    {
-
-    }
+    double result = MaxKPoly(k, points);
+    printf("%.1lf\n", result);
 }
