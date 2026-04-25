@@ -2753,6 +2753,8 @@
     <ClCompile Include="1. Bronze\Bronze 2\[B2] 17011 Cold Compress.cpp" />
     <ClCompile Include="4. Platinum\Platinum 3\[P3] 23765 다각형의 넓이.cpp" />
     <ClCompile Include="1. Bronze\Bronze 4\[B4] 34236 숭고한에 어서오세요.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 3\[B3] 35261 피갤컵 들어왔으면 이 글부터 봐라.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 5\[B5] 34297 Parking Pandemonium.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
