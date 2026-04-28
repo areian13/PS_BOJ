@@ -2756,6 +2756,9 @@
     <ClCompile Include="1. Bronze\Bronze 3\[B3] 35261 피갤컵 들어왔으면 이 글부터 봐라.cpp" />
     <ClCompile Include="1. Bronze\Bronze 5\[B5] 34297 Parking Pandemonium.cpp" />
     <ClCompile Include="1. Bronze\Bronze 5\[B5] 34411 M-Climb.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 2\[B2] 14790 Tidy Numbers %28Small%29.cpp" />
+    <ClCompile Include="1. Bronze\Bronze 4\[B4] 34308 Abby%27s Absolutes.cpp" />
+    <ClCompile Include="0. Unrated\[U0] 16075 악마의 유혹.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1. Bronze\Bronze 2\[B2] 08559 Potęga.py" />
@@ -2804,5 +2807,6 @@
     <Text Include="2. Silver\Silver 5\[S5] 15549 if.txt" />
     <Text Include="3. Gold\Gold 3\[G3] 13317 한 번 남았다 [2].txt" />
     <Text Include="3. Gold\Gold 4\[G4] 23483 Construct Points.txt" />
+    <Text Include="0. Unrated\[U0] 35515 Good Bye, BOJ!.txt" />
   </ItemGroup>
 </Project>
